@@ -3821,10 +3821,9 @@
     }
 
     function me(t) {
-//alert(t);
 
-        var fgh= /(?:http?s?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g.test(t);
-        //alert(fgh);
+
+        return /^(https?:)?\/\/((player|www)\.)?vimeo\.com(?=$|\/)/.test(t)
     }
 
     function ge() {
@@ -4173,7 +4172,7 @@
                     var e = r.querySelector("iframe");
                     e && (r = e)
                 }
-                //if ("IFRAME" === r.nodeName && !me(r.getAttribute("src") || "")) throw new Error("The player element passed isn’t a Vimeo embed.");
+                if ("IFRAME" === r.nodeName && !me(r.getAttribute("src") || "")) throw new Error("The player element passed isn’t a Vimeo embed.");
                 if (Pe.has(r)) return Pe.get(r);
                 this.element = r, this.origin = "*";
                 var s = new Ee(function(o, a) {

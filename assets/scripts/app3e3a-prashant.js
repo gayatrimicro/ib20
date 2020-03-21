@@ -3821,10 +3821,9 @@
     }
 
     function me(t) {
-//alert(t);
 
-        var fgh= /(?:http?s?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g.test(t);
-        //alert(fgh);
+
+        return /^(https?:)?\/\/((www)\.)?youtube\.com(?=$|\/)/.test(t)
     }
 
     function ge() {
@@ -3833,7 +3832,7 @@
             n = e.url,
             s = i || n;
         if (!s) throw new Error("An id or url must be passed, either in an options object or as a data-vimeo-id or data-vimeo-url attribute.");
-        if (t = s, !isNaN(parseFloat(t)) && isFinite(t) && Math.floor(t) == t) return "https://vimeo.com/".concat(s);
+        if (t = s, !isNaN(parseFloat(t)) && isFinite(t) && Math.floor(t) == t) return "https://youtube.com/".concat(s);
         if (me(s)) return s.replace("en.html", "en.html");
         if (i) throw new TypeError("“".concat(i, "” is not a valid video id."));
         throw new TypeError("“".concat(s, "” is not a vimeo.com url."))
@@ -4173,7 +4172,8 @@
                     var e = r.querySelector("iframe");
                     e && (r = e)
                 }
-                //if ("IFRAME" === r.nodeName && !me(r.getAttribute("src") || "")) throw new Error("The player element passed isn’t a Vimeo embed.");
+                // if ("IFRAME" === r.nodeName && !me(r.getAttribute("src") || "")) throw new Error("The player element passed isn’t a Vimeo embed.");
+                
                 if (Pe.has(r)) return Pe.get(r);
                 this.element = r, this.origin = "*";
                 var s = new Ee(function(o, a) {
@@ -4193,6 +4193,7 @@
                     };
                     if (n.addEventListener ? n.addEventListener("message", t, !1) : n.attachEvent && n.attachEvent("onmessage", t), "IFRAME" !== l.element.nodeName) {
                         var e = Me(r, i);
+                        
                         Le(ge(e), e, r).then(function(t) {
                             var e, i, n, s = $e(t, r);
                             return l.element = s, l._originalElement = r, e = r, i = s, n = ke.get(e), ke.set(i, n), ke.delete(e), Pe.set(l.element, l), t
