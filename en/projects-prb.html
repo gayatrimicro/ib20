@@ -30,8 +30,8 @@
 
     <!-- DNS Prefetching -->
     <link rel="dns-prefetch" href="http://cdnjs.cloudflare.com/" />
-    <link rel="dns-prefetch" href="http://www.google.com/" />
-    <link rel="dns-prefetch" href="http://www.google-analytics.com/" />
+    <!-- <link rel="dns-prefetch" href="http://www.google.com/" /> -->
+    <!-- <link rel="dns-prefetch" href="http://www.google-analytics.com/" /> -->
     <link rel="dns-prefetch" href="http://www.gstatic.com/" />
 
     <!-- Viewport -->
@@ -40,7 +40,7 @@
     <meta name="HandheldFriendly" content="true">
     <link rel='stylesheet' id='bones-stylesheet-css' href='../assets/styles/css/imagestylesheet.css' type='text/css' media='all' />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
 
     <!-- Appearance -->
     <meta name="theme-color" content="#4D84F1">
@@ -94,14 +94,15 @@
 
     ga('send', 'pageview');
     </script>
-    <script async src="../../www.google-analytics.com/analytics.js"></script>
+    <!-- <script src="../../www.google-analytics.com/analytics.js"></script> -->
     <script src="../assets/scripts/autotrack3e3a.js?v=4.51"></script>
-    <script src="../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script>
+    <!-- <script src="../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
 
 
     <!-- <script type='text/javascript' src='../assets/js/jquery.min.js'></script> -->
 </head>
 <body data-rsssl=1 class="archive post-type-archive post-type-archive-case-studies">
+    <div class="mycusdiv"></div>
 
     <!-- <div class="c-debug-safari"></div> -->
 
@@ -131,7 +132,7 @@
         <!-- <span class="c-play-button_circle"></span> -->
     </a>
 
-    <div data-load-container>
+    <div data-load-container style="overflow: auto !important;height: 100% !important;">
         <header class="c-header js-header">
             <div class="c-header_logoWrap">
                 <a class="c-header_logo" href="index.html">
@@ -284,19 +285,19 @@
                 <li class="c-nav_socials_item c-social_item">
                     <a href="https://facebook.com/" class="o-link -circleHover" target="_blank" rel="noopener noreferrer">
                         <span class="u-screen-reader-text">Facebook</span>
-                        <svg role="img"><use xlink:href="assets/images/sprite.svg#facebook"></use></svg>
+                        <!-- <svg role="img"><use xlink:href="assets/images/sprite.svg#facebook"></use></svg> -->
                     </a>
                 </li>
                 <li class="c-nav_socials_item c-social_item">
                     <a href="https://twitter.com/" class="o-link -circleHover" target="_blank" rel="noopener noreferrer">
                         <span class="u-screen-reader-text">Twitter</span>
-                        <svg role="img"><use xlink:href="assets/images/sprite.svg#twitter"></use></svg>
+                        <!-- <svg role="img"><use xlink:href="assets/images/sprite.svg#twitter"></use></svg> -->
                     </a>
                 </li>
                 <li class="c-nav_socials_item c-social_item">
                     <a href="https://instagram.com/" class="o-link -circleHover" target="_blank" rel="noopener noreferrer">
                         <span class="u-screen-reader-text">Instagram</span>
-                        <svg role="img"><use xlink:href="assets/images/sprite.svg#instagram"></use></svg>
+                        <!-- <svg role="img"><use xlink:href="assets/images/sprite.svg#instagram"></use></svg> -->
                     </a>
                 </li>
                 
@@ -308,13 +309,13 @@
                 </svg>
             </a>
         </div>
-<div class="o-scroll" data-module="Scroll" data-main-scroll>
+<div class="o-scroll" data-module="Scroll" data-main-scroll style="overflow: auto !important;height: 100% !important;">
     <main class="o-page">
 
         <div class="o-container">
             <section class="o-section -padding-std js-animate">
                 <div class="o-section_heading">
-                    <h1 class="o-section_heading_title o-h -indent u-anim -parent -delay-2">Our Work</h1> <p class="o-section_heading_content o-h2 o-fade-up-rows -delay -text-indent js-animate" data-module="FadeUpByRow" data-lines-class="o-fade-up-rows_line"><span class="o-fade-up-rows_indent-el"></span>Locomotive develops, designs and delivers websites and creative campaigns that drive results, build awareness and win awards. Our work never brags, but it sure loves to speak for itself.</p>
+                    <h1 class="o-section_heading_title o-h -indent u-anim -parent -delay-2">Our Work</h1> <p class="o-section_heading_content o-h2 o-fade-up-rows -delay -text-indent js-animate" data-module="FadeUpByRow" data-lines-class="o-fade-up-rows_line"><span class="o-fade-up-rows_indent-el"></span>iBridge Digital develops, designs and delivers websites and creative campaigns that drive results, build awareness and win awards. Our work never brags, but it sure loves to speak for itself.</p>
                 </div>
             </section>
         </div>
@@ -359,14 +360,29 @@
                 <div class="o-container || o-section -margin-tiny">
                     <div class="c-projectList">
                        
-
-                        <div class="c-projectList_section o-layout -bottom -gutter-small -gutter-bottom box-100" >
-                            <div class="c-projectList_item o-layout_item box-100" >
+                        <style type="text/css">
+                            .c-projectList_title span{
+                                opacity: 1;
+                                color: #fff;
+                            }
+                            .c-projectList_title{
+                                z-index: 9999999999;
+                            }
+                            .max-cont{
+                                width: max-content !important;
+                            }
+                        </style>
+                        <div class="c-projectList_section o-layout -bottom -gutter-small -gutter-bottom box2-100 msli">
+                            <div class="shd_img"></div>
+                            <div class="c-projectList_item o-layout_item box-100">                                
                                 <a class="c-projectList" href="">
                                     <span class="c-projectList_content">
+                                         <span class="c-projectList_title o-h4 max-cont">
+                                            <span>Bayswater Bathrooms</span>
+                                            <span>Wordpress</span>
+                                        </span>
                                         <span class="c-projectList_image">
                                             <span class="c-projectList_image_wrap">
-                                                <!-- <img src="../uploads/projects/Design_Canada/HeroImage-BayswaterSite.png"> -->
                                                 <a href="#" class="project-card small-z" data-tilt data-tilt-perspective="1000" data-tilt-speed="400" data-tilt-max="8">
                                                     <div class="grid__item-img project-card__overlay big-z" data-displacement="../assets/images/displacement/main.jpg" data-intensity="-0.65" data-speedIn="2" data-speedOut="2">
                                                         <img class="img" src="../uploads/projects/Design_Canada/HeroImage-BayswaterSite.png" alt="Image"/>
@@ -380,16 +396,18 @@
                             </div>
                         </div>
 
-
-
-
                         <div class="c-projectList_section o-layout -bottom -gutter-small -gutter-bottom box-100" style="margin-top:80px !important;">
-                            <div class="c-projectList_item o-layout_item u-3/3@from-small js-animate"  style="width:50%;display: inline-block;">
+                            
+                            <div class="c-projectList_item o-layout_item u-3/3@from-small js-animate msli"  style="width:50%;display: inline-block;">
+                                <div class="shd_img2" id="myDIV"></div>
                                 <a class="c-projectList" href="" style="padding-bottom: 59%;">
                                     <span class="c-projectList_content">
+                                        <span class="c-projectList_title o-h4 max-cont">
+                                            <span>Design Canada</span>
+                                            <span>Digital</span>
+                                        </span>
                                         <span class="c-projectList_image -all">
                                             <span class="c-projectList_image_wrap">
-                                                <!-- <img src="../uploads/projects/Design_Canada/HeroImage-BayswaterSite.png"> -->
                                                 <a href="#" class="project-card verticals small-z" data-tilt data-tilt-perspective="1000" data-tilt-speed="400" data-tilt-max="8">
                                                     <div class="grid__item-img project-card__overlay big-z" data-displacement="../assets/images/displacement/main.jpg" data-intensity="-0.65" data-speedIn="2" data-speedOut="1.2">
                                                         <img class="img" src="../uploads/projects/Design_Canada/img_galerie_1920x1080_design_canada_01.jpg" alt="Image"/>
@@ -402,12 +420,16 @@
                                 </a>
                             </div>
 
-                            <div class="c-projectList_item o-layout_item u-3/3@from-small js-animate"  style="width:50%;display: inline-block;">
+                            <div class="c-projectList_item o-layout_item u-3/3@from-small js-animate msli"  style="width:50%;display: inline-block;">
+                                <div class="shd_img2"></div>
                                 <a class="c-projectList" href="" style="padding-bottom: 59%;">
                                     <span class="c-projectList_content">
+                                        <span class="c-projectList_title o-h4 max-cont">
+                                            <span>Design Canada</span>
+                                            <span>Digital</span>
+                                        </span>
                                         <span class="c-projectList_image -all">
                                             <span class="c-projectList_image_wrap">
-                                                <!-- <img src="../uploads/projects/Design_Canada/HeroImage-BayswaterSite.png"> -->
                                                 <a href="#" class="project-card verticals small-z" data-tilt data-tilt-perspective="1000" data-tilt-speed="400" data-tilt-max="8">
                                                     <div class="grid__item-img project-card__overlay big-z" data-displacement="../assets/images/displacement/main.jpg" data-intensity="-0.65" data-speedIn="2" data-speedOut="1.2">
                                                         <img class="img" src="../uploads/projects/Design_Canada/img_galerie_1920x1080_design_canada_01.jpg" alt="Image"/>
@@ -2091,6 +2113,9 @@
                 dynamicallyLoadScript(scripts[iterator]);
             }
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        
 
 
 
@@ -2098,6 +2123,7 @@
 <script type='text/javascript' src='../assets/scripts/js/scripts.min.js'></script>
 <script src="../assets/scripts/js/imagesloaded.pkgd.min.js"></script>
 <script src="../assets/scripts/js/hover.js"></script>
+<script src="../assets/scripts/js/custometest.js"></script>
 
         <script>
             imagesLoaded( document.querySelectorAll('.img'), () => {
