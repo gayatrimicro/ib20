@@ -33,7 +33,7 @@
     <link rel="dns-prefetch" href="http://www.google.com/" />
     <link rel="dns-prefetch" href="http://www.google-analytics.com/" />
     <link rel="dns-prefetch" href="http://www.gstatic.com/" />
-
+<link rel="stylesheet" type="text/css" href="../../assets/styles/newstyle.css">
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
@@ -1641,7 +1641,7 @@
                     <svg class="o-circle-button_icon -blue" role="img"><use xlink:href="../assets/images/sprite.svg#back-arrow"></use></svg>
                 </button>
         
-                <button class="c-lisa_sound || js-mute" type="button">
+                <!-- <button class="c-lisa_sound || js-mute" type="button">
                     <span class="u-screen-reader-text">Toggle Sound</span>
                     <div class="c-lisa_sound-icon -on">
                         <svg role="img"><use xlink:href="../assets/images/sprite.svg#sound-on"></use></svg>
@@ -1649,13 +1649,69 @@
                     <div class="c-lisa_sound-icon -off">
                         <svg role="img"><use xlink:href="../assets/images/sprite.svg#sound-off"></use></svg>
                     </div>
-                </button>
+                </button> -->
         
                 <div class="c-lisa_progress-wrapper">
                     <div class="c-lisa_progress" data-module="LisaProgress"></div>
                 </div>
             </div>
             <div class="c-lisa_content">
+                <div class="edit_projfrm">
+                    <h6>Start a project</h6>
+                    <h3>Sweet, now give us more details about your project?</h3>
+                    <div class="o-layout -gutter">
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="rfp_firstName">First Name *</label>
+                                    <input type="text" name="firstName" class="o-input || js-input" id="rfp_firstName" data-is-required>
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="rfp_lastName">Last Name *</label>
+                                    <input type="text" name="lastName" class="o-input || js-input" id="rfp_lastName" data-is-required>
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="rfp_telephone">Telephone</label>
+                                    <input type="phone" name="telephone" class="o-input || js-input" id="rfp_telephone">
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="rfp_email">Email *</label>
+                                    <input type="email" name="email" class="o-input || js-input" id="rfp_email" data-is-required>
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="rfp_company">Company *</label>
+                                    <input type="text" name="company" class="o-input || js-input" id="rfp_company" data-is-required>
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="rfp_deadline">Your deadline *</label>
+                                    <input type="text" name="deadline" class="o-input || js-input" id="rfp_deadline" data-is-required>
+                                </div>
+        
+                                <div class="o-layout_item">
+                                    <label class="o-label" for="rfp_message">Description</label>
+                                    <textarea rows="10" name="message" class="o-textarea || js-input" id="rfp_message"></textarea>
+                                </div>
+                            </div>
+                            <div class="c-lisa_form-footer marb100">
+        
+                                <div class="g-recaptcha js-captcha" data-sitekey="6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6"></div>
+        
+                                <div class="c-lisa_form-submit-wrapper">
+                                    <div class="c-lisa_form-loader">
+                                        <div class="o-loader">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="o-button -white -white || c-lisa_form-submit">
+                                        <span class="o-button_label -base">Submit</span>
+                                        <span class="o-button_label -hover">Submit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                 <div class="c-lisa_step" data-module="LisaStep" data-progress="0.1" data-id="greeting-1" data-prevent-back data-next="greeting-2" data-sentences="{&quot;lisa.intro&quot;:&quot;Hi there, I am L.I.S.A,&lt;br&gt;Locomotive\u2019s Interactive Super Assistant&quot;}">
                     <span class="c-lisa_step_title || js-title"></span>
                     <button class="c-lisa_step_skip || js-skip" type="button">Skip</button>

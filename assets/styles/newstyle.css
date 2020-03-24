@@ -1,0 +1,19 @@
+.edit_projfrm
+	{
+		width: 65%;
+    margin: 99px auto;
+    overflow: scroll;
+    height: 600px;
+	}
+	.marb100
+	{
+		margin-bottom: 100px;
+	}
+	.edit_projfrm h3
+	{
+		text-align: center;
+	}
+	.edit_projfrm h6
+	{
+		text-align: center;
+	} 
