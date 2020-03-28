@@ -429,11 +429,15 @@
         <img src="../../assets/images/desktop.png" alt="">
         <div class="c-device_media">
             <div class="o-vimeo-player">
-                <iframe class="js-animate" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://player.vimeo.com/video/330878900?controls=false&amp;autoplay=0&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                <!-- <iframe class="js-animate" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://www.youtube.com/embed/x-mNqbUX_WU" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe> -->
+                <video id="desk_vid" loop>
+  <source src="../../assets/videos/bayswater.mov" type="video/mp4">
+</video>
             </div>
         </div>
     </div>
 </div>
+
 
                 <div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
     <figure class="o-container">
@@ -1349,7 +1353,17 @@ $(document).mouseup(function (e)
     });
 });
 </script>
+<script type="text/javascript">
 
+    $("#desk_vid").click(function(){
+        playVid();
+    });
+
+function playVid() {
+    var vid = document.getElementById("desk_vid");
+    vid.play();
+}
+</script>
 
 
     </body>
