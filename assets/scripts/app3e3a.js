@@ -4882,7 +4882,7 @@
                         fov: 25,
                         position: [0, 0, 10]
                     }
-                }, e.file = "laptop_v2.glb", e
+                }, e.file = "", e
             }
             return c(h, Ze), a(h, [{
                 key: "initGui",
