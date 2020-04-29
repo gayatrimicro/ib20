@@ -436,15 +436,12 @@
         <div class="c-device_media">
             <div class="o-vimeo-player">
                 <!-- <iframe class="js-animate" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://www.youtube.com/embed/x-mNqbUX_WU" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe> -->
-<<<<<<< HEAD
-                <video id="desk_vid" loop>
+                <!-- <video id="desk_vid" loop>
   <source src="../../assets/videos/bayswater.mp4" type="video/mp4">
-</video>
-=======
+</video> -->
                 <video id="desk_vid" autoplay loop>
                   <source src="../../assets/videos/bayswater.mp4"  type="video/mp4">
                 </video>
->>>>>>> a26fc04ed46952059f30663c0c248e8b0923c728
             </div>
         </div>
     </div>
@@ -455,12 +452,9 @@
     <figure class="o-container">
         <div class="o-vimeo-player js-animate u-anim -delay-1">
             <!-- <iframe class="js-animate ifrme_rempoi" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://www.youtube.com/embed/x-mNqbUX_WU?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=true&amp;loop=1&amp;muted=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" autoplay></iframe> -->
-<<<<<<< HEAD
             <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=N8vMn4x5jAo&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe>
-=======
             <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe>
             <!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
->>>>>>> a26fc04ed46952059f30663c0c248e8b0923c728
         </div>
     </figure>
 </div>
@@ -1382,22 +1376,29 @@ $(document).mouseup(function (e)
 <script type="text/javascript">
 
     $("#desk_vid").click(function(){
-        playVid();
+        var vid = document.getElementById("desk_vid");
+    vid.play();
     });
 
-function playVid() {
-    var vid = document.getElementById("desk_vid");
-    vid.play();
-}
+    document.addEventListener('scroll', function (event) {
 
-$("#normal-vid").click(function(){
-        playVid();
-    });
+var footer = $('footer').offset().top;
 
-function playVid() {
-    var vid = document.getElementById("normal-vid");
-    vid.play();
-}
+myVar = parseInt(footer, 10);
+    var l = Math.pow(10, Math.floor(Math.log(myVar)/Math.log(10)));
+    var b = Math.floor(myVar/l);
+    var digit = b-Math.floor(b/10)*10;
+    //console.log(digit);
+
+        if (digit <= 5) {
+            
+        }
+
+   if (digit <= 3){
+    
+   }
+    }, true);
+
 </script>
 
 
