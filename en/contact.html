@@ -60,7 +60,7 @@
     <link rel="icon" type="image/png" href="../assets/images/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../assets/images/favicons/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="../assets/images/favicons/android-chrome-192x192.png" sizes="192x192">
-
+    <link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css">
     <link rel="manifest" href="../manifest.json">
     <link rel="mask-icon" href="../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1">
 
@@ -557,10 +557,9 @@
   <div class="modal-bodies">
     <div class="modal-body modal-body-step-1 is-showing">
       <h3>Step 1</h3>
-      <h4>Hello there, Let's play a game.</h4>
+      <h4>Find your practice</h4>
       <form>
-        <input type="text" placeholder="Name"/>
-        <input type="email" placeholder="Email"/>
+        <input type="text" placeholder="Type your practice name"/>
         <div class="text-center">
           <div class="button">Start</div>
         </div>
@@ -667,220 +666,7 @@ $('.rerun-button').click(function(){
 });
 
 </script>
-<style type="text/css">
-    html {
-  background: #000;
-  min-height: 100%;
-  font-family: "Roboto", sans-serif;
-}
 
-.title {
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #FF8F00;
-  font-weight: 300;
-  font-size: 24px;
-  letter-spacing: 1px;
-}
-
-.description {
-  text-align: center;
-  color: #666;
-  margin-bottom: 30px;
-}
-
-input[type="text"],
-input[type="email"] {
-  padding: 10px 20px;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  display: block;
-  width: 100%;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  outline: none;
-}
-input[type="text"]:focus,
-input[type="email"]:focus {
-  border-color: #dedede;
-}
-
-input[type="radio"] {
-  margin-right: 10px;
-}
-
-label {
-  margin-bottom: 20px;
-  display: block;
-  font-size: 18px;
-  color: #fff;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
-  cursor: pointer;
-}
-label:first-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-
-.button,
-.rerun-button {
-  padding: 10px 50px;
-    border-radius: 33px;
-    background: #ffffff;
-    color: #4d84f1;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block;
-    cursor: pointer;
-}
-.button:hover,
-.rerun-button:hover {
-  background: #4d84f1;
-  color: #fff;
-  border: thin solid #fff;
-}
-.button.rerun-button,
-.rerun-button.rerun-button {
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  margin-bottom: 50px;
-  box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.2);
-  display: none;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.modal-wrap {
-  max-width: 600px;
-  margin: 50px auto;
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-}
-
-.modal-header {
-  height: 45px;
-  background: transparent;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
-}
-.modal-header span {
-  display: block;
-  height: 12px;
-  width: 12px;
-  margin: 5px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
-}
-.modal-header span.is-active {
-  background: #fff;
-}
-
-.modal-bodies {
-  position: relative;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-::placeholder {
-  color: white;
-  opacity: 1; /* Firefox */
-}
-.modal-body {
-  background: transparent;
-  padding: 40px 100px;
-  margin-bottom: 50px;
-  position: absolute;
-  top: 0;
-  display: none;
-  box-sizing: border-box;
-  width: 100%;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-.modal-body.is-showing {
-  display: block;
-}
-
-.animate-out {
-  -webkit-animation: out 600ms ease-in-out forwards;
-          animation: out 600ms ease-in-out forwards;
-}
-
-.animate-in {
-  -webkit-animation: in 500ms ease-in-out forwards;
-          animation: in 500ms ease-in-out forwards;
-  display: block;
-}
-
-.animate-up {
-  -webkit-transform: translateY(-600px) rotate(30deg);
-          transform: translateY(-600px) rotate(30deg);
-}
-
-@-webkit-keyframes out {
-  0% {
-    -webkit-transform: translateY(0px) rotate(0deg);
-            transform: translateY(0px) rotate(0deg);
-  }
-  60% {
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
-  }
-  100% {
-    -webkit-transform: translateY(800px) rotate(10deg);
-            transform: translateY(800px) rotate(10deg);
-  }
-}
-
-@keyframes out {
-  0% {
-    -webkit-transform: translateY(0px) rotate(0deg);
-            transform: translateY(0px) rotate(0deg);
-  }
-  60% {
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
-  }
-  100% {
-    -webkit-transform: translateY(800px) rotate(10deg);
-            transform: translateY(800px) rotate(10deg);
-  }
-}
-@-webkit-keyframes in {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-}
-@keyframes in {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-}
-
-</style>
                 <div class="c-lisa_step" data-module="LisaStep" data-progress="0.1" data-id="greeting-1" data-prevent-back data-next="greeting-2" data-sentences="{&quot;lisa.intro&quot;:&quot;Hi there, I am L.I.S.A,&lt;br&gt;Locomotive\u2019s Interactive Super Assistant&quot;}">
                     <span class="c-lisa_step_title || js-title"></span>
                     <button class="c-lisa_step_skip || js-skip" type="button">Skip</button>
