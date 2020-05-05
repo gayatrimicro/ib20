@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM business_category";
 $result = $conn->query($sql);
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html class="has-no-js" lang="en" data-template="contact" data-theme="dark"  data-pageColor="default">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -59,7 +59,7 @@ $result = $conn->query($sql);
 	<meta name="HandheldFriendly" content="true">
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	
 	<!-- Appearance -->
 	<meta name="theme-color" content="#4D84F1">
@@ -97,6 +97,12 @@ $result = $conn->query($sql);
 			background-image: url("../../uploads/projects/Bayswater/img_1920x1280_bayswater.jpg");
 			background-size: cover;
 		}
+		.pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+
+    background-image: none !important;
+    height: 0px;
+}
 
 	</style>
 	<link rel="stylesheet" id="main-css" href="../../assets/styles/main3e3a.css?v=4.51" media="none" onload="if(media!='all')media='all'">
@@ -112,15 +118,7 @@ $result = $conn->query($sql);
 
 	ga('send', 'pageview');
 	</script>
-	<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
-	<script src="../../assets/scripts/autotrack3e3a.js"></script>
-	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-	<script>
-		$(document).ready(function() { $("#e1").select2(); });
-	</script>
+	
 </head>
 <body data-module="Load" style="opacity: 0;">
 	<!-- <div class="c-debug-safari"></div> -->
@@ -638,7 +636,7 @@ $result = $conn->query($sql);
 							<div class="c-stats_number">90%</div>
 						</div>
 
-						<div class="o-object3d || c-stats_object3d || js-animate" data-gui="false" data-speed="2" data-module="Object3D js-animate" data-callback="trigger.Object3D()" data-models="hand_thumb.glb" data-settings='{ "camera": { "position": [0,-1,8], "fov": 45, "translateScroll": [0,20,0] }, "ambientLight": { "intensity": 0.4 }, "object": { "position": [-0.75,0.5,-0.5], "rotation": [7,246,-83], "rotationScroll": [0,0,110] } }'></div>
+						<!-- <div class="o-object3d || c-stats_object3d || js-animate" data-gui="false" data-speed="2" data-module="Object3D js-animate" data-callback="trigger.Object3D()" data-models="hand_thumb.glb" data-settings='{ "camera": { "position": [0,-1,8], "fov": 45, "translateScroll": [0,20,0] }, "ambientLight": { "intensity": 0.4 }, "object": { "position": [-0.75,0.5,-0.5], "rotation": [7,246,-83], "rotationScroll": [0,0,110] } }'></div> -->
 
 						<div class="o-layout_item || c-stats_block -after3d">
 							<div class="o-line -text"></div>
@@ -822,9 +820,10 @@ $result = $conn->query($sql);
 	  <h3>Step 1</h3>
 	  <h4>Find your practice</h4>
 	  <form>
-		<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text"/>
+		<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text" />
+		<p style="font-size: 14px;color: #fff;display: none;margin-bottom: 22px;" class="err_msg">Please Enter Location</p>
 		<div class="text-center">
-		  <div class="button">Start</div>
+		  <div class="button chksts">Start</div>
 		</div>
 	  </form>
 	</div>
@@ -896,8 +895,62 @@ $result = $conn->query($sql);
   <!--<div class="button">Loading...</div>-->
 	
 </div>
-<script type="text/javascript">
+
+
+
+
+
+							
+						</div>
+				
+				
+		
+
+
+		
+				
+			</div>
+		
+			
+		</div>
+		
+		<section class="c-choo" data-module="Choochoo">
+		
+			<button class="o-circle-button c-choo-btn_close js-choo-close" type="button">
+				<div class="o-circle-button_bg"></div>
+				<svg class="o-circle-button_icon" role="img"><use xlink:href="../../assets/images/sprite.svg#cross"></use></svg>
+			</button>
+		
+			<div class="c-choo_letter_bg js-letter-bg"></div>
+		
+			<div class="c-choo_letter_container">
+				<span class="js-letter c-choo_letter">C</span>
+				<span class="js-letter c-choo_letter">H</span>
+				<span class="js-letter c-choo_letter">O</span>
+				<span class="js-letter c-choo_letter">O</span>
+				<span class="js-letter c-choo_letter">C</span>
+				<span class="js-letter c-choo_letter">H</span>
+				<span class="js-letter c-choo_letter">O</span>
+				<span class="js-letter c-choo_letter">O</span>
+			</div>
+		
+			<div class="c-choo_image_container js-images-container"></div>
+		
+		</section>
+		<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
+	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
+	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+	<script type="text/javascript">
 $('.button').click(function(){
+	if($(".pac-target-input").val()=="")
+	{
+		$(".err_msg").show();
+		return false;
+	}
+	$(".err_msg").hide();
 	var $btn = $(this),
 	$step = $btn.parents('.modal-body'),
 	stepIndex = $step.index(),
@@ -1064,53 +1117,14 @@ function get_category(id)
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
 		async defer></script>
-
-
-
-
-							
-						</div>
-				
-				
-		
-
-
-		
-				
-			</div>
-		
-			
-		</div>
-		
-		<section class="c-choo" data-module="Choochoo">
-		
-			<button class="o-circle-button c-choo-btn_close js-choo-close" type="button">
-				<div class="o-circle-button_bg"></div>
-				<svg class="o-circle-button_icon" role="img"><use xlink:href="../../assets/images/sprite.svg#cross"></use></svg>
-			</button>
-		
-			<div class="c-choo_letter_bg js-letter-bg"></div>
-		
-			<div class="c-choo_letter_container">
-				<span class="js-letter c-choo_letter">C</span>
-				<span class="js-letter c-choo_letter">H</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">C</span>
-				<span class="js-letter c-choo_letter">H</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">O</span>
-			</div>
-		
-			<div class="c-choo_image_container js-images-container"></div>
-		
-		</section>
+	<script>
+		$(document).ready(function() { $("#e1").select2(); });
+	</script>
 		<script>
 			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
 
 			var iterator = 0;
 			var scripts = [
-				'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
 				'../../assets/scripts/vendors3e3a.js',
 				'../../assets/scripts/app3e3a.js'
 			];
@@ -1130,23 +1144,21 @@ function get_category(id)
 				dynamicallyLoadScript(scripts[iterator]);
 			}
 		</script>
-		<script type="text/javascript" src="../../assets/scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('.image_ripple').ripples('show');
 			});
 		</script>
-		<script type="text/javascript" src="../../assets/scripts/app3e3a.js"></script>
 
-		<script type="text/javascript" src="../../assets/scripts/vendors3e3a.js"></script>
 
-		<script type="text/javascript" src="../../assets/scripts/analytics.js"></script>
-		<script type="text/javascript" src="../../assets/scripts/api.js"></script>
+		<!-- <script type="text/javascript" src="../../assets/scripts/analytics.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/api.js"></script> -->
 		
-		<script type="text/javascript" src="../../assets/scripts/player.js"></script>
+		<!-- <script type="text/javascript" src="../../assets/scripts/player.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/vendors.js"></script>
-		<script type="text/javascript" src="../../assets/scripts/vuid.min.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/vuid.min.js"></script> -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
 
 
@@ -1155,7 +1167,7 @@ function get_category(id)
 
 <script type="text/javascript">
 
-	// Load the IFrame Player API code asynchronously.
+	// // Load the IFrame Player API code asynchronously.
 	  var tag = document.createElement('script');
 	  tag.src = "https://www.youtube.com/player_api";
 	  var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -1227,7 +1239,6 @@ myVar = parseInt(footer, 10);
 	}, true);
 
 </script>
-
 
 	</body>
 
