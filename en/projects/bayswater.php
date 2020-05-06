@@ -81,6 +81,7 @@ $result = $conn->query($sql);
 
 	<link rel="manifest" href="../../manifest.json">
 	<link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/newstyle.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css">
 
@@ -821,7 +822,7 @@ $result = $conn->query($sql);
 	  <h4>Find your practice</h4>
 	  <form>
 		<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text" />
-		<p style="font-size: 14px;color: #fff;display: none;margin-bottom: 22px;" class="err_msg">Please Enter Location</p>
+		<p class="err_msg">Please Enter Location</p>
 		<div class="text-center">
 		  <div class="button chksts">Start</div>
 		</div>
@@ -853,7 +854,7 @@ $result = $conn->query($sql);
 	  
 	</div>
 
-	<div class="modal-body modal-body-step-3">
+	<div class="modal-body modal-body-step-3 cat_js_basic">
 	  <h3>Step 3</h3>
 	  <!-- <h4>Would you rather</h4> -->
 		<label>
@@ -867,8 +868,9 @@ $result = $conn->query($sql);
 				<?php } ?>
 			</select>
 		</label>
+		<p class="err_msg">Please select category</p>
 		<div class="text-center fade-in">
-		  <div class="button">Next</div>
+		  <div class="button_sel">Next</div>
 		</div>
 	</div>
 	<div class="modal-body modal-body-step-4">
@@ -941,11 +943,13 @@ $result = $conn->query($sql);
 	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
 	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
+	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
 	<script type="text/javascript">
-$('.button').click(function(){
-	if($(".pac-target-input").val()=="")
+		$('.button_sel').click(function(){
+			var e = document.getElementById("e1");
+	var strUser = e.options[e.selectedIndex].text;
+	if(strUser=="Select Category")
 	{
 		$(".err_msg").show();
 		return false;
@@ -958,6 +962,23 @@ $('.button').click(function(){
 	if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
 	else { step4($step, $pag); }  
 });
+
+$('.button').click(function(){
+	if($(".pac-target-input").val()=="")
+	{
+		$(".err_msg").show();
+		return false;
+	}
+
+	$(".err_msg").hide();
+	var $btn = $(this),
+	$step = $btn.parents('.modal-body'),
+	stepIndex = $step.index(),
+	$pag = $('.modal-header span').eq(stepIndex);
+	if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
+	else { step4($step, $pag); }  
+});
+
 
 
 function step1($step, $pag){
@@ -1113,6 +1134,12 @@ function get_category(id)
 		});
 	  }
 	}
+	$(document).keypress(
+			function(event){
+			if (event.which == '13') {
+				event.preventDefault();
+			}
+		});
 
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
