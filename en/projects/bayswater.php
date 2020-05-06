@@ -1026,6 +1026,17 @@ $('.rerun-button').click(function(){
 
 function get_category(id)
 {
+	var city = document.getElementById('locality').innerHTML;
+	var state = document.getElementById('administrative_area_level_1').innerHTML;
+	var country = document.getElementById('country').innerHTML;
+	var organization_name = document.getElementById('name').innerHTML;
+	
+	console.log("Organization Name : "+organization_name);
+	document.getElementById('frm_locality').value = city;
+	document.getElementById('frm_administrative_area_level_1').value = state;
+	document.getElementById('frm_country').value = country;
+	document.getElementById('frm_name').value = organization_name;
+
 	document.getElementById('frm_category').value = '';
 	document.getElementById('frm_category').value = id;
 }
@@ -1053,17 +1064,6 @@ function get_category(id)
 	  name: 'name',	  
 	};
 
-	var frm_componentForm = {	 
-	  frm_street_number: 'short_name',
-	  frm_route: 'long_name',
-	  frm_locality: 'long_name',
-	  frm_administrative_area_level_1: 'long_name',
-	  frm_country: 'short_name',
-	  frm_postal_code: 'short_name',
-	  frm_website: 'website',
-	  frm_name: 'name',
-	};
-
 	function initAutocomplete() {
 	  // Create the autocomplete object, restricting the search predictions to
 	  // geographical location types.
@@ -1088,12 +1088,6 @@ function get_category(id)
 		document.getElementById(component).innerHTML = '';
 		// document.getElementById(component).disabled = false;
 	  }
-
-	  for (var component in frm_componentForm) {
-		document.getElementById(component).value = '';
-		// document.getElementById(component).disabled = false;
-	  }
-
 	  
 	  // Get each component of the address from the place details,
 	  // and then fill-in the corresponding field on the form.
@@ -1102,14 +1096,6 @@ function get_category(id)
 		if (componentForm[addressType]) {
 		  var val = place.address_components[i][componentForm[addressType]];
 		  document.getElementById(addressType).innerHTML = val;		
-		}
-	  }
-
-	  for (var i = 0; i < place.address_components.length; i++) {
-		var addressType = place.address_components[i].types[0];
-		if (frm_componentForm[addressType]) {
-		  var val = place.address_components[i][frm_componentForm[addressType]];
-		  document.getElementById(addressType).value = val;		
 		}
 	  }
 
@@ -1133,13 +1119,14 @@ function get_category(id)
 		  autocomplete.setBounds(circle.getBounds());
 		});
 	  }
-	}
-	$(document).keypress(
+		$(document).keypress(
 			function(event){
 			if (event.which == '13') {
 				event.preventDefault();
 			}
 		});
+	}
+	
 
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"

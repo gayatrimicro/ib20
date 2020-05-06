@@ -1,12 +1,11 @@
 <?php
 include "vendor/autoload.php";
-// var_dump($_POST);
-// exit();
+set_time_limit(5016000);
+//var_dump($_POST); exit();
 $servername = "64.207.177.102";
 $username = "usr_google";
 $password = "Kd%x761x";
-// $username = "root";
-// $password = "";
+
 $databese = 'google';
 // Create connection
 $conn = new mysqli($servername, $username, $password, $databese);
@@ -26,7 +25,7 @@ $organization_website = $_POST['website'];
 echo "<br>";
 $str = $category.' '.$_POST['city'].' '.$_POST['state'];
 $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='.$str.'&key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4';
-set_time_limit(516000);
+
 $i = 0;
 echo "<h3 style='color:green;'>Competitors</h3>";
 echo "<h4>".$organization_name .' ('. $category .')'."</h4>";
@@ -36,17 +35,18 @@ $google_rank = array();
 $reputation = array();
 $website = array();
 $seo_score_ar = array();
-
+$mobile_friendly_score_ar = array();
+$security_ar = array();
 //get desktop and mobile speed from website
 if($organization_website!="")
 {
-	$my_searchabilibity_ar = explode('://', $organization_website);
-	if($my_searchabilibity_ar[0]=="https")
+	$my_security_ar = explode('://', $organization_website);
+	if($my_security_ar[0]=="https")
 	{
-		$my_searchabilibity = "Pass";
+		$my_security = "Pass";
 	}
 	else{
-		$my_searchabilibity = "Fail";
+		$my_security = "Fail";
 	}
 	$get_desktop_speed_data_url = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='.$organization_website.'&key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM&strategy=desktop&category=PERFORMANCE';
 	$desktop_website_client = new GuzzleHttp\Client();
@@ -82,12 +82,42 @@ if($organization_website!="")
 	else{
 		$my_seo_score = "0";
 	}
+	
+	$get_my_mobile_friendly_data_url = 'https://searchconsole.googleapis.com/v1/urlTestingTools/mobileFriendlyTest:run?key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM';
+		$ar = 	[
+				'form_params' =>	[
+						'url' => $organization_website,
+						'requestScreenshot' => 'true'
+					]];
+		$my_mobile_friendly_client = new GuzzleHttp\Client();
+		$my_mobile_friendly_response = $my_mobile_friendly_client->request('POST', $get_my_mobile_friendly_data_url, $ar);
+		if($my_mobile_friendly_response->getStatusCode() == 200)
+		{
+			$my_mobile_friendly_res1 = $my_mobile_friendly_response->getBody();
+			$my_mobile_friendly_res11 = json_decode($my_mobile_friendly_res1, true);
+			if($my_mobile_friendly_res11['mobileFriendliness'] == "MOBILE_FRIENDLY")
+			{
+				$my_mobile_friendly_score = "TRUE";
+				$my_screen_shot = '<img width="200" height="300" src="data:'. $my_mobile_friendly_res11['screenshot']['mimeType'] .';base64,' . $my_mobile_friendly_res11['screenshot']['data'] . '" />';
+				// $my_screen_shot = "";
+			}
+			else{
+				$my_mobile_friendly_score = "FALSE";
+				$my_screen_shot = "";
+			}
+		}
+		else{
+			$my_mobile_friendly_score = "FALSE";
+			$my_screen_shot = "";
+		}
 }
 else{
-	$my_searchabilibity = "Fail";
+	$my_security = "Fail";
 	$my_desktop_speed = "Not Found";
 	$my_mobile_speed = "Not Found";
 	$my_seo_score = "0";
+	$my_mobile_friendly_score = "FALSE";
+	$my_screen_shot = "";
 }
 
 $client = new GuzzleHttp\Client();
@@ -155,13 +185,13 @@ if($response->getStatusCode() == 200)
 
 					if($website_str!="")
 					{
-						$searchabilibity_ar = explode('://', $website_str);
-						if($searchabilibity_ar[0]=="https")
+						$security_arr = explode('://', $website_str);
+						if($security_arr[0]=="https")
 						{
-							$searchabilibity = "Pass";
+							$security = "Pass";
 						}
 						else{
-							$searchabilibity = "Fail";
+							$security = "Fail";
 						}
 						$get_desktop_speed_data_url = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='.$website_str.'&key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM&strategy=desktop&category=PERFORMANCE';
 						$desktop_website_client = new GuzzleHttp\Client();
@@ -197,15 +227,47 @@ if($response->getStatusCode() == 200)
 						else{
 							$seo_score = "0";
 						}
+						
+						$get_mobile_friendly_data_url = 'https://searchconsole.googleapis.com/v1/urlTestingTools/mobileFriendlyTest:run?key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM';
+						$ar = 	[
+								'form_params' =>	[
+										'url' => $website_str,
+										'requestScreenshot' => 'true'
+									]];
+						$mobile_friendly_client = new GuzzleHttp\Client();
+						$mobile_friendly_response = $mobile_friendly_client->request('POST', $get_mobile_friendly_data_url, $ar);
+						if($mobile_friendly_response->getStatusCode() == 200)
+						{
+							$mobile_friendly_res1 = $mobile_friendly_response->getBody();
+							$mobile_friendly_res11 = json_decode($mobile_friendly_res1, true);
+							if($mobile_friendly_res11['mobileFriendliness'] == "MOBILE_FRIENDLY")
+							{
+								$mobile_friendly_score = "TRUE";								
+								$screen_shot = '<img width="200" height="300" src="data:'. $mobile_friendly_res11['screenshot']['mimeType'] .';base64,' . $mobile_friendly_res11['screenshot']['data'] . '" />';
+								// $screen_shot = "";
+							}
+							else{
+								$mobile_friendly_score = "FALSE";
+								$screen_shot = "";
+							}
+						}
+						else{
+							$mobile_friendly_score = "FALSE";
+							$screen_shot = "";
+						}
 					}
 					else{
 						$desktop_speed = "Not Found";
 						$mobile_speed = "Not Found";
-						$searchabilibity = "Fail";
+						$security = "Fail";
 						$seo_score = "0";
+						$mobile_friendly_score = "FALSE";
+						$screen_shot = "";
 					}
 					array_push($website, ['name'=>$name, 'website_url'=>$website_str, 'mobile_speed'=>$mobile_speed, 'desktop_speed'=>$desktop_speed, 'searchabilibity'=>$searchabilibity]);
 					array_push($seo_score_ar, ['name'=>$name, 'website_url'=>$website_str, 'seo_score'=>$seo_score]);
+					array_push($mobile_friendly_score_ar, ['name'=>$name, 'website_url'=>$website_str, 'mobile_friendly'=>$mobile_friendly_score, 'screen_shot'=>$screen_shot]);
+					array_push($security_ar, ['name'=>$name, 'status'=>$security]);
 				}
 			}
 			$i++;
@@ -241,6 +303,8 @@ if($response->getStatusCode() == 200)
 			array_push($reputation, $reputation_ar);
 			array_push($website, ['name'=>$name, 'website_url'=>$organization_website, 'mobile_speed'=>$my_mobile_speed, 'desktop_speed'=>$my_desktop_speed, 'searchabilibity'=>$my_searchabilibity]);
 			array_push($seo_score_ar, ['name'=>$name, 'website_url'=>$organization_website, 'seo_score'=>$my_seo_score]);
+			array_push($mobile_friendly_score_ar, ['name'=>$name, 'website_url'=>$organization_website, 'mobile_friendly'=>$my_mobile_friendly_score, 'screen_shot'=>$my_screen_shot]);
+			array_push($security_ar, ['name'=>$name, 'status'=>$my_security]);
 		}
 	}
 	else{
@@ -299,11 +363,11 @@ $i=0;
 foreach ($website as $row) {
 	if($row['name'] != "Your Organization")
 	{
-		echo ($i+1)." <b>".$row['name']."<br>\t".$row['website_url']."<br>\tDesktop Speed (".$row['desktop_speed'].") - Mobile Speed (".$row['mobile_speed'].") </b><br>\tSecurity - ".$row['searchabilibity']."<br><br>";
+		echo ($i+1)." <b>".$row['name']."<br>\t".$row['website_url']."<br>\tDesktop Speed (".$row['desktop_speed'].") - Mobile Speed (".$row['mobile_speed'].") </b><br><br>";
 		$i++;
 	}
 	else{
-		echo ($i+1)." <b>".$organization_name."<br>\t".$row['website_url']."<br>\tDesktop Speed (".$row['desktop_speed'].") - Mobile Speed (".$row['mobile_speed'].") </b><br>\tSecurity - ".$row['searchabilibity']."<br><br>";
+		echo ($i+1)." <b>".$organization_name."<br>\t".$row['website_url']."<br>\tDesktop Speed (".$row['desktop_speed'].") - Mobile Speed (".$row['mobile_speed'].") </b><br><br>";
 		$i++;
 	}
 }
@@ -321,6 +385,42 @@ foreach ($seo_score_ar as $row) {
 	}
 	else{
 		echo ($i+1)." <b>".$organization_name."<br>\t".$row['website_url']."<br>\tSEO Score (".$row['seo_score'].")<br><br>";
+		$i++;
+	}
+}
+
+//-------------------------- DISPLAYING MOBILE FRIENDLY STATUS ---------------------------------
+echo "<hr>";
+echo "<h3 style='color:green;'>Mobile Friendly Status</h3>";
+$i=0;
+// arsort($reputation);
+foreach ($mobile_friendly_score_ar as $row) {
+	if($row['name'] != "Your Organization")
+	{
+		echo ($i+1)." <b>".$row['name']."<br>\t".$row['website_url']."<br>\tMobile Friendly Status (".$row['mobile_friendly'].")<br>\t".$row['screen_shot']."
+		<br><br>";
+		$i++;
+	}
+	else{
+		echo ($i+1)." <b>".$organization_name."<br>\t".$row['website_url']."<br>\tMobile Friendly Status (".$row['mobile_friendly'].")<br>\t".$row['screen_shot']."
+		<br><br>";
+		$i++;
+	}
+}
+
+//-------------------------- DISPLAYING SECURITY STATUS ---------------------------------
+echo "<hr>";
+echo "<h3 style='color:green;'>Security Status</h3>";
+$i=0;
+// arsort($reputation);
+foreach ($security_ar as $row) {
+	if($row['name'] != "Your Organization")
+	{
+		echo ($i+1)." <b>".$row['name']."<br>\t".$row['status']."<br><br>";
+		$i++;
+	}
+	else{
+		echo ($i+1)." <b>".$organization_name."<br>\t".$row['status']."<br><br>";
 		$i++;
 	}
 }
