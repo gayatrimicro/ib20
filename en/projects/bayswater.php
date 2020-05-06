@@ -941,8 +941,8 @@ $result = $conn->query($sql);
 	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
 	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
 	<script type="text/javascript">
 $('.button').click(function(){
 	if($(".pac-target-input").val()=="")
