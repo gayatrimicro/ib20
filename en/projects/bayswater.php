@@ -812,6 +812,7 @@ $result = $conn->query($sql);
 			</div>
 			<div class="c-lisa_content">
 				<div class="edit_projfrm">
+					<img src="../../assets/images/lod.gif" class="img_lod">
 					<!-- <h6>Start a project</h6>
 					<h3>Sweet, now give us more details about your project?</h3> -->
 					<div class="modal-wrap">
@@ -822,7 +823,7 @@ $result = $conn->query($sql);
 	  <h4>Find your practice</h4>
 	  <form>
 		<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text" />
-		<p class="err_msg">Please Enter Location</p>
+		<p class="err_msg">Please enter location</p>
 		<div class="text-center">
 		  <div class="button chksts">Start</div>
 		</div>
@@ -860,14 +861,13 @@ $result = $conn->query($sql);
 		<label>
 		  Select Category to know your competitors
 		</label>
-		<label>
 		  <select name="category" required onchange="get_category(this.value)" id="e1" style="color: #000;">
 				<option value="">Select Category</option>
 				<?php while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
 				<?php } ?>
 			</select>
-		</label>
+			<hr>
 		<p class="err_msg">Please select category</p>
 		<div class="text-center fade-in">
 		  <div class="button_sel">Next</div>
@@ -875,7 +875,7 @@ $result = $conn->query($sql);
 	</div>
 	<div class="modal-body modal-body-step-4">
 	  <h3>Step 4</h3>
-	  <h4>Check your results.</h4>
+	  <h4 style="text-align: center;">Check your results.</h4>
 		<form method="post" action="competitors.php">
 			<input type="hidden" id="frm_street_number" value="" />
 			<input type="hidden" name="street_address" id="frm_route" value="" />
@@ -887,9 +887,9 @@ $result = $conn->query($sql);
 			<input type="hidden" id="frm_name" name="name" value="" />
 			<input type="hidden" id="frm_category" name="category" value="" />
 			<div class="text-center">
-				<button type="submit" class="button">Done!</button>
+				<button type="submit" class="button btn_fin">Done!</button>
 			</div>
-		</form>
+		</form>		
 	</div>
   </div>
 </div>
@@ -1163,6 +1163,10 @@ function get_category(id)
 			$(document).ready(function() {
 				$('.image_ripple').ripples('show');
 			});
+
+			$(".btn_fin").click(function(){
+				$(".img_lod").fadeIn("slow");
+			})
 		</script>
 
 
