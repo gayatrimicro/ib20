@@ -899,7 +899,7 @@ $result = $conn->query($sql);
 			<input type="text" name="user_contact" id="sno" maxlength="12">
 			<br>
 			<p class="err_msg">Please fill all fields</p>
-			<br><br>
+			
 			<div class="text-center">
 				<button type="submit" class="btn_fin">Done!</button>
 			</div>
