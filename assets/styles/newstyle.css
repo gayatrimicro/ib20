@@ -80,6 +80,26 @@
     color: #fff;
     border: thin solid #fff;
 }
+.btn_fin
+{
+    padding: 10px 50px;
+    border-radius: 33px;
+    background: #ffffff;
+    color: #4d84f1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn_fin:hover{
+    background: #4d84f1;
+    color: #fff;
+    border: thin solid #fff;
+}
+.hiddbtn
+{
+    display: none;
+}
 .err_msg{
 	font-size: 16px;
     color: rgb(255, 255, 255);

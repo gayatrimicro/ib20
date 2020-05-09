@@ -888,18 +888,20 @@ $result = $conn->query($sql);
 			<input type="hidden" id="frm_category" name="category" value="" />
 			
 			<label style="display: flex;"><strong>Name&nbsp;:&nbsp;</strong></label>
-			<input type="text" name="user_name" required="" maxlength="40">
+			<input type="text" name="user_name" id="snme" maxlength="40">
 			<br>
 
 			<label style="display: flex;"><strong>Email&nbsp;:&nbsp;</strong></label>
-			<input type="email" name="user_email" required="" maxlength="30">
+			<input type="email" name="user_email" id="seml" maxlength="30">
 			<br>
 
 			<label style="display: flex;"><strong>Contact Number&nbsp;:&nbsp;</strong></label>
-			<input type="text" name="user_contact" required="" maxlength="12">
+			<input type="text" name="user_contact" id="sno" maxlength="12">
 			<br>
+			<p class="err_msg">Please fill all fields</p>
+			<br><br>
 			<div class="text-center">
-				<button type="submit" class="button btn_fin">Done!</button>
+				<button type="submit" class="btn_fin">Done!</button>
 			</div>
 		</form>		
 	</div>
@@ -1177,8 +1179,24 @@ function get_category(id)
 			});
 
 			$(".btn_fin").click(function(){
-				$(".img_lod").fadeIn("slow");
-			})
+				
+				var nme = $("#snme").val();
+				var eml = $("#seml").val();
+				var no = $("#sno").val();
+
+				if(nme=="" && eml=="" && no=="")
+				{
+					$(".err_msg").show();
+					return false;
+				}
+				else
+				{
+					$(".modal-wrap").fadeOut("slow");
+					$(".err_msg").hide();
+					$(".img_lod").fadeIn("slow");
+				}
+				
+			});
 		</script>
 
 
