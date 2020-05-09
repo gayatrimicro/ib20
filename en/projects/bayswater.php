@@ -886,6 +886,18 @@ $result = $conn->query($sql);
 			<input type="hidden" id="frm_website" name="website" value="" />
 			<input type="hidden" id="frm_name" name="name" value="" />
 			<input type="hidden" id="frm_category" name="category" value="" />
+			
+			<label style="display: flex;"><strong>Name&nbsp;:&nbsp;</strong></label>
+			<input type="text" name="user_name" required="" maxlength="40">
+			<br>
+
+			<label style="display: flex;"><strong>Email&nbsp;:&nbsp;</strong></label>
+			<input type="email" name="user_email" required="" maxlength="30">
+			<br>
+
+			<label style="display: flex;"><strong>Contact Number&nbsp;:&nbsp;</strong></label>
+			<input type="text" name="user_contact" required="" maxlength="12">
+			<br>
 			<div class="text-center">
 				<button type="submit" class="button btn_fin">Done!</button>
 			</div>
