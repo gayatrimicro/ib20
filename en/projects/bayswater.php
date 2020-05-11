@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM business_category";
 $result = $conn->query($sql);
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html class="has-no-js" lang="en" data-template="contact" data-theme="dark"  data-pageColor="default">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -59,7 +59,7 @@ $result = $conn->query($sql);
 	<meta name="HandheldFriendly" content="true">
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	
 	<!-- Appearance -->
 	<meta name="theme-color" content="#4D84F1">
@@ -81,6 +81,7 @@ $result = $conn->query($sql);
 
 	<link rel="manifest" href="../../manifest.json">
 	<link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/newstyle.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css">
 
@@ -97,6 +98,12 @@ $result = $conn->query($sql);
 			background-image: url("../../uploads/projects/Bayswater/img_1920x1280_bayswater.jpg");
 			background-size: cover;
 		}
+		.pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+
+    background-image: none !important;
+    height: 0px;
+}
 
 	</style>
 	<link rel="stylesheet" id="main-css" href="../../assets/styles/main3e3a.css?v=4.51" media="none" onload="if(media!='all')media='all'">
@@ -112,15 +119,7 @@ $result = $conn->query($sql);
 
 	ga('send', 'pageview');
 	</script>
-	<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
-	<script src="../../assets/scripts/autotrack3e3a.js"></script>
-	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-	<script>
-		$(document).ready(function() { $("#e1").select2(); });
-	</script>
+	
 </head>
 <body data-module="Load" style="opacity: 0;">
 	<!-- <div class="c-debug-safari"></div> -->
@@ -638,7 +637,7 @@ $result = $conn->query($sql);
 							<div class="c-stats_number">90%</div>
 						</div>
 
-						<div class="o-object3d || c-stats_object3d || js-animate" data-gui="false" data-speed="2" data-module="Object3D js-animate" data-callback="trigger.Object3D()" data-models="hand_thumb.glb" data-settings='{ "camera": { "position": [0,-1,8], "fov": 45, "translateScroll": [0,20,0] }, "ambientLight": { "intensity": 0.4 }, "object": { "position": [-0.75,0.5,-0.5], "rotation": [7,246,-83], "rotationScroll": [0,0,110] } }'></div>
+						<!-- <div class="o-object3d || c-stats_object3d || js-animate" data-gui="false" data-speed="2" data-module="Object3D js-animate" data-callback="trigger.Object3D()" data-models="hand_thumb.glb" data-settings='{ "camera": { "position": [0,-1,8], "fov": 45, "translateScroll": [0,20,0] }, "ambientLight": { "intensity": 0.4 }, "object": { "position": [-0.75,0.5,-0.5], "rotation": [7,246,-83], "rotationScroll": [0,0,110] } }'></div> -->
 
 						<div class="o-layout_item || c-stats_block -after3d">
 							<div class="o-line -text"></div>
@@ -813,6 +812,7 @@ $result = $conn->query($sql);
 			</div>
 			<div class="c-lisa_content">
 				<div class="edit_projfrm">
+					<img src="../../assets/images/lod.gif" class="img_lod">
 					<!-- <h6>Start a project</h6>
 					<h3>Sweet, now give us more details about your project?</h3> -->
 					<div class="modal-wrap">
@@ -822,9 +822,10 @@ $result = $conn->query($sql);
 	  <h3>Step 1</h3>
 	  <h4>Find your practice</h4>
 	  <form>
-		<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text"/>
+		<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text" />
+		<p class="err_msg">Please enter location</p>
 		<div class="text-center">
-		  <div class="button">Start</div>
+		  <div class="button chksts">Start</div>
 		</div>
 	  </form>
 	</div>
@@ -854,27 +855,27 @@ $result = $conn->query($sql);
 	  
 	</div>
 
-	<div class="modal-body modal-body-step-3">
+	<div class="modal-body modal-body-step-3 cat_js_basic">
 	  <h3>Step 3</h3>
 	  <!-- <h4>Would you rather</h4> -->
 		<label>
 		  Select Category to know your competitors
 		</label>
-		<label>
 		  <select name="category" required onchange="get_category(this.value)" id="e1" style="color: #000;">
 				<option value="">Select Category</option>
 				<?php while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
 				<?php } ?>
 			</select>
-		</label>
+			<hr>
+		<p class="err_msg">Please select category</p>
 		<div class="text-center fade-in">
-		  <div class="button">Next</div>
+		  <div class="button_sel">Next</div>
 		</div>
 	</div>
 	<div class="modal-body modal-body-step-4">
 	  <h3>Step 4</h3>
-	  <h4>Check your results.</h4>
+	  <h4 style="text-align: center;">Check your results.</h4>
 		<form method="post" action="competitors.php">
 			<input type="hidden" id="frm_street_number" value="" />
 			<input type="hidden" name="street_address" id="frm_route" value="" />
@@ -885,10 +886,24 @@ $result = $conn->query($sql);
 			<input type="hidden" id="frm_website" name="website" value="" />
 			<input type="hidden" id="frm_name" name="name" value="" />
 			<input type="hidden" id="frm_category" name="category" value="" />
+			
+			<label style="display: flex;"><strong>Name&nbsp;:&nbsp;</strong></label>
+			<input type="text" name="user_name" id="snme" maxlength="40">
+			<br>
+
+			<label style="display: flex;"><strong>Email&nbsp;:&nbsp;</strong></label>
+			<input type="email" name="user_email" id="seml" maxlength="30">
+			<br>
+
+			<label style="display: flex;"><strong>Contact Number&nbsp;:&nbsp;</strong></label>
+			<input type="text" name="user_contact" id="sno" maxlength="12">
+			<br>
+			<p class="err_msg">Please fill all fields</p>
+			
 			<div class="text-center">
-				<button type="submit" class="button">Done!</button>
+				<button type="submit" class="btn_fin">Done!</button>
 			</div>
-		</form>
+		</form>		
 	</div>
   </div>
 </div>
@@ -896,8 +911,64 @@ $result = $conn->query($sql);
   <!--<div class="button">Loading...</div>-->
 	
 </div>
-<script type="text/javascript">
-$('.button').click(function(){
+
+
+
+
+
+							
+						</div>
+				
+				
+		
+
+
+		
+				
+			</div>
+		
+			
+		</div>
+		
+		<section class="c-choo" data-module="Choochoo">
+		
+			<button class="o-circle-button c-choo-btn_close js-choo-close" type="button">
+				<div class="o-circle-button_bg"></div>
+				<svg class="o-circle-button_icon" role="img"><use xlink:href="../../assets/images/sprite.svg#cross"></use></svg>
+			</button>
+		
+			<div class="c-choo_letter_bg js-letter-bg"></div>
+		
+			<div class="c-choo_letter_container">
+				<span class="js-letter c-choo_letter">C</span>
+				<span class="js-letter c-choo_letter">H</span>
+				<span class="js-letter c-choo_letter">O</span>
+				<span class="js-letter c-choo_letter">O</span>
+				<span class="js-letter c-choo_letter">C</span>
+				<span class="js-letter c-choo_letter">H</span>
+				<span class="js-letter c-choo_letter">O</span>
+				<span class="js-letter c-choo_letter">O</span>
+			</div>
+		
+			<div class="c-choo_image_container js-images-container"></div>
+		
+		</section>
+		<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
+	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
+	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
+	<script type="text/javascript">
+		$('.button_sel').click(function(){
+			var e = document.getElementById("e1");
+	var strUser = e.options[e.selectedIndex].text;
+	if(strUser=="Select Category")
+	{
+		$(".err_msg").show();
+		return false;
+	}
+	$(".err_msg").hide();
 	var $btn = $(this),
 	$step = $btn.parents('.modal-body'),
 	stepIndex = $step.index(),
@@ -905,6 +976,23 @@ $('.button').click(function(){
 	if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
 	else { step4($step, $pag); }  
 });
+
+$('.button').click(function(){
+	if($(".pac-target-input").val()=="")
+	{
+		$(".err_msg").show();
+		return false;
+	}
+
+	$(".err_msg").hide();
+	var $btn = $(this),
+	$step = $btn.parents('.modal-body'),
+	stepIndex = $step.index(),
+	$pag = $('.modal-header span').eq(stepIndex);
+	if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
+	else { step4($step, $pag); }  
+});
+
 
 
 function step1($step, $pag){
@@ -952,6 +1040,17 @@ $('.rerun-button').click(function(){
 
 function get_category(id)
 {
+	var city = document.getElementById('locality').innerHTML;
+	var state = document.getElementById('administrative_area_level_1').innerHTML;
+	var country = document.getElementById('country').innerHTML;
+	var organization_name = document.getElementById('name').innerHTML;
+	
+	console.log("Organization Name : "+organization_name);
+	document.getElementById('frm_locality').value = city;
+	document.getElementById('frm_administrative_area_level_1').value = state;
+	document.getElementById('frm_country').value = country;
+	document.getElementById('frm_name').value = organization_name;
+
 	document.getElementById('frm_category').value = '';
 	document.getElementById('frm_category').value = id;
 }
@@ -979,17 +1078,6 @@ function get_category(id)
 	  name: 'name',	  
 	};
 
-	var frm_componentForm = {	 
-	  frm_street_number: 'short_name',
-	  frm_route: 'long_name',
-	  frm_locality: 'long_name',
-	  frm_administrative_area_level_1: 'long_name',
-	  frm_country: 'short_name',
-	  frm_postal_code: 'short_name',
-	  frm_website: 'website',
-	  frm_name: 'name',
-	};
-
 	function initAutocomplete() {
 	  // Create the autocomplete object, restricting the search predictions to
 	  // geographical location types.
@@ -1014,12 +1102,6 @@ function get_category(id)
 		document.getElementById(component).innerHTML = '';
 		// document.getElementById(component).disabled = false;
 	  }
-
-	  for (var component in frm_componentForm) {
-		document.getElementById(component).value = '';
-		// document.getElementById(component).disabled = false;
-	  }
-
 	  
 	  // Get each component of the address from the place details,
 	  // and then fill-in the corresponding field on the form.
@@ -1028,14 +1110,6 @@ function get_category(id)
 		if (componentForm[addressType]) {
 		  var val = place.address_components[i][componentForm[addressType]];
 		  document.getElementById(addressType).innerHTML = val;		
-		}
-	  }
-
-	  for (var i = 0; i < place.address_components.length; i++) {
-		var addressType = place.address_components[i].types[0];
-		if (frm_componentForm[addressType]) {
-		  var val = place.address_components[i][frm_componentForm[addressType]];
-		  document.getElementById(addressType).value = val;		
 		}
 	  }
 
@@ -1059,58 +1133,26 @@ function get_category(id)
 		  autocomplete.setBounds(circle.getBounds());
 		});
 	  }
+		$(document).keypress(
+			function(event){
+			if (event.which == '13') {
+				event.preventDefault();
+			}
+		});
 	}
+	
 
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
 		async defer></script>
-
-
-
-
-							
-						</div>
-				
-				
-		
-
-
-		
-				
-			</div>
-		
-			
-		</div>
-		
-		<section class="c-choo" data-module="Choochoo">
-		
-			<button class="o-circle-button c-choo-btn_close js-choo-close" type="button">
-				<div class="o-circle-button_bg"></div>
-				<svg class="o-circle-button_icon" role="img"><use xlink:href="../../assets/images/sprite.svg#cross"></use></svg>
-			</button>
-		
-			<div class="c-choo_letter_bg js-letter-bg"></div>
-		
-			<div class="c-choo_letter_container">
-				<span class="js-letter c-choo_letter">C</span>
-				<span class="js-letter c-choo_letter">H</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">C</span>
-				<span class="js-letter c-choo_letter">H</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">O</span>
-			</div>
-		
-			<div class="c-choo_image_container js-images-container"></div>
-		
-		</section>
+	<script>
+		$(document).ready(function() { $("#e1").select2(); });
+	</script>
 		<script>
 			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
 
 			var iterator = 0;
 			var scripts = [
-				'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
 				'../../assets/scripts/vendors3e3a.js',
 				'../../assets/scripts/app3e3a.js'
 			];
@@ -1130,24 +1172,42 @@ function get_category(id)
 				dynamicallyLoadScript(scripts[iterator]);
 			}
 		</script>
-		<script type="text/javascript" src="../../assets/scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('.image_ripple').ripples('show');
 			});
+
+			$(".btn_fin").click(function(){
+				
+				var nme = $("#snme").val();
+				var eml = $("#seml").val();
+				var no = $("#sno").val();
+
+				if(nme=="" && eml=="" && no=="")
+				{
+					$(".err_msg").show();
+					return false;
+				}
+				else
+				{
+					$(".modal-wrap").fadeOut("slow");
+					$(".err_msg").hide();
+					$(".img_lod").fadeIn("slow");
+				}
+				
+			});
 		</script>
-		<script type="text/javascript" src="../../assets/scripts/app3e3a.js"></script>
 
-		<script type="text/javascript" src="../../assets/scripts/vendors3e3a.js"></script>
 
-		<script type="text/javascript" src="../../assets/scripts/analytics.js"></script>
-		<script type="text/javascript" src="../../assets/scripts/api.js"></script>
+		<!-- <script type="text/javascript" src="../../assets/scripts/analytics.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/api.js"></script> -->
 		
-		<script type="text/javascript" src="../../assets/scripts/player.js"></script>
+		<!-- <script type="text/javascript" src="../../assets/scripts/player.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/vendors.js"></script>
-		<script type="text/javascript" src="../../assets/scripts/vuid.min.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/vuid.min.js"></script> -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
 
 
@@ -1156,7 +1216,7 @@ function get_category(id)
 
 <script type="text/javascript">
 
-	// Load the IFrame Player API code asynchronously.
+	// // Load the IFrame Player API code asynchronously.
 	  var tag = document.createElement('script');
 	  tag.src = "https://www.youtube.com/player_api";
 	  var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -1228,7 +1288,6 @@ myVar = parseInt(footer, 10);
 	}, true);
 
 </script>
-
 
 	</body>
 
