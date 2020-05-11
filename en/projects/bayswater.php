@@ -423,7 +423,7 @@ $result = $conn->query($sql);
 					</div>
 
 					<div class="c-fancy-video-player || js-player" id="divContent">
-						<iframe src="https://www.youtube.com/embed/pIZpXQtf0Hw" width="640" height="360" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe>
+						<iframe src="" width="640" height="360" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe>
 						<!-- <iframe width="640" height="360"
 						src="https://www.youtube.com/embed/x-mNqbUX_WU">
 						</iframe> -->
@@ -477,7 +477,7 @@ $result = $conn->query($sql);
 	<figure class="o-container">
 		<div class="o-vimeo-player js-animate u-anim -delay-1">
 			<!-- <iframe class="js-animate ifrme_rempoi" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://www.youtube.com/embed/x-mNqbUX_WU?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=true&amp;loop=1&amp;muted=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" autoplay></iframe> -->
-			<iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=N8vMn4x5jAo&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe>
+			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=N8vMn4x5jAo&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
 			<iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe>
 			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
 		</div>
