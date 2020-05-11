@@ -2,7 +2,7 @@
 include "vendor/autoload.php";
 // var_dump($_POST);
 // exit();
-$servername = "localhost";
+$servername = "64.207.177.102";
 $username = "usr_google";
 $password = "Kd%x761x";
 // $username = "root";

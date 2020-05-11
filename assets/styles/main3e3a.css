@@ -2925,7 +2925,6 @@ html.is-mobile .o-cursor:not(.-top-mobile):not(.-center-mobile) {
 	margin: 0;
 	border: none;
 	height: 2px;
-    background-color: #fff;
 }
 
 .o-line.-under {
@@ -10079,8 +10078,8 @@ html:not(.has-slider-grabbing) .c-home_title_mobile_item.is-active {
 	left: 50%;
 	width: 2.66667rem;
 	height: 2.66667rem;
-	background-color: #fff;
-	z-index: -1;
+	border: thin solid #fff;
+	z-index: 9999999;
 	border-radius: 50%;
 	transform: translate3d(-50%, -50%, 0) scale(0);
 	transition: transform .3s cubic-bezier(.215, .61, .355, 1)

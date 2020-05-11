@@ -1132,6 +1132,7 @@ function get_category(id)
 		</script>
 		<script type="text/javascript" src="../../assets/scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('.image_ripple').ripples('show');
