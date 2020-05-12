@@ -2046,8 +2046,17 @@ html.is-dragging .o-scrollbar {
 	margin-left: -2.8rem;
 	pointer-events: none;
 	color: #fff;
-	z-index: 15;
+	z-index: 100;
 	will-change: transform
+}
+#myid video
+{
+	width: 100%;
+	height: 100%;
+	outline: none;
+}
+#myid video::-webkit-media-controls-start-playback-button {
+    display: none;
 }
 
 .o-cursor.-white {

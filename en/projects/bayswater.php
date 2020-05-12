@@ -95,8 +95,9 @@ $result = $conn->query($sql);
 	</style>
 	<style type="text/css">
 		#myid{
-			background-image: url("../../uploads/projects/Bayswater/img_1920x1280_bayswater.jpg");
-			background-size: cover;
+			/*background-image: url("../../uploads/projects/Bayswater/img_1920x1280_bayswater.jpg");
+			background-size: cover;*/
+			    background-color: #1c1c20;
 		}
 		.pac-container:after {
     /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
@@ -403,11 +404,10 @@ $result = $conn->query($sql);
 				<div class="c-fancy-video c-project_intro_item js-animate -paused has-video" data-module="FancyVideo">
 					<div class="c-fancy-video_bg" style="background-color:#EB2931"></div>
 					<div id="myid">
-						<div id="ytplayer">
-						<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?autoplay=1&controls=0&loop=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media" id="myvid">
-						</iframe> -->
-
-						</div>
+						<video id="fir_vid">
+  <source src="../../assets/videos/bayswater.mp4" type="video/mp4">
+</video>
+					
 				</div>
 
 					<div class="c-fancy-video-img_wrapper">
@@ -439,7 +439,7 @@ $result = $conn->query($sql);
 							<div class="o-cursor_label">
 								<div class="o-cursor_label_outer">
 									<div class="o-cursor_label_inner">
-										<span>Play</span>
+										<span class="cur_txt">Play</span>
 									</div>
 								</div>
 							</div>
@@ -477,13 +477,26 @@ $result = $conn->query($sql);
 				<div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
 	<figure class="o-container">
 		<div class="o-vimeo-player js-animate u-anim -delay-1" style="padding-bottom: 0% !important;">
-			<!-- <iframe class="js-animate ifrme_rempoi" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://www.youtube.com/embed/x-mNqbUX_WU?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=true&amp;loop=1&amp;muted=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" autoplay></iframe> -->
-			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=N8vMn4x5jAo&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
-			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
-			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
-			<video id="desk_vid1" autoplay loop>
-			  <source src="../../assets/videos/bayswater.mp4"  type="video/mp4">
-			</video>
+			<div id="vid_seco">
+				<video id="desk_vid1" autoplay loop>
+				  <source src="../../assets/videos/bayswater.mp4"  type="video/mp4">
+				</video>
+				<div class="c-fancy-video-cursor || o-cursor_wrapper || js-video-cursor js-animate" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()">
+						<div class="c-fancy-video-cursor_zone || js-drag-zone"></div>
+
+						<div class="o-cursor -white -center-mobile || js-cursor">
+							<div class="o-cursor_background"></div>
+							<div class="o-cursor_label">
+								<div class="o-cursor_label_outer">
+									<div class="o-cursor_label_inner">
+										<span class="cur_txt">Play</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			
 		</div>
 	</figure>
 </div>
@@ -1221,49 +1234,71 @@ function get_category(id)
 <script type="text/javascript">
 
 	// // Load the IFrame Player API code asynchronously.
-	  var tag = document.createElement('script');
-	  tag.src = "https://www.youtube.com/player_api";
-	  var firstScriptTag = document.getElementsByTagName('script')[0];
-	  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	  // var tag = document.createElement('script');
+	  // tag.src = "../../assets/videos/bayswater.mp4";
+	  // var firstScriptTag = document.getElementsByTagName('script')[0];
+	  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 	  // Replace the 'ytplayer' element with an <iframe> and
 	  // YouTube player after the API code downloads.
-	  var player;
-	  function onYouTubePlayerAPIReady() {
-		player = new YT.Player('ytplayer', {
-		  height: '360',
-		  width: '640',
-		  playerVars : {
-				autoplay :0,
-				controls:0,
-				rel: 0
-			},
-		  videoId: 'N8vMn4x5jAo'
-		});
-	  }
+	 //  var player;
+	 //  function onYouTubePlayerAPIReady() {
+		// player = new YT.Player('ytplayer', {
+		//   height: '360',
+		//   width: '640',
+		//   playerVars : {
+		// 		autoplay :0,
+		// 		controls:0,
+		// 		rel: 0
+		// 	},
+		//   videoId: 'N8vMn4x5jAo'
+		// });
+	 //  }
 
 
 $('#myid').click(function(){
-	$("#myid iframe").css("display","block");
-	$(".o-cursor.-white").css("display","none");
-	player.playVideo();
+	var vid = document.getElementById("fir_vid");	
+	if(vid.paused)
+	{
+		vid.play();
+		$(".cur_txt").text("Pause");
+	}
+	else
+	{
+		vid.pause();
+		$(".cur_txt").text("Play");
+	}
 });
 
-$(document).mouseup(function (e)
-{
-	var container = new Array();
-	container.push($('#myid'));
-	
-	$.each(container, function(key, value) {
-		if (!$(value).is(e.target) // if the target of the click isn't the container...
-			&& $(value).has(e.target).length === 0) // ... nor a descendant of the container
-		{
-			$("#myid iframe").css("display","none");
-			$(".o-cursor.-white").css("display","block");
-			player.stopVideo();
-		}
-	});
+$('#vid_seco').click(function(){
+	var vid = document.getElementById("desk_vid1");	
+	if(vid.paused)
+	{
+		vid.play();
+		$(".cur_txt").text("Pause");
+	}
+	else
+	{
+		vid.pause();
+		$(".cur_txt").text("Play");
+	}
 });
+
+// $(document).mouseup(function (e)
+// {
+// 	var container = new Array();
+// 	container.push($('#myid'));
+	
+// 	$.each(container, function(key, value) {
+// 		if (!$(value).is(e.target) // if the target of the click isn't the container...
+// 			&& $(value).has(e.target).length === 0) // ... nor a descendant of the container
+// 		{
+// 			$("#myid iframe").css("display","none");
+// 			$(".o-cursor.-white").css("display","block");
+// 			player.stopVideo();
+// 		}
+// 	});
+// });
 </script>
 <script type="text/javascript">
 
@@ -1272,10 +1307,6 @@ $(document).mouseup(function (e)
 	vid.play();
 	});
 
-	$("#desk_vid1").click(function(){
-		var vid1 = document.getElementById("desk_vid1");
-		vid1.play();
-	});
 
 	$("#normal_vid").click(function(){
 		var vid2 = document.getElementById("normal_vid");
