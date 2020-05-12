@@ -1,5 +1,4 @@
 ! function() {
-    "use strict";
 
     function l(t, e, i, n, s, o, a) {
         try {
@@ -1440,7 +1439,7 @@
                     this.lineLength = 50, this.planeGeometry = new THREE.PlaneBufferGeometry(6.5, 8, this.lineLength, this.lineLength);
                     var t = new THREE.Matrix3;
                     t.setUvTransform(0, 0, 1, 1, 0, 0, 0);
-                    var e = (new THREE.TextureLoader).load(window.isTouch ? "/assets/images/flag-displacement-vertical.png" : "/assets/images/flag-displacement.png");
+                    var e = (new THREE.TextureLoader).load(window.isTouch ? "../ib20/assets/images/flag-displacement-vertical.png" : "../ib20/assets/images/flag-displacement.png");
                     e.minFilter = THREE.LinearFilter, this.planeMaterial = new THREE.ShaderMaterial({
                         vertexShader: "\n    uniform sampler2D texture;\n    uniform float factor;\n\n    #include <common>\n    #include <uv_pars_vertex>\n\n    void main() {\n        #include <uv_vertex>\n\n        vec3 newPosition = vec3(position.x, position.y, position.z + ((texture2D(texture, vUv).r ) * factor * 2.));\n\n        gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.);\n    }\n",
                         fragmentShader: "\n\n    uniform vec3 color;\n\n    void main() {\n\n      // colour is RGBA: u, v, 0, 1\n      gl_FragColor = vec4( color , 1. );\n\n    }\n",
@@ -6002,7 +6001,7 @@
                 key: "getContext",
                 value: function() {
                     return new Promise(function(e) {
-                        $.getJSON("api/weather-forecast", {
+                        $.getJSON("#", {
                             lang: _e.lisa.lang
                         }, function(t) {
                             _e.lisa.context = t, e()
@@ -8473,7 +8472,7 @@
             NavButton: Qs,
             PlayShapes: z
         });
-    console.log("%c👋 – 🔨 with ❤️ by iBridge", "font-size:10px;font-weight: bold;color:#fff; background-color:#4D84F1; padding:5px;border-radius:4px;");
+    // console.log("%c👋 – 🔨 with ❤️ by iBridge", "font-size:10px;font-weight: bold;color:#fff; background-color:#4D84F1; padding:5px;border-radius:4px;");
     var to = function() {
         function t() {
             var e = this;

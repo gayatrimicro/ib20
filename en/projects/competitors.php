@@ -1,5 +1,9 @@
 <?php
 include "vendor/autoload.php";
+
+// var_dump($_POST);
+// exit();
+
 use PHPMailer\PHPMailer\PHPMailer;
 set_time_limit(5016000);
 

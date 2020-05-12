@@ -406,7 +406,6 @@ $result = $conn->query($sql);
 						<div id="ytplayer">
 						<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?autoplay=1&controls=0&loop=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media" id="myvid">
 						</iframe> -->
-
 						</div>
 				</div>
 
@@ -423,8 +422,8 @@ $result = $conn->query($sql);
 						</div>
 					</div>
 
-					<div class="c-fancy-video-player || js-player" id="divContent" style="background-color: red;">
-						<iframe src="" width="640" height="360" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe>
+					<div class="c-fancy-video-player || js-player" id="divContent">
+						<iframe src="https://www.youtube.com/embed/pIZpXQtf0Hw" width="640" height="360" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe>
 						<!-- <iframe width="640" height="360"
 						src="https://www.youtube.com/embed/x-mNqbUX_WU">
 						</iframe> -->
@@ -476,14 +475,11 @@ $result = $conn->query($sql);
 
 				<div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
 	<figure class="o-container">
-		<div class="o-vimeo-player js-animate u-anim -delay-1" style="padding-bottom: 0% !important;">
+		<div class="o-vimeo-player js-animate u-anim -delay-1">
 			<!-- <iframe class="js-animate ifrme_rempoi" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://www.youtube.com/embed/x-mNqbUX_WU?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=true&amp;loop=1&amp;muted=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" autoplay></iframe> -->
-			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=N8vMn4x5jAo&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
-			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
+			<iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=N8vMn4x5jAo&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe>
+			<iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe>
 			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
-			<video id="desk_vid1" autoplay loop>
-			  <source src="../../assets/videos/bayswater.mp4"  type="video/mp4">
-			</video>
 		</div>
 	</figure>
 </div>
@@ -1271,17 +1267,6 @@ $(document).mouseup(function (e)
 		var vid = document.getElementById("desk_vid");
 	vid.play();
 	});
-
-	$("#desk_vid1").click(function(){
-		var vid1 = document.getElementById("desk_vid1");
-		vid1.play();
-	});
-
-	$("#normal_vid").click(function(){
-		var vid2 = document.getElementById("normal_vid");
-		vid2.play();
-	});
-
 
 	document.addEventListener('scroll', function (event) {
 

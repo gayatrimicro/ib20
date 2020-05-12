@@ -1,22 +1,22 @@
 <?php
-$servername = "64.207.177.102";
-$username = "usr_google";
-$password = "Kd%x761x";
+// $servername = "localhost";
+// // $username = "usr_google";
+// // $password = "Kd%x761x";
 // $username = "root";
 // $password = "";
-$databese = 'google';
-// Create connection
-$conn = new mysqli($servername, $username, $password, $databese);
+// $databese = 'google';
+// // Create connection
+// $conn = new mysqli($servername, $username, $password, $databese);
 
-// Check connection
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}
+// // Check connection
+// if ($conn->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// }
 
-$sql = "SELECT * FROM business_category";
-$result = $conn->query($sql);
+// $sql = "SELECT * FROM business_category";
+// $result = $conn->query($sql);
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html class="has-no-js" lang="en" data-template="contact" data-theme="dark"  data-pageColor="default">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -59,7 +59,7 @@ $result = $conn->query($sql);
 	<meta name="HandheldFriendly" content="true">
 
 
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	
 	<!-- Appearance -->
 	<meta name="theme-color" content="#4D84F1">
@@ -81,7 +81,6 @@ $result = $conn->query($sql);
 
 	<link rel="manifest" href="../../manifest.json">
 	<link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/newstyle.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css">
 
@@ -98,12 +97,6 @@ $result = $conn->query($sql);
 			background-image: url("../../uploads/projects/Bayswater/img_1920x1280_bayswater.jpg");
 			background-size: cover;
 		}
-		.pac-container:after {
-    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
-
-    background-image: none !important;
-    height: 0px;
-}
 
 	</style>
 	<link rel="stylesheet" id="main-css" href="../../assets/styles/main3e3a.css?v=4.51" media="none" onload="if(media!='all')media='all'">
@@ -119,7 +112,15 @@ $result = $conn->query($sql);
 
 	ga('send', 'pageview');
 	</script>
-	
+	<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
+	<script src="../../assets/scripts/autotrack3e3a.js"></script>
+	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+	<script>
+		$(document).ready(function() { $("#e1").select2(); });
+	</script>
 </head>
 <body data-module="Load" style="opacity: 0;">
 	<!-- <div class="c-debug-safari"></div> -->
@@ -406,7 +407,6 @@ $result = $conn->query($sql);
 						<div id="ytplayer">
 						<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?autoplay=1&controls=0&loop=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media" id="myvid">
 						</iframe> -->
-
 						</div>
 				</div>
 
@@ -423,8 +423,8 @@ $result = $conn->query($sql);
 						</div>
 					</div>
 
-					<div class="c-fancy-video-player || js-player" id="divContent" style="background-color: red;">
-						<iframe src="" width="640" height="360" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe>
+					<div class="c-fancy-video-player || js-player" id="divContent">
+						<iframe src="https://www.youtube.com/embed/pIZpXQtf0Hw" width="640" height="360" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe>
 						<!-- <iframe width="640" height="360"
 						src="https://www.youtube.com/embed/x-mNqbUX_WU">
 						</iframe> -->
@@ -463,8 +463,8 @@ $result = $conn->query($sql);
 			<div class="o-vimeo-player">
 				<!-- <iframe class="js-animate" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://www.youtube.com/embed/x-mNqbUX_WU" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe> -->
 				<!-- <video id="desk_vid" loop>
-				  <source src="../../assets/videos/bayswater.mp4" type="video/mp4">
-				</video> -->
+  <source src="../../assets/videos/bayswater.mp4" type="video/mp4">
+</video> -->
 				<video id="desk_vid" autoplay loop>
 				  <source src="../../assets/videos/bayswater.mp4"  type="video/mp4">
 				</video>
@@ -476,14 +476,11 @@ $result = $conn->query($sql);
 
 				<div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
 	<figure class="o-container">
-		<div class="o-vimeo-player js-animate u-anim -delay-1" style="padding-bottom: 0% !important;">
+		<div class="o-vimeo-player js-animate u-anim -delay-1">
 			<!-- <iframe class="js-animate ifrme_rempoi" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://www.youtube.com/embed/x-mNqbUX_WU?controls=false&amp;autoplay=1&amp;transparent=false&amp;autopause=true&amp;loop=1&amp;muted=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" autoplay></iframe> -->
-			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=N8vMn4x5jAo&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
-			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
+			<iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=N8vMn4x5jAo&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe>
+			<iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe>
 			<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
-			<video id="desk_vid1" autoplay loop>
-			  <source src="../../assets/videos/bayswater.mp4"  type="video/mp4">
-			</video>
 		</div>
 	</figure>
 </div>
@@ -641,7 +638,7 @@ $result = $conn->query($sql);
 							<div class="c-stats_number">90%</div>
 						</div>
 
-						<!-- <div class="o-object3d || c-stats_object3d || js-animate" data-gui="false" data-speed="2" data-module="Object3D js-animate" data-callback="trigger.Object3D()" data-models="hand_thumb.glb" data-settings='{ "camera": { "position": [0,-1,8], "fov": 45, "translateScroll": [0,20,0] }, "ambientLight": { "intensity": 0.4 }, "object": { "position": [-0.75,0.5,-0.5], "rotation": [7,246,-83], "rotationScroll": [0,0,110] } }'></div> -->
+						<div class="o-object3d || c-stats_object3d || js-animate" data-gui="false" data-speed="2" data-module="Object3D js-animate" data-callback="trigger.Object3D()" data-models="hand_thumb.glb" data-settings='{ "camera": { "position": [0,-1,8], "fov": 45, "translateScroll": [0,20,0] }, "ambientLight": { "intensity": 0.4 }, "object": { "position": [-0.75,0.5,-0.5], "rotation": [7,246,-83], "rotationScroll": [0,0,110] } }'></div>
 
 						<div class="o-layout_item || c-stats_block -after3d">
 							<div class="o-line -text"></div>
@@ -816,7 +813,6 @@ $result = $conn->query($sql);
 			</div>
 			<div class="c-lisa_content">
 				<div class="edit_projfrm">
-					<img src="../../assets/images/lod.gif" class="img_lod">
 					<!-- <h6>Start a project</h6>
 					<h3>Sweet, now give us more details about your project?</h3> -->
 					<div class="modal-wrap">
@@ -826,96 +822,246 @@ $result = $conn->query($sql);
 	  <h3>Step 1</h3>
 	  <h4>Find your practice</h4>
 	  <form>
-		<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text" />
-		<p class="err_msg">Please enter location</p>
+		<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text"/>
 		<div class="text-center">
-		  <div class="button chksts">Start</div>
+		  <div class="button">Start</div>
 		</div>
 	  </form>
 	</div>
-	
 	<div class="modal-body modal-body-step-2">
 	  <h3>Step 2</h3>
-	  <!-- <h4>Would you rather</h4> -->
-		<div id="address" hidden="" style="color: #fff;">
-			<label style="display: flex;"><strong>Street address&nbsp;:&nbsp;</strong><p id="street_number"></p>&nbsp;<p id="route"></p></label><br>
-
-			<label style="display: flex;"><strong>City&nbsp;:&nbsp;</strong><p id="locality"></p></label><br>
-
-			<label style="display: flex;"><strong>State&nbsp;:&nbsp;</strong><p id="administrative_area_level_1"></p></label><br>
-
-			<label style="display: flex;"><strong>Zip code&nbsp;:&nbsp;</strong><p id="postal_code"></p></label><br>
-
-			<label style="display: flex;"><strong>Country&nbsp;:&nbsp;</strong><p id="country"></p></label><br>
-
-			<label style="display: flex;"><strong>Website&nbsp;:&nbsp;</strong><p id="website"></p></label><br>
-
-			<label style="display: flex;"><strong>Organization&nbsp;:&nbsp;</strong><p id="name"></p></label>
-			<br><br>
+	  <h4>Would you rather</h4>
+	  <form>
+		<!-- <label>
+		  <input type="radio" name="radio"/>live one life that lasts 1,000 years?
+		</label>
+		<label>
+		  <input id="radio2" type="radio" name="radio"/>live 10 lives that last 100 years each?
+		</label> -->
+		<div>
+			<form method="post" action="competitors.php">
+	<table id="address" hidden>
+	  <tr>
+		<td class="label">Street address</td>
+		<td class="slimField"><input class="field" id="street_number" disabled="true"/></td>
+		<td class="wideField" colspan="2"><input class="field" name="street_address" id="route" disabled="true"/></td>
+	  </tr>
+	  <tr>
+		<td class="label">City</td>
+		<td class="wideField" colspan="3"><input class="field" id="locality" name="city" disabled="true"/></td>
+	  </tr>
+	  <tr>
+		<td class="label">State</td>
+		<td class="slimField"><input class="field" id="administrative_area_level_1" name="state" disabled="true"/></td>
+		<td class="label">Zip code</td>
+		<td class="wideField"><input class="field" id="postal_code" name="zip_code" disabled="true"/></td>
+	  </tr>
+	  <tr>
+		<td class="label">Country</td>
+		<td class="wideField" colspan="3"><input class="field" id="country" name="country" disabled="true"/></td>
+	  </tr>
+	  <tr>
+		<td class="label">Website</td>
+		<td class="wideField" colspan="3"><input class="field" id="website" name="website" disabled="true"/></td>
+	  </tr>
+	  <tr>
+		<td class="label">Organization</td>
+		<td class="wideField" colspan="3"><input class="field" id="name" name="name" disabled="true"/></td>
+	  </tr>
+	  <tr>
+		<td class="wideField" style="text-align: center;" colspan="4"><hr><h3>Select Category to know your competitors</h3></td>
+	  </tr>
+	  <tr>
+		<td class="label">Category</td>
+		<td class="wideField" colspan="3">
+			<select name="category" required id="e1">
+				<option value="">Select Category</option>
+				<?php while($row = $result->fetch_assoc()) { ?>
+					<option value="<?php echo $row['category'] ?>"><?php echo $row['category'] ?></option>
+				<?php } ?>
+			</select>
+		</td>
+	  </tr>
+	  <tr>
+		<td class="label">&nbsp;</td>
+		<td class="wideField" colspan="3">
+			<input type="submit" name="Submit">
+		</td>
+	  </tr>
+	</table>
+	</form>
 		</div>
 		<div class="text-center fade-in">
 		  <div class="button">Next</div>
 		</div>
-	  
+	  </form>
 	</div>
 
-	<div class="modal-body modal-body-step-3 cat_js_basic">
+	<div class="modal-body modal-body-step-3">
 	  <h3>Step 3</h3>
-	  <!-- <h4>Would you rather</h4> -->
+	  <h4>Would you rather</h4>
+	  <form>
 		<label>
-		  Select Category to know your competitors
+		  <input type="radio" name="radio"/>live one life that lasts 1,000 years?
 		</label>
-		  <select name="category" required onchange="get_category(this.value)" id="e1" style="color: #000;">
-				<option value="">Select Category</option>
-				<?php while($row = $result->fetch_assoc()) { ?>
-					<option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
-				<?php } ?>
-			</select>
-			<hr>
-		<p class="err_msg">Please select category</p>
+		<label>
+		  <input id="radio2" type="radio" name="radio"/>live 10 lives that last 100 years each?
+		</label>
 		<div class="text-center fade-in">
-		  <div class="button_sel">Next</div>
+		  <div class="button">Next</div>
 		</div>
+	  </form>
 	</div>
 	<div class="modal-body modal-body-step-4">
 	  <h3>Step 4</h3>
-	  <h4 style="text-align: center;">Check your results.</h4>
-		<form method="post" action="competitors.php">
-			<input type="hidden" id="frm_street_number" value="" />
-			<input type="hidden" name="street_address" id="frm_route" value="" />
-			<input type="hidden" id="frm_locality" name="city" value="" />
-			<input type="hidden" id="frm_administrative_area_level_1" name="state" value="" />
-			<input type="hidden" id="frm_postal_code" name="zip_code" value="" />
-			<input type="hidden" id="frm_country" name="country" value="" />
-			<input type="hidden" id="frm_website" name="website" value="" />
-			<input type="hidden" id="frm_name" name="name" value="" />
-			<input type="hidden" id="frm_category" name="category" value="" />
-			
-			<label style="display: flex;"><strong>Name&nbsp;:&nbsp;</strong></label>
-			<input type="text" name="user_name" id="snme" maxlength="40">
-			<br>
-
-			<label style="display: flex;"><strong>Email&nbsp;:&nbsp;</strong></label>
-			<input type="email" name="user_email" id="seml" maxlength="30">
-			<br>
-
-			<label style="display: flex;"><strong>Contact Number&nbsp;:&nbsp;</strong></label>
-			<input type="text" name="user_contact" id="sno" maxlength="12">
-			<br>
-			<p class="err_msg">Please fill all fields</p>
-			
-			<div class="text-center">
-				<button type="submit" class="btn_fin">Done!</button>
-			</div>
-		</form>		
+	  <h4>Check your email for the game results.</h4>
+	  <div class="text-center">
+		<div class="button">Done!</div>
+	  </div>
 	</div>
   </div>
 </div>
 <div class="text-center">
-  <!--<div class="button">Loading...</div>-->
-	
+  <div class="rerun-button">ReRun</div>
 </div>
+<script type="text/javascript">
+$('.button').click(function(){
+	var $btn = $(this),
+	$step = $btn.parents('.modal-body'),
+	stepIndex = $step.index(),
+	$pag = $('.modal-header span').eq(stepIndex);
+	if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
+	else { step4($step, $pag); }  
+});
 
+
+function step1($step, $pag){
+	console.log('step1');
+  // animate the step out
+  $step.addClass('animate-out');
+  
+  // animate the step in
+  setTimeout(function(){
+	$step.removeClass('animate-out is-showing')
+		 .next().addClass('animate-in');
+	$pag.removeClass('is-active')
+		  .next().addClass('is-active');
+  }, 600);
+  
+  // after the animation, adjust the classes
+  setTimeout(function(){
+	$step.next().removeClass('animate-in')
+		  .addClass('is-showing');
+	
+  }, 1200);
+}
+
+
+function step4($step, $pag){
+console.log('3');
+
+  // animate the step out
+  $step.parents('.modal-wrap').addClass('animate-up');
+
+  setTimeout(function(){
+	$('.rerun-button').css('display', 'inline-block');
+  }, 300);
+}
+
+$('.rerun-button').click(function(){
+ $('.modal-wrap').removeClass('animate-up')
+				  .find('.modal-body')
+				  .first().addClass('is-showing')
+				  .siblings().removeClass('is-showing');
+
+  $('.modal-header span').first().addClass('is-active')
+						  .siblings().removeClass('is-active');
+ $(this).hide();
+});
+
+</script>
+
+<script>
+	// This sample uses the Autocomplete widget to help the user select a
+	// place, then it retrieves the address components associated with that
+	// place, and then it populates the form fields with those details.
+	// This sample requires the Places library. Include the libraries=places
+	// parameter when you first load the API. For example:
+	// <script
+	// src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+	var placeSearch, autocomplete;
+
+	var componentForm = {
+	  street_number: 'short_name',
+	  route: 'long_name',
+	  locality: 'long_name',
+	  administrative_area_level_1: 'long_name',
+	  country: 'short_name',
+	  postal_code: 'short_name',
+	  website: 'website',
+	  name: 'name',
+	};
+
+	function initAutocomplete() {
+	  // Create the autocomplete object, restricting the search predictions to
+	  // geographical location types.
+	  autocomplete = new google.maps.places.Autocomplete(
+		  document.getElementById('autocomplete'), {types: ['establishment']});
+
+	  // Avoid paying for data that you don't need by restricting the set of
+	  // place fields that are returned to just the address components.
+	  // autocomplete.setFields(['address_component', 'website']);
+
+	  // When the user selects an address from the drop-down, populate the
+	  // address fields in the form.
+	  autocomplete.addListener('place_changed', fillInAddress);
+	}
+
+	function fillInAddress() {
+	  // Get the place details from the autocomplete object.
+	  document.getElementById('address').removeAttribute("hidden");
+	  var place = autocomplete.getPlace();
+
+	  for (var component in componentForm) {
+		document.getElementById(component).value = '';
+		document.getElementById(component).disabled = false;
+	  }
+
+	  
+	  // Get each component of the address from the place details,
+	  // and then fill-in the corresponding field on the form.
+	  for (var i = 0; i < place.address_components.length; i++) {
+		var addressType = place.address_components[i].types[0];
+		if (componentForm[addressType]) {
+		  var val = place.address_components[i][componentForm[addressType]];
+		  document.getElementById(addressType).value = val;		
+		}
+	  }
+
+	  document.getElementById('website').value = place['website'];
+	  document.getElementById('name').value = place['name'];
+	}
+
+	// Bias the autocomplete object to the user's geographical location,
+	// as supplied by the browser's 'navigator.geolocation' object.
+	function geolocate() {
+	  if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(position) {
+		  var geolocation = {
+			lat: position.coords.latitude,
+			lng: position.coords.longitude
+		  };
+		  var circle = new google.maps.Circle(
+			  {center: geolocation, radius: position.coords.accuracy});
+		  autocomplete.setBounds(circle.getBounds());
+		});
+	  }
+	}
+
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
+		async defer></script>
 
 
 
@@ -957,206 +1103,12 @@ $result = $conn->query($sql);
 			<div class="c-choo_image_container js-images-container"></div>
 		
 		</section>
-		<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
-	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
-	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
-	<script type="text/javascript">
-		$('.button_sel').click(function(){
-			var e = document.getElementById("e1");
-	var strUser = e.options[e.selectedIndex].text;
-	if(strUser=="Select Category")
-	{
-		$(".err_msg").show();
-		return false;
-	}
-	$(".err_msg").hide();
-	var $btn = $(this),
-	$step = $btn.parents('.modal-body'),
-	stepIndex = $step.index(),
-	$pag = $('.modal-header span').eq(stepIndex);
-	if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
-	else { step4($step, $pag); }  
-});
-
-$('.button').click(function(){
-	if($(".pac-target-input").val()=="")
-	{
-		$(".err_msg").show();
-		return false;
-	}
-
-	$(".err_msg").hide();
-	var $btn = $(this),
-	$step = $btn.parents('.modal-body'),
-	stepIndex = $step.index(),
-	$pag = $('.modal-header span').eq(stepIndex);
-	if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
-	else { step4($step, $pag); }  
-});
-
-
-
-function step1($step, $pag){
-	console.log('step1');
-  // animate the step out
-  $step.addClass('animate-out');
-  
-  // animate the step in
-  setTimeout(function(){
-	$step.removeClass('animate-out is-showing')
-		 .next().addClass('animate-in');
-	$pag.removeClass('is-active')
-		  .next().addClass('is-active');
-  }, 600);
-  
-  // after the animation, adjust the classes
-  setTimeout(function(){
-	$step.next().removeClass('animate-in')
-		  .addClass('is-showing');
-	
-  }, 1200);
-}
-
-function step4($step, $pag){
-console.log('3');
-
-  // animate the step out
-  $step.parents('.modal-wrap').addClass('animate-up');
-
-  setTimeout(function(){
-	$('.rerun-button').css('display', 'inline-block');
-  }, 300);
-}
-
-$('.rerun-button').click(function(){
- $('.modal-wrap').removeClass('animate-up')
-				  .find('.modal-body')
-				  .first().addClass('is-showing')
-				  .siblings().removeClass('is-showing');
-
-  $('.modal-header span').first().addClass('is-active')
-						  .siblings().removeClass('is-active');
- $(this).hide();
-});
-
-function get_category(id)
-{
-	var city = document.getElementById('locality').innerHTML;
-	var state = document.getElementById('administrative_area_level_1').innerHTML;
-	var country = document.getElementById('country').innerHTML;
-	var organization_name = document.getElementById('name').innerHTML;
-	
-	console.log("Organization Name : "+organization_name);
-	document.getElementById('frm_locality').value = city;
-	document.getElementById('frm_administrative_area_level_1').value = state;
-	document.getElementById('frm_country').value = country;
-	document.getElementById('frm_name').value = organization_name;
-
-	document.getElementById('frm_category').value = '';
-	document.getElementById('frm_category').value = id;
-}
-</script>
-
-<script>
-	// This sample uses the Autocomplete widget to help the user select a
-	// place, then it retrieves the address components associated with that
-	// place, and then it populates the form fields with those details.
-	// This sample requires the Places library. Include the libraries=places
-	// parameter when you first load the API. For example:
-	// <script
-	// src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-	var placeSearch, autocomplete;
-
-	var componentForm = {
-	  street_number: 'short_name',
-	  route: 'long_name',
-	  locality: 'long_name',
-	  administrative_area_level_1: 'long_name',
-	  country: 'short_name',
-	  postal_code: 'short_name',
-	  website: 'website',
-	  name: 'name',	  
-	};
-
-	function initAutocomplete() {
-	  // Create the autocomplete object, restricting the search predictions to
-	  // geographical location types.
-	  autocomplete = new google.maps.places.Autocomplete(
-		  document.getElementById('autocomplete'), {types: ['establishment']});
-
-	  // Avoid paying for data that you don't need by restricting the set of
-	  // place fields that are returned to just the address components.
-	  // autocomplete.setFields(['address_component', 'website']);
-
-	  // When the user selects an address from the drop-down, populate the
-	  // address fields in the form.
-	  autocomplete.addListener('place_changed', fillInAddress);
-	}
-
-	function fillInAddress() {
-	  // Get the place details from the autocomplete object.
-	  document.getElementById('address').removeAttribute("hidden");
-	  var place = autocomplete.getPlace();
-
-	  for (var component in componentForm) {
-		document.getElementById(component).innerHTML = '';
-		// document.getElementById(component).disabled = false;
-	  }
-	  
-	  // Get each component of the address from the place details,
-	  // and then fill-in the corresponding field on the form.
-	  for (var i = 0; i < place.address_components.length; i++) {
-		var addressType = place.address_components[i].types[0];
-		if (componentForm[addressType]) {
-		  var val = place.address_components[i][componentForm[addressType]];
-		  document.getElementById(addressType).innerHTML = val;		
-		}
-	  }
-
-	  document.getElementById('website').innerHTML = place['website'];
-	  document.getElementById('name').innerHTML = place['name'];
-	  document.getElementById('frm_website').value = place['website'];
-	  document.getElementById('frm_name').value = place['name'];
-	}
-
-	// Bias the autocomplete object to the user's geographical location,
-	// as supplied by the browser's 'navigator.geolocation' object.
-	function geolocate() {
-	  if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(function(position) {
-		  var geolocation = {
-			lat: position.coords.latitude,
-			lng: position.coords.longitude
-		  };
-		  var circle = new google.maps.Circle(
-			  {center: geolocation, radius: position.coords.accuracy});
-		  autocomplete.setBounds(circle.getBounds());
-		});
-	  }
-		$(document).keypress(
-			function(event){
-			if (event.which == '13') {
-				event.preventDefault();
-			}
-		});
-	}
-	
-
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
-		async defer></script>
-	<script>
-		$(document).ready(function() { $("#e1").select2(); });
-	</script>
 		<script>
 			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
 
 			var iterator = 0;
 			var scripts = [
+				'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
 				'../../assets/scripts/vendors3e3a.js',
 				'../../assets/scripts/app3e3a.js'
 			];
@@ -1176,42 +1128,23 @@ function get_category(id)
 				dynamicallyLoadScript(scripts[iterator]);
 			}
 		</script>
+		<script type="text/javascript" src="../../assets/scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('.image_ripple').ripples('show');
 			});
-
-			$(".btn_fin").click(function(){
-				
-				var nme = $("#snme").val();
-				var eml = $("#seml").val();
-				var no = $("#sno").val();
-
-				if(nme=="" && eml=="" && no=="")
-				{
-					$(".err_msg").show();
-					return false;
-				}
-				else
-				{
-					$(".modal-wrap").fadeOut("slow");
-					$(".err_msg").hide();
-					$(".img_lod").fadeIn("slow");
-				}
-				
-			});
 		</script>
+		<script type="text/javascript" src="../../assets/scripts/app3e3a.js"></script>
 
+		<script type="text/javascript" src="../../assets/scripts/vendors3e3a.js"></script>
 
-		<!-- <script type="text/javascript" src="../../assets/scripts/analytics.js"></script>
-		<script type="text/javascript" src="../../assets/scripts/api.js"></script> -->
+		<script type="text/javascript" src="../../assets/scripts/analytics.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/api.js"></script>
 		
-		<!-- <script type="text/javascript" src="../../assets/scripts/player.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/player.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/vendors.js"></script>
-		<script type="text/javascript" src="../../assets/scripts/vuid.min.js"></script> -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/vuid.min.js"></script>
 
 
 
@@ -1220,7 +1153,7 @@ function get_category(id)
 
 <script type="text/javascript">
 
-	// // Load the IFrame Player API code asynchronously.
+	// Load the IFrame Player API code asynchronously.
 	  var tag = document.createElement('script');
 	  tag.src = "https://www.youtube.com/player_api";
 	  var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -1272,17 +1205,6 @@ $(document).mouseup(function (e)
 	vid.play();
 	});
 
-	$("#desk_vid1").click(function(){
-		var vid1 = document.getElementById("desk_vid1");
-		vid1.play();
-	});
-
-	$("#normal_vid").click(function(){
-		var vid2 = document.getElementById("normal_vid");
-		vid2.play();
-	});
-
-
 	document.addEventListener('scroll', function (event) {
 
 var footer = $('footer').offset().top;
@@ -1303,6 +1225,7 @@ myVar = parseInt(footer, 10);
 	}, true);
 
 </script>
+
 
 	</body>
 
