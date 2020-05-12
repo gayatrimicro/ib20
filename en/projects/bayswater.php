@@ -1233,28 +1233,6 @@ function get_category(id)
 
 <script type="text/javascript">
 
-	// // Load the IFrame Player API code asynchronously.
-	  // var tag = document.createElement('script');
-	  // tag.src = "../../assets/videos/bayswater.mp4";
-	  // var firstScriptTag = document.getElementsByTagName('script')[0];
-	  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-	  // Replace the 'ytplayer' element with an <iframe> and
-	  // YouTube player after the API code downloads.
-	 //  var player;
-	 //  function onYouTubePlayerAPIReady() {
-		// player = new YT.Player('ytplayer', {
-		//   height: '360',
-		//   width: '640',
-		//   playerVars : {
-		// 		autoplay :0,
-		// 		controls:0,
-		// 		rel: 0
-		// 	},
-		//   videoId: 'N8vMn4x5jAo'
-		// });
-	 //  }
-
 
 $('#myid').click(function(){
 	var vid = document.getElementById("fir_vid");	
@@ -1284,21 +1262,6 @@ $('#vid_seco').click(function(){
 	}
 });
 
-// $(document).mouseup(function (e)
-// {
-// 	var container = new Array();
-// 	container.push($('#myid'));
-	
-// 	$.each(container, function(key, value) {
-// 		if (!$(value).is(e.target) // if the target of the click isn't the container...
-// 			&& $(value).has(e.target).length === 0) // ... nor a descendant of the container
-// 		{
-// 			$("#myid iframe").css("display","none");
-// 			$(".o-cursor.-white").css("display","block");
-// 			player.stopVideo();
-// 		}
-// 	});
-// });
 </script>
 <script type="text/javascript">
 

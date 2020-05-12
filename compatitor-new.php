@@ -27,6 +27,7 @@ $result = $conn->query($sql);
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="assets/styles/steps.css">
       <link rel="stylesheet" href="assets/styles/main3e3a.css">
+      <link rel="stylesheet" href="assets/styles/newstyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     </head>
@@ -54,6 +55,7 @@ $result = $conn->query($sql);
 
     <h2 style="text-align: center;">Welcome to the Competitor finder tool</h2>
       <div class="edit_projfrm">
+        <img src="assets/images/lod.gif" class="img_lod">
           <!-- <img src="assets/images/lod.gif" class="img_lod"> -->
           <!-- <h6>Start a project</h6>
           <h3>Sweet, now give us more details about your project?</h3> -->
@@ -112,7 +114,7 @@ $result = $conn->query($sql);
       <hr>
     <p class="err_msg">Please select category</p>
     <div class="text-center fade-in">
-      <div class="button button_sel">Next</div>
+      <div class="button_sel">Next</div>
     </div>
   </div>
   <div class="modal-body modal-body-step-4">
@@ -143,7 +145,7 @@ $result = $conn->query($sql);
       <p class="err_msg">Please fill all fields</p>
       
       <div class="text-center">
-        <button type="submit" class="button btn_fin">Done!</button>
+        <button type="submit" class="btn_fin">Done!</button>
       </div>
     </form>   
   </div>
@@ -194,7 +196,25 @@ $('.button').click(function(){
   else { step4($step, $pag); }  
 });
 
+$(".btn_fin").click(function(){
+        
+        var nme = $("#snme").val();
+        var eml = $("#seml").val();
+        var no = $("#sno").val();
 
+        if(nme=="" && eml=="" && no=="")
+        {
+          $(".err_msg").show();
+          return false;
+        }
+        else
+        {
+          $(".modal-wrap").fadeOut("slow");
+          $(".err_msg").hide();
+          $(".img_lod").fadeIn("slow");
+        }
+        
+      });
 
 function step1($step, $pag){
   console.log('step1');
