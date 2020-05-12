@@ -148,7 +148,7 @@ $result = $conn->query($sql);
 	<a class="c-play-button">
 		<span class="u-screen-reader-text">Play hard</span>
 		<canvas class="c-play-canvas" data-module="PlayShapes"></canvas>
-		<!-- <span class="c-play-button_circle"></span> -->
+		<span class="c-play-button_circle"></span>
 	</a>
 
 	<div data-load-container>
