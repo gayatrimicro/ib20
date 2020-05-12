@@ -25,6 +25,7 @@ $result = $conn->query($sql);
          Competitor Checker  | IBridge Digital
       </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="assets/styles/steps.css">
       <link rel="stylesheet" href="assets/styles/main3e3a.css">
       <link rel="stylesheet" href="assets/styles/newstyle.css">
@@ -54,7 +55,7 @@ $result = $conn->query($sql);
 
 
     <h2 style="text-align: center;">Welcome to the Competitor finder tool</h2>
-      <div class="edit_projfrm">
+      <div class="">
         <img src="assets/images/lod.gif" class="img_lod">
           <!-- <img src="assets/images/lod.gif" class="img_lod"> -->
           <!-- <h6>Start a project</h6>
@@ -114,7 +115,7 @@ $result = $conn->query($sql);
       <hr>
     <p class="err_msg">Please select category</p>
     <div class="text-center fade-in">
-      <div class="button_sel">Next</div>
+      <div class="button">Next</div>
     </div>
   </div>
   <div class="modal-body modal-body-step-4">
