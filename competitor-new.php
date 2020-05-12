@@ -115,7 +115,7 @@ $result = $conn->query($sql);
       <hr>
     <p class="err_msg">Please select category</p>
     <div class="text-center fade-in">
-      <div class="button">Next</div>
+      <div class="button_sel">Next</div>
     </div>
   </div>
   <div class="modal-body modal-body-step-4">

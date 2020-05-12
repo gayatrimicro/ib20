@@ -69,14 +69,14 @@
     padding: 10px 50px;
     border-radius: 33px;
     background: #ffffff;
-    color: #4d84f1;
+    color: #000;
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-block;
     cursor: pointer;
 }
 .button_sel:hover{
-	background: #4d84f1;
+	background: #000;
     color: #fff;
     border: thin solid #fff;
 }
@@ -85,14 +85,14 @@
     padding: 10px 50px;
     border-radius: 33px;
     background: #ffffff;
-    color: #4d84f1;
+    color: #000;
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-block;
     cursor: pointer;
 }
 .btn_fin:hover{
-    background: #4d84f1;
+    background: #000;
     color: #fff;
     border: thin solid #fff;
 }
