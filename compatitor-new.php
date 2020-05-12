@@ -31,7 +31,7 @@ $result = $conn->query($sql);
 
     </head>
 
-   <body class="custom-landing-page patient-visitor-guide browser-large" data-gr-c-s-loaded="true" style="background-color: #1c1c20;padding-top: 10rem;">
+   <body class="custom-landing-page patient-visitor-guide browser-large" data-gr-c-s-loaded="true" style="background-color: #1c1c20;padding-top: 5rem;">
     <style type="text/css">
       h1, h2, h3, h4, h5, h6{
         color: #fff;
