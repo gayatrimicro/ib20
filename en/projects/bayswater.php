@@ -476,7 +476,7 @@ $result = $conn->query($sql);
 
 				<div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
 	<figure class="o-container">
-		<div class="o-vimeo-player js-animate u-anim -delay-1" style="padding-bottom: 0% !important;">
+		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;">
 			<div id="vid_seco">
 				<video id="desk_vid1" autoplay loop>
 				  <source src="../../assets/videos/bayswater.mp4"  type="video/mp4">

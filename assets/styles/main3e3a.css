@@ -2185,6 +2185,11 @@ html.is-mobile .o-cursor:not(.-top-mobile):not(.-center-mobile) {
 .o-cursor_wrapper[data-draggable=true] {
 	cursor: grab
 }
+#desk_vid1 
+{
+	width: 100%;
+	height: 100%;
+}
 
 .o-cursor_background {
 	display: block;
@@ -13152,7 +13157,7 @@ html.has-dom-loaded .c-error_button:nth-child(3) {
 
 .c-fancy-video-cursor,
 .c-fancy-video-cursor_zone {
-	cursor: none!important;
+	cursor: pointer!important;
 	position: absolute;
 	top: 0;
 	left: 0;
