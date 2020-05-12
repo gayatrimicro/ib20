@@ -154,7 +154,9 @@ $result = $conn->query($sql);
   
 </div>
 
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
 
 
 
@@ -254,7 +256,98 @@ function get_category(id)
   document.getElementById('frm_category').value = id;
 }
 </script>
+<script>
+  // This sample uses the Autocomplete widget to help the user select a
+  // place, then it retrieves the address components associated with that
+  // place, and then it populates the form fields with those details.
+  // This sample requires the Places library. Include the libraries=places
+  // parameter when you first load the API. For example:
+  // <script
+  // src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+  var placeSearch, autocomplete;
+
+  var componentForm = {
+    street_number: 'short_name',
+    route: 'long_name',
+    locality: 'long_name',
+    administrative_area_level_1: 'long_name',
+    country: 'short_name',
+    postal_code: 'short_name',
+    website: 'website',
+    name: 'name',   
+  };
+
+  function initAutocomplete() {
+    // Create the autocomplete object, restricting the search predictions to
+    // geographical location types.
+    autocomplete = new google.maps.places.Autocomplete(
+      document.getElementById('autocomplete'), {types: ['establishment']});
+
+    // Avoid paying for data that you don't need by restricting the set of
+    // place fields that are returned to just the address components.
+    // autocomplete.setFields(['address_component', 'website']);
+
+    // When the user selects an address from the drop-down, populate the
+    // address fields in the form.
+    autocomplete.addListener('place_changed', fillInAddress);
+  }
+
+  function fillInAddress() {
+    // Get the place details from the autocomplete object.
+    document.getElementById('address').removeAttribute("hidden");
+    var place = autocomplete.getPlace();
+
+    for (var component in componentForm) {
+    document.getElementById(component).innerHTML = '';
+    // document.getElementById(component).disabled = false;
+    }
+    
+    // Get each component of the address from the place details,
+    // and then fill-in the corresponding field on the form.
+    for (var i = 0; i < place.address_components.length; i++) {
+    var addressType = place.address_components[i].types[0];
+    if (componentForm[addressType]) {
+      var val = place.address_components[i][componentForm[addressType]];
+      document.getElementById(addressType).innerHTML = val;   
+    }
+    }
+
+    document.getElementById('website').innerHTML = place['website'];
+    document.getElementById('name').innerHTML = place['name'];
+    document.getElementById('frm_website').value = place['website'];
+    document.getElementById('frm_name').value = place['name'];
+  }
+
+  // Bias the autocomplete object to the user's geographical location,
+  // as supplied by the browser's 'navigator.geolocation' object.
+  function geolocate() {
+    if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var geolocation = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+      };
+      var circle = new google.maps.Circle(
+        {center: geolocation, radius: position.coords.accuracy});
+      autocomplete.setBounds(circle.getBounds());
+    });
+    }
+    $(document).keypress(
+      function(event){
+      if (event.which == '13') {
+        event.preventDefault();
+      }
+    });
+  }
+  
+
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
+    async defer></script>
+  <script>
+    $(document).ready(function() { $("#e1").select2(); });
+  </script>
             </div>
    </body>
 </html>
