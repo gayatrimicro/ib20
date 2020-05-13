@@ -34,7 +34,7 @@ $result = $conn->query($sql);
 
     </head>
 
-   <body class="custom-landing-page patient-visitor-guide browser-large" data-gr-c-s-loaded="true" style="background-color: #1c1c20;padding-top: 5rem;">
+   <body class="custom-landing-page patient-visitor-guide browser-large" data-gr-c-s-loaded="true" style="background-color: #1c1c20;padding-top: 3rem;">
     <style type="text/css">
       h1, h2, h3, h4, h5, h6{
         color: #fff;
@@ -55,20 +55,21 @@ $result = $conn->query($sql);
     </style>
 
 
-    <h2 style="text-align: center;">Welcome to the Competitor finder tool</h2>
+    <!-- <h2 style="text-align: center;font-size: 32px;">Find your practice</h2> -->
       <div class="">
         <img src="assets/images/lod.gif" class="img_lod">
           <!-- <img src="assets/images/lod.gif" class="img_lod"> -->
           <!-- <h6>Start a project</h6>
           <h3>Sweet, now give us more details about your project?</h3> -->
           <div class="modal-wrap">
-  <div class="modal-header"><span class="is-active"></span><span></span><span></span><span></span></div>
+  <!-- <div class="modal-header"><span class="is-active"></span><span></span><span></span><span></span></div> -->
   <div class="modal-bodies">
   <div class="modal-body modal-body-step-1 is-showing">
-    <h3>Step 1</h3>
-    <h4>Find your practice</h4>
-    <form>
-    <input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text" />
+    <!-- <h3>Step 1</h3> -->
+    <h4 style="font-size: 28px;line-height: 1.2;">Compare your business with your competitors in your local area</h4>
+    <form style="padding: 0px 100px;">
+    <label style="display: flex;">Type your company name OR website url&nbsp;:&nbsp;</label>
+    <input id="autocomplete" placeholder="" onFocus="geolocate()" type="text" />
     <p class="err_msg">Please enter location</p>
     <div class="text-center">
       <div class="button chksts">Start</div>
@@ -77,7 +78,7 @@ $result = $conn->query($sql);
   </div>
   
   <div class="modal-body modal-body-step-2">
-    <h3>Step 2</h3>
+    <!-- <h3>Step 2</h3> -->
     <!-- <h4>Would you rather</h4> -->
     <div id="address" hidden="" style="color: #fff;">
       <label style="display: flex;"><strong>Street address&nbsp;:&nbsp;</strong><p id="street_number"></p>&nbsp;<p id="route"></p></label><br>
@@ -101,10 +102,10 @@ $result = $conn->query($sql);
     
   </div>
 
-  <div class="modal-body modal-body-step-3 cat_js_basic">
-    <h3>Step 3</h3>
+  <div class="modal-body modal-body-step-3 cat_js_basic"  style="padding: 0px 100px;">
+    <!-- <h3>Step 3</h3> -->
     <!-- <h4>Would you rather</h4> -->
-    <label>
+    <label >
       Select Category to know your competitors
     </label>
       <select name="category" required onchange="get_category(this.value)" id="e1" style="color: #fff;">
@@ -120,9 +121,9 @@ $result = $conn->query($sql);
     </div>
   </div>
   <div class="modal-body modal-body-step-4">
-    <h3>Step 4</h3>
+    <!-- <h3>Step 4</h3> -->
     <h4 style="text-align: center;">Check your results.</h4>
-    <form method="post" action="competitors.php">
+    <form method="post" action="competitors.php" style="padding: 0px 100px;">
       <input type="hidden" id="frm_street_number" value="" />
       <input type="hidden" name="street_address" id="frm_route" value="" />
       <input type="hidden" id="frm_locality" name="city" value="" />
@@ -133,15 +134,15 @@ $result = $conn->query($sql);
       <input type="hidden" id="frm_name" name="name" value="" />
       <input type="hidden" id="frm_category" name="category" value="" />
       
-      <label style="display: flex;"><strong>Name&nbsp;:&nbsp;</strong></label>
+      <label style="display: flex;">Name&nbsp;:&nbsp;</label>
       <input type="text" name="user_name" id="snme" maxlength="40">
       
 
-      <label style="display: flex;"><strong>Email&nbsp;:&nbsp;</strong></label>
+      <label style="display: flex;">Email&nbsp;:&nbsp;</label>
       <input type="email" name="user_email" id="seml" maxlength="30">
       
 
-      <label style="display: flex;"><strong>Contact Number&nbsp;:&nbsp;</strong></label>
+      <label style="display: flex;">Contact Number&nbsp;:&nbsp;</label>
       <input type="text" name="user_contact" id="sno" maxlength="12">
       
       <p class="err_msg">Please fill all fields</p>

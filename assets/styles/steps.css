@@ -24,7 +24,8 @@
 input[type="text"],
 input[type="email"] {
   padding: 10px 20px;
-  border: 1px solid #fff;
+  border: 1px solid #5d5d5d70;
+  background-color: #5d5d5d70;
   border-radius: 3px;
   display: block;
   width: 100%;
@@ -44,7 +45,7 @@ input[type="radio"] {
 label {
   margin-bottom: 10px;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     /*border-top: 1px solid #ddd;*/
     /* border-bottom: 1px solid #ddd; */
@@ -125,9 +126,12 @@ label:first-child {
   color: white;
   opacity: 1; /* Firefox */
 }
+label{
+  letter-spacing: 1.5px !important;
+}
 .modal-body {
   background: transparent;
-  padding: 40px 100px;
+  padding: 40px 0px;
   margin-bottom: 50px;
   position: absolute;
   top: 0;
