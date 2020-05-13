@@ -17,7 +17,7 @@ var Drip = ( function() {
         shape.alpha = 1 - ( index / shapes.length );
         shape.hue = (index % 5 === 0 ? 58 : 349) + ~~(Math.random() * 10 - 5);
         shape.saturation = 100;
-        shape.lightness = 20;
+        shape.lightness = 80;
         for ( i = 0; i < 21; ++i ) {
           y = ( i % 2 === 0 ? Math.random() * 20 : Math.random() * ( height * .25 ) ) + ( index * ( height / ( shapes.length - 1 ) ) );
           rad = Math.random() * 50;
