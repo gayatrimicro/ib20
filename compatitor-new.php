@@ -26,6 +26,7 @@ $result = $conn->query($sql);
       </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="assets/styles/steps.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
       <link rel="stylesheet" href="assets/styles/main3e3a.css">
       <link rel="stylesheet" href="assets/styles/newstyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
