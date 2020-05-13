@@ -71,7 +71,7 @@ var Drip = ( function() {
     drawDrip = function( points, color, alpha, h, s, l ) {
       h=207;
       s=15;
-      l=58;
+      l=100;
       ctx.fillStyle = 'hsl(' + h + ', ' + ( s * alpha ) + '%, ' + ( ( l * alpha ) + 7 ) + '%)';
       console.log(ctx.fillStyle);
       ctx.beginPath();
