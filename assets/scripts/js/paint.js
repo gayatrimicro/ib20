@@ -69,7 +69,11 @@ var Drip = ( function() {
       requestAnimationFrame( draw );
     },
     drawDrip = function( points, color, alpha, h, s, l ) {
+      h=207;
+      s=15;
+      l=58;
       ctx.fillStyle = 'hsl(' + h + ', ' + ( s * alpha ) + '%, ' + ( ( l * alpha ) + 7 ) + '%)';
+      console.log(ctx.fillStyle);
       ctx.beginPath();
       ctx.moveTo( 0, 0 );
       ctx.lineTo( points[ 0 ].x, points[ 0 ].y );
