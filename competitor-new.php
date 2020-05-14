@@ -34,7 +34,7 @@ $result = $conn->query($sql);
 
     </head>
 
-   <body class="custom-landing-page patient-visitor-guide browser-large" data-gr-c-s-loaded="true" style="background-color: #1c1c20;padding-top: 3rem;">
+   <body class="custom-landing-page patient-visitor-guide browser-large" data-gr-c-s-loaded="true" style="background-color: #1c1c20;padding-top: 0rem;">
     <style type="text/css">
       h1, h2, h3, h4, h5, h6{
         color: #fff;
@@ -51,6 +51,30 @@ $result = $conn->query($sql);
       ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
           color: #fff;
         }
+        .form-box{
+          padding: 0px 50px;
+        }
+        .heading-title{
+          font-size: 28px;
+          line-height: 1.2;
+          letter-spacing: 1.5px;
+        }
+        .margin-top{
+          margin: 45px 0px;
+        }
+
+        @media (max-width: 600px){
+          .form-box{
+            padding: 0px 30px;
+          }
+          .heading-title{
+            padding: 0px 10px;
+          }
+          .comp-details{
+            padding: 0px 20px;
+          }
+        }
+
        
     </style>
 
@@ -66,18 +90,18 @@ $result = $conn->query($sql);
   <div class="modal-bodies">
   <div class="modal-body modal-body-step-1 is-showing">
     <!-- <h3>Step 1</h3> -->
-    <h4 style="font-size: 28px;line-height: 1.2;">Compare your business with your competitors in your local area</h4>
-    <form style="padding: 0px 100px;">
-    <label style="display: flex;">Type your company name OR website url&nbsp;:&nbsp;</label>
+    <h4 class="heading-title">Compare your business with your competitors in your local area</h4>
+    <form class="form-box">
+    <label style="display: flex;">Type your company name OR website url &nbsp;:&nbsp;</label>
     <input id="autocomplete" placeholder="" onFocus="geolocate()" type="text" />
     <p class="err_msg">Please enter location</p>
-    <div class="text-center">
+    <div class="text-center margin-top">
       <div class="button chksts">Start</div>
     </div>
     </form>
   </div>
   
-  <div class="modal-body modal-body-step-2">
+  <div class="modal-body modal-body-step-2 comp-details">
     <!-- <h3>Step 2</h3> -->
     <!-- <h4>Would you rather</h4> -->
     <div id="address" hidden="" style="color: #fff;">
@@ -91,7 +115,7 @@ $result = $conn->query($sql);
 
       <label style="display: flex;"><strong>Country&nbsp;:&nbsp;</strong><p id="country"></p></label><br>
 
-      <label style="display: flex;"><strong>Website&nbsp;:&nbsp;</strong><p id="website"></p></label><br>
+      <label style="display: flex;"><strong>Website&nbsp;:&nbsp;</strong><p id="website" style="overflow-wrap: anywhere;"></p></label><br>
 
       <label style="display: flex;"><strong>Organization&nbsp;:&nbsp;</strong><p id="name"></p></label>
       <br><br>
@@ -102,7 +126,7 @@ $result = $conn->query($sql);
     
   </div>
 
-  <div class="modal-body modal-body-step-3 cat_js_basic"  style="padding: 0px 100px;">
+  <div class="modal-body modal-body-step-3 cat_js_basic form-box">
     <!-- <h3>Step 3</h3> -->
     <!-- <h4>Would you rather</h4> -->
     <label >
@@ -114,16 +138,16 @@ $result = $conn->query($sql);
           <option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
         <?php } ?>
       </select>
-      <hr>
+      
     <p class="err_msg">Please select category</p>
-    <div class="text-center fade-in">
+    <div class="text-center fade-in margin-top">
       <div class="button_sel">Next</div>
     </div>
   </div>
   <div class="modal-body modal-body-step-4">
     <!-- <h3>Step 4</h3> -->
-    <h4 style="text-align: center;">Check your results.</h4>
-    <form method="post" action="competitors.php" style="padding: 0px 100px;">
+    <h4 style="text-align: center;letter-spacing: 1.5px;">Check your results.</h4>
+    <form method="post" action="competitors.php" class="form-box">
       <input type="hidden" id="frm_street_number" value="" />
       <input type="hidden" name="street_address" id="frm_route" value="" />
       <input type="hidden" id="frm_locality" name="city" value="" />
@@ -147,7 +171,7 @@ $result = $conn->query($sql);
       
       <p class="err_msg">Please fill all fields</p>
       
-      <div class="text-center">
+      <div class="text-center margin-top">
         <button type="submit" class="btn_fin">Done!</button>
       </div>
     </form>   
