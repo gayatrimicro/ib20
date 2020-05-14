@@ -68,7 +68,7 @@ $result = $conn->query($sql);
             padding: 0px 30px;
           }
           .heading-title{
-            padding: 0px 10px;
+            padding: 0px 20px;
           }
           .comp-details{
             padding: 0px 20px;
