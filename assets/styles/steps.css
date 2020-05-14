@@ -87,7 +87,7 @@ label:first-child {
 }
 
 .modal-wrap {
-  max-width: 600px;
+  max-width: 650px;
   margin: 50px auto;
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: -webkit-transform 300ms ease-in-out;
