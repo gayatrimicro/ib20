@@ -56,7 +56,7 @@ $result = $conn->query($sql);
         }
         .heading-title{
           font-size: 28px;
-          line-height: 1.2;
+          line-height: 1.5;
           letter-spacing: 1.5px;
         }
         .margin-top{
@@ -103,6 +103,8 @@ $result = $conn->query($sql);
   
   <div class="modal-body modal-body-step-2 comp-details">
     <!-- <h3>Step 2</h3> -->
+    <h4 style="text-align: center;letter-spacing: 1.5px;">Check your company details.</h4>
+
     <!-- <h4>Would you rather</h4> -->
     <div id="address" hidden="" style="color: #fff;">
       <label style="display: flex;"><strong>Street address&nbsp;:&nbsp;</strong><p id="street_number"></p>&nbsp;<p id="route"></p></label><br>
@@ -128,6 +130,8 @@ $result = $conn->query($sql);
 
   <div class="modal-body modal-body-step-3 cat_js_basic form-box">
     <!-- <h3>Step 3</h3> -->
+    <h4 style="text-align: center;letter-spacing: 1.5px;">Select your company category.</h4>
+
     <!-- <h4>Would you rather</h4> -->
     <label >
       Select Category to know your competitors
