@@ -3367,19 +3367,21 @@
                 value: function(t) {
                     this.scrollbar.reverseWheel(t)
                 }
-            }, {
-                key: "preloadImages",
-                value: function() {
-                    var i = this,
-                        n = Array.from(document.querySelectorAll("img"));
-                    n.forEach(function(t) {
-                        var e = document.createElement("img");
-                        e.addEventListener("load", function() {
-                            n.splice(n.indexOf(t), 1), 0 === n.length && i.update()
-                        }), e.src = t.getAttribute("src")
-                    })
-                }
-            }, {
+            }, 
+            // {
+            //     key: "preloadImages",
+            //     value: function() {
+            //         var i = this,
+            //             n = Array.from(document.querySelectorAll("img"));
+            //         n.forEach(function(t) {
+            //             var e = document.createElement("img");
+            //             e.addEventListener("load", function() {
+            //                 n.splice(n.indexOf(t), 1), 0 === n.length && i.update()
+            //             }), e.src = t.getAttribute("src")
+            //         })
+            //     }
+            // },
+             {
                 key: "destroy",
                 value: function() {
                     p(d(i.prototype), "destroy", this).call(this), y.removeClass("has-smooth-scroll"), this.parallaxElements = [], this.instance.destroy(), cancelAnimationFrame(this.raf)
