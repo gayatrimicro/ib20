@@ -828,71 +828,60 @@ $result = $conn->query($sql);
 				</div>
 			</div>
 			<div class="c-lisa_content">
-				<div class="edit_projfrm">
-					<img src="../../assets/images/lod.gif" class="img_lod">
-					<!-- <h6>Start a project</h6>
-					<h3>Sweet, now give us more details about your project?</h3> -->
-					<div class="modal-wrap">
-  <div class="modal-header"><span class="is-active"></span><span></span><span></span><span></span></div>
-  <div class="modal-bodies">
-	<div class="modal-body modal-body-step-1 is-showing">
-	  <h3>Step 1</h3>
-	  <h4>Find your practice</h4>
-	  <form>
-		<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text" />
-		<p class="err_msg">Please enter location</p>
-		<div class="text-center">
-		  <div class="button chksts">Start</div>
-		</div>
-	  </form>
-	</div>
-	
-	<div class="modal-body modal-body-step-2">
-	  <h3>Step 2</h3>
-	  <!-- <h4>Would you rather</h4> -->
-		<div id="address" hidden="" style="color: #fff;">
-			<label style="display: flex;"><strong>Street address&nbsp;:&nbsp;</strong><p id="street_number"></p>&nbsp;<p id="route"></p></label><br>
+				
+				<div class="inn_progbar">
+					<p class="txt_stp">Step <span class="stp_no">1</span> of 4</p>
+					<div class="prog_bar">
+						<div class="inn_br"></div>
+					</div>
+				</div>
 
-			<label style="display: flex;"><strong>City&nbsp;:&nbsp;</strong><p id="locality"></p></label><br>
+				<div class="inn_stepslid">
+					<div class="innStep1 actstp">
+						<h4>Find your practice</h4>
+							<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text" />
+							<p class="err_msg">Please enter location</p>
+							<div class="text-center">
+							  <div class="btn_frm" onclick="changeStep('step1')">Start</div>
+							</div>
+					</div>
+					<div class="innStep2">
+						<div id="address" class="hei_over" hidden="" style="color: #fff;">
+						<label style="display: flex;"><strong>Street address&nbsp;:&nbsp;</strong><p id="street_number"></p>&nbsp;<p id="route"></p></label><br>
 
-			<label style="display: flex;"><strong>State&nbsp;:&nbsp;</strong><p id="administrative_area_level_1"></p></label><br>
+						<label style="display: flex;"><strong>City&nbsp;:&nbsp;</strong><p id="locality"></p></label><br>
 
-			<label style="display: flex;"><strong>Zip code&nbsp;:&nbsp;</strong><p id="postal_code"></p></label><br>
+						<label style="display: flex;"><strong>State&nbsp;:&nbsp;</strong><p id="administrative_area_level_1"></p></label><br>
 
-			<label style="display: flex;"><strong>Country&nbsp;:&nbsp;</strong><p id="country"></p></label><br>
+						<label style="display: flex;"><strong>Zip code&nbsp;:&nbsp;</strong><p id="postal_code"></p></label><br>
 
-			<label style="display: flex;"><strong>Website&nbsp;:&nbsp;</strong><p id="website"></p></label><br>
+						<label style="display: flex;"><strong>Country&nbsp;:&nbsp;</strong><p id="country"></p></label><br>
 
-			<label style="display: flex;"><strong>Organization&nbsp;:&nbsp;</strong><p id="name"></p></label>
-			<br><br>
-		</div>
-		<div class="text-center fade-in">
-		  <div class="button">Next</div>
-		</div>
-	  
-	</div>
+						<label style="display: flex;"><strong>Website&nbsp;:&nbsp;</strong><p id="website"></p></label><br>
 
-	<div class="modal-body modal-body-step-3 cat_js_basic">
-	  <h3>Step 3</h3>
-	  <!-- <h4>Would you rather</h4> -->
-		<label>
-		  Select Category to know your competitors
-		</label>
-		  <select name="category" required onchange="get_category(this.value)" id="e1" style="color: #000;">
+						<label style="display: flex;"><strong>Organization&nbsp;:&nbsp;</strong><p id="name"></p></label>
+						<br><br>
+				</div>
+				<div class="text-center">
+				  <div class="btn_frm" onclick="changeStep('step2')">Next</div>
+				</div>
+			</div>
+			<div class="innStep3 cat_js_basic">
+				<h4>Select Category to know your competitors</h4>
+				<select name="category" required onchange="get_category(this.value)" id="e1" style="color: #000;">
 				<option value="">Select Category</option>
 				<?php while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
 				<?php } ?>
 			</select>
 			<hr>
-		<p class="err_msg">Please select category</p>
-		<div class="text-center fade-in">
-		  <div class="button_sel">Next</div>
-		</div>
-	</div>
-	<div class="modal-body modal-body-step-4">
-	  <h3>Step 4</h3>
-	  <h4 style="text-align: center;">Check your results.</h4>
+				<p class="err_msg">Please select category</p>
+				<div class="text-center">
+				  <div class="btn_frm" onclick="changeStep('step3')">Next</div>
+				</div>
+			</div>
+			<div class="innStep4">
+				<h4>Check your results.</h4>
 		<form method="post" action="competitors.php">
 			<input type="hidden" id="frm_street_number" value="" />
 			<input type="hidden" name="street_address" id="frm_route" value="" />
@@ -904,45 +893,20 @@ $result = $conn->query($sql);
 			<input type="hidden" id="frm_name" name="name" value="" />
 			<input type="hidden" id="frm_category" name="category" value="" />
 			
-			<label style="display: flex;"><strong>Name&nbsp;:&nbsp;</strong></label>
-			<input type="text" name="user_name" id="snme" maxlength="40">
-			<br>
-
-			<label style="display: flex;"><strong>Email&nbsp;:&nbsp;</strong></label>
-			<input type="email" name="user_email" id="seml" maxlength="30">
-			<br>
-
-			<label style="display: flex;"><strong>Contact Number&nbsp;:&nbsp;</strong></label>
-			<input type="text" name="user_contact" id="sno" maxlength="12">
-			<br>
+			<input type="text" name="user_name" id="snme" maxlength="40" placeholder="Name">
+			<input type="email" name="user_email" id="seml" maxlength="30" placeholder="Email">
+			<input type="text" name="user_contact" id="sno" maxlength="12" placeholder="Contact Number">
 			<p class="err_msg">Please fill all fields</p>
-			
+
 			<div class="text-center">
-				<button type="submit" class="btn_fin">Done!</button>
+				  <div class="btn_frm" onclick="changeStep('step4')">Done!</div>
+				  <button type="submit" class="btn_fin">Done!</button>
+				</div>
+		</form>
 			</div>
-		</form>		
+			<img src="../../assets/images/lod.gif" class="img_lod">
+		</div>
 	</div>
-  </div>
-</div>
-<div class="text-center">
-  <!--<div class="button">Loading...</div>-->
-	
-</div>
-
-
-
-
-
-							
-						</div>
-				
-				
-		
-
-
-		
-				
-			</div>
 		
 			
 		</div>
@@ -976,6 +940,80 @@ $result = $conn->query($sql);
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
+
+<script type="text/javascript">
+	function changeStep(step)
+	{
+		if(step=="step1")
+		{
+			if($("#autocomplete").val()=="")
+			{
+				$(".err_msg").show();
+				return false;
+			}
+			else
+			{
+				$(".err_msg").hide();
+				$(".inn_br").css("width","50%");
+				$(".innStep1").removeClass("actstp");
+				$(".innStep1").addClass("hidstp");
+				$(".innStep2").addClass("actstp");
+				$(".stp_no").text("2");
+			}
+		}
+
+		if(step=="step2")
+		{
+			$(".inn_br").css("width","75%");
+			$(".innStep2").removeClass("actstp");
+			$(".innStep2").addClass("hidstp");
+			$(".innStep3").addClass("actstp");
+			$(".stp_no").text("3");
+		}
+
+		if(step=="step3")
+		{
+			var e = document.getElementById("e1");
+			var strUser = e.options[e.selectedIndex].text;
+			if(strUser=="Select Category")
+			{				
+				$(".err_msg").show();
+				return false;
+			}
+			else
+			{
+				$(".err_msg").hide();
+				$(".inn_br").css("width","90%");
+				$(".innStep3").removeClass("actstp");
+				$(".innStep3").addClass("hidstp");
+				$(".innStep4").addClass("actstp");
+				$(".stp_no").text("4");
+			}
+		}
+
+		if(step=="step4")
+		{
+			var nme = $("#snme").val();
+			var eml = $("#seml").val();
+			var no = $("#sno").val();
+			if(nme=="" && eml=="" && no=="")
+			{
+				$(".err_msg").show();
+				return false;
+			}
+			else
+			{
+				$(".err_msg").hide();
+				$(".btn_fin").click();
+				$(".inn_br").css("width","100%");
+				$(".innStep4").removeClass("actstp");
+				$(".innStep4").addClass("hidstp");
+				$(".img_lod").fadeIn("slow");
+			}
+		}
+		
+	}
+</script>
 	<script type="text/javascript">
 		$('.button_sel').click(function(){
 			var e = document.getElementById("e1");
@@ -1196,25 +1234,7 @@ function get_category(id)
 				$('.image_ripple').ripples('show');
 			});
 
-			$(".btn_fin").click(function(){
-				
-				var nme = $("#snme").val();
-				var eml = $("#seml").val();
-				var no = $("#sno").val();
-
-				if(nme=="" && eml=="" && no=="")
-				{
-					$(".err_msg").show();
-					return false;
-				}
-				else
-				{
-					$(".modal-wrap").fadeOut("slow");
-					$(".err_msg").hide();
-					$(".img_lod").fadeIn("slow");
-				}
-				
-			});
+			
 		</script>
 
 
