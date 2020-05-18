@@ -847,20 +847,19 @@ $result = $conn->query($sql);
 					</div>
 					<div class="innStep2">
 						<div id="address" class="hei_over" hidden="" style="color: #fff;">
-						<label style="display: flex;"><strong>Street address&nbsp;:&nbsp;</strong><p id="street_number"></p>&nbsp;<p id="route"></p></label><br>
+						<label style="display: flex;"><strong>Street address&nbsp;:&nbsp;</strong><p id="street_number"></p>&nbsp;<p id="route"></p></label>
 
-						<label style="display: flex;"><strong>City&nbsp;:&nbsp;</strong><p id="locality"></p></label><br>
+						<label style="display: flex;"><strong>City&nbsp;:&nbsp;</strong><p id="locality"></p></label>
 
-						<label style="display: flex;"><strong>State&nbsp;:&nbsp;</strong><p id="administrative_area_level_1"></p></label><br>
+						<label style="display: flex;"><strong>State&nbsp;:&nbsp;</strong><p id="administrative_area_level_1"></p></label>
+						<label style="display: flex;"><strong>Zip code&nbsp;:&nbsp;</strong><p id="postal_code"></p></label>
 
-						<label style="display: flex;"><strong>Zip code&nbsp;:&nbsp;</strong><p id="postal_code"></p></label><br>
+						<label style="display: flex;"><strong>Country&nbsp;:&nbsp;</strong><p id="country"></p></label>
 
-						<label style="display: flex;"><strong>Country&nbsp;:&nbsp;</strong><p id="country"></p></label><br>
-
-						<label style="display: flex;"><strong>Website&nbsp;:&nbsp;</strong><p id="website"></p></label><br>
+						<label style="display: flex;"><strong>Website&nbsp;:&nbsp;</strong><p id="website"></p></label>
 
 						<label style="display: flex;"><strong>Organization&nbsp;:&nbsp;</strong><p id="name"></p></label>
-						<br><br>
+						<br>					
 				</div>
 				<div class="text-center">
 				  <div class="btn_frm" onclick="changeStep('step2')">Next</div>
