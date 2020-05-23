@@ -30,7 +30,7 @@ $result = $conn->query($sql);
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
       <link rel="stylesheet" href="assets/styles/main3e3a.css">
       <link rel="stylesheet" href="assets/styles/newstyle.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
 
     </head>
 
@@ -170,108 +170,108 @@ $result = $conn->query($sql);
 
 
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
 
 
 
               <script type="text/javascript">
-    $('.button_sel').click(function(){
-      var e = document.getElementById("e1");
-  var strUser = e.options[e.selectedIndex].text;
-  if(strUser=="Select Category")
-  {
-    $(".err_msg").show();
-    return false;
-  }
-  $(".err_msg").hide();
-  var $btn = $(this),
-  $step = $btn.parents('.modal-body'),
-  stepIndex = $step.index(),
-  $pag = $('.modal-header span').eq(stepIndex);
-  if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
-  else { step4($step, $pag); }  
-});
+//     $('.button_sel').click(function(){
+//       var e = document.getElementById("e1");
+//   var strUser = e.options[e.selectedIndex].text;
+//   if(strUser=="Select Category")
+//   {
+//     $(".err_msg").show();
+//     return false;
+//   }
+//   $(".err_msg").hide();
+//   var $btn = $(this),
+//   $step = $btn.parents('.modal-body'),
+//   stepIndex = $step.index(),
+//   $pag = $('.modal-header span').eq(stepIndex);
+//   if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
+//   else { step4($step, $pag); }  
+// });
 
-$('.button').click(function(){
-  if($(".pac-target-input").val()=="")
-  {
-    $(".err_msg").show();
-    return false;
-  }
+// $('.button').click(function(){
+//   if($(".pac-target-input").val()=="")
+//   {
+//     $(".err_msg").show();
+//     return false;
+//   }
 
-  $(".err_msg").hide();
-  var $btn = $(this),
-  $step = $btn.parents('.modal-body'),
-  stepIndex = $step.index(),
-  $pag = $('.modal-header span').eq(stepIndex);
-  if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
-  else { step4($step, $pag); }  
-});
+//   $(".err_msg").hide();
+//   var $btn = $(this),
+//   $step = $btn.parents('.modal-body'),
+//   stepIndex = $step.index(),
+//   $pag = $('.modal-header span').eq(stepIndex);
+//   if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
+//   else { step4($step, $pag); }  
+// });
 
-$(".btn_fin").click(function(){
+// $(".btn_fin").click(function(){
         
-        var nme = $("#snme").val();
-        var eml = $("#seml").val();
-        var no = $("#sno").val();
+//         var nme = $("#snme").val();
+//         var eml = $("#seml").val();
+//         var no = $("#sno").val();
 
-        if(nme=="" && eml=="" && no=="")
-        {
-          $(".err_msg").show();
-          return false;
-        }
-        else
-        {
-          $(".modal-wrap").fadeOut("slow");
-          $(".err_msg").hide();
-          $(".img_lod").fadeIn("slow");
-        }
+//         if(nme=="" && eml=="" && no=="")
+//         {
+//           $(".err_msg").show();
+//           return false;
+//         }
+//         else
+//         {
+//           $(".modal-wrap").fadeOut("slow");
+//           $(".err_msg").hide();
+//           $(".img_lod").fadeIn("slow");
+//         }
         
-      });
+//       });
 
-function step1($step, $pag){
-  console.log('step1');
-  // animate the step out
-  $step.addClass('animate-out');
+// function step1($step, $pag){
+//   console.log('step1');
+//   // animate the step out
+//   $step.addClass('animate-out');
   
-  // animate the step in
-  setTimeout(function(){
-  $step.removeClass('animate-out is-showing')
-     .next().addClass('animate-in');
-  $pag.removeClass('is-active')
-      .next().addClass('is-active');
-  }, 600);
+//   // animate the step in
+//   setTimeout(function(){
+//   $step.removeClass('animate-out is-showing')
+//      .next().addClass('animate-in');
+//   $pag.removeClass('is-active')
+//       .next().addClass('is-active');
+//   }, 600);
   
-  // after the animation, adjust the classes
-  setTimeout(function(){
-  $step.next().removeClass('animate-in')
-      .addClass('is-showing');
+//   // after the animation, adjust the classes
+//   setTimeout(function(){
+//   $step.next().removeClass('animate-in')
+//       .addClass('is-showing');
   
-  }, 1200);
-}
+//   }, 1200);
+// }
 
-function step4($step, $pag){
-console.log('3');
+// function step4($step, $pag){
+// console.log('3');
 
-  // animate the step out
-  $step.parents('.modal-wrap').addClass('animate-up');
+//   // animate the step out
+//   $step.parents('.modal-wrap').addClass('animate-up');
 
-  setTimeout(function(){
-  $('.rerun-button').css('display', 'inline-block');
-  }, 300);
-}
+//   setTimeout(function(){
+//   $('.rerun-button').css('display', 'inline-block');
+//   }, 300);
+// }
 
-$('.rerun-button').click(function(){
- $('.modal-wrap').removeClass('animate-up')
-          .find('.modal-body')
-          .first().addClass('is-showing')
-          .siblings().removeClass('is-showing');
+// $('.rerun-button').click(function(){
+//  $('.modal-wrap').removeClass('animate-up')
+//           .find('.modal-body')
+//           .first().addClass('is-showing')
+//           .siblings().removeClass('is-showing');
 
-  $('.modal-header span').first().addClass('is-active')
-              .siblings().removeClass('is-active');
- $(this).hide();
-});
+//   $('.modal-header span').first().addClass('is-active')
+//               .siblings().removeClass('is-active');
+//  $(this).hide();
+// });
 
 function get_category(id)
 {
@@ -437,7 +437,7 @@ function get_category(id)
       var nme = $("#snme").val();
       var eml = $("#seml").val();
       var no = $("#sno").val();
-      if(nme=="" && eml=="" && no=="")
+      if(nme=="" || eml=="" || no=="")
       {
         $(".err_msg").show();
         return false;
