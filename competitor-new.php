@@ -25,11 +25,14 @@ $result = $conn->query($sql);
          Competitor Checker  | IBridge Digital
       </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css" href="assets/styles/steps.css">
+      <!-- <link rel="stylesheet" type="text/css" href="assets/styles/steps.css"> -->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
-      <link rel="stylesheet" href="assets/styles/main3e3a.css">
+      <!-- <link rel="stylesheet" href="assets/styles/main3e3a.css"> -->
       <link rel="stylesheet" href="assets/styles/newstyle.css">
+  
   
 
     </head>
@@ -52,7 +55,7 @@ $result = $conn->query($sql);
           color: #fff;
         }
         .form-box{
-          padding: 0px 50px;
+          padding: 0px 0px;
         }
         .heading-title{
           font-size: 28px;
@@ -77,7 +80,7 @@ $result = $conn->query($sql);
 
        
     </style>
-        <div>
+        <!-- <div>
           <div class="inn_progbar">
             <p class="txt_stp">Step <span class="stp_no">1</span> of 4</p>
             <div class="prog_bar">
@@ -99,7 +102,7 @@ $result = $conn->query($sql);
             <div class="innStep2">
               <h4 style="text-align: center;letter-spacing: 1.5px;">Check your company details.</h4>
 
-    <!-- <h4>Would you rather</h4> -->
+    
     <div id="address" class="hei_over" hidden="" style="color: #fff;">
       <label style="display: flex;"><strong>Street address&nbsp;:&nbsp;</strong><p id="street_number"></p>&nbsp;<p id="route"></p></label>
 
@@ -122,14 +125,7 @@ $result = $conn->query($sql);
             </div>
             <div class="innStep3 cat_js_basic">
              <h4>Select Category to know your competitors</h4>
-             <div class="cus_selwid">
-               <select name="category" required onchange="get_category(this.value)" id="e1" style="color: #fff;">
-        <option value="">Select Category</option>
-        <?php while($row = $result->fetch_assoc()) { ?>
-          <option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
-        <?php } ?>
-      </select>
-             </div>
+             
       
       
     <p class="err_msg">Please select category</p>
@@ -166,16 +162,261 @@ $result = $conn->query($sql);
             </div>
             <img src="assets/images/lod.gif" class="img_lod">
           </div>
+        </div> -->
+
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="display: block;
+    width: 250px;margin: 150px auto;">Open Modal</button>
+
+        <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body modbdy">
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <div class="inFrmStrt">
+            <div class="inn_progbar">
+            <p class="txt_stp">Step <span class="stp_no">1</span> of 4</p>
+            <div class="prog_bar">
+              <div class="inn_br"></div>
+            </div>
+          </div>
+          <div class="Step1str Stepcurr">
+            <h4>Step <span class="stpNo">1</span></h4>
+            <h2>Compare your business with your competitors in your local area</h2>
+            <fieldset>
+              <legend>Practice name :</legend>
+              <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Type your practice name">
+            </fieldset>
+            <div class="text-right"><button class="nxtPge hidstpBtn" onclick="NxtStp('step1')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
+
+            <div class="Step2str Stepcurr">
+            <hr>
+            <div id="address" hidden="">
+              <div class="row">
+                <div class="col-sm-6">
+                  <fieldset>
+                    <legend>Street No :</legend>
+                    <input type="text" class="form-control" id="street_number" placeholder="Street number">
+                  </fieldset>
+                </div>
+                <div class="col-sm-6">
+                  <fieldset>
+                    <legend>Street address :</legend>
+                    <input type="text" class="form-control" id="route" placeholder="Street address">
+                  </fieldset>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <fieldset>
+                    <legend>City :</legend>
+                    <input type="text" class="form-control" id="locality" placeholder="City">
+                  </fieldset>
+                </div>
+                <div class="col-sm-6">
+                  <fieldset>
+                    <legend>State :</legend>
+                    <input type="text" class="form-control" id="administrative_area_level_1" placeholder="State">
+                  </fieldset>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <fieldset>
+                    <legend>Zip code :</legend>
+                    <input type="text" class="form-control" id="postal_code" placeholder="Zip code">
+                  </fieldset>
+                </div>
+                <div class="col-sm-6">
+                  <fieldset>
+                    <legend>Country :</legend>
+                    <input type="text" class="form-control" id="country" placeholder="Country">
+                  </fieldset>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <fieldset>
+                    <legend>Website :</legend>
+                    <input type="text" class="form-control" id="website" placeholder="website">
+                  </fieldset>
+                </div>
+                <div class="col-sm-12">
+                  <fieldset>
+                    <legend>Organization :</legend>
+                    <input type="text" class="form-control" id="name" placeholder="Organization">
+                  </fieldset>
+                </div>
+                <div class="col-sm-12 cat_js_basic">
+                  <fieldset class="fidSet">
+                    <legend class="Lgnd">Practice Category :</legend>
+                    <select name="category" onchange="get_category(this.value)" id="e1">
+                    <option value="">Select Category</option>
+                      <?php while($row = $result->fetch_assoc()) { ?>
+                    <option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
+                      <?php } ?>
+                    </select>
+                  </fieldset>
+                </div>
+              </div>              
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 text-left"><button class="bckPge" onclick="BckStp('step1')"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &nbsp;Previous</button></div>
+              <div class="col-sm-6 text-right"><button class="nxtPge" onclick="NxtStp('step2')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
+            </div>
+
+          </div>
+          </div>
+          
+          <div class="Step3str Stepcurr cat_js_basic">
+            <h4>Step 3</h4>
+            <h2>Enter your contact information</h2>
+            <p>We'll send your personalized results to your email.</p>
+               <form method="post" action="competitors.php" class="form-box">
+                  <input type="hidden" id="frm_street_number" value="" />
+                  <input type="hidden" name="street_address" id="frm_route" value="" />
+                  <input type="hidden" id="frm_locality" name="city" value="" />
+                  <input type="hidden" id="frm_administrative_area_level_1" name="state" value="" />
+                  <input type="hidden" id="frm_postal_code" name="zip_code" value="" />
+                  <input type="hidden" id="frm_country" name="country" value="" />
+                  <input type="hidden" id="frm_website" name="website" value="" />
+                  <input type="hidden" id="frm_name" name="name" value="" />
+                  <input type="hidden" id="frm_category" name="category" value="" />
+
+                  <fieldset class="fidSet1">
+                    <legend class="Lgnd1">Name :</legend>
+                    <input type="text" name="user_name" class="form-control" id="snme" maxlength="40" placeholder="Name" autocomplete="off">
+                  </fieldset>
+                  <fieldset class="fidSet2">
+                    <legend class="Lgnd2">Phone :</legend>
+                    <input type="text" name="user_contact" class="form-control" id="sno" maxlength="12" placeholder="Contact Number" autocomplete="off">
+                  </fieldset>
+                  <fieldset class="fidSet3">
+                    <legend class="Lgnd3">Email :</legend>
+                    <input type="email" name="user_email" class="form-control" id="seml" maxlength="30" placeholder="Email" autocomplete="off">
+                  </fieldset>                                    
+                    
+                    <div class="text-center">
+                        <button type="submit" class="btn_fin">Done!</button>
+                      </div>
+                  </form>         
+              <div class="row">
+                <div class="col-sm-6 text-left"><button class="bckPge" onclick="BckStp('step2')"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &nbsp;Previous</button></div>
+                <div class="col-sm-6 text-right"><button class="nxtPge" onclick="NxtStp('step3')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
+            </div>
+          </div>
+          <img src="assets/images/lod.gif" class="img_lod">
+          </div>
         </div>
+      </div>
+      
+    </div>
+  </div>
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
 
+<script type="text/javascript">
+  function NxtStp(step){
+    if(step=="step1"){
+      if($("#autocomplete").val()=="")
+      {
+        $(".Step1str fieldset").css("border","2px solid red");
+        $(".Step1str legend").css("color","red");
+        return false;
+      }
+      else
+      {
+        $(".Step1str legend").css("color","#000");
+        $(".Step1str fieldset").css("border","2px solid #ddd");
+        $(".hidstpBtn").css("display","none");
+      $(".inn_br").css("width","50%");
+      $(".stp_no").text("2");
+      $(".stpNo").text("2");
+      $(".Step2str").css("display","block");
+      }      
+    }
 
+    if(step=="step2"){
+      var e = document.getElementById("e1");
+      var strUser = e.options[e.selectedIndex].text;
+      if(strUser=="Select Category")
+      {
+        $(".fidSet").css("border","2px solid red");
+        $(".Lgnd").css("color","red");
+        return false;
+      }
+      else
+      {
+        $(".Lgnd").css("color","#000");
+        $(".fidSet").css("border","2px solid #ddd");
+      $(".Step1str").css("display","none");
+      $(".inn_br").css("width","75%");
+      $(".stp_no").text("3");
+      $(".Step3str").css("display","block");
+      }      
+    }
 
+    if(step=="step3"){
+          if($("#snme").val()=="")
+          {
+            $(".fidSet1").css("border","2px solid red");
+            $(".Lgnd1").css("color","red");
+            return false;
+          }
+          else if($("#sno").val()=="")
+          {
+            $(".fidSet2").css("border","2px solid red");
+            $(".Lgnd2").css("color","red");
+            return false;
+          }
+          else if($("#seml").val()=="")
+          {
+            $(".fidSet3").css("border","2px solid red");
+            $(".Lgnd3").css("color","red");
+            return false;
+          }
+          else{
+            $(".btn_fin").click();
+            $(".Step3str").css("display","none");
+            $(".Lgnd1").css("color","#000");
+            $(".fidSet1").css("border","2px solid #ddd");
+            $(".Lgnd2").css("color","#000");
+            $(".fidSet2").css("border","2px solid #ddd");
+            $(".Lgnd3").css("color","#000");
+            $(".fidSet3").css("border","2px solid #ddd");
+            $(".img_lod").css("display","block")
+          }      
+    }
+  }
+  function BckStp(step){
+    if(step=="step1"){
+      $(".Step1str").css("display","block");
+      $(".hidstpBtn").css("display","block");
+      $(".inn_br").css("width","25%");
+      $(".stp_no").text("1");
+      $(".Step2str").css("display","none");      
+    }
+    if(step=="step2"){
+      $(".Step1str").css("display","block");
+      $(".Step2str").css("display","block");
+      $(".inn_br").css("width","50%");
+      $(".stp_no").text("2");
+      $(".Step3str").css("display","none");
+    }
+  }
+ 
+</script>
+<script>
+    $(document).ready(function() { $("#e1").select2(); });
+  </script>
               <script type="text/javascript">
 //     $('.button_sel').click(function(){
 //       var e = document.getElementById("e1");
@@ -333,7 +574,7 @@ function get_category(id)
     var place = autocomplete.getPlace();
 
     for (var component in componentForm) {
-    document.getElementById(component).innerHTML = '';
+    document.getElementById(component).value = '';
     // document.getElementById(component).disabled = false;
     }
     
@@ -343,12 +584,12 @@ function get_category(id)
     var addressType = place.address_components[i].types[0];
     if (componentForm[addressType]) {
       var val = place.address_components[i][componentForm[addressType]];
-      document.getElementById(addressType).innerHTML = val;   
+      document.getElementById(addressType).value = val;   
     }
     }
 
-    document.getElementById('website').innerHTML = place['website'];
-    document.getElementById('name').innerHTML = place['name'];
+    document.getElementById('website').value = place['website'];
+    document.getElementById('name').value = place['name'];
     document.getElementById('frm_website').value = place['website'];
     document.getElementById('frm_name').value = place['name'];
   }
@@ -379,9 +620,7 @@ function get_category(id)
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
     async defer></script>
-  <script>
-    $(document).ready(function() { $("#e1").select2(); });
-  </script>
+  
   <script type="text/javascript">
   function changeStep(step)
   {
@@ -412,25 +651,25 @@ function get_category(id)
       $(".stp_no").text("3");
     }
 
-    if(step=="step3")
-    {
-      var e = document.getElementById("e1");
-      var strUser = e.options[e.selectedIndex].text;
-      if(strUser=="Select Category")
-      {       
-        $(".err_msg").show();
-        return false;
-      }
-      else
-      {
-        $(".err_msg").hide();
-        $(".inn_br").css("width","90%");
-        $(".innStep3").removeClass("actstp");
-        $(".innStep3").addClass("hidstp");
-        $(".innStep4").addClass("actstp");
-        $(".stp_no").text("4");
-      }
-    }
+    // if(step=="step3")
+    // {
+    //   var e = document.getElementById("e1");
+    //   var strUser = e.options[e.selectedIndex].text;
+    //   if(strUser=="Select Category")
+    //   {       
+    //     $(".err_msg").show();
+    //     return false;
+    //   }
+    //   else
+    //   {
+    //     $(".err_msg").hide();
+    //     $(".inn_br").css("width","90%");
+    //     $(".innStep3").removeClass("actstp");
+    //     $(".innStep3").addClass("hidstp");
+    //     $(".innStep4").addClass("actstp");
+    //     $(".stp_no").text("4");
+    //   }
+    // }
 
     if(step=="step4")
     {

@@ -38,12 +38,12 @@
     height: 45px;
 }
 .cat_js_basic .select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 45px;
-    color: #fff;
-    font-size: 15px;
+    line-height: 40px;
+    color: #777;
+    font-size: 17px;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-    border-color: #fff transparent transparent transparent;
+    border-color: #000 transparent transparent transparent;
 }
 .cat_js_basic .select2-container {
     width: 100% !important;
@@ -52,7 +52,8 @@
 .cat_js_basic .select2-container .select2-selection--single {
     height: 45px;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid transparent;
+    outline: none;
 }
 .cat_js_basic .select2-container--default .select2-selection--single .select2-selection__arrow {
     height: 40px;
@@ -95,21 +96,15 @@
 }
 .img_lod
 {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
     margin: 0 auto;
     display: none;
-    transform: translateY(-50%);
-    margin-top: 80px;
 }
 
 /*---------------steps--------------*/
 
 .prog_bar{
     position: relative;
-    height: 11px;
+    height: 8px;
     margin-bottom: 20px;
     overflow: hidden;
     background-color: #f5f5f5;
@@ -120,8 +115,8 @@
 }
 .inn_progbar
 {
-    padding: 100px 0px 20px 0px;
-    width: 50%;
+    padding: 0px 0px 20px 0px;
+    width: 100%;
     margin: 0 auto;
     transition: 0.8s all;
 }
@@ -138,17 +133,17 @@
 .txt_stp
 {
     text-align: center;
-    color: #fff;
-    font-size: 17px;
-    word-spacing: 2px;
-    letter-spacing: 1px;
+    color: #777;
+    font-size: 15px;
+    word-spacing: 0px;
+    letter-spacing: 0px;
     font-weight: 600;
     margin-bottom: 15px;
 }
 .inn_stepslid
 {
     width: 55%;
-    margin: 0 auto;
+    margin: 150px auto;
     position: relative;
     transition: 0.8s all;
 }
@@ -171,7 +166,7 @@
     letter-spacing: 1px;
     display: inline-block;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 40px;
     outline: none;
 }
 .btn_frm:hover
@@ -228,7 +223,7 @@
 }
 .hei_over
 {
-    height: 250px;
+    height: 220px;
     overflow-y: scroll;
 }
 .cus_selwid
@@ -239,6 +234,138 @@
 .cus_selwid .form-box {
     padding: 0px 0px;
 }
+
+
+/*-------- compititor popup css start -------------*/
+
+
+.Stepcurr h4
+{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    color: #4d84f1;
+}
+.Stepcurr h2
+{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    color: #3a3f48;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+.modbdy {
+    position: relative;
+    padding: 33px 50px;
+}
+fieldset {
+    min-width: 100%;
+    padding: 0px 12px;
+    margin: 0;
+    border: 2px solid #ddd;
+}
+legend {
+    display: unset;
+    width: unset;
+    padding: 0;
+    margin-bottom: 0px;
+    font-size: 13px;
+    line-height: inherit;
+    color: #333;
+    border-bottom: unset;
+    padding: 0px 6px;
+}
+fieldset .form-control
+{
+    border: none;
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: unset !important;
+    font-size: 17px;
+    height: 40px;
+    padding: 0px 5px;
+}
+fieldset input
+{
+    outline: none;
+}
+.nxtPge
+{
+    background-color: #0256b8;
+    color: #fff;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border-radius: 50px;
+    border: none;
+    margin-top: 50px;
+    letter-spacing: 1px;
+}
+.bckPge
+{
+    background-color: transparent;
+    color: #0256b8;
+    padding: 14px 0px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 50px;
+    border: none;
+    margin-top: 50px;
+    font-weight: 600;
+}
+#address .col-sm-12,.col-sm-6
+{
+    margin-bottom: 20px;
+}
+#address strong
+{
+    font-size: 15px;
+}
+.bckPge i
+{
+    font-size: 18px;
+    margin-right: 8px;
+}
+.pac-container {
+z-index: 10000;
+}
+.Step2str
+{
+    display: none;
+}
+.Step3str
+{
+    display: none;
+}
+.Step3str fieldset
+{
+    margin-bottom: 20px;
+}
+.Step3str h2
+{
+    margin-bottom: 11px;
+}
+.Step3str p
+{
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+.hei_over::-webkit-scrollbar 
+{
+  display: none;
+}
+#address p
+{
+    margin: 0;
+    display: inline-block;
+    width: 90%;
+    vertical-align: top;
+    margin-left: 6px;
+}
+/*-------- compititor popup css end -------------*/
 /*----------------------------------*/
 
 @media(min-width: 320px) and (max-width: 767px){
