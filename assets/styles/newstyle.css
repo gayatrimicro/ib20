@@ -300,7 +300,7 @@ fieldset input
     outline: none;
     border-radius: 50px;
     border: none;
-    margin-top: 50px;
+    margin-top: 30px;
     letter-spacing: 1px;
 }
 .bckPge
@@ -312,7 +312,7 @@ fieldset input
     outline: none;
     border-radius: 50px;
     border: none;
-    margin-top: 50px;
+    margin-top: 30px;
     font-weight: 600;
 }
 #address .col-sm-12,.col-sm-6
@@ -365,7 +365,53 @@ z-index: 10000;
     vertical-align: top;
     margin-left: 6px;
 }
+.Step2str fieldset
+{
+    border:2px solid #ddd;
+}
+.Step2str legend
+{
+    color: #000;
+}
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+  position: fixed;
+    bottom: 0;
+    display: none;
+}
+
+#myBar {
+  width: 5%;
+  height: 30px;
+  background-color: #0256b8;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  position: relative;
+}
+#my_per
+{
+    position: absolute;
+    top: -33px;
+    width: 33px;
+    height: 33px;
+    color: #0256b8;
+    font-size: 21px;
+    font-weight: 700;
+    z-index: 10000;
+    right: 20;
+}
 /*-------- compititor popup css end -------------*/
+
+/*------------- Patient Loader page start -----------------*/
+.BakClr
+{
+    background-color: #fff;
+    padding-top: 0rem;
+}
+/*------------- Patient Loader page end -----------------*/
+
 /*----------------------------------*/
 
 @media(min-width: 320px) and (max-width: 767px){
