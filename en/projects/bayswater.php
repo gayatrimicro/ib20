@@ -83,7 +83,7 @@ $result = $conn->query($sql);
 	<link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/newstyle.css">
-	<link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css"> -->
 
 	<meta name="msapplication-TileColor" content="#4D84F1">
 	<meta name="msapplication-TileImage" content="../../assets/images/favicons/mstile-144x144.png">
@@ -829,83 +829,118 @@ $result = $conn->query($sql);
 			</div>
 			<div class="c-lisa_content">
 				
-				<div class="inn_progbar">
-					<p class="txt_stp">Step <span class="stp_no">1</span> of 4</p>
-					<div class="prog_bar">
-						<div class="inn_br"></div>
-					</div>
-				</div>
 
-				<div class="inn_stepslid">
-					<div class="innStep1 actstp">
-						<h4>Find your practice</h4>
-							<input id="autocomplete" placeholder="Type your practice name" onFocus="geolocate()" type="text" />
-							<p class="err_msg">Please enter location</p>
-							<div class="text-center">
-							  <div class="btn_frm" onclick="changeStep('step1')">Start</div>
-							</div>
-					</div>
-					<div class="innStep2">
-						<div id="address" class="hei_over" hidden="" style="color: #fff;">
-						<label style="display: flex;"><strong>Street address&nbsp;:&nbsp;</strong><p id="street_number"></p>&nbsp;<p id="route"></p></label>
 
-						<label style="display: flex;"><strong>City&nbsp;:&nbsp;</strong><p id="locality"></p></label>
+				<div class="c-lisa_step -active">
 
-						<label style="display: flex;"><strong>State&nbsp;:&nbsp;</strong><p id="administrative_area_level_1"></p></label>
-						<label style="display: flex;"><strong>Zip code&nbsp;:&nbsp;</strong><p id="postal_code"></p></label>
+                    <span class="c-lisa_step_title || js-title">Now that we’re BFFs, tell me more about your project.</span>
+                    <div class="c-lisa_step_content">
+        
+                        <form class="c-lisa_form js-form" id="lead-form">
+                            <!-- <input type="hidden" name="lang" value="en">
+                            <input type="hidden" name="projectType">
+                            <input type="hidden" name="budget">
+                            <input type="hidden" name="leadOrigin"> -->
+        
+                            <div class="o-layout -gutter">
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="firstName">First Name *</label>
+                                    <input type="text" name="firstName" class="o-input || js-input" id="firstName" required>
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="lastName">Last Name *</label>
+                                    <input type="text" name="lastName" class="o-input || js-input" id="lastName" required>
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="telephone">Telephone *</label>
+                                    <input type="text" maxlength="10" pattern="[0-9]{10,10}$" title="Enter valid contact number." name="telephone" class="o-input || js-input" id="telephone" >
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="email">Email *</label>
+                                    <input type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Enter valid E-mail address." name="email" class="o-input || js-input" id="email" required>
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="company">Company *</label>
+                                    <input type="text" name="company" class="o-input || js-input" id="company" required>
+                                </div>
+        
+                                <div class="o-layout_item u-1/2@from-small">
+                                    <label class="o-label" for="deadline">Your deadline *</label>
+                                    <input type="text" name="deadline" class="o-input || js-input" id="deadline" required>
+                                </div>
+        
+                                <div class="o-layout_item">
+                                    <label class="o-label" for="message">Description *</label>
+                                    <textarea rows="10" name="message" class="o-textarea || js-input" id="message" required></textarea>
+                                </div>
+                            </div>
+        
+                            <!-- <div class="c-lisa_form-message || js-message" data-error="Error:"></div> -->
+        
+                            <div class="c-lisa_form-footer">
+        
+                                <div class="g-recaptcha js-captcha" data-sitekey="6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6"></div>
+        
+                                <div class="c-lisa_form-submit-wrapper">
+                                    <div class="c-lisa_form-loader">
+                                        <div class="o-loader">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="o-button -white -white || c-lisa_form-submit">
+                                        <span class="o-button_label -base">Submit</span>
+                                        <span class="o-button_label -hover">Submit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+        
 
-						<label style="display: flex;"><strong>Country&nbsp;:&nbsp;</strong><p id="country"></p></label>
+<script>
+$(document).ready(function() { 
+    $('#lead-form').submit(function(event) {
+      event.preventDefault();
+      var formdata = $('#lead-form').serialize();
 
-						<label style="display: flex;"><strong>Website&nbsp;:&nbsp;</strong><p id="website"></p></label>
+      // alert(formdata);
+      if ($('#firstName').val() != "" && $('#lastName').val() != "" && $('#telephone').val() != "" && $('#email').val() != "" && $('#company').val() != "" && $('#deadline').val() != "" && $('#message').val() != "") {
+            
+             $.ajax({
+                              url:'lead.php',
+                              type:'POST',
+                              data:formdata,
+                              success:function(result){
+                                  
+                                  $("#successmessage").css("display", "block");
+                                  $("#successmessage").html("Your enquiry has been sent successfully");
+                                  $("#firstName, #lastName, #telephone, #email, #company, #deadline, #message").val("");
+                                  
+                              }
+                    });
 
-						<label style="display: flex;"><strong>Organization&nbsp;:&nbsp;</strong><p id="name"></p></label>
-						<br>					
-				</div>
-				<div class="text-center">
-				  <div class="btn_frm" onclick="changeStep('step2')">Next</div>
-				</div>
-			</div>
-			<div class="innStep3 cat_js_basic">
-				<h4>Select Category to know your competitors</h4>
-				<select name="category" required onchange="get_category(this.value)" id="e1" style="color: #000;">
-				<option value="">Select Category</option>
-				<?php while($row = $result->fetch_assoc()) { ?>
-					<option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
-				<?php } ?>
-			</select>
-			<hr>
-				<p class="err_msg">Please select category</p>
-				<div class="text-center">
-				  <div class="btn_frm" onclick="changeStep('step3')">Next</div>
-				</div>
-			</div>
-			<div class="innStep4">
-				<h4>Check your results.</h4>
-		<form method="post" action="competitors.php">
-			<input type="hidden" id="frm_street_number" value="" />
-			<input type="hidden" name="street_address" id="frm_route" value="" />
-			<input type="hidden" id="frm_locality" name="city" value="" />
-			<input type="hidden" id="frm_administrative_area_level_1" name="state" value="" />
-			<input type="hidden" id="frm_postal_code" name="zip_code" value="" />
-			<input type="hidden" id="frm_country" name="country" value="" />
-			<input type="hidden" id="frm_website" name="website" value="" />
-			<input type="hidden" id="frm_name" name="name" value="" />
-			<input type="hidden" id="frm_category" name="category" value="" />
+        
+    }
+             else{
+              alert("All fields are mandatory");
+                  }
+    });
+});
+
+</script>
+
+
+
+                </div>
+
+</div>
+
+
 			
-			<input type="text" name="user_name" id="snme" maxlength="40" placeholder="Name">
-			<input type="email" name="user_email" id="seml" maxlength="30" placeholder="Email">
-			<input type="text" name="user_contact" id="sno" maxlength="12" placeholder="Contact Number">
-			<p class="err_msg">Please fill all fields</p>
-
-			<div class="text-center">
-				  <div class="btn_frm" onclick="changeStep('step4')">Done!</div>
-				  <button type="submit" class="btn_fin">Done!</button>
-				</div>
-		</form>
 			</div>
-			<img src="../../assets/images/lod.gif" class="img_lod">
-		</div>
-	</div>
 		
 			
 		</div>
