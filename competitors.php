@@ -20,7 +20,7 @@ $conn = new mysqli($servername, $username, $password, $databese);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+try{
 $sql = "SELECT * FROM business_category where id = '".$_POST['category']."'";
 $db_result = $conn->query($sql);
 $cat_result = $db_result->fetch_row();
@@ -481,4 +481,8 @@ foreach ($mobile_friendly_score_ar as $row) {
 	}
 }
 
+}
+catch(exception $e){
+	print_r("Something went wrong");	
+}
 ?>

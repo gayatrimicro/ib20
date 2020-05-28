@@ -628,10 +628,10 @@ document.getElementById("seml").onblur =function() {
 
 function get_category(id)
 {
-  var city = document.getElementById('locality').innerHTML;
-  var state = document.getElementById('administrative_area_level_1').innerHTML;
-  var country = document.getElementById('country').innerHTML;
-  var organization_name = document.getElementById('name').innerHTML;
+  var city = document.getElementById('locality').value;
+  var state = document.getElementById('administrative_area_level_1').value;
+  var country = document.getElementById('country').value;
+  var organization_name = document.getElementById('name').value;
   
   console.log("Organization Name : "+organization_name);
   document.getElementById('frm_locality').value = city;
