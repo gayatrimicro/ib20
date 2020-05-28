@@ -405,7 +405,7 @@ $result = $conn->query($sql);
 					<div class="c-fancy-video_bg" style="background-color:#EB2931"></div>
 					<div id="myid">
 						<video id="fir_vid">
-  <source src="../../assets/videos/bayswater.mp4" type="video/mp4">
+  <source src="../../assets/videos/bayswater1.mp4" type="video/mp4">
 </video>
 					
 				</div>
@@ -466,7 +466,7 @@ $result = $conn->query($sql);
 				  <source src="../../assets/videos/bayswater.mp4" type="video/mp4">
 				</video> -->
 				<video id="desk_vid" autoplay loop>
-				  <source src="../../assets/videos/bayswater.mp4"  type="video/mp4">
+				  <source src="../../assets/videos/bayswater3.mp4"  type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -479,7 +479,7 @@ $result = $conn->query($sql);
 		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;">
 			<div id="vid_seco">
 				<video id="desk_vid1" autoplay loop>
-				  <source src="../../assets/videos/bayswater.mp4"  type="video/mp4">
+				  <source src="../../assets/videos/bayswater1.mp4"  type="video/mp4">
 				</video>
 				<div class="c-fancy-video-cursor || o-cursor_wrapper || js-video-cursor js-animate" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()">
 						<div class="c-fancy-video-cursor_zone || js-drag-zone"></div>
@@ -530,7 +530,7 @@ $result = $conn->query($sql);
 		<div class="o-vimeo-player js-animate u-anim -delay-1" style="padding-bottom: 0% !important;">
 			<!-- <iframe class="js-animate" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://player.vimeo.com/video/330879106?controls=false&amp;autoplay=0&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1" width="640" height="360" muted frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe> -->
 			<video id="normal_vid" autoplay loop>
-				  <source src="../../assets/videos/bayswater-categories.mp4"  type="video/mp4">
+				  <source src="../../assets/videos/bayswater2.mp4"  type="video/mp4">
 				</video>
 			<!-- <video id="desk_vid" loop>
 			  <source src="../../assets/videos/bayswater.mov" type="video/mp4">
