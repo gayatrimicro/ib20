@@ -24,20 +24,21 @@ $result = $conn->query($sql);
       <title>
          Competitor Checker  | IBridge Digital
       </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
       <!-- <link rel="stylesheet" type="text/css" href="assets/styles/steps.css"> -->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
       <!-- <link rel="stylesheet" href="assets/styles/main3e3a.css"> -->
-      <link rel="stylesheet" href="assets/styles/newstyle.css">
+      <link rel="stylesheet" href="com-assets/css/newstyle.css">
+      <link rel="stylesheet" href="com-assets/css/slick.css">
+      <link rel="stylesheet" type="text/css" href="com-assets/css/slick-theme.css">
   
   
 
     </head>
 
-   <body class="custom-landing-page patient-visitor-guide browser-large" data-gr-c-s-loaded="true" style="background-color: #1c1c20;padding-top: 0rem;">
+   <body class="custom-landing-page patient-visitor-guide browser-large BacClr" data-gr-c-s-loaded="true">
     <style type="text/css">
       h1, h2, h3, h4, h5, h6{
         color: #fff;
@@ -80,6 +81,103 @@ $result = $conn->query($sql);
 
        
     </style>
+    <section>
+      <div class="HdrNav">
+        <div class="row">
+          <div class="col-sm-5">
+            <div><img src="com-assets/img/logo.png"></div>
+          </div>
+          <div class="col-sm-7">
+            <div class="disMsg op0zin">
+              <div class="row">                
+                <div class="col-sm-11">
+                  <p>This can take about a minute. Please do not refresh<br> your screen or click your browser’s back button.</p>
+                </div>
+                <div class="col-sm-1 pad_0">
+                  <img src="com-assets/img/clock.png" class="imgClock">
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="DeskView">
+        <div class="SliSec">
+          <button type="button" class="btn_Modal" data-toggle="modal" data-target="#pracFrm">Patients competitors</button>
+          <div class="SlickSli op0zin">
+            <div class="LodSlid">
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Gathering your compititors</h2>
+                      <h3>Patients could be choosing your competitors without you even realizing it.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Calculating your Google rank score</h2>
+                      <h3>You should strive to rank as high as possible, as search results listed on page 1 of Google get 95% of all web traffic.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Calculating your website score</h2>
+                      <h3>Patients could be choosing your competitors without you even realizing it.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Calculating your reputation score</h2>
+                      <h3>When choosing between two providers, patients are likely to select the one with better reviews 91 percent of the time.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Scanning your practice</h2>
+                      <h3>Please do not refresh your screen or click your browser's back button.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
         <!-- <div>
           <div class="inn_progbar">
             <p class="txt_stp">Step <span class="stp_no">1</span> of 4</p>
@@ -164,11 +262,10 @@ $result = $conn->query($sql);
           </div>
         </div> -->
 
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="display: block;
-    width: 250px;margin: 150px auto;">Open Modal</button>
+        
 
         <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="pracFrm" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -185,8 +282,8 @@ $result = $conn->query($sql);
           <div class="Step1str Stepcurr">
             <h4>Step <span class="stpNo">1</span></h4>
             <h2>Compare your business with your competitors in your local area</h2>
-            <fieldset>
-              <legend>Practice name :</legend>
+            <fieldset class="LocFie">
+              <legend class="LegFie">Practice name :</legend>
               <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Type your practice name">
             </fieldset>
             <div class="text-right"><button class="nxtPge hidstpBtn" onclick="NxtStp('step1')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
@@ -198,13 +295,13 @@ $result = $conn->query($sql);
                 <div class="col-sm-6">
                   <fieldset>
                     <legend>Street No :</legend>
-                    <input type="text" class="form-control" id="street_number" placeholder="Street number">
+                    <input type="text" class="form-control" id="street_number" placeholder="Street number" oninput="ChkInpSts(this)">
                   </fieldset>
                 </div>
                 <div class="col-sm-6">
                   <fieldset>
                     <legend>Street address :</legend>
-                    <input type="text" class="form-control" id="route" placeholder="Street address">
+                    <input type="text" class="form-control" id="route" placeholder="Street address" oninput="ChkInpSts(this)">
                   </fieldset>
                 </div>
               </div>
@@ -212,13 +309,13 @@ $result = $conn->query($sql);
                 <div class="col-sm-6">
                   <fieldset>
                     <legend>City :</legend>
-                    <input type="text" class="form-control" id="locality" placeholder="City">
+                    <input type="text" class="form-control" id="locality" placeholder="City" oninput="ChkInpSts(this)">
                   </fieldset>
                 </div>
                 <div class="col-sm-6">
                   <fieldset>
                     <legend>State :</legend>
-                    <input type="text" class="form-control" id="administrative_area_level_1" placeholder="State">
+                    <input type="text" class="form-control" id="administrative_area_level_1" placeholder="State" oninput="ChkInpSts(this)">
                   </fieldset>
                 </div>
               </div>
@@ -226,13 +323,13 @@ $result = $conn->query($sql);
                 <div class="col-sm-6">
                   <fieldset>
                     <legend>Zip code :</legend>
-                    <input type="text" class="form-control" id="postal_code" placeholder="Zip code">
+                    <input type="text" class="form-control" id="postal_code" placeholder="Zip code" oninput="ChkInpSts(this)">
                   </fieldset>
                 </div>
                 <div class="col-sm-6">
                   <fieldset>
                     <legend>Country :</legend>
-                    <input type="text" class="form-control" id="country" placeholder="Country">
+                    <input type="text" class="form-control" id="country" placeholder="Country" oninput="ChkInpSts(this)">
                   </fieldset>
                 </div>
               </div>
@@ -240,13 +337,13 @@ $result = $conn->query($sql);
                 <div class="col-sm-12">
                   <fieldset>
                     <legend>Website :</legend>
-                    <input type="text" class="form-control" id="website" placeholder="website">
+                    <input type="text" class="form-control" id="website" placeholder="website" oninput="ChkInpSts(this)">
                   </fieldset>
                 </div>
                 <div class="col-sm-12">
                   <fieldset>
                     <legend>Organization :</legend>
-                    <input type="text" class="form-control" id="name" placeholder="Organization">
+                    <input type="text" class="form-control" id="name" placeholder="Organization" oninput="ChkInpSts(this)">
                   </fieldset>
                 </div>
                 <div class="col-sm-12 cat_js_basic">
@@ -288,16 +385,17 @@ $result = $conn->query($sql);
 
                   <fieldset class="fidSet1">
                     <legend class="Lgnd1">Name :</legend>
-                    <input type="text" name="user_name" class="form-control" id="snme" maxlength="40" placeholder="Name" autocomplete="off">
+                    <input type="text" name="user_name" class="form-control" id="snme" maxlength="40" placeholder="Name" autocomplete="off" oninput="ChkInpSts(this)">
                   </fieldset>
                   <fieldset class="fidSet2">
                     <legend class="Lgnd2">Phone :</legend>
-                    <input type="text" name="user_contact" class="form-control" id="sno" maxlength="12" placeholder="Contact Number" autocomplete="off">
+                    <input type="text" name="user_contact" class="form-control" id="sno" maxlength="10" placeholder="Contact Number" autocomplete="off" oninput="ChkInpSts(this)">
                   </fieldset>
                   <fieldset class="fidSet3">
                     <legend class="Lgnd3">Email :</legend>
-                    <input type="email" name="user_email" class="form-control" id="seml" maxlength="30" placeholder="Email" autocomplete="off">
-                  </fieldset>                                    
+                    <input type="email" name="user_email" class="form-control" id="seml" maxlength="30" placeholder="Email" autocomplete="off" oninput="ChkInpSts(this)">
+                  </fieldset>
+                  <p>By submitting my email address above, I acknowledge that ibridge Digital may use my information as described in its Privacy Policy.</p>                                    
                     
                     <div class="text-center">
                         <button type="submit" class="btn_fin">Done!</button>
@@ -316,26 +414,55 @@ $result = $conn->query($sql);
     </div>
   </div>
 
+<div id="myProgress">
+  <div id="myBar"><div id="my_per">42%</div></div>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="com-assets/js/slick.min.js"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
-
+<script>
+var set_i = 0;
+function move() {
+  if (set_i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 42;
+    var id = setInterval(frame, 1000);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        set_i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        document.getElementById("my_per").innerHTML = width  + "%";
+      }
+    }
+  }
+}
+</script>
 <script type="text/javascript">
+  $('.LodSlid').slick({
+  infinite: true,
+  autoplay: true,
+  speed: 300,
+  fade: true,
+  cssEase: 'linear'
+});
+
   function NxtStp(step){
     if(step=="step1"){
       if($("#autocomplete").val()=="")
       {
-        $(".Step1str fieldset").css("border","2px solid red");
-        $(".Step1str legend").css("color","red");
+        $(".LocFie").css("border","2px solid red");
+        $(".LegFie").css("color","red");
         return false;
       }
       else
       {
-        $(".Step1str legend").css("color","#000");
-        $(".Step1str fieldset").css("border","2px solid #ddd");
         $(".hidstpBtn").css("display","none");
       $(".inn_br").css("width","50%");
       $(".stp_no").text("2");
@@ -355,44 +482,62 @@ $result = $conn->query($sql);
       }
       else
       {
-        $(".Lgnd").css("color","#000");
-        $(".fidSet").css("border","2px solid #ddd");
+      $(".fidSet").css("border","2px solid #ddd");
+      $(".Lgnd").css("color","#000");
       $(".Step1str").css("display","none");
-      $(".inn_br").css("width","75%");
+      $(".inn_br").css("width","100%");
       $(".stp_no").text("3");
-      $(".Step3str").css("display","block");
+      $(".Step3str").css("display","block");      
       }      
     }
 
     if(step=="step3"){
+      var count_n=0;
           if($("#snme").val()=="")
           {
-            $(".fidSet1").css("border","2px solid red");
-            $(".Lgnd1").css("color","red");
-            return false;
+            count_n+=1;
           }
-          else if($("#sno").val()=="")
+          if($("#sno").val()=="")
           {
-            $(".fidSet2").css("border","2px solid red");
-            $(".Lgnd2").css("color","red");
-            return false;
+            count_n+=1;
           }
-          else if($("#seml").val()=="")
+          count_n+=phoneno($("#sno").val());
+          if($("#seml").val()=="")
+          {            
+            count_n+=1;
+          }
+          count_n+=validEmail($("#seml").val());
+
+          if(count_n>0)
           {
-            $(".fidSet3").css("border","2px solid red");
-            $(".Lgnd3").css("color","red");
+              if($("#snme").val()=="")
+              {
+                $(".fidSet1").css("border","2px solid red");
+                $(".Lgnd1").css("color","red");
+              }
+              if($("#sno").val()=="")
+              {
+                $(".fidSet2").css("border","2px solid red");
+                $(".Lgnd2").css("color","red");
+              }
+              if($("#seml").val()=="")
+              {            
+                $(".fidSet3").css("border","2px solid red");
+                $(".Lgnd3").css("color","red");
+              }            
             return false;
           }
           else{
-            $(".btn_fin").click();
+            $("#myProgress").show();            
             $(".Step3str").css("display","none");
-            $(".Lgnd1").css("color","#000");
-            $(".fidSet1").css("border","2px solid #ddd");
-            $(".Lgnd2").css("color","#000");
-            $(".fidSet2").css("border","2px solid #ddd");
-            $(".Lgnd3").css("color","#000");
-            $(".fidSet3").css("border","2px solid #ddd");
-            $(".img_lod").css("display","block")
+            $(".Step3str fieldset").css("border","2px solid #ddd");
+            $(".Step3str legend").css("color","#000");
+            $('#pracFrm').modal('hide');
+            $('.btn_Modal').hide();
+            move();
+            $(".SlickSli").removeClass("op0zin");
+            $(".disMsg").removeClass("op0zin");
+            $(".btn_fin").click();
           }      
     }
   }
@@ -412,6 +557,74 @@ $result = $conn->query($sql);
       $(".Step3str").css("display","none");
     }
   }
+
+  document.getElementById("autocomplete").oninput = function() {
+  if($("#autocomplete").val()==""){
+        $(".LocFie").css("border","2px solid red");
+        $(".LegFie").css("color","red");
+      }
+      else
+      {
+        $(".LocFie").css("border","2px solid #2c98f7");
+        $(".LegFie").css("color","#2c98f7");
+        $("#autocomplete").css("color","#2c98f7");        
+      }
+};
+
+  function ChkInpSts(inp){
+    $(inp).parent().css("border","2px solid #2c98f7");
+        $(inp).parent().find("legend").css("color","#2c98f7");
+        $(inp).css("color","#2c98f7");
+    if($(inp).val()==""){
+      $(inp).parent().css("border","2px solid red");
+      $(inp).parent().find("legend").css("color","red");
+      }
+      else
+      {
+        $(inp).parent().css("border","2px solid #2c98f7");
+        $(inp).parent().find("legend").css("color","#2c98f7");
+        $(inp).css("color","#2c98f7");        
+      }
+  }
+
+function phoneno(val){         
+            if(val.length==10)  {
+           $(".fidSet2").css("border","2px solid #2c98f7");
+             $(".Lgnd2").css("color","#2c98f7");
+             $(".fidSet2 input").css("color","#2c98f7");
+             return 0;                
+            }
+            else{
+              $(".fidSet2").css("border","2px solid red");
+                $(".Lgnd2").css("color","red");
+                $(".fidSet2 input").css("color","red"); 
+              return 1;
+            } 
+     }
+
+document.getElementById("sno").onkeyup = function() {
+    document.getElementById("sno").value = document.getElementById("sno").value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+    phoneno(document.getElementById("sno").value);
+  };
+
+document.getElementById("seml").onblur =function() {
+  var eml=document.getElementById("seml").value;
+  validEmail(eml);
+}; 
+  function validEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(re.test(email)==false){
+      $(".fidSet3").css("border","2px solid red");
+        $(".Lgnd3").css("color","red");
+        $(".fidSet3 input").css("color","red");
+        return 1;
+    }
+    else
+    {
+      return 0;
+    }
+    // return re.test(email);
+};
  
 </script>
 <script>
@@ -574,7 +787,7 @@ function get_category(id)
     var place = autocomplete.getPlace();
 
     for (var component in componentForm) {
-    document.getElementById(component).value = '';
+    document.getElementById(component).value = 'unknown';
     // document.getElementById(component).disabled = false;
     }
     
@@ -614,8 +827,9 @@ function get_category(id)
         event.preventDefault();
       }
     });
-  }
-  
+
+    
+  }  
 
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
