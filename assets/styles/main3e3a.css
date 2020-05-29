@@ -5404,7 +5404,7 @@ html.has-nav-open .c-header_burger:before {
 }
 
 .c-footer {
-	height: 56vh;
+	height: 45vh;
 	position: relative;
 	background-color: #1c1c20;
 	color: #fff;
@@ -5427,7 +5427,7 @@ html.has-nav-open .c-header_burger:before {
 @media (min-width:1200px) {
 	.c-footer_inner {
 		position: absolute;
-		top: 50%;
+		top: 65%;
 		left: 0;
 		right: 0;
 		transform: translateY(-50%)
