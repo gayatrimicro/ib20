@@ -126,6 +126,51 @@
 						<div class="pad_grph"><b><span class="BClr">What does this mean?</span></b></div>
 					</div>
 				</div>
+				<style type="text/css">
+					
+/*.bar-container {
+    position: relative;
+    font-size:40px;
+    margin-top:150px;
+    display: inline-block;
+    border-bottom: 1px double #000;
+    cursor: help;
+}*/
+.bar-container .tooltiptext {
+    visibility: hidden;
+    font-size:18px;
+    width: 100px;
+    background-color: #414141;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin: 0px 0px 30px -60px;
+    opacity: 0;
+    transition: all ease 1s; 
+}
+
+.bar-container .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #414141 transparent transparent transparent;
+}
+
+.bar-container:hover .tooltiptext {
+    visibility: visible;
+    margin: 0px 0px 0px -60px;
+    opacity: 1;
+}
+				</style>
 				<div class="col-sm-8">
 					<div class="bac_clrMap">
 						<h4 class="BClr">"PatientPop builds your website, handles your local listings, online reputation, and online scheduling. It's a remarkable solution."</h4>
@@ -135,7 +180,10 @@
 			                    <li>
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
+			                            	
 			                                <div class="bar-inner">1</div>
+			                                <span class="tooltiptext">96 Excellent</span>
+
 			                            </div>
 			                        </div>
 			                    </li>
@@ -143,6 +191,8 @@
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
 			                                <div class="bar-inner">2</div>
+			                                <span class="tooltiptext">52 Good </span>
+
 			                            </div>
 			                        </div>
 			                    </li>
@@ -150,6 +200,8 @@
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
 			                                <div class="bar-inner">3</div>
+			                                <span class="tooltiptext">36 Poor</span>
+
 			                            </div>
 			                        </div>
 			                    </li>
@@ -157,6 +209,8 @@
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
 			                                <div class="bar-inner">4</div>
+			                                <span class="tooltiptext">76 Good </span>
+
 			                            </div>
 			                        </div>
 			                    </li>                   
