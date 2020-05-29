@@ -6,7 +6,7 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link rel="stylesheet" href="com-assets/css/newstyle.css">
-  	<link rel="stylesheet" href="com-assets/css/bar.css">
+  	<link rel="stylesheet" href="com-assets/css/bar.css">  	
 </head>
 <body>
 	<section class="HedResult">
@@ -126,51 +126,6 @@
 						<div class="pad_grph"><b><span class="BClr">What does this mean?</span></b></div>
 					</div>
 				</div>
-				<style type="text/css">
-					
-/*.bar-container {
-    position: relative;
-    font-size:40px;
-    margin-top:150px;
-    display: inline-block;
-    border-bottom: 1px double #000;
-    cursor: help;
-}*/
-.bar-container .tooltiptext {
-    visibility: hidden;
-    font-size:18px;
-    width: 100px;
-    background-color: #414141;
-    color: #fff;
-    text-align: center;
-    border-radius: 8px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin: 0px 0px 30px -60px;
-    opacity: 0;
-    transition: all ease 1s; 
-}
-
-.bar-container .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #414141 transparent transparent transparent;
-}
-
-.bar-container:hover .tooltiptext {
-    visibility: visible;
-    margin: 0px 0px 0px -60px;
-    opacity: 1;
-}
-				</style>
 				<div class="col-sm-8">
 					<div class="bac_clrMap">
 						<h4 class="BClr">"PatientPop builds your website, handles your local listings, online reputation, and online scheduling. It's a remarkable solution."</h4>
@@ -179,42 +134,32 @@
 			                <ul class="graph-container">
 			                    <li>
 			                        <div class="bar-wrapper">
-			                            <div class="bar-container">
-			                            	
-			                                <div class="bar-inner">1</div>
-			                                <span class="tooltiptext">96 Excellent</span>
-
+			                            <div class="bar-container">			                            	
+			                                <div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
 			                            </div>
 			                        </div>
 			                    </li>
 			                    <li>
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
-			                                <div class="bar-inner">2</div>
-			                                <span class="tooltiptext">52 Good </span>
-
+			                                <div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
 			                            </div>
 			                        </div>
 			                    </li>
 			                    <li>
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
-			                                <div class="bar-inner">3</div>
-			                                <span class="tooltiptext">36 Poor</span>
-
+			                                <div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
 			                            </div>
 			                        </div>
 			                    </li>
 			                    <li>
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
-			                                <div class="bar-inner">4</div>
-			                                <span class="tooltiptext">76 Good </span>
-
+			                                <div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
 			                            </div>
 			                        </div>
-			                    </li>                   
-			                    <li></li>
+			                    </li>
 			                </ul>
 			            </section>
 						<div class="text-right">
@@ -273,33 +218,32 @@
 			                <ul class="graph-container">
 			                    <li>
 			                        <div class="bar-wrapper">
-			                            <div class="bar-container">
-			                                <div class="bar-inner">1</div>
+			                            <div class="bar-container">			                            	
+			                                <div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
 			                            </div>
 			                        </div>
 			                    </li>
 			                    <li>
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
-			                                <div class="bar-inner">2</div>
+			                                <div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
 			                            </div>
 			                        </div>
 			                    </li>
 			                    <li>
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
-			                                <div class="bar-inner">3</div>
+			                                <div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
 			                            </div>
 			                        </div>
 			                    </li>
 			                    <li>
 			                        <div class="bar-wrapper">
 			                            <div class="bar-container">
-			                                <div class="bar-inner">4</div>
+			                                <div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
 			                            </div>
 			                        </div>
-			                    </li>                   
-			                    <li></li>
+			                    </li>
 			                </ul>
 			            </section>
 						<div class="text-right">
@@ -354,7 +298,38 @@
 					<div class="bac_clrMap">
 						<h4 class="BClr">"The more often search engines see your information, the more likely they are to prioritize it in search results."</h4>
 						<div class="DrName"><span>Search Engine Land, April 30th, 2018</span></div>
-						<div><img src="com-assets/img/graph.png"></div>
+						<section class="main_br" id="main_br2">
+			                <ul class="graph-container">
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">			                            	
+			                                <div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                </ul>
+			            </section>
 						<div class="text-right">
 							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Website &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
 						</div>
@@ -407,7 +382,38 @@
 					<div class="bac_clrMap">
 						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
 						<div class="DrName"><span></span></div>
-						<div><img src="com-assets/img/graph.png"></div>
+						<section class="main_br" id="main_br3">
+			                <ul class="graph-container">
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">			                            	
+			                                <div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                </ul>
+			            </section>
 						<div class="text-right">
 							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Reputation &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
 						</div>
@@ -462,7 +468,38 @@
 					<div class="bac_clrMap">
 						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
 						<div class="DrName"><span></span></div>
-						<div><img src="com-assets/img/graph.png"></div>
+						<section class="main_br" id="main_br4">
+			                <ul class="graph-container">
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">			                            	
+			                                <div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                </ul>
+			            </section>
 						<div class="text-right">
 							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Summary &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
 						</div>
@@ -484,7 +521,24 @@
 					<button class="btnFinGrph">Schedule a free consultation &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 				</div>
 				<div class="col-sm-6">
-					<img src="com-assets/img/g2.png">
+					<section class="main_br" id="main_br5">
+			                <ul class="graph-container">
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">			                            	
+			                                <div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="bar-wrapper">
+			                            <div class="bar-container">
+			                                <div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
+			                            </div>
+			                        </div>
+			                    </li>
+			                </ul>
+			            </section>
 					<p class="BClr NxtLin"><b>See how PatientPop can help you improve</b></p>
 				</div>
 			</div>
@@ -513,8 +567,24 @@ $(window).scroll(function() {
 		main.className += " product1";
     }
     if ($(window).scrollTop() > 2100) {
-        var main2 = document.getElementById("main_br1");
+        var main1 = document.getElementById("main_br1");
+		main1.className += " product1";
+    }
+    if ($(window).scrollTop() > 3050) {
+        var main2 = document.getElementById("main_br2");
 		main2.className += " product1";
+    }
+    if ($(window).scrollTop() > 4000) {
+        var main3 = document.getElementById("main_br3");
+		main3.className += " product1";
+    }
+    if ($(window).scrollTop() > 4950) {
+        var main4 = document.getElementById("main_br4");
+		main4.className += " product1";
+    }
+    if ($(window).scrollTop() > 5850) {
+        var main5 = document.getElementById("main_br5");
+		main5.className += " product1";
     }
 });
 </script>

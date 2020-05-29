@@ -8,6 +8,27 @@
     transform: scale(0.8);
     margin-top: -50px;
 }
+#main_br2 {
+    text-align: center;
+    transform: scale(0.8);
+    margin-top: -50px;
+}
+#main_br3 {
+    text-align: center;
+    transform: scale(0.8);
+    margin-top: -50px;
+}
+#main_br4 {
+    text-align: center;
+    transform: scale(0.8);
+    margin-top: -50px;
+}
+#main_br5 {
+    text-align: center;
+    transform: scale(0.8);
+    margin-top: -50px;
+}
+
 
 /*********************
  * Graph Holder styles *
@@ -27,13 +48,12 @@
 /* Bars and X-axis labels holder */
 .graph-container > li {
     float: left; /* Make sure bars are aligned one next to another */
-    position: relative; /* Make sure X-axis labels are positioned relative to this element */
+    position: relative;
+    cursor: pointer; /* Make sure X-axis labels are positioned relative to this element */
 }
 /* A small hack to make Graph Holder's background side be wide enough
    ..because our bottom side is skewed and pushed to the right, we have to compensate it in Graph Holder's background */
-.graph-container > li:nth-last-child(2) {
-    margin-right: 2.5em;
-}
+
 /* X-axis labels */
 .graph-container > li > span {
     position: absolute;
@@ -212,11 +232,18 @@
 .graph-container > li:nth-child(1) .bar-inner:before { background-color: #f25562; }
 .graph-container > li:nth-child(1) .bar-inner:after { background-color: #e8dce6; }
 
-.graph-container > li:nth-child(2) .bar-inner { background-color: #e2c6c8; }
+.graph-container > li:nth-child(2) .bar-inner { background-color: #a3dacd; }
 .graph-container > li:nth-child(2) .bar-inner:before { background-color: #07c597; }
-.graph-container > li:nth-child(2) .bar-inner:after { background-color: #e8dce6; }
+.graph-container > li:nth-child(2) .bar-inner:after { background-color: #b9ece6; }
 
-.graph-container > li:nth-child(1) .bar-inner { height: 0%; bottom: 0; transition-delay: 0.00s; }
+.graph-container > li:nth-child(3) .bar-inner { background-color: #cbd5de; }
+.graph-container > li:nth-child(3) .bar-inner:before { background-color: #1f8bf7; }
+.graph-container > li:nth-child(3) .bar-inner:after { background-color: #88bce6; }
+
+.graph-container > li:nth-child(4) .bar-inner { background-color: #e8dcc3; }
+.graph-container > li:nth-child(4) .bar-inner:before { background-color: #f9bc3c; }
+.graph-container > li:nth-child(4) .bar-inner:after { background-color: #f7ddab; }
+
 
 .graph-container > li:nth-child(1) .bar-inner { height: 0%; bottom: 0; transition-delay: 0.00s; }
 .graph-container > li:nth-child(2) .bar-inner { height: 0%; bottom: 0; transition-delay: 0.05s; }
@@ -252,7 +279,7 @@
 
 /* spacing between bars */
 .graph-container > li .bar-container {
-    margin-right: 21px;
+    margin-right: 30px;
 }
 
 
@@ -324,4 +351,43 @@
 @media screen and (max-width: 450px) {
 	.graph-container { font-size: 0.22em; }
 	.button-label{ margin: 0 5px 0 0;}
+}
+
+
+.bar-container .tooltiptext {
+    visibility: hidden; 
+    font-size: 18px;
+    width: 100px;
+    background-color: #414141;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    margin: 0px 0px 30px -60px;
+    opacity: 0; 
+    transition: all ease 1s;
+    top: -83px;
+    left: 90%;
+    right: 0;
+    z-index: 10;
+    transform: skew(0deg, -24deg)
+}
+
+.bar-container .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #414141 transparent transparent transparent;
+}
+
+.bar-container:hover .tooltiptext {
+    visibility: visible;
+    margin: 0px 0px 0px -53px;
+    opacity: 1;
 }

@@ -1,3 +1,50 @@
+@font-face {
+    font-family: Haas-hell;
+    src: url(../fonts/haasgrotdisp-55roman.html) format(&quot;
+    woff2&quot;
+    ),
+    url(../fonts/haasgrotdisp-55roman-2.html) format(&quot;
+    woff&quot;
+    );
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: Haas-hell;
+    src: url(../fonts/haasgrotdisp-45light.html) format(&quot;
+    woff2&quot;
+    ),
+    url(../fonts/haasgrotdisp-45light-2.html) format(&quot;
+    woff&quot;
+    );
+    font-style: normal;
+    font-weight: 300
+}
+
+@font-face {
+    font-family: Haas-hell;
+    src: url(../fonts/haasgrotdisp-56italic.html) format(&quot;
+    woff2&quot;
+    ),
+    url(../fonts/haasgrotdisp-56italic-2.html) format(&quot;
+    woff&quot;
+    );
+    font-style: italic;
+    font-weight: 400
+}
+
+html{
+    font-family: Haas-hell, sans-serif !important;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: none
+}
+body{
+    font-family: Haas-hell, sans-serif !important;
+ }
+
 .edit_projfrm
 	{
 		width: 65%;
