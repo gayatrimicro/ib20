@@ -2939,6 +2939,7 @@ html.is-mobile .o-cursor:not(.-top-mobile):not(.-center-mobile) {
 	margin: 0;
 	border: none;
 	height: 2px;
+	background-color: #fff;
 }
 
 .o-line.-under {
