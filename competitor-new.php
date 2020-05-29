@@ -24,14 +24,15 @@ $result = $conn->query($sql);
       <title>
          Competitor Checker  | IBridge Digital
       </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
       <!-- <link rel="stylesheet" type="text/css" href="assets/styles/steps.css"> -->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
       <!-- <link rel="stylesheet" href="assets/styles/main3e3a.css"> -->
-      <link rel="stylesheet" href="assets/styles/newstyle.css">
+      <link rel="stylesheet" href="com-assets/css/newstyle.css">
+      <link rel="stylesheet" href="com-assets/css/slick.css">
+      <link rel="stylesheet" type="text/css" href="com-assets/css/slick-theme.css">
   
   
 
@@ -82,7 +83,99 @@ $result = $conn->query($sql);
     </style>
     <section>
       <div class="HdrNav">
-        
+        <div class="row">
+          <div class="col-sm-5">
+            <div><img src="com-assets/img/logo.png"></div>
+          </div>
+          <div class="col-sm-7">
+            <div class="disMsg op0zin">
+              <div class="row">                
+                <div class="col-sm-11">
+                  <p>This can take about a minute. Please do not refresh<br> your screen or click your browser’s back button.</p>
+                </div>
+                <div class="col-sm-1 pad_0">
+                  <img src="com-assets/img/clock.png" class="imgClock">
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="DeskView">
+        <div class="SliSec">
+          <button type="button" class="btn_Modal" data-toggle="modal" data-target="#pracFrm">Patients competitors</button>
+          <div class="SlickSli op0zin">
+            <div class="LodSlid">
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Gathering your compititors</h2>
+                      <h3>Patients could be choosing your competitors without you even realizing it.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Calculating your Google rank score</h2>
+                      <h3>You should strive to rank as high as possible, as search results listed on page 1 of Google get 95% of all web traffic.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Calculating your website score</h2>
+                      <h3>Patients could be choosing your competitors without you even realizing it.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Calculating your reputation score</h2>
+                      <h3>When choosing between two providers, patients are likely to select the one with better reviews 91 percent of the time.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div><img src="com-assets/img/com1png.png"></div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="txtSli">
+                      <h2>Scanning your practice</h2>
+                      <h3>Please do not refresh your screen or click your browser's back button.</h3>                      
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
         <!-- <div>
@@ -169,8 +262,7 @@ $result = $conn->query($sql);
           </div>
         </div> -->
 
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#pracFrm" style="display: block;
-    width: 250px;margin: 150px auto;">Open Modal</button>
+        
 
         <!-- Modal -->
   <div class="modal fade" id="pracFrm" role="dialog">
@@ -323,13 +415,13 @@ $result = $conn->query($sql);
   </div>
 
 <div id="myProgress">
-  <div id="myBar"><div id="my_per">5%</div></div>
+  <div id="myBar"><div id="my_per">42%</div></div>
 </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="com-assets/js/slick.min.js"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
 <script>
 var set_i = 0;
@@ -337,8 +429,8 @@ function move() {
   if (set_i == 0) {
     i = 1;
     var elem = document.getElementById("myBar");
-    var width = 5;
-    var id = setInterval(frame, 800);
+    var width = 42;
+    var id = setInterval(frame, 1000);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
@@ -353,7 +445,14 @@ function move() {
 }
 </script>
 <script type="text/javascript">
-  
+  $('.LodSlid').slick({
+  infinite: true,
+  autoplay: true,
+  speed: 300,
+  fade: true,
+  cssEase: 'linear'
+});
+
   function NxtStp(step){
     if(step=="step1"){
       if($("#autocomplete").val()=="")
@@ -429,14 +528,16 @@ function move() {
             return false;
           }
           else{
-            $("#myProgress").show();
-            $(".btn_fin").click();
+            $("#myProgress").show();            
             $(".Step3str").css("display","none");
             $(".Step3str fieldset").css("border","2px solid #ddd");
             $(".Step3str legend").css("color","#000");
             $('#pracFrm').modal('hide');
-            $('.btn-info').hide();
+            $('.btn_Modal').hide();
             move();
+            $(".SlickSli").removeClass("op0zin");
+            $(".disMsg").removeClass("op0zin");
+            $(".btn_fin").click();
           }      
     }
   }

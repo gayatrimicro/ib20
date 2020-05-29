@@ -426,7 +426,7 @@ z-index: 10000;
 }
 .SliSec
 {
-    background-image: url(../../chrome-base.svg);
+    background-image: url(../../com-assets/img/chrome-base.svg);
     height: 400px;
     position: relative;
 }
@@ -665,7 +665,6 @@ z-index: 10000;
 {
         font-size: 16px !important;
     padding: 0px 35px;
-    margin-top: 40px;
     margin-bottom: 35px;
     font-weight: 600;
 }
@@ -743,7 +742,7 @@ z-index: 10000;
     font-size: 14px;
     font-weight: 600;
     color: #777;
-    margin-bottom: 65px;
+    margin-bottom: 20px;
 }
 .fot_pink
 {
@@ -802,6 +801,39 @@ z-index: 10000;
     margin-bottom: 45px;
     line-height: 28px;
     font-size: 17px;
+}
+.circle-chart__circle {
+  animation: circle-chart-fill 2s reverse;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+.inPerBar
+{
+    position: relative;
+    display: none;
+}
+.ScrRes
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+.ScrRes p
+{
+    font-size: 18px;
+    margin: 0px;
+}
+.ScrRes span
+{
+    font-size: 90px;
+    font-weight: 600;
+    line-height: 90px;
 }
 /*------compititors result page end----------------*/
 
