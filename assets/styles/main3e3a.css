@@ -5404,16 +5404,16 @@ html.has-nav-open .c-header_burger:before {
 }
 
 .c-footer {
-	height: 100vh;
+	height: 56vh;
 	position: relative;
 	background-color: #1c1c20;
 	color: #fff;
 	overflow: hidden
 }
 
-@media (max-width:1199px) {
+@media (max-width:899px) {
 	.c-footer {
-		height: auto;
+		/*height: auto;*/
 		padding: 11.2rem 0 0
 	}
 }

@@ -723,7 +723,7 @@ $result = $conn->query($sql);
 		
 			</div>
 		
-			<ul class="c-footer_socials c-social">
+			<!-- <ul class="c-footer_socials c-social">
 				<li class="c-social_item">
 					<a class="o-link -circleHover" href="https://facebook.com/locoMTL" target="_blank" rel="noopener noreferrer" ga-on="click" ga-event-category="ui.social.footer" ga-event-action="click" ga-event-label="facebook">
 						<span class="u-screen-reader-text">Facebook</span>
@@ -748,9 +748,9 @@ $result = $conn->query($sql);
 						<svg role="img"><use xlink:href="../../assets/images/sprite.svg#behance"></use></svg>
 					</a>
 				</li>
-			</ul>
+			</ul> -->
 		
-			<div class="c-footer_footer">
+			<!-- <div class="c-footer_footer">
 				<div class="o-container">
 					<div class="o-layout -middle">
 						<div class="c-footer_copyright o-layout_item u-1/4@from-small">
@@ -788,7 +788,7 @@ $result = $conn->query($sql);
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		
 		</footer>
 	</main>
