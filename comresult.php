@@ -542,6 +542,65 @@
 					<p class="BClr NxtLin"><b>See how PatientPop can help you improve</b></p>
 				</div>
 			</div>
+			<div class="MreRslt HidAcc">
+				<div class="inMre">
+					<h3>Let's grow your practice. <span class="clsSpn"><i class="fa fa-times" aria-hidden="true"></i></span></h3>
+					<p class="pMarb">Contact us to see how PatientPop can help transform your practice</p>
+					<div class="row fntSpn">
+						<div class="col-sm-4 pad_0"><span>Practice Growth Factors</span></div>
+						<div class="col-sm-2 text-center"><span>Your Scores</span></div>
+						<div class="col-sm-6"><span>How PatientPop can help</span></div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-sm-4 pad_0">
+							<h4><img src="com-assets/img/goor.png">Google Ranking</h4>
+						</div>
+						<div class="col-sm-2 text-center fot_pink1">
+							<div class="FotScr">60</div><div class="FotWei">Poor</div>
+						</div>
+						<div class="col-sm-6">
+							<p>We strive to help practices appear near the top of organic search results, as the first listing gets 42% of all click-through traffic. The second listing gets 12%. All others receive less than 10% of click-through traffic.</p>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-sm-4 pad_0">
+							<h4><img src="com-assets/img/wpre.png">Web Presence</h4>
+						</div>
+						<div class="col-sm-2 text-center fot_vryPoor">
+							<div class="FotScr">46</div><div class="FotWei">Very Poor</div>
+						</div>
+						<div class="col-sm-6">
+							<p>Upon joining PatientPop, we'll create more than 70 profiles across the web for your practice, refined with photos and relevant information. Additionally, patients can book an appointment online directly from each web profile.</p>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-sm-4 pad_0">
+							<h4><img src="com-assets/img/web.png">Website</h4>
+						</div>
+						<div class="col-sm-2 text-center fot_vryPoor">
+							<div class="FotScr">50</div><div class="FotWei">Very Poor</div>
+						</div>
+						<div class="col-sm-6">
+							<p>PatientPop practices get a fast, secure and mobile-responsive website that promotes each service line of your practice. Addionally, structured data conveys your brand, location, services and star rating to search engines.</p>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-sm-4 pad_0">
+							<h4><img src="com-assets/img/rep.png">Reputation</h4>
+						</div>
+						<div class="col-sm-2 text-center fot_Exce">
+							<div class="FotScr">92</div><div class="FotWei">Excellent</div>
+						</div>
+						<div class="col-sm-6">
+							<p>The average PatientPop practice with an integrated EMR doubles their number of reviews and increases their star rating by .2 within the first 6 months of joining PatientPop, improving their overall online reputation.</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -564,28 +623,36 @@ $(window).scroll(function() {
     }
     if ($(window).scrollTop() > 1150) {
         var main = document.getElementById("main_br");
-		main.className += " product1";
+		$(main).addClass("product1");
     }
     if ($(window).scrollTop() > 2100) {
         var main1 = document.getElementById("main_br1");
-		main1.className += " product1";
+        $(main1).addClass("product1");
     }
     if ($(window).scrollTop() > 3050) {
         var main2 = document.getElementById("main_br2");
-		main2.className += " product1";
+        $(main2).addClass("product1");
     }
     if ($(window).scrollTop() > 4000) {
         var main3 = document.getElementById("main_br3");
-		main3.className += " product1";
+        $(main3).addClass("product1");
     }
     if ($(window).scrollTop() > 4950) {
         var main4 = document.getElementById("main_br4");
-		main4.className += " product1";
+        $(main4).addClass("product1");
     }
     if ($(window).scrollTop() > 5850) {
         var main5 = document.getElementById("main_br5");
-		main5.className += " product1";
+        $(main5).addClass("product1");
     }
+});
+
+$(".NxtLin").click(function(){
+$(".MreRslt").removeClass("HidAcc");
+});
+
+$(".clsSpn").click(function(){
+$(".MreRslt").addClass("HidAcc");
 });
 </script>
 </body>
