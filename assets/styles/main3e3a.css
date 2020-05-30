@@ -4612,7 +4612,6 @@ html[data-theme=dark]:not(.ui-light):not(.has-lisa-active):not(.has-nav-open):no
 		margin: 2.8rem
 	}
 }
-
 @media (min-width:1600px) {
 	.c-header_logo {
 		margin: 3.25926rem
