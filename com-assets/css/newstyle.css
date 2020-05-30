@@ -822,6 +822,7 @@ z-index: 10000;
 {
     background-color: #fff;
     padding: 75px;
+    position: relative;
 }
 .btnFinGrph
 {
@@ -836,6 +837,7 @@ z-index: 10000;
 .NxtLin
 {
     font-size: 18px;
+    cursor: pointer;
 }
 .ResFin h1
 {
@@ -881,6 +883,88 @@ z-index: 10000;
     font-size: 90px;
     font-weight: 600;
     line-height: 90px;
+}
+.MreRslt
+{
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;    
+    padding: 65px 50px;
+    transition: 0.8s all;
+}
+.HidAcc
+{
+    height: 0% !important;
+    display: none;
+    transition: 0.8s all;
+}
+.MreRslt h3
+{
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 25px;
+    color: #4e5771;
+}
+.MreRslt p
+{
+    color: #4e5771;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+.MreRslt h4 img
+{
+    width: 90px;
+    margin-right: 25px;
+}
+.MreRslt h4
+{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4e5771;
+}
+.fot_pink1
+{
+    color: #f6606e;
+}
+.fot_vryPoor
+{
+    color: #828aa3;
+}
+.fot_Exce
+{    
+    color: #07c597;
+}
+.pMarb
+{
+    margin-bottom: 30px !important;
+}
+.FotScr
+{
+    font-size: 28px;
+    font-weight: 600;
+}
+.fntSpn span
+{
+    font-size: 13px;
+    font-weight: 600;
+}
+.FotWei
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+.clsSpn
+{
+    float: right;
+    color: #4e5771; 
+    cursor: pointer;
 }
 /*------compititors result page end----------------*/
 
