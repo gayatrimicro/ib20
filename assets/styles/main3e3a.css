@@ -4580,7 +4580,7 @@ html[data-theme=dark]:not(.ui-light):not(.has-lisa-active):not(.has-nav-open):no
 }
 
 .c-header_logo svg {
-	fill: #1c1c20;
+	fill: #fff;
 	transition: fill .3s cubic-bezier(.4, 0, 0, 1)
 }
 
@@ -4589,17 +4589,21 @@ html.has-lisa-active .c-header_logo svg,
 html.has-nav-open .c-header_logo svg,
 html.ui-light .c-header_logo svg,
 html[data-theme=light]:not(.ui-dark) .c-header_logo svg {
-	fill: #fff
+	fill: #1c1c20
+}
+
+html[data-theme=dark]:not(.ui-dark) .c-header_logo svg {
+	fill: #fff !important;
 }
 
 html.ui-dark:not(.has-lisa-active):not(.has-nav-open):not(.has-dom-loading) .c-header_logo svg,
 html[data-theme=dark]:not(.ui-light):not(.has-lisa-active):not(.has-nav-open):not(.has-dom-loading) .c-header_logo svg {
-	fill: #1c1c20
+	fill: #ffffff
 }
 
 @media (max-width:999px) {
 	html.is-not-top[data-direction=up]:not(.has-nav-open) .c-header_logo svg {
-		fill: #1c1c20
+		fill: #ffffff
 	}
 }
 
