@@ -64,7 +64,7 @@ $result = $conn->query($sql);
 	<!-- Appearance -->
 	<meta name="theme-color" content="#4D84F1">
 
-	<link rel="apple-touch-icon" sizes="57x57" href="../../assets/images/favicons/apple-touch-icon-57x57.png">
+	<!-- <link rel="apple-touch-icon" sizes="57x57" href="../../assets/images/favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="../../assets/images/favicons/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="../../assets/images/favicons/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="76x76" href="../../assets/images/favicons/apple-touch-icon-76x76.png">
@@ -72,21 +72,21 @@ $result = $conn->query($sql);
 	<link rel="apple-touch-icon" sizes="120x120" href="../../assets/images/favicons/apple-touch-icon-120x120.png">
 	<link rel="apple-touch-icon" sizes="144x144" href="../../assets/images/favicons/apple-touch-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="../../assets/images/favicons/apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon-180x180.png"> -->
 
 	<link rel="icon" type="image/png" href="../../assets/images/favicons/favicon-16x16.png" sizes="16x16">
-	<link rel="icon" type="image/png" href="../../assets/images/favicons/favicon-32x32.png" sizes="32x32">
+	<!-- <link rel="icon" type="image/png" href="../../assets/images/favicons/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="../../assets/images/favicons/favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="../../assets/images/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../assets/images/favicons/android-chrome-192x192.png" sizes="192x192"> -->
 
 	<link rel="manifest" href="../../manifest.json">
-	<link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1">
+	<!-- <link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1"> -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/newstyle.css">
 	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css"> -->
 
 	<meta name="msapplication-TileColor" content="#4D84F1">
-	<meta name="msapplication-TileImage" content="../../assets/images/favicons/mstile-144x144.png">
+	<!-- <meta name="msapplication-TileImage" content="../../assets/images/favicons/mstile-144x144.png"> -->
 
 	<!-- Styles -->
 	<style media="all">
@@ -451,7 +451,7 @@ $result = $conn->query($sql);
 					<div class="c-fancy-video_bg" style="background-color:#EB2931"></div>
 					<div id="myid">
 						<video id="fir_vid">
-  <source src="../../assets/videos/bayswater1.mp4" type="video/mp4">
+  <source src="../../assets/videos/The Bayswater Bathrooms Brand Film.mp4" type="video/mp4">
 </video>
 					
 				</div>
@@ -521,7 +521,7 @@ $result = $conn->query($sql);
 
 
 				<div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
-	<figure class="o-container">
+	<figure class="o-container"  data-theme="light">
 		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;">
 			<div id="vid_seco">
 				<video id="desk_vid1" autoplay loop>
