@@ -1,3 +1,21 @@
+<?php
+$servername = "64.207.177.102";
+$username = "usr_google";
+$password = "Kd%x761x";
+// $username = "root";
+// $password = "";
+$databese = 'google';
+// Create connection
+$conn = new mysqli($servername, $username, $password, $databese);
+
+// Check connection
+if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM business_category";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html class="has-no-js" lang="en" data-template="contact" data-theme="dark"  data-pageColor="default">
 
@@ -41,7 +59,7 @@
 	<meta name="HandheldFriendly" content="true">
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	
 	<!-- Appearance -->
 	<meta name="theme-color" content="#4D84F1">
@@ -63,7 +81,7 @@
 
 	<link rel="manifest" href="../../manifest.json">
 	<!-- <link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1"> -->
-	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" /> -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/newstyle.css">
 	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css"> -->
 
@@ -378,7 +396,7 @@
 						</div>
 					</div>
 				</div> -->
-<!-- 	<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+	<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 	<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
 	<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
 	<div class="lap3d" style="display: none;">
@@ -388,7 +406,7 @@
 				  background-color="#1c1c20"
 				  shadow-intensity="1"
 				  camera-controls
-				  ></model-viewer> -->
+				  ></model-viewer>
 	</div>
 	
 				<!-- <div class="c-project-header_device-wrapper || js-animate" data-speed="-0.5" data-position="top">
@@ -397,8 +415,8 @@
 						
 					</div>
 				</div> -->
-				<!-- <script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
-				<script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script> -->
+				<script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
+				<script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script>
 			</div>
 
 			<div class="o-container || c-project_intro">
@@ -999,9 +1017,272 @@ $(document).ready(function() {
 		<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
 	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
 	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
-	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
 
+<script type="text/javascript">
+	function changeStep(step)
+	{
+		if(step=="step1")
+		{
+			if($("#autocomplete").val()=="")
+			{
+				$(".err_msg").show();
+				return false;
+			}
+			else
+			{
+				$(".err_msg").hide();
+				$(".inn_br").css("width","50%");
+				$(".innStep1").removeClass("actstp");
+				$(".innStep1").addClass("hidstp");
+				$(".innStep2").addClass("actstp");
+				$(".stp_no").text("2");
+			}
+		}
+
+		if(step=="step2")
+		{
+			$(".inn_br").css("width","75%");
+			$(".innStep2").removeClass("actstp");
+			$(".innStep2").addClass("hidstp");
+			$(".innStep3").addClass("actstp");
+			$(".stp_no").text("3");
+		}
+
+		if(step=="step3")
+		{
+			var e = document.getElementById("e1");
+			var strUser = e.options[e.selectedIndex].text;
+			if(strUser=="Select Category")
+			{				
+				$(".err_msg").show();
+				return false;
+			}
+			else
+			{
+				$(".err_msg").hide();
+				$(".inn_br").css("width","90%");
+				$(".innStep3").removeClass("actstp");
+				$(".innStep3").addClass("hidstp");
+				$(".innStep4").addClass("actstp");
+				$(".stp_no").text("4");
+			}
+		}
+
+		if(step=="step4")
+		{
+			var nme = $("#snme").val();
+			var eml = $("#seml").val();
+			var no = $("#sno").val();
+			if(nme=="" && eml=="" && no=="")
+			{
+				$(".err_msg").show();
+				return false;
+			}
+			else
+			{
+				$(".err_msg").hide();
+				$(".btn_fin").click();
+				$(".inn_br").css("width","100%");
+				$(".innStep4").removeClass("actstp");
+				$(".innStep4").addClass("hidstp");
+				$(".img_lod").fadeIn("slow");
+			}
+		}
+		
+	}
+</script>
+	<script type="text/javascript">
+		$('.button_sel').click(function(){
+			var e = document.getElementById("e1");
+	var strUser = e.options[e.selectedIndex].text;
+	if(strUser=="Select Category")
+	{
+		$(".err_msg").show();
+		return false;
+	}
+	$(".err_msg").hide();
+	var $btn = $(this),
+	$step = $btn.parents('.modal-body'),
+	stepIndex = $step.index(),
+	$pag = $('.modal-header span').eq(stepIndex);
+	if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
+	else { step4($step, $pag); }  
+});
+
+$('.button').click(function(){
+	if($(".pac-target-input").val()=="")
+	{
+		$(".err_msg").show();
+		return false;
+	}
+
+	$(".err_msg").hide();
+	var $btn = $(this),
+	$step = $btn.parents('.modal-body'),
+	stepIndex = $step.index(),
+	$pag = $('.modal-header span').eq(stepIndex);
+	if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
+	else { step4($step, $pag); }  
+});
+
+
+
+function step1($step, $pag){
+	console.log('step1');
+  // animate the step out
+  $step.addClass('animate-out');
+  
+  // animate the step in
+  setTimeout(function(){
+	$step.removeClass('animate-out is-showing')
+		 .next().addClass('animate-in');
+	$pag.removeClass('is-active')
+		  .next().addClass('is-active');
+  }, 600);
+  
+  // after the animation, adjust the classes
+  setTimeout(function(){
+	$step.next().removeClass('animate-in')
+		  .addClass('is-showing');
+	
+  }, 1200);
+}
+
+function step4($step, $pag){
+console.log('3');
+
+  // animate the step out
+  $step.parents('.modal-wrap').addClass('animate-up');
+
+  setTimeout(function(){
+	$('.rerun-button').css('display', 'inline-block');
+  }, 300);
+}
+
+$('.rerun-button').click(function(){
+ $('.modal-wrap').removeClass('animate-up')
+				  .find('.modal-body')
+				  .first().addClass('is-showing')
+				  .siblings().removeClass('is-showing');
+
+  $('.modal-header span').first().addClass('is-active')
+						  .siblings().removeClass('is-active');
+ $(this).hide();
+});
+
+function get_category(id)
+{
+	var city = document.getElementById('locality').innerHTML;
+	var state = document.getElementById('administrative_area_level_1').innerHTML;
+	var country = document.getElementById('country').innerHTML;
+	var organization_name = document.getElementById('name').innerHTML;
+	
+	console.log("Organization Name : "+organization_name);
+	document.getElementById('frm_locality').value = city;
+	document.getElementById('frm_administrative_area_level_1').value = state;
+	document.getElementById('frm_country').value = country;
+	document.getElementById('frm_name').value = organization_name;
+
+	document.getElementById('frm_category').value = '';
+	document.getElementById('frm_category').value = id;
+}
+</script>
+
+<script>
+	// This sample uses the Autocomplete widget to help the user select a
+	// place, then it retrieves the address components associated with that
+	// place, and then it populates the form fields with those details.
+	// This sample requires the Places library. Include the libraries=places
+	// parameter when you first load the API. For example:
+	// <script
+	// src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+	var placeSearch, autocomplete;
+
+	var componentForm = {
+	  street_number: 'short_name',
+	  route: 'long_name',
+	  locality: 'long_name',
+	  administrative_area_level_1: 'long_name',
+	  country: 'short_name',
+	  postal_code: 'short_name',
+	  website: 'website',
+	  name: 'name',	  
+	};
+
+	function initAutocomplete() {
+	  // Create the autocomplete object, restricting the search predictions to
+	  // geographical location types.
+	  autocomplete = new google.maps.places.Autocomplete(
+		  document.getElementById('autocomplete'), {types: ['establishment']});
+
+	  // Avoid paying for data that you don't need by restricting the set of
+	  // place fields that are returned to just the address components.
+	  // autocomplete.setFields(['address_component', 'website']);
+
+	  // When the user selects an address from the drop-down, populate the
+	  // address fields in the form.
+	  autocomplete.addListener('place_changed', fillInAddress);
+	}
+
+	function fillInAddress() {
+	  // Get the place details from the autocomplete object.
+	  document.getElementById('address').removeAttribute("hidden");
+	  var place = autocomplete.getPlace();
+
+	  for (var component in componentForm) {
+		document.getElementById(component).innerHTML = '';
+		// document.getElementById(component).disabled = false;
+	  }
+	  
+	  // Get each component of the address from the place details,
+	  // and then fill-in the corresponding field on the form.
+	  for (var i = 0; i < place.address_components.length; i++) {
+		var addressType = place.address_components[i].types[0];
+		if (componentForm[addressType]) {
+		  var val = place.address_components[i][componentForm[addressType]];
+		  document.getElementById(addressType).innerHTML = val;		
+		}
+	  }
+
+	  document.getElementById('website').innerHTML = place['website'];
+	  document.getElementById('name').innerHTML = place['name'];
+	  document.getElementById('frm_website').value = place['website'];
+	  document.getElementById('frm_name').value = place['name'];
+	}
+
+	// Bias the autocomplete object to the user's geographical location,
+	// as supplied by the browser's 'navigator.geolocation' object.
+	function geolocate() {
+	  if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(position) {
+		  var geolocation = {
+			lat: position.coords.latitude,
+			lng: position.coords.longitude
+		  };
+		  var circle = new google.maps.Circle(
+			  {center: geolocation, radius: position.coords.accuracy});
+		  autocomplete.setBounds(circle.getBounds());
+		});
+	  }
+		$(document).keypress(
+			function(event){
+			if (event.which == '13') {
+				event.preventDefault();
+			}
+		});
+	}
+	
+
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
+		async defer></script>
+	<script>
+		$(document).ready(function() { $("#e1").select2(); });
+	</script>
 		<script>
 			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
 
@@ -1026,8 +1307,8 @@ $(document).ready(function() {
 				dynamicallyLoadScript(scripts[iterator]);
 			}
 		</script>
-		<!-- <script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script> -->
-		<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
+		<script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('.image_ripple').ripples('show');
@@ -1043,7 +1324,7 @@ $(document).ready(function() {
 		<!-- <script type="text/javascript" src="../../assets/scripts/player.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/vendors.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/vuid.min.js"></script> -->
-		<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
 
 
@@ -1118,4 +1399,6 @@ myVar = parseInt(footer, 10);
 </script>
 
 	</body>
+
+<!-- Mirrored from locomotive.ca/en/projects/design-canada by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Oct 2019 06:48:41 GMT -->
 </html>
