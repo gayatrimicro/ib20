@@ -41,7 +41,7 @@
 	<meta name="HandheldFriendly" content="true">
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	
 	<!-- Appearance -->
 	<meta name="theme-color" content="#4D84F1">
@@ -63,7 +63,7 @@
 
 	<link rel="manifest" href="../../manifest.json">
 	<!-- <link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1"> -->
-	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" /> -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/newstyle.css">
 	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css"> -->
 
@@ -378,9 +378,9 @@
 						</div>
 					</div>
 				</div> -->
-<!-- 	<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+	<!-- <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 	<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-	<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+	<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script> -->
 	<div class="lap3d" style="display: none;">
 		<model-viewer class="lap3dmod"
 				  src="../../assets/images/bath.glb"
@@ -388,7 +388,7 @@
 				  background-color="#1c1c20"
 				  shadow-intensity="1"
 				  camera-controls
-				  ></model-viewer> -->
+				  ></model-viewer>
 	</div>
 	
 				<!-- <div class="c-project-header_device-wrapper || js-animate" data-speed="-0.5" data-position="top">
@@ -1000,7 +1000,7 @@ $(document).ready(function() {
 	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
 	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
 	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 		<script>
 			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
@@ -1026,8 +1026,8 @@ $(document).ready(function() {
 				dynamicallyLoadScript(scripts[iterator]);
 			}
 		</script>
-		<!-- <script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script> -->
-		<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
+		<script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('.image_ripple').ripples('show');
@@ -1043,7 +1043,7 @@ $(document).ready(function() {
 		<!-- <script type="text/javascript" src="../../assets/scripts/player.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/vendors.js"></script>
 		<script type="text/javascript" src="../../assets/scripts/vuid.min.js"></script> -->
-		<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
 
 
