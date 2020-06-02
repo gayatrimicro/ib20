@@ -2185,7 +2185,7 @@ html.is-mobile .o-cursor:not(.-top-mobile):not(.-center-mobile) {
 .o-cursor_wrapper[data-draggable=true] {
 	cursor: grab
 }
-#desk_vid1 
+#desk_vid1, #normal_vid 
 {
 	width: 100%;
 	height: 100%;
