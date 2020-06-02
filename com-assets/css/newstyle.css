@@ -85,25 +85,27 @@ body{
     height: 45px;
 }
 .cat_js_basic .select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 40px;
-    color: #777;
-    font-size: 17px;
+    line-height: 50px;
+    color: rgba(0,0,0,.87);
+    font-size: 15px;
+    padding: 0px 16px;
+    font-weight: 600;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     border-color: #000 transparent transparent transparent;
 }
 .cat_js_basic .select2-container {
     width: 100% !important;
-    height: 45px;
+    height: 50px;
 }
 .cat_js_basic .select2-container .select2-selection--single {
-    height: 45px;
+    height: 50px;
     background-color: transparent;
-    border: 1px solid transparent;
+    border: 1px solid #bbb;
     outline: none;
 }
 .cat_js_basic .select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: 40px;
+    height: 50px;
 }
 .select2-results__options {
     color: #000 !important;
@@ -323,17 +325,25 @@ legend {
     border-bottom: unset;
     padding: 0px 6px;
 }
-fieldset .form-control
+.form-control
 {
-    border: none;
+    border: 1px solid #bbb;
     box-shadow: none !important;
     outline: none !important;
-    border-color: unset !important;
     font-size: 17px;
-    height: 40px;
-    padding: 0px 5px;
+    height: 50px;
+    padding: 0px 18px;
+    border-radius: 4px;
 }
-fieldset input
+.form-control:focus
+{
+    border: 2px solid #2c98f7;
+}
+.form-control:focus input
+{
+    border: 2px solid #2c98f7;
+}
+input
 {
     outline: none;
 }
@@ -418,7 +428,7 @@ z-index: 10000;
 }
 .Step2str legend
 {
-    color: #000;
+    color: #777;
 }
 #myProgress {
   width: 100%;
@@ -966,6 +976,80 @@ z-index: 10000;
     color: #4e5771; 
     cursor: pointer;
 }
+label {
+  position: absolute;
+top: 0;
+font-weight: 500;
+font-size: 18px;
+margin: 10px;
+padding: 4px 10px;
+-webkit-transition: top .2s ease-in-out, font-size .2s ease-in-out;
+transition: top .2s ease-in-out, font-size .2s ease-in-out;
+color: #777;
+}
+.actInp {
+top: -25px;
+font-size: 14px;
+text-transform: capitalize;
+background-color: #fff;
+z-index: 1;
+}
+.PosRel
+{
+    position: relative;
+    border-radius: 4px;
+}
+.pad_l
+{
+    padding-left: 0px;
+}
+.pad_r
+{
+    padding-right: 0px;
+}
+.Step2str input
+{
+    color: rgba(0,0,0,.87);
+    font-weight: 600;
+    font-size: 15px;
+}
+.SelClik label
+{
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(0,0,0,.87);
+}
+.SelClik .actInp {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #777;
+}
+.Step3str .PosRel
+{
+    margin-bottom: 25px;
+}
+.shk {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+    cursor: pointer;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+}
+}
+
 /*------compititors result page end----------------*/
 
 /*----------------------------------*/

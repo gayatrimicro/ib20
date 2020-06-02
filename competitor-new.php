@@ -282,87 +282,87 @@ $result = $conn->query($sql);
           <div class="Step1str Stepcurr">
             <h4>Step <span class="stpNo">1</span></h4>
             <h2>Compare your business with your competitors in your local area</h2>
-            <fieldset class="LocFie">
-              <legend class="LegFie">Practice name :</legend>
-              <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Type your practice name">
-            </fieldset>
+            <div class="LocFie PosRel">
+              <label for="FirName">Practice name</label>
+              <input type="text"class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="" />
+            </div>
             <div class="text-right"><button class="nxtPge hidstpBtn" onclick="NxtStp('step1')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
 
             <div class="Step2str Stepcurr">
             <hr>
             <div id="address" hidden="">
               <div class="row">
-                <div class="col-sm-6">
-                  <fieldset>
-                    <legend>Street No :</legend>
-                    <input type="text" class="form-control" id="street_number" placeholder="Street number" oninput="ChkInpSts(this)">
-                  </fieldset>
+                <div class="col-sm-6 pad_l">
+                  <div class="PosRel">
+                    <label for="FirName">Street No</label>
+                    <input type="text"class="form-control"  id="street_number" oninput="ChkInpSts(this)" />
+                  </div>
                 </div>
-                <div class="col-sm-6">
-                  <fieldset>
-                    <legend>Street address :</legend>
-                    <input type="text" class="form-control" id="route" placeholder="Street address" oninput="ChkInpSts(this)">
-                  </fieldset>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <fieldset>
-                    <legend>City :</legend>
-                    <input type="text" class="form-control" id="locality" placeholder="City" oninput="ChkInpSts(this)">
-                  </fieldset>
-                </div>
-                <div class="col-sm-6">
-                  <fieldset>
-                    <legend>State :</legend>
-                    <input type="text" class="form-control" id="administrative_area_level_1" placeholder="State" oninput="ChkInpSts(this)">
-                  </fieldset>
+                <div class="col-sm-6 pad_r">
+                  <div class="PosRel">
+                    <label for="FirName">Street address</label>
+                    <input type="text" class="form-control" id="route" oninput="ChkInpSts(this)">
+                  </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-6">
-                  <fieldset>
-                    <legend>Zip code :</legend>
-                    <input type="text" class="form-control" id="postal_code" placeholder="Zip code" oninput="ChkInpSts(this)">
-                  </fieldset>
+                <div class="col-sm-6 pad_l">
+                  <div class="PosRel">
+                    <label for="FirName">City</label>
+                    <input type="text" class="form-control" id="locality" oninput="ChkInpSts(this)">
+                  </div>
                 </div>
-                <div class="col-sm-6">
-                  <fieldset>
-                    <legend>Country :</legend>
-                    <input type="text" class="form-control" id="country" placeholder="Country" oninput="ChkInpSts(this)">
-                  </fieldset>
+                <div class="col-sm-6 pad_r">
+                  <div class="PosRel">
+                    <label for="FirName">State</label>
+                    <input type="text" class="form-control" id="administrative_area_level_1" oninput="ChkInpSts(this)">
+                  </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-12">
-                  <fieldset>
-                    <legend>Website :</legend>
-                    <input type="text" class="form-control" id="website" placeholder="website" oninput="ChkInpSts(this)">
-                  </fieldset>
+                <div class="col-sm-6 pad_l">
+                  <div class="PosRel">
+                    <label for="FirName">Zip code</label>
+                    <input type="text" class="form-control" id="postal_code" oninput="ChkInpSts(this)">
+                  </div>
                 </div>
-                <div class="col-sm-12">
-                  <fieldset>
-                    <legend>Organization :</legend>
-                    <input type="text" class="form-control" id="name" placeholder="Organization" oninput="ChkInpSts(this)">
-                  </fieldset>
+                <div class="col-sm-6 pad_r">
+                  <div class="PosRel">
+                    <label for="FirName">Country</label>
+                    <input type="text" class="form-control" id="country" oninput="ChkInpSts(this)">
+                  </div>
                 </div>
-                <div class="col-sm-12 cat_js_basic">
-                  <fieldset class="fidSet">
-                    <legend class="Lgnd">Practice Category :</legend>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 pad_0">
+                  <div class="PosRel">
+                    <label for="FirName">Website</label>
+                    <input type="text" class="form-control" id="website" oninput="ChkInpSts(this)">
+                  </div>
+                </div>
+                <div class="col-sm-12 pad_0">
+                  <div class="PosRel">
+                    <label for="FirName">Organization</label>
+                    <input type="text" class="form-control" id="name" oninput="ChkInpSts(this)">
+                  </div>
+                </div>
+                <div class="col-sm-12 cat_js_basic pad_0">
+                  <div class="PosRel SelClik">
+                    <label for="FirName">Practice Category</label>
                     <select name="category" onchange="get_category(this.value)" id="e1">
-                    <option value="">Select Category</option>
+                    <option value=""></option>
                       <?php while($row = $result->fetch_assoc()) { ?>
                     <option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
                       <?php } ?>
                     </select>
-                  </fieldset>
+                  </div>
                 </div>
               </div>              
             </div>
 
             <div class="row">
-              <div class="col-sm-6 text-left"><button class="bckPge" onclick="BckStp('step1')"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &nbsp;Previous</button></div>
-              <div class="col-sm-6 text-right"><button class="nxtPge" onclick="NxtStp('step2')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
+              <div class="col-sm-6 text-left pad_l"><button class="bckPge" onclick="BckStp('step1')"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &nbsp;Previous</button></div>
+              <div class="col-sm-6 text-right pad_r"><button class="nxtPge" onclick="NxtStp('step2')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
             </div>
 
           </div>
@@ -383,18 +383,19 @@ $result = $conn->query($sql);
                   <input type="hidden" id="frm_name" name="name" value="" />
                   <input type="hidden" id="frm_category" name="category" value="" />
 
-                  <fieldset class="fidSet1">
-                    <legend class="Lgnd1">Name :</legend>
-                    <input type="text" name="user_name" class="form-control" id="snme" maxlength="40" placeholder="Name" autocomplete="off" oninput="ChkInpSts(this)">
-                  </fieldset>
-                  <fieldset class="fidSet2">
-                    <legend class="Lgnd2">Phone :</legend>
-                    <input type="text" name="user_contact" class="form-control" id="sno" maxlength="10" placeholder="Contact Number" autocomplete="off" oninput="ChkInpSts(this)">
-                  </fieldset>
-                  <fieldset class="fidSet3">
-                    <legend class="Lgnd3">Email :</legend>
-                    <input type="email" name="user_email" class="form-control" id="seml" maxlength="30" placeholder="Email" autocomplete="off" oninput="ChkInpSts(this)">
-                  </fieldset>
+                  <div class="PosRel fidSet1">
+                    <label for="FirName">Name</label>
+                    <input type="text" name="user_name" class="form-control" id="snme" maxlength="40" autocomplete="off" oninput="ChkInpSts(this)">
+                  </div>
+                  <div class="PosRel fidSet2">
+                    <label for="FirName">Phone</label>
+                    <input type="text" name="user_contact" class="form-control" id="sno" maxlength="10" autocomplete="off" oninput="ChkInpSts(this)">
+                  </div>
+                  <div class="PosRel fidSet3">
+                    <label for="FirName">Email</label>
+                    <input type="email" name="user_email" class="form-control" id="seml" maxlength="30" autocomplete="off" oninput="ChkInpSts(this)">
+                  </div>
+                  
                   <p>By submitting my email address above, I acknowledge that ibridge Digital may use my information as described in its Privacy Policy.</p>                                    
                     
                     <div class="text-center">
@@ -423,6 +424,23 @@ $result = $conn->query($sql);
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="com-assets/js/slick.min.js"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
+<script type="text/javascript">
+jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
+  
+    intShakes = intShakes || 3;
+    intDistance = intDistance || 2;
+    intDuration = intDuration || 300;
+  
+    this.each(function() { 
+        for (var x=1; x<=intShakes; x++) {
+        $(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
+    .animate({left:intDistance}, ((intDuration/intShakes)/2))
+    .animate({left:0}, (((intDuration/intShakes)/4)));
+    }
+  });
+return this;
+};
+</script>
 <script>
 var set_i = 0;
 function move() {
@@ -457,33 +475,65 @@ function move() {
     if(step=="step1"){
       if($("#autocomplete").val()=="")
       {
-        $(".LocFie").css("border","2px solid red");
-        $(".LegFie").css("color","red");
+        $(".LocFie input").css("border","2px solid red");
+        $(".LocFie label").css("color","red");
+        $(".LocFie label").shake();
         return false;
       }
       else
       {
-        $(".hidstpBtn").css("display","none");
+      $(".hidstpBtn").css("display","none");
       $(".inn_br").css("width","50%");
       $(".stp_no").text("2");
       $(".stpNo").text("2");
       $(".Step2str").css("display","block");
+      ChkInpLbl();
       }      
     }
 
     if(step=="step2"){
       var e = document.getElementById("e1");
-      var strUser = e.options[e.selectedIndex].text;
-      if(strUser=="Select Category")
+      var strUser = e.options[e.selectedIndex].value;
+      var cont=0;
+      if($("#street_number").val==""){
+        cont+=1;
+      }
+      if($("#route").val==""){
+        cont+=1;
+      }
+      if($("#locality").val==""){
+        cont+=1;
+      }
+      if($("#administrative_area_level_1").val==""){
+        cont+=1;
+      }
+      if($("#postal_code").val==""){
+        cont+=1;
+      }
+      if($("#country").val==""){
+        cont+=1;
+      }
+      if($("#website").val==""){
+        cont+=1;
+      }
+      if($("#name").val==""){
+        cont+=1;
+      }
+      if(strUser=="")
       {
-        $(".fidSet").css("border","2px solid red");
-        $(".Lgnd").css("color","red");
+        cont+=1;
+      }
+      if(strUser=="")
+      {
+        $(".select2-selection--single").css("border","2px solid red");
+        $(".SelClik label").css("color","red");
+        $(".SelClik label").shake();
         return false;
       }
       else
       {
-      $(".fidSet").css("border","2px solid #ddd");
-      $(".Lgnd").css("color","#000");
+      $(".select2-selection--single").css("border","2px solid #ddd");
+      $(".SelClik label").css("color","#000");
       $(".Step1str").css("display","none");
       $(".inn_br").css("width","100%");
       $(".stp_no").text("3");
@@ -512,26 +562,36 @@ function move() {
           {
               if($("#snme").val()=="")
               {
-                $(".fidSet1").css("border","2px solid red");
-                $(".Lgnd1").css("color","red");
+                $(".fidSet1 input").css("border","2px solid red");
+                $(".fidSet1 label").css("color","red");
+                $(".fidSet1 label").shake();
               }
               if($("#sno").val()=="")
               {
-                $(".fidSet2").css("border","2px solid red");
-                $(".Lgnd2").css("color","red");
+                $(".fidSet2 input").css("border","2px solid red");
+                $(".fidSet2 label").css("color","red");
+                $(".fidSet2 label").shake();
+              }
+              if($("#sno").val().length!=10)
+              {
+                $(".fidSet2 label").shake();
               }
               if($("#seml").val()=="")
               {            
-                $(".fidSet3").css("border","2px solid red");
-                $(".Lgnd3").css("color","red");
+                $(".fidSet3 input").css("border","2px solid red");
+                $(".fidSet3 label").css("color","red");
+                $(".fidSet3 label").shake();
+              }
+              if(validEmail($("#seml").val())==1){
+                $(".fidSet3 label").shake();
               }            
             return false;
           }
           else{
             $("#myProgress").show();            
             $(".Step3str").css("display","none");
-            $(".Step3str fieldset").css("border","2px solid #ddd");
-            $(".Step3str legend").css("color","#000");
+            $(".Step3str input").css("border","2px solid #ddd");
+            $(".Step3str label").css("color","#000");
             $('#pracFrm').modal('hide');
             $('.btn_Modal').hide();
             move();
@@ -544,7 +604,7 @@ function move() {
   function BckStp(step){
     if(step=="step1"){
       $(".Step1str").css("display","block");
-      $(".hidstpBtn").css("display","block");
+      $(".hidstpBtn").css("display","inline-block");
       $(".inn_br").css("width","25%");
       $(".stp_no").text("1");
       $(".Step2str").css("display","none");      
@@ -560,44 +620,44 @@ function move() {
 
   document.getElementById("autocomplete").oninput = function() {
   if($("#autocomplete").val()==""){
-        $(".LocFie").css("border","2px solid red");
-        $(".LegFie").css("color","red");
+        $(".LocFie input").css("border","2px solid red");
+        $(".LocFie label").css("color","red");
+        $(".LocFie label").shake();
       }
       else
       {
-        $(".LocFie").css("border","2px solid #2c98f7");
-        $(".LegFie").css("color","#2c98f7");
+        $(".LocFie input").css("border","2px solid #2c98f7");
+        $(".LocFie label").css("color","#2c98f7");
         $("#autocomplete").css("color","#2c98f7");        
       }
 };
 
   function ChkInpSts(inp){
-    $(inp).parent().css("border","2px solid #2c98f7");
-        $(inp).parent().find("legend").css("color","#2c98f7");
         $(inp).css("color","#2c98f7");
+        $(inp).css("border","2px solid #2c98f7");
     if($(inp).val()==""){
-      $(inp).parent().css("border","2px solid red");
-      $(inp).parent().find("legend").css("color","red");
+      $(inp).css("border","2px solid red");
+      $(inp).parent().find("label").css("color","red");
+      $(inp).parent().find("label").shake();
       }
       else
       {
-        $(inp).parent().css("border","2px solid #2c98f7");
-        $(inp).parent().find("legend").css("color","#2c98f7");
+        $(inp).parent().find("label").css("color","#2c98f7");
         $(inp).css("color","#2c98f7");        
       }
   }
 
 function phoneno(val){         
             if(val.length==10)  {
-           $(".fidSet2").css("border","2px solid #2c98f7");
-             $(".Lgnd2").css("color","#2c98f7");
+           $(".fidSet2 input").css("border","2px solid #2c98f7");
+             $(".fidSet2 label").css("color","#2c98f7");
              $(".fidSet2 input").css("color","#2c98f7");
              return 0;                
             }
             else{
-              $(".fidSet2").css("border","2px solid red");
-                $(".Lgnd2").css("color","red");
-                $(".fidSet2 input").css("color","red"); 
+              $(".fidSet2 input").css("border","2px solid red");
+                $(".fidSet2 label").css("color","red");
+                $(".fidSet2 input").css("color","red");                
               return 1;
             } 
      }
@@ -614,8 +674,8 @@ document.getElementById("seml").onblur =function() {
   function validEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(re.test(email)==false){
-      $(".fidSet3").css("border","2px solid red");
-        $(".Lgnd3").css("color","red");
+      $(".fidSet3 input").css("border","2px solid red");
+        $(".fidSet3 label").css("color","red");
         $(".fidSet3 input").css("color","red");
         return 1;
     }
@@ -627,105 +687,51 @@ document.getElementById("seml").onblur =function() {
 };
  
 </script>
+<script type="text/javascript">
+$('input').on('focusin', function() {
+  $(this).parent().find('label').addClass('actInp');
+  $(this).parent().find('input').css("border","2px solid #2c98f7");
+  $(this).parent().find('label').css("color","#2c98f7");
+});
+
+$('input').on('focusout', function() {
+  if (!this.value) {
+    $(this).parent().find('label').removeClass('actInp');
+  }
+});
+
+$('label').on('click', function() {
+    $(this).parent().find('label').addClass('actInp');
+    $(this).parent().find('input').focus();
+});
+
+
+function ChkInpLbl(){
+
+   $(":input").each(function(){
+   var input = $(this);
+   if($(this).val()=="")
+   {      
+     $(this).parent().find('label').removeClass('actInp');
+   }
+   else
+   {      
+      $(this).parent().find('label').addClass('actInp');
+   }
+});
+
+}
+$(".SelClik").click(function(){
+  $(this).find('label').addClass('actInp');
+})
+
+
+</script>
 <script>
     $(document).ready(function() { $("#e1").select2(); });
   </script>
               <script type="text/javascript">
-//     $('.button_sel').click(function(){
-//       var e = document.getElementById("e1");
-//   var strUser = e.options[e.selectedIndex].text;
-//   if(strUser=="Select Category")
-//   {
-//     $(".err_msg").show();
-//     return false;
-//   }
-//   $(".err_msg").hide();
-//   var $btn = $(this),
-//   $step = $btn.parents('.modal-body'),
-//   stepIndex = $step.index(),
-//   $pag = $('.modal-header span').eq(stepIndex);
-//   if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
-//   else { step4($step, $pag); }  
-// });
 
-// $('.button').click(function(){
-//   if($(".pac-target-input").val()=="")
-//   {
-//     $(".err_msg").show();
-//     return false;
-//   }
-
-//   $(".err_msg").hide();
-//   var $btn = $(this),
-//   $step = $btn.parents('.modal-body'),
-//   stepIndex = $step.index(),
-//   $pag = $('.modal-header span').eq(stepIndex);
-//   if(stepIndex === 0 || stepIndex === 1 || stepIndex === 2) { step1($step, $pag); }
-//   else { step4($step, $pag); }  
-// });
-
-// $(".btn_fin").click(function(){
-        
-//         var nme = $("#snme").val();
-//         var eml = $("#seml").val();
-//         var no = $("#sno").val();
-
-//         if(nme=="" && eml=="" && no=="")
-//         {
-//           $(".err_msg").show();
-//           return false;
-//         }
-//         else
-//         {
-//           $(".modal-wrap").fadeOut("slow");
-//           $(".err_msg").hide();
-//           $(".img_lod").fadeIn("slow");
-//         }
-        
-//       });
-
-// function step1($step, $pag){
-//   console.log('step1');
-//   // animate the step out
-//   $step.addClass('animate-out');
-  
-//   // animate the step in
-//   setTimeout(function(){
-//   $step.removeClass('animate-out is-showing')
-//      .next().addClass('animate-in');
-//   $pag.removeClass('is-active')
-//       .next().addClass('is-active');
-//   }, 600);
-  
-//   // after the animation, adjust the classes
-//   setTimeout(function(){
-//   $step.next().removeClass('animate-in')
-//       .addClass('is-showing');
-  
-//   }, 1200);
-// }
-
-// function step4($step, $pag){
-// console.log('3');
-
-//   // animate the step out
-//   $step.parents('.modal-wrap').addClass('animate-up');
-
-//   setTimeout(function(){
-//   $('.rerun-button').css('display', 'inline-block');
-//   }, 300);
-// }
-
-// $('.rerun-button').click(function(){
-//  $('.modal-wrap').removeClass('animate-up')
-//           .find('.modal-body')
-//           .first().addClass('is-showing')
-//           .siblings().removeClass('is-showing');
-
-//   $('.modal-header span').first().addClass('is-active')
-//               .siblings().removeClass('is-active');
-//  $(this).hide();
-// });
 
 function get_category(id)
 {
@@ -827,87 +833,14 @@ function get_category(id)
         event.preventDefault();
       }
     });
-
     
   }  
 
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
     async defer></script>
-  
-  <script type="text/javascript">
-  function changeStep(step)
-  {
-    if(step=="step1")
-    {
-      if($("#autocomplete").val()=="")
-      {
-        $(".err_msg").show();
-        return false;
-      }
-      else
-      {
-        $(".err_msg").hide();
-        $(".inn_br").css("width","50%");
-        $(".innStep1").removeClass("actstp");
-        $(".innStep1").addClass("hidstp");
-        $(".innStep2").addClass("actstp");
-        $(".stp_no").text("2");
-      }
-    }
 
-    if(step=="step2")
-    {
-      $(".inn_br").css("width","75%");
-      $(".innStep2").removeClass("actstp");
-      $(".innStep2").addClass("hidstp");
-      $(".innStep3").addClass("actstp");
-      $(".stp_no").text("3");
-    }
 
-    // if(step=="step3")
-    // {
-    //   var e = document.getElementById("e1");
-    //   var strUser = e.options[e.selectedIndex].text;
-    //   if(strUser=="Select Category")
-    //   {       
-    //     $(".err_msg").show();
-    //     return false;
-    //   }
-    //   else
-    //   {
-    //     $(".err_msg").hide();
-    //     $(".inn_br").css("width","90%");
-    //     $(".innStep3").removeClass("actstp");
-    //     $(".innStep3").addClass("hidstp");
-    //     $(".innStep4").addClass("actstp");
-    //     $(".stp_no").text("4");
-    //   }
-    // }
-
-    if(step=="step4")
-    {
-      var nme = $("#snme").val();
-      var eml = $("#seml").val();
-      var no = $("#sno").val();
-      if(nme=="" || eml=="" || no=="")
-      {
-        $(".err_msg").show();
-        return false;
-      }
-      else
-      {
-        $(".err_msg").hide();
-        $(".btn_fin").click();
-        $(".inn_br").css("width","100%");
-        $(".innStep4").removeClass("actstp");
-        $(".innStep4").addClass("hidstp");
-        $(".img_lod").fadeIn("slow");
-      }
-    }
-    
-  }
-</script>
      </div>
    </body>
 </html>
