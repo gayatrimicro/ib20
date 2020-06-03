@@ -335,7 +335,7 @@
 							<canvas class="o-line_canvas js-animate" data-auto="true" data-module="Rope" data-delay="0.3" data-color="black"></canvas>
 						</div>
  -->						<div class="o-header-block">
-							<div class="o-header-block_title u-anim -parent -delay-3" style="margin-bottom: 0rem;">Expertise</div>
+							<div class="o-header-block_title u-anim -parent -delay-3" style="margin-bottom: 0rem;margin-top: 2rem;">Expertise</div>
 						</div>
 					</div>
 
