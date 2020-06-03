@@ -314,7 +314,7 @@
 							</div>
 						<div class="c-project-header_block-bottom GetUp">
 							<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
-								<span class="c-project-header_word o-h1" style="color: #000">Bayswater &nbsp;Bathrooms</span>
+								<span class="c-project-header_word o-h1" style="color: #000;">Bayswater &nbsp;Bathrooms</span>
 							</div>
 						</div>
 					</div>
