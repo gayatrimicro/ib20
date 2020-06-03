@@ -335,13 +335,13 @@
 							<canvas class="o-line_canvas js-animate" data-auto="true" data-module="Rope" data-delay="0.3" data-color="black"></canvas>
 						</div>
  -->						<div class="o-header-block">
-							<div class="o-header-block_title u-anim -parent -delay-3">Expertise</div>
+							<div class="o-header-block_title u-anim -parent -delay-3" style="margin-bottom: 0rem;">Expertise</div>
 						</div>
 					</div>
 
 					<div class="c-project-header_block-bottom -container">
 						<div class="c-project-header_title">
-							<span class="c-project-header_word o-h1">Wordpress</span>
+							<span class="c-project-header_word" style="font-size: 6rem;">Wordpress</span>
 						</div>
 					</div>
 					
