@@ -306,6 +306,19 @@
 							<span class="c-project-header_word o-h1">Bayswater &nbsp;Bathrooms</span>
 						</div>
 					</div>
+					<div style="position: relative;">
+						<div class="c-project-header_cta" style="position:absolute;left: 75%;">
+								<a href="https://www.bayswaterbathrooms.co.uk/" target="_blank" class="o-circle-button" style="width: 100%;height: 20%;">
+									<img src="../../uploads/projects/Bayswater/Web-9-1280x1280.jpg">
+								</a>
+							</div>
+						<div class="c-project-header_block-bottom" style="position:absolute;margin-top: -8.9rem;">
+							<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
+								<span class="c-project-header_word o-h1" style="color: #000">Bayswater &nbsp;Bathrooms</span>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 
 				<div class="c-project-header_block">
@@ -337,16 +350,15 @@
 					</div>
 				</div>
 
-				<div class="o-container" data-theme="dark" >
+				<!-- <div class="o-container" data-theme="dark"  style="overflow: hidden;">
 					<div class="c-project-header_cta-wrapper || js-animate" data-speed="-1" data-position="top" >
 						<div class="c-project-header_cta" style="left: 75%;margin-top: -12rem;">
 							<a href="https://www.bayswaterbathrooms.co.uk/" target="_blank" class="o-circle-button" style="width: 160%;height: 20%;">
-								<img style="overflow: hidden;" src="../../uploads/projects/Bayswater/Web-9-1280x1280.jpg">
+								<img src="../../uploads/projects/Bayswater/Web-9-1280x1280.jpg">
 							</a>
 						</div>
-							
 					</div>
-				</div>
+				</div> -->
 
 				<!-- <div class="c-project-header_block">
 					<div class="o-container">
