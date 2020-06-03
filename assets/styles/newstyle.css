@@ -824,6 +824,11 @@ z-index: 10000;
 {
     position: absolute;
 }
+.GetBtnSit
+{
+    position: relative;
+    z-index: 1000;
+}
 /*------compititors result page end----------------*/
 
 /*----------------------------------*/
