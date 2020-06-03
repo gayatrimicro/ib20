@@ -45,34 +45,73 @@ body{
     font-family: Haas-hell, sans-serif !important;
  }
 
+h1, h2, h3, h4, h5, h6{
+color: #fff;
+text-align: center;
+}
+html{
+color: #fff !important;
+}
+select{
+padding: 10px 20px !important;
+border: 1px solid #fff !important;
+border-radius: 3px !important;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+}
+.form-box{
+  padding: 0px 0px;
+}
+.heading-title{
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+.margin-top{
+  margin: 45px 0px;
+}
+
+@media (max-width: 600px){
+  .form-box{
+    padding: 0px 30px;
+  }
+  .heading-title{
+    padding: 0px 20px;
+  }
+  .comp-details{
+    padding: 0px 20px;
+  }
+}
+
 .edit_projfrm
-	{
-		width: 65%;
-    margin: 99px auto;
-    overflow: scroll;
-    height: 600px;
-	}
-	.marb100
-	{
-		margin-bottom: 100px;
-	}
-	.edit_projfrm h3
-	{
-		text-align: center;
-	}
-	.edit_projfrm h6
-	{
-		text-align: center;
-	}
-	.logowid
-	{
-		width: 50px;
-	}
-	.c-awards-scene {
-    margin-top: 0 !important;
-    margin: 0 !important;
-    margin-left: 0 !important;
-    top: -50px !important;
+{
+	width: 65%;
+margin: 99px auto;
+overflow: scroll;
+height: 600px;
+}
+.marb100
+{
+	margin-bottom: 100px;
+}
+.edit_projfrm h3
+{
+	text-align: center;
+}
+.edit_projfrm h6
+{
+	text-align: center;
+}
+.logowid
+{
+	width: 50px;
+}
+.c-awards-scene {
+margin-top: 0 !important;
+margin: 0 !important;
+margin-left: 0 !important;
+top: -50px !important;
 }
 .o-vimeo-player video
 {
@@ -1049,7 +1088,10 @@ z-index: 1;
     transform: translate3d(2px, 0, 0);
 }
 }
-
+.RsltSec
+{
+    display: none;
+}
 /*------compititors result page end----------------*/
 
 /*----------------------------------*/

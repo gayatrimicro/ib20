@@ -803,6 +803,21 @@ z-index: 10000;
     line-height: 28px;
     font-size: 17px;
 }
+.c-project-header_block-bottom
+{
+    z-index: 1;
+}
+
+.c-project-header_block
+{
+    z-index: 1000;
+}
+
+.hidTxt {
+    color: red;
+    width: 500px;
+    overflow: hidden;
+}
 /*------compititors result page end----------------*/
 
 /*----------------------------------*/
