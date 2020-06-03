@@ -286,7 +286,7 @@
 				<div class="c-project-header_block">
 					<div class="o-container">
 						<div class="o-header-block">
-							<div class="o-header-block_title u-anim -parent -delay-4">Client</div>
+							<div class="o-header-block_title u-anim -parent -delay-4" style="position: relative;top: 53px;">Client</div>
 						</div>
 					</div>
 					<div class="GetHed">						
@@ -296,14 +296,14 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="hidTxt">
+					<div class="hidTxt">
 						<div class="hidS1"></div>
 						<div class="c-project-header_block-bottom">
 							<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
 								<span class="c-project-header_word o-h1">Bayswater &nbsp;Bathrooms</span>
 							</div>
 						</div>
-					</div> -->
+					</div>
 				</div>
 
 				<div class="c-project-header_block">

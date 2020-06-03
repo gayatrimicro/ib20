@@ -818,7 +818,7 @@ z-index: 10000;
     width: 500px;
     overflow: hidden;
     position: relative;
-    top: 97px;
+    top: -50px;
 }
 .hidS1
 {
@@ -828,6 +828,11 @@ z-index: 10000;
 {
     position: relative;
     z-index: 1000;
+}
+.GetHed
+{
+    position: relative;
+    top: 73px;
 }
 /*------compititors result page end----------------*/
 
