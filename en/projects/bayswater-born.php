@@ -312,7 +312,9 @@
 									<img src="../../uploads/projects/Bayswater/Web-9-1280x1280.jpg">
 								</a>
 							</div>
-						<div class="c-project-header_block-bottom GetUp">
+							<div class="GetUp"></div>
+						<div class="c-project-header_block-bottom">
+
 							<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
 								<span class="c-project-header_word o-h1" style="color: #000;">Bayswater &nbsp;Bathrooms</span>
 							</div>
