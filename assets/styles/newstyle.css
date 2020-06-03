@@ -817,6 +817,22 @@ z-index: 10000;
     color: red;
     width: 500px;
     overflow: hidden;
+    position: relative;
+    top: 97px;
+}
+.GetHed
+{
+    position: relative;
+    top: 220px;
+}
+.hidS1
+{
+    position: absolute;
+}
+.getTop
+{
+    position: relative;
+    top: -288px;
 }
 /*------compititors result page end----------------*/
 

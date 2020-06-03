@@ -284,18 +284,20 @@
 
 			<div class="c-project-header js-animate" data-module="ProjectHeader" data-callback="trigger.ProjectHeader()" data-repeat>
 				<div class="c-project-header_block">
-					<div class="o-container">
+					<div class="o-container" style="position: relative;top: 235px;">
 						<div class="o-header-block">
 							<div class="o-header-block_title u-anim -parent -delay-4">Client</div>
 						</div>
 					</div>
-
-					<div class="c-project-header_block-bottom">
-						<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
-							<span class="c-project-header_word o-h1">Bayswater &nbsp;Bathrooms</span>
+					<div class="GetHed">						
+						<div class="c-project-header_block-bottom">
+							<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
+								<span class="c-project-header_word o-h1">Bayswater &nbsp;Bathrooms</span>
+							</div>
 						</div>
 					</div>
 					<div class="hidTxt">
+						<div class="hidS1"></div>
 						<div class="c-project-header_block-bottom">
 							<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
 								<span class="c-project-header_word o-h1">Bayswater &nbsp;Bathrooms</span>
@@ -305,7 +307,7 @@
 				</div>
 
 				<div class="c-project-header_block">
-					<div class="o-container">
+					<div class="o-container" style="position: relative;top: -300px;">
 						<!-- <div class="o-line -elastic">
 							<canvas class="o-line_canvas js-animate" data-auto="true" data-module="Rope" data-delay="0.3" data-color="black"></canvas>
 						</div>
@@ -314,7 +316,7 @@
 						</div>
 					</div>
 
-					<div class="c-project-header_block-bottom -container">
+					<div class="c-project-header_block-bottom -container getTop">
 						<div class="c-project-header_title">
 							<span class="c-project-header_word o-h1">Wordpress</span>
 						</div>
