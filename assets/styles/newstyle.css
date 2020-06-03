@@ -829,6 +829,26 @@ z-index: 10000;
     position: relative;
     z-index: 1000;
 }
+.GetHed
+{
+    position: relative;
+    top: 73px;
+}
+.GetUp
+{
+    position: absolute;
+    margin-top: -8.9rem;
+    width: 29.6%;
+    overflow: hidden;
+}
+.outer-position{
+    left: 33% !important;
+    top: 125% !important;
+}
+.inner-width{
+    width: 45% !important;
+    height: 0% !important;
+}
 /*------compititors result page end----------------*/
 
 /*----------------------------------*/

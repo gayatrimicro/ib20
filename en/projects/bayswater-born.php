@@ -295,7 +295,7 @@
 
 			<div class="c-project-header js-animate" data-module="ProjectHeader" data-callback="trigger.ProjectHeader()" data-repeat>
 				<div class="c-project-header_block">
-					<div class="o-container">
+					<div class="o-container" style="text-align: right;">
 						<div class="o-header-block">
 							<div class="o-header-block_title u-anim -parent -delay-4">Client</div>
 						</div>
@@ -306,13 +306,21 @@
 							<span class="c-project-header_word o-h1">Bayswater &nbsp;Bathrooms</span>
 						</div>
 					</div>
-					<div style="position: relative;">
-						<div class="c-project-header_cta" style="position:absolute;left: 75%;">
-								<a href="https://www.bayswaterbathrooms.co.uk/" target="_blank" class="o-circle-button" style="width: 100%;height: 30%;">
+					<div style="">
+						<div class="c-project-header_cta outer-position">
+								<a href="https://www.bayswaterbathrooms.co.uk/" target="_blank" class="o-circle-button inner-width">
 									<img src="../../uploads/projects/Bayswater/Web-9-1280x1280.jpg">
 								</a>
 							</div>
-						<div class="c-project-header_block-bottom GetUp">
+							
+						<div class="c-project-header_block-bottom GetUp">	
+
+<!-- <div class="o-container">
+								<div class="o-header-block">
+									<div class="o-header-block_title u-anim -parent -delay-4" style="color: #000">Client</div>
+								</div>
+							</div> -->
+
 							<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
 								<span class="c-project-header_word o-h1" style="color: #000">Bayswater &nbsp;Bathrooms</span>
 							</div>
@@ -321,7 +329,7 @@
 					
 				</div>
 
-				<div class="c-project-header_block">
+				<div class="c-project-header_block" style="text-align: right;">
 					<div class="o-container">
 						<!-- <div class="o-line -elastic">
 							<canvas class="o-line_canvas js-animate" data-auto="true" data-module="Rope" data-delay="0.3" data-color="black"></canvas>

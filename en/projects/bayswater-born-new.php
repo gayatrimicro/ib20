@@ -306,15 +306,15 @@
 							<span class="c-project-header_word o-h1">Bayswater &nbsp;Bathrooms</span>
 						</div>
 					</div>
-					<div style="position: relative;">
-						<div class="c-project-header_cta" style="position:absolute;left: 75%;">
+					<div>
+						<div class="c-project-header_cta" style="left: 33%;top: unset;">
 								<a href="https://www.bayswaterbathrooms.co.uk/" target="_blank" class="o-circle-button" style="width: 100%;height: 30%;">
 									<img src="../../uploads/projects/Bayswater/Web-9-1280x1280.jpg">
 								</a>
 							</div>
-						<div class="c-project-header_block-bottom" style="position:absolute;margin-top: -8.9rem;">
+						<div style="position:absolute;margin-top: -8.9rem;">
 							<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
-								<span class="c-project-header_word o-h1" style="color: #000">Bayswater &nbsp;Bathrooms</span>
+								<span class="c-project-header_word o-h1" style="color: #000;">Bayswater &nbsp;Bathrooms</span>
 							</div>
 						</div>
 					</div>
