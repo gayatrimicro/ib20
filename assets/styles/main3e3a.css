@@ -4625,11 +4625,11 @@ html.ui-dark:not(.has-lisa-active):not(.has-nav-open):not(.has-dom-loading) .c-h
 	bottom:50px;
 	left:27px;
 	transform-origin:center bottom;
-	animation:dot 1s ease-in-out infinite}
+	animation:dot 1.5s ease-in-out infinite}
 
 	@-webkit-keyframes dot{
     0%{transform:matrix(1, 0, 0, 1, 0, 0)}
-    33.33%{transform:matrix(1, 0, 0, 1.02922, 0, -47.0782)}
+    33.33%{transform:matrix(1, 0, 0, 1.02922, 0, -42.0782)}
     66.66%{transform:matrix(1, 0, 0, 0.54, 0, 0)}
     100%{transform:matrix(1, 0, 0, 1, 0, 0)}}
 
