@@ -834,6 +834,19 @@ z-index: 10000;
     position: relative;
     top: 73px;
 }
+.GetUp
+{
+    position: absolute;
+    margin-top: -8.9rem;
+    width: 315px;
+    overflow: hidden;
+    right: 157px;
+}
+/*.c-project-header_title .c-rail_group-container
+{
+    width: 316px;
+    margin-left: -788px;
+}*/
 /*------compititors result page end----------------*/
 
 /*----------------------------------*/
