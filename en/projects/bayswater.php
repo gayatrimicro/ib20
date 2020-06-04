@@ -1237,7 +1237,7 @@
 </div>
 
 
-				<div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
+				<div class="o-section -padding-v-huge" style="background-color:#ddd;">
 	<figure class="o-container"  data-theme="light">
 		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
 			<div id="vid_seco">
@@ -1288,7 +1288,7 @@
 	</div>
 </div>
 
-				<div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
+				<div class="o-section -padding-v-huge" style="background-color:#ddd;">
 	<figure class="o-container"  data-theme="light">
 		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
 			<div id="vid_tri">
@@ -1379,7 +1379,7 @@
 		</figure>
 	</div>
 </div>
-				<div class="o-section -padding-v-huge" style="background-color:#FFFFFF;">
+				<div class="o-section -padding-v-huge" style="background-color:#ddd;">
 	<figure class="o-container">
 		<div class="o-vimeo-player js-animate u-anim -delay-1">
 			<img src="../../uploads/projects/Bayswater/img_1920x1260_bayswater_info_01.jpg" alt="" class="js-animate" data-speed="-6">
@@ -1750,8 +1750,34 @@ $(document).ready(function() {
 	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script type="text/javascript" src="../../assets/scripts/vendors3e3a.js"></script>
-		<script type="text/javascript" src="../../assets/scripts/app3e3a.js"></script>
+
+
+		<script>
+			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
+
+			var iterator = 0;
+			var scripts = [
+				'../../assets/scripts/vendors3e3a.js',
+				'../../assets/scripts/app3e3a.js'
+			];
+			function dynamicallyLoadScript(url) {
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = url;
+				document.body.appendChild(script);
+				script.onload = function() {
+					if (iterator < scripts.length - 1) {
+						iterator++;
+						dynamicallyLoadScript(scripts[iterator]);
+					}
+				}
+			}
+			window.onload = function() {
+				dynamicallyLoadScript(scripts[iterator]);
+			}
+		</script>
+<!-- 		<script type="text/javascript" src="../../assets/scripts/vendors3e3a.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/app3e3a.js"></script> -->
 		<!-- <script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script> -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 		<script>
