@@ -5431,8 +5431,8 @@ html.has-nav-open .c-header_burger:before {
 .c-footer {
 	height: 45vh;
 	position: relative;
-	background-color: #1c1c20;
-	color: #fff;
+	background-color: #fff;
+	color: #1c1c20;
 	overflow: hidden
 }
 
