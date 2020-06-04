@@ -63,7 +63,7 @@
 
 	<link rel="manifest" href="../../manifest.json">
 	<!-- <link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#4D84F1"> -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" /> -->
 	<link rel="stylesheet" type="text/css" href="../../assets/styles/newstyle.css">
 	<!-- <link rel="stylesheet" type="text/css" href="../../assets/styles/steps.css"> -->
 
@@ -89,9 +89,9 @@
 }
 
 	</style>
-	<link rel="stylesheet" id="main-css" href="../../assets/styles/main3e3a.css?v=4.51" media="none" onload="if(media!='all')media='all'">
+	<link rel="stylesheet" id="main-css" href="../../assets/styles/main3e3a.css" media="none" onload="if(media!='all')media='all'">
 
-	<script>
+	<!-- <script>
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-1837138-68', 'auto');
 
@@ -101,7 +101,7 @@
 	// ga('require', 'maxScrollTracker');
 
 	ga('send', 'pageview');
-	</script>
+	</script> -->
 	
 </head>
 <body data-module="Load" style="opacity: 0;">
