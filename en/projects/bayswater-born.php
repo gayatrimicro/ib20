@@ -309,7 +309,7 @@
 					<div style="">
 						<div class="c-project-header_cta outer-position">
 								<a href="https://www.bayswaterbathrooms.co.uk/" target="_blank" class="o-circle-button inner-width">
-									<img src="../../uploads/projects/Bayswater/Web-9-1280x1280.jpg">
+									<img src="../../uploads/projects/Bayswater/Web-9-1280x1280.jpg" class="lazyload">
 								</a>
 							</div>
 							
@@ -444,8 +444,8 @@
 				<div class="c-fancy-video c-project_intro_item js-animate -paused has-video" data-module="FancyVideo">
 					<div class="c-fancy-video_bg" style="background-color:#EB2931"></div>
 					<div id="myid">
-						<video id="fir_vid" muted poster="../../uploads/projects/Bayswater/img_1920x1280_bayswater-bathtub.jpg">
-  <source src="../../assets/videos/The Bayswater Bathrooms Brand Film.mp4" type="video/mp4">
+						<video id="fir_vid" muted poster="../../uploads/projects/Bayswater/img_1920x1280_bayswater-bathtub.jpg" class="lazyload">
+  <source src="../../assets/videos/The Bayswater Bathrooms Brand Film.mp4" type="video/mp4" class="lazyload">
 </video>
 					
 				</div>
@@ -493,12 +493,12 @@
 
 				<figure class="o-image -parallax">
 	<div class="o-image_inner">
-		<img src="../../uploads/projects/Bayswater/img_1920x1260_bayswater.jpg" alt="" class="js-animate" data-speed="-6">
+		<img src="../../uploads/projects/Bayswater/img_1920x1260_bayswater.jpg" alt="desktop mockup" class="lazyload js-animate" data-speed="-6">
 	</div>
 </figure>
 				<div class="c-device -desktop o-container">
 	<div class="c-device_inner u-anim -delay-3 js-animate">
-		<img src="../../assets/images/desktop.png" alt="">
+		<img src="../../assets/images/desktop.png" class="lazyload" alt="Mockuo-desktop">
 		<div class="c-device_media">
 			<div class="o-vimeo-player">
 				<!-- <iframe class="js-animate" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://www.youtube.com/embed/x-mNqbUX_WU" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe> -->
@@ -514,7 +514,7 @@
 </div>
 
 
-				<div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
+				<div class="o-section -padding-v-huge" style="background-color:#ddd;">
 	<figure class="o-container"  data-theme="light">
 		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
 			<div id="vid_seco">
@@ -543,7 +543,7 @@
 
 				<figure class="o-image -parallax">
 	<div class="o-image_inner">
-		<img src="../../uploads/projects/Bayswater/img_1920x1280_bayswater-features.jpg" alt="" class="js-animate" data-speed="-6">
+		<img src="../../uploads/projects/Bayswater/img_1920x1280_bayswater-features.jpg" alt="Features" class="lazyload js-animate" data-speed="-6">
 	</div>
 </figure>
 				<div class="o-layout js-animate">
@@ -551,7 +551,7 @@
 		<div class="c-mobile-device" style="background:#E6E6E6;">
 			<div class="c-mobile-device_inner u-anim -delay-3 js-animate">
 				<svg role="img" style="fill:#272727;"><use xlink:href="../../assets/images/sprite.svg#mobile-device"></use></svg>
-				<img src="../../uploads/projects/Bayswater/mobile_screen_720x1280_bayswater_01.jpg" alt="">
+				<img src="../../uploads/projects/Bayswater/mobile_screen_720x1280_bayswater_01.jpg" class="lazyload" alt="Mobile Mockup">
 			</div>
 		</div>
 	</div>
@@ -559,17 +559,17 @@
 		<div class="c-mobile-device" style="background:#0E0E0E;">
 			<div class="c-mobile-device_inner u-anim -delay-5 js-animate">
 				<svg role="img" style="fill:#DCDCDC;"><use xlink:href="../../assets/images/sprite.svg#mobile-device"></use></svg>
-				<img src="../../uploads/projects/Bayswater/mobile_screen_720x1280_bayswater_02.jpg" alt="">
+				<img src="../../uploads/projects/Bayswater/mobile_screen_720x1280_bayswater_02.jpg" class="lazyload" alt="Mobile Mockup">
 			</div>
 		</div>
 	</div>
 </div>
 
-				<div class="o-section -padding-v-huge" style="background-color:#F5F5F5;">
+				<div class="o-section -padding-v-huge" style="background-color:#ddd;">
 	<figure class="o-container"  data-theme="light">
 		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
 			<div id="vid_tri">
-				<video id="normal_vid" autoplay loop>
+				<video id="normal_vid" autoplay loop class="lazyload">
 				  <source src="../../assets/videos/bayswater2.mp4"  type="video/mp4">
 				</video>
 				<div class="c-fancy-video-cursor || o-cursor_wrapper || js-video-cursor js-animate" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()">
@@ -634,7 +634,7 @@
 </section>
 				<figure class="o-image -parallax">
 	<div class="o-image_inner">
-		<img src="../../uploads/projects/Bayswater/img_1920x1260_bayswater_02.jpg" alt="" class="js-animate" data-speed="-6">
+		<img src="../../uploads/projects/Bayswater/img_1920x1260_bayswater_02.jpg" alt="Bayswater Laptop Mockup" class="lazyload js-animate" data-speed="-6">
 	</div>
 </figure>
 				<div class="o-container">
@@ -651,15 +651,15 @@
 			<div class="o-vimeo-player">
 				<!-- <iframe class="js-animate" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://player.vimeo.com/video/330881462?controls=false&amp;autoplay=0&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe> -->
 				<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
-				<img src="../../uploads/projects/Bayswater/img_1920x1260_wireframe_02.jpg" alt="" class="js-animate" data-speed="-6">
+				<img src="../../uploads/projects/Bayswater/img_1920x1260_wireframe_02.jpg" alt="Wireframe" class="lazyload js-animate" data-speed="-6">
 			</div>
 		</figure>
 	</div>
 </div>
-				<div class="o-section -padding-v-huge" style="background-color:#FFFFFF;">
+				<div class="o-section -padding-v-huge" style="background-color:#ddd;">
 	<figure class="o-container">
 		<div class="o-vimeo-player js-animate u-anim -delay-1">
-			<img src="../../uploads/projects/Bayswater/img_1920x1260_bayswater_info_01.jpg" alt="" class="js-animate" data-speed="-6">
+			<img src="../../uploads/projects/Bayswater/img_1920x1260_bayswater_info_01.jpg" alt="Branding" class="lazyload js-animate" data-speed="-6">
 		</div>
 	</figure>
 </div>
@@ -673,17 +673,17 @@
 				<div class="c-slider_wrapper || swiper-wrapper">
 					<div class="c-slider_slide || swiper-slide">
 						<div class="c-slider_slide-inner">
-							<img src="../../uploads/projects/Bayswater/img_galerie_1920x1080_bayswater_01.jpg" alt="" />
+							<img src="../../uploads/projects/Bayswater/img_galerie_1920x1080_bayswater_01.jpg" alt="Mockup" class="lazyload" />
 						</div>
 					</div>
 					<div class="c-slider_slide || swiper-slide">
 						<div class="c-slider_slide-inner">
-							<img src="../../uploads/projects/Bayswater/img_galerie_1920x1080_bayswater_02.jpg" alt="" />
+							<img src="../../uploads/projects/Bayswater/img_galerie_1920x1080_bayswater_02.jpg" alt="Mockup" class="lazyload" />
 						</div>
 					</div>
 					<div class="c-slider_slide || swiper-slide">
 						<div class="c-slider_slide-inner">
-							<img src="../../uploads/projects/Bayswater/img_galerie_1920x1080_bayswater_03.jpg" alt="" />
+							<img src="../../uploads/projects/Bayswater/img_galerie_1920x1080_bayswater_03.jpg" alt="Mockup" class="lazyload" />
 						</div>
 					</div>
 				</div>
@@ -716,7 +716,7 @@
 									<span class="c-stats_title -no-border u-anim -delay-2 js-animate">The results</span>
 								</div>
 								<div class="o-layout_item u-1/2@from-medium">
-									<p class="u-anim -delay-2 js-animate">Design iBridge website has become tremendously popular with its audience and picked up numerous prizes, such as Site Of The Month from Awwwards, and Grand Prix awards from both Boomerang and Grafika, among others. Stats show a bounce rate under 20%, which demonstrates the relevance of the user experience offered by the platform.</p>
+									<p class="u-anim -delay-2 js-animate">Bayswater bathrooms website has become tremendously popular with its audience and picked up numerous prizes, such as Site Of The Month from Awwwards, and Grand Prix awards from both Boomerang and Grafika, among others. Stats show a bounce rate under 20%, which demonstrates the relevance of the user experience offered by the platform.</p>
 								</div>
 							</div>
 						</div>
@@ -1027,30 +1027,7 @@ $(document).ready(function() {
 	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-		<script>
-			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
-
-			var iterator = 0;
-			var scripts = [
-				'../../assets/scripts/vendors3e3a.js',
-				'../../assets/scripts/app3e3a.js'
-			];
-			function dynamicallyLoadScript(url) {
-				var script = document.createElement('script');
-				script.type = 'text/javascript';
-				script.src = url;
-				document.body.appendChild(script);
-				script.onload = function() {
-					if (iterator < scripts.length - 1) {
-						iterator++;
-						dynamicallyLoadScript(scripts[iterator]);
-					}
-				}
-			}
-			window.onload = function() {
-				dynamicallyLoadScript(scripts[iterator]);
-			}
-		</script>
+		
 		<!-- <script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script> -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 		<script>
@@ -1155,6 +1132,29 @@ myVar = parseInt(footer, 10);
 	}, true);
 
 </script>
+<script>
+			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
 
+			var iterator = 0;
+			var scripts = [
+				'../../assets/scripts/vendors3e3a.js',
+				'../../assets/scripts/app3e3a.js'
+			];
+			function dynamicallyLoadScript(url) {
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = url;
+				document.body.appendChild(script);
+				script.onload = function() {
+					if (iterator < scripts.length - 1) {
+						iterator++;
+						dynamicallyLoadScript(scripts[iterator]);
+					}
+				}
+			}
+			window.onload = function() {
+				dynamicallyLoadScript(scripts[iterator]);
+			}
+		</script>
 	</body>
 </html>
