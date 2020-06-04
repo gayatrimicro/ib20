@@ -1167,7 +1167,7 @@
 				<div class="c-fancy-video c-project_intro_item js-animate -paused has-video" data-module="FancyVideo">
 					<div class="c-fancy-video_bg" style="background-color:#EB2931"></div>
 					<div id="myid">
-						<video id="fir_vid" muted>
+						<video id="fir_vid" muted poster="../../uploads/projects/Bayswater/img_1920x1280_bayswater-bathtub.jpg" >
   <source src="../../assets/videos/The Bayswater Bathrooms Brand Film.mp4" type="video/mp4">
 </video>
 					

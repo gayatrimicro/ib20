@@ -1102,15 +1102,15 @@
 					</div>
 				</div>
 
-				<!-- <div class="o-container" data-theme="dark"  style="overflow: hidden;">
-					<div class="c-project-header_cta-wrapper || js-animate" data-speed="-1" data-position="top" >
-						<div class="c-project-header_cta" style="left: 75%;margin-top: -12rem;">
+				<div class="o-container" data-theme="dark">
+					<div class="c-project-header_cta-wrapper || js-animate" data-speed="-3" data-position="top" >
+						<div class="c-project-header_cta" style="left: 105%;margin-top: 0rem;margin-right: -15rem;/* position: absolute; */">
 							<a href="https://www.bayswaterbathrooms.co.uk/" target="_blank" class="o-circle-button" style="width: 160%;height: 20%;">
-								<img src="../../uploads/projects/Bayswater/Web-9-1280x1280.jpg">
+								<img src="../../uploads/projects/Bayswater/Web-9-blue.jpg">
 							</a>
 						</div>
 					</div>
-				</div> -->
+				</div>
 
 				<!-- <div class="c-project-header_block">
 					<div class="o-container">

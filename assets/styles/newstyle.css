@@ -848,6 +848,7 @@ z-index: 10000;
 .inner-width{
     width: 45% !important;
     height: 0% !important;
+    margin-top: -10rem;
 }
 /*------compititors result page end----------------*/
 
