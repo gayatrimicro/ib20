@@ -1470,9 +1470,9 @@
 					<a href="home-societe.html" draggable="false" class="c-footer_lines c-heading-lines_title js-drag-zone js-hover" data-module="Footer">
 						<div class="c-footer_lines_line c-heading-lines_title_line">
 							<div class="o-container">
-								<div class="o-line -elastic">
+								<!-- <div class="o-line -elastic">
 									<canvas class="o-line_canvas js-animate" data-callback="inview.Rope()" data-module="Rope" data-delay="0.1" data-color="white"></canvas>
-								</div>
+								</div> -->
 								<div class="c-heading-lines_words">
 									<span class="c-heading-lines_word o-h1">Next<span class="c-footer_timeline js-timeline"></span>
 									<span class="c-footer_lines_arrow js-arrow">
@@ -1480,8 +1480,9 @@
 									</span>
 								</span>
 								</div>
-								<div class="o-line -elastic">
-								</div>
+								<!-- <div class="o-line -elastic">
+									<canvas class="o-line_canvas js-animate" data-callback="inview.Rope()" data-module="Rope" data-delay="0.1" data-color="white"></canvas>
+								</div> -->
 							</div>
 						</div>
 						<div class="c-footer_lines_line c-heading-lines_title_line -rail">
@@ -1489,9 +1490,9 @@
 								<span class="c-heading-lines_word o-h1">Home Société<span class="c-footer_timeline js-timeline"></span></span>
 							</div>
 							<div class="o-container">
-								<div class="o-line -elastic">
+								<!-- <div class="o-line -elastic">
 									<canvas class="o-line_canvas js-animate" data-callback="inview.Rope()" data-module="Rope" data-delay="0.1" data-color="white"></canvas>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</a>

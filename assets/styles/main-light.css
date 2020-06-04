@@ -374,7 +374,7 @@ button {
 	outline: 0;
 	border: 0;
 	background: none transparent;
-	color: #fff;
+	color: #000;
 	vertical-align: middle;
 	text-align: center;
 	text-transform: none;
@@ -1645,7 +1645,7 @@ html:not(.is-mobile) .o-circle-button:hover .o-circle-button_bg {
 .o-link,
 .o-link:focus,
 .o-link:hover {
-	color: #fff
+	color: #000
 }
 
 .o-link.-circleHover {
@@ -1690,7 +1690,7 @@ html:not(.is-mobile) .o-circle-button:hover .o-circle-button_bg {
 	max-width: inherit;
 	fill: transparent;
 	stroke-width: 1px;
-	stroke: #fff;
+	stroke: #000;
 	min-width: 70px;
 	width: 200%;
 	height: 200%;
