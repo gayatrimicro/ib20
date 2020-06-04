@@ -89,7 +89,7 @@
 }
 
 	</style>
-	<link rel="stylesheet" id="main-css" href="../../assets/styles/main3e3a.css?v=4.51" media="none" onload="if(media!='all')media='all'">
+	<link rel="stylesheet" id="main-css" href="../../assets/styles/main3e3a.css" media="none" onload="if(media!='all')media='all'">
 
 	<script>
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1481,7 +1481,6 @@
 								</span>
 								</div>
 								<div class="o-line -elastic">
-									<canvas class="o-line_canvas js-animate" data-callback="inview.Rope()" data-module="Rope" data-delay="0.1" data-color="white"></canvas>
 								</div>
 							</div>
 						</div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="has-no-js" lang="en" data-template="contact" data-theme="dark"  data-pageColor="default">
+<html class="has-no-js" lang="en" data-template="contact" data-theme="light"  data-pageColor="default">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
@@ -88,8 +88,9 @@
     height: 0px;
 }
 
+
 	</style>
-	<link rel="stylesheet" id="main-css" href="../../assets/styles/main3e3a.css" media="none" onload="if(media!='all')media='all'">
+	<link rel="stylesheet" id="main-css" href="../../assets/styles/main-light.css" media="none" onload="if(media!='all')media='all'">
 
 	<!-- <script>
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1066,7 +1067,7 @@
 							</div> -->
 
 							<div class="c-project-header_title -rail" data-module="Rail" data-shuffle data-rail-speed="1">
-								<span class="c-project-header_word o-h1" style="color: #000">Bayswater &nbsp;Bathrooms</span>
+								<span class="c-project-header_word o-h1" style="color: #fff">Bayswater &nbsp;Bathrooms</span>
 							</div>
 						</div>
 					</div>
@@ -1104,7 +1105,7 @@
 
 				<div class="o-container" data-theme="dark">
 					<div class="c-project-header_cta-wrapper || js-animate" data-speed="-3" data-position="top" >
-						<div class="c-project-header_cta" style="left: 120%;margin-top: 0rem;margin-right: -38rem;/* position: absolute; */">
+						<div class="c-project-header_cta" style="left: 126%;margin-top: 7rem;margin-right: -44rem;/* position: absolute; */">
 							<a href="https://www.bayswaterbathrooms.co.uk/" target="_blank" class="o-circle-button" style="width: 100%;height: 20%;">
 								<img src="../../uploads/projects/Bayswater/Web-9-blue.jpg">
 							</a>
