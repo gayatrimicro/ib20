@@ -1105,7 +1105,7 @@
 
 				<div class="o-container" data-theme="dark">
 					<div class="c-project-header_cta-wrapper || js-animate" data-speed="-3" data-position="top" >
-						<div class="c-project-header_cta" style="left: 126%;margin-top: 7rem;margin-right: -44rem;/* position: absolute; */">
+						<div class="c-project-header_cta" style="left: 122%;margin-top: 7rem;margin-right: -44rem;/* position: absolute; */">
 							<a href="https://www.bayswaterbathrooms.co.uk/" target="_blank" class="o-circle-button" style="width: 100%;height: 20%;">
 								<img src="../../uploads/projects/Bayswater/Web-9-blue.jpg">
 							</a>
