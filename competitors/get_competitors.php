@@ -3,6 +3,9 @@
 include "../vendor/autoload.php";
 include "db_connection.php";
 
+use PHPMailer\PHPMailer\PHPMailer;
+
+
 $sql = "SELECT * FROM business_category where id = '".$_POST['category']."'";
 $db_result = $conn->query($sql);
 $cat_result = $db_result->fetch_row();
@@ -13,6 +16,59 @@ $organization_website = $_POST['website'];
 
 $str = $category.' '.$_POST['city'].' '.$_POST['state'];
 $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='.$str.'&key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4';
+
+$insert_sql = "INSERT INTO contact_details (ip_address, name, email_id, contact_number, organization, city, state, country, category, compared_at)
+VALUES ('".$_SERVER['REMOTE_ADDR']."', '".$_POST['user_name']."', 
+			'".$_POST['user_email']."',
+			'".$_POST['user_contact']."',
+			'".$_POST['name']."',
+			'".$_POST['city']."',
+			'".$_POST['state']."',
+			'".$_POST['country']."',
+			'".$category."',
+			'".date('Y-m-d h:m:i')."'
+		)";
+if (mysqli_query($conn, $insert_sql)) {
+	//echo "New record created successfully";
+} else {
+	//echo "Error: " . $insert_sql . "<br>" . mysqli_error($conn);
+}
+
+$mail = new PHPMailer;
+
+//From email address and name
+$mail->From = $_POST['user_email'];
+$mail->FromName = $_POST['user_name'];
+
+//To address and name
+$mail->addAddress("laravel@gmicro.us", "User Details");
+$mail->addAddress("seo@gmicro.us", "User Details");
+
+//Send HTML or Plain Text email
+$mail->isHTML(true);
+
+$mail->Subject = "Search Details";
+$mail->Body = "<i><b>Comparision Details<b/></i>".
+	"<br><br><b>User Details</b><br>".
+	"<b>User Name : ".$_POST['user_name']."</b><br>".
+	"<b>User Email : ".$_POST['user_email']."</b><br>".
+	"<b>User Contact Number : ".$_POST['user_contact']."</b><br>".
+	"<br><b>Search Details</b><br>".
+	"<b>Organization Name : ".$_POST['name']."</b><br>".
+	"<b>City : ".$_POST['city']."</b><br>".
+	"<b>State : ".$_POST['state']."</b><br>".
+	"<b>Country : ".$_POST['country']."</b><br>".
+	"<b>Category searched for : ".$category."</b><br>".
+	"<b>Compared At : ".date('d M, Y h:m a')."</b><br>";
+
+if(!$mail->send()) 
+{
+   // echo "Mailer Error: " . $mail->ErrorInfo;
+} 
+else 
+{
+   // echo "Message has been sent successfully";
+}
 
 $i = 0;
 $your_organization_flag = false;
@@ -185,6 +241,8 @@ if($response->getStatusCode() == 200)
 		$result['reputation'] = implode('', $reputation);
 		$result['reputation_chart'] = implode('', $reputation_chart);
 		$result['reputation_detail'] = implode('', $reputation_detail);
+		$result['organization_name'] = $name;
+		$result['category_name'] = $category;
 		$result['status'] = 'true';
 		echo json_encode($result);
 	}

@@ -46,8 +46,8 @@ $result = $conn->query($sql);
 			<div class="col-sm-6 text-right">
 				<ul>
 					<li>
-						<h2>Empire State Building</h2>
-						<p>Acupuncturist</p>
+						<h2 id="organization_name"></h2>
+						<p id="category_name"></p>
 					</li>
 					<li>
 						<button>Request Consultation &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
@@ -1472,6 +1472,10 @@ function move() {
 					data: formData,
 					success: function(data) {
 						var competitor_jsonData = JSON.parse(data);
+						$('#category_name').empty();
+						$('#category_name').html(competitor_jsonData.category_name);
+						$('#organization_name').empty();
+						$('#organization_name').html(competitor_jsonData.organization_name);
 						// alert(jsonData.status);
 						if(competitor_jsonData.status=='true')
 						{
