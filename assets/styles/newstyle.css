@@ -4,7 +4,7 @@
     margin: 99px auto;
     overflow: scroll;
     height: 600px;
-	}
+	} 
 	.marb100
 	{
 		margin-bottom: 100px;
@@ -818,7 +818,7 @@ z-index: 10000;
     width: 500px;
     overflow: hidden;
     position: relative;
-    top: -50px;
+    top: 97px;
 }
 .hidS1
 {
@@ -837,8 +837,19 @@ z-index: 10000;
 .GetUp
 {
     margin-top: -8.9rem;
-    width: 315px;
+    width: 29.6%;
     overflow: hidden;
+<<<<<<< HEAD
+=======
+}
+.outer-position{
+    left: 33% !important;
+    top: 125% !important;
+}
+.inner-width{
+    width: 45% !important;
+    height: 0% !important;
+>>>>>>> 7001e5f844623b1281221a3062370487e8bb6479
 }
 /*------compititors result page end----------------*/
 

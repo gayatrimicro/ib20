@@ -8238,6 +8238,7 @@ html.is-ie .c-filters_list {
 	display: -ms-flexbox;
 	display: flex;
 	width: auto;
+	height: auto;
 	white-space: nowrap
 }
 
