@@ -1877,7 +1877,7 @@ $(document).ready(function() {
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-		<script>
+		<!-- <script>
 			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
 
 			var iterator = 0;
@@ -1900,9 +1900,9 @@ $(document).ready(function() {
 			window.onload = function() {
 				dynamicallyLoadScript(scripts[iterator]);
 			}
-		</script>
-<!-- 		<script type="text/javascript" src="../../assets/scripts/vendors3e3a.js"></script>
-		<script type="text/javascript" src="../../assets/scripts/app3e3a.js"></script> -->
+		</script> -->
+		<script type="text/javascript" src="../../assets/scripts/vendors3e3a.js"></script>
+		<script type="text/javascript" src="../../assets/scripts/app3e3a.js"></script>
 		<!-- <script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script> -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 		<script>

@@ -466,7 +466,7 @@ $result = $conn->query($sql);
 								</div>
 							</li> -->
 						</ul>
-						<div class="pad_grph"><b><span class="BClr">How was this calculated?</span></b></div>
+						<div class="pad_grph GetOpn2"><b><span class="BClr">How was this calculated?</span></b></div>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -981,6 +981,41 @@ $result = $conn->query($sql);
 	  </div>		
 	</div>
 </div>
+
+<div class="GoogRnk2">
+  		<div class="InGooRnk">
+  			<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+  			<h2>SEO Score</h2>
+  			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
+  			<ul>
+  				<li class="TimLin"></li>
+  				<li class="LiGP">
+  					<p class="GP1">Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</p>
+  					<p class="GP2">http://www.emizani.com/</p>
+  					<p class="GPs1"></p>
+  					<p class="GPs2"></p>
+  				</li>
+  				<li class="LiGP">
+  					<p class="GP1">Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</p>
+  					<p class="GP2">http://soroyabacchusmd.com/</p>
+  					<p class="GPs1"></p>
+  					<p class="GPs2"></p>
+  				</li>
+  				<li class="LiGP">
+  					<p class="GP1">Calming Goat Addiction Medicine</p>
+  					<p class="GP2">https://calminggoat.com/</p>
+  					<p class="GPs1"></p>
+  					<p class="GPs2"></p>
+  				</li>
+  				<li class="LiGP">
+  					<p class="GP1">Your Practice</p>
+  					<p class="GP2">http://www.hollywoodsign.org</p>
+  					<p class="GPs1"></p>
+  					<p class="GPs2"></p>
+  				</li>
+  			</ul>
+  		</div>
+  	</div>
 
 <div class="REpFa">
 	<div class="InGooRnk">
@@ -1874,6 +1909,10 @@ function move() {
 			});
 			$(".ReFac").click(function(){
 				$(".REpFa").addClass("W66");
+				$(".InGooRnk").fadeIn(2000);
+			});
+			$(".GetOpn2").click(function(){
+				$(".GoogRnk2").addClass("W66");
 				$(".InGooRnk").fadeIn(2000);
 			});
 			$(".ClsSL").click(function(){
