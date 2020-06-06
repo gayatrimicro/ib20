@@ -1411,6 +1411,11 @@ z-index: 1;
 {
     border: 2px solid red !important;
 }
+.pac-container:after {
+
+    background-image: none !important;
+    height: 0px;
+}
 
 /*------compititors result page end----------------*/
 
