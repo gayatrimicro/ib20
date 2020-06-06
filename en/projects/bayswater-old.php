@@ -1168,8 +1168,8 @@
 					<div class="c-fancy-video_bg" style="background-color:#EB2931"></div>
 					<div id="myid">
 						<video id="fir_vid" muted poster="../../uploads/projects/Bayswater/img_1920x1280_bayswater-bathtub.jpg" >
-						  <source src="https://gwsprojects.s3.ap-south-1.amazonaws.com/websites/ib/videos/The+Bayswater+Bathrooms+Brand+Film.mp4" type="video/mp4">
-						</video>
+  <source src="../../assets/videos/The Bayswater Bathrooms Brand Film.mp4" type="video/mp4">
+</video>
 					
 				</div>
 
@@ -1228,8 +1228,8 @@
 				<!-- <video id="desk_vid" loop>
 				  <source src="../../assets/videos/bayswater.mp4" type="video/mp4">
 				</video> -->
-				<video id="desk_vid" class="lazyload" autoplay loop>
-				  <source class="lazyload" src="https://gwsprojects.s3.ap-south-1.amazonaws.com/websites/ib/videos/bayswater3.mp4"  type="video/mp4">
+				<video id="desk_vid" autoplay loop>
+				  <source src="../../assets/videos/bayswater3.mp4"  type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -1239,12 +1239,12 @@
 
 				<div class="o-section -padding-v-huge" style="background-color:#ddd;">
 	<figure class="o-container"  data-theme="light">
-		<div class="c-fancy-video c-project_intro_item js-animate has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
-			<div>
-				<video id="desk_vid1" class="lazyload" autoplay loop>
-				  <source class="lazyload" src="https://gwsprojects.s3.ap-south-1.amazonaws.com/websites/ib/videos/bayswater1.mp4"  type="video/mp4">
+		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
+			<div id="vid_seco">
+				<video id="desk_vid1" autoplay loop>
+				  <source src="../../assets/videos/bayswater1.mp4"  type="video/mp4">
 				</video>
-				<!-- <div class="c-fancy-video-cursor || o-cursor_wrapper || js-video-cursor js-animate" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()">
+				<div class="c-fancy-video-cursor || o-cursor_wrapper || js-video-cursor js-animate" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()">
 						<div class="c-fancy-video-cursor_zone || js-drag-zone"></div>
 
 						<div class="o-cursor -white -center-mobile || js-cursor">
@@ -1257,7 +1257,7 @@
 								</div>
 							</div>
 						</div>
-					</div> -->
+					</div>
 			</div>
 			
 		</div>
@@ -1291,11 +1291,11 @@
 				<div class="o-section -padding-v-huge" style="background-color:#ddd;">
 	<figure class="o-container"  data-theme="light">
 		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
-			<div>
-				<video id="normal_vid" class="lazyload" autoplay loop>
-				  <source class="lazyload" src="https://gwsprojects.s3.ap-south-1.amazonaws.com/websites/ib/videos/bayswater2.mp4"  type="video/mp4">
+			<div id="vid_tri">
+				<video id="normal_vid" autoplay loop>
+				  <source src="../../assets/videos/bayswater2.mp4"  type="video/mp4">
 				</video>
-				<!-- <div class="c-fancy-video-cursor || o-cursor_wrapper || js-video-cursor js-animate" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()">
+				<div class="c-fancy-video-cursor || o-cursor_wrapper || js-video-cursor js-animate" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()">
 						<div class="c-fancy-video-cursor_zone || js-drag-zone"></div>
 
 						<div class="o-cursor -white -center-mobile || js-cursor">
@@ -1308,7 +1308,7 @@
 								</div>
 							</div>
 						</div>
-					</div> -->
+					</div>
 			</div>
 			
 		</div>
@@ -1678,15 +1678,6 @@
 
 <script>
 $(document).ready(function() { 
-	var vid = document.getElementById("desk_vid1");	
-	var mockup_vid = document.getElementById("desk_vid");
-	var bayswater2 = document.getElementById("normal_vid");
-	vid.play();
-	mockup_vid.play();
-	bayswater2.play();
-
-
-	
     $('#lead-form').submit(function(event) {
       event.preventDefault();
       var formdata = $('#lead-form').serialize();
@@ -1811,8 +1802,64 @@ $(document).ready(function() {
 
 
 
-
 <script type="text/javascript">
+
+
+$('#myid').click(function(){
+	var vid = document.getElementById("fir_vid");	
+	if(vid.paused)
+	{
+		vid.play();
+		$(".cur_txt").text("Pause");
+	}
+	else
+	{
+		vid.pause();
+		$(".cur_txt").text("Play");
+	}
+});
+
+$('#vid_seco').click(function(){
+	var vid = document.getElementById("desk_vid1");	
+	if(vid.paused)
+	{
+		vid.play();
+		$(".cur_txt").text("Pause");
+	}
+	else
+	{
+		vid.pause();
+		$(".cur_txt").text("Play");
+	}
+});
+
+$('#vid_tri').click(function(){
+	var vid = document.getElementById("normal_vid");	
+	if(vid.paused)
+	{
+		vid.play();
+		$(".cur_txt").text("Pause");
+	}
+	else
+	{
+		vid.pause();
+		$(".cur_txt").text("Play");
+	}
+});
+
+</script>
+<script type="text/javascript">
+
+	$("#desk_vid").click(function(){
+		var vid = document.getElementById("desk_vid");
+	vid.play();
+	});
+
+
+	$("#normal_vid").click(function(){
+		var vid2 = document.getElementById("normal_vid");
+		vid2.play();
+	});
 
 
 	document.addEventListener('scroll', function (event) {
