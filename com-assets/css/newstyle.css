@@ -1146,6 +1146,7 @@ z-index: 1;
     font-size: 24px;
     line-height: 0;
     outline: none;
+    border: 2px solid #fff;
 }
 .GoogRnk
 {
@@ -1389,6 +1390,10 @@ z-index: 1;
 .W66
 {
     width: 66%;
+}
+.BCRed select
+{
+    border: 2px solid red !important;
 }
 
 /*------compititors result page end----------------*/

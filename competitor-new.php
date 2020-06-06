@@ -38,7 +38,7 @@ $result = $conn->query($sql);
 			</style>
 		</head>
 	 <body class="custom-landing-page patient-visitor-guide browser-large BacClr" data-gr-c-s-loaded="true">
-<div class="RsltSec">
+<div class="RsltSec_">
 	<section class="HedResult">
 		<div class="row">
 			<div class="col-sm-6">
@@ -808,23 +808,23 @@ $result = $conn->query($sql);
 	          <form>
 	          	<div class="PosRel">
 					<label for="FirName">Full Name *</label>
-					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RName" oninput="ChkInpSts(this)">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Practice Name *</label>
-					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RPname" oninput="ChkInpSts(this)">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Email *</label>
-					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+					<input type="email" class="form-control" id="REmail" maxlength="30" autocomplete="off" oninput="ChkInpSts(this)">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Phone *</label>
-					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RPhone" maxlength="10" autocomplete="off" oninput="ChkInpSts(this)">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">ZIP *</label>
-					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RZip" oninput="ChkInpSts(this)">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Number of providers *</label>
@@ -1880,6 +1880,123 @@ function move() {
 				$(this).parent().parent().parent().removeClass("W66");
 				$(".InGooRnk").fadeOut(100);
 			});
+
+			$(".btnFinGrph").click(function(){
+				var sel = document.getElementById("Nofpro");
+				var strPrc = sel.options[sel.selectedIndex].value;
+				var cnt=0;
+				if($("#RName").val()==""){
+					cnt+=1;
+				}
+				if($("#RPname").val()==""){
+					cnt+=1;
+				}
+				if($("#REmail").val()==""){
+					cnt+=1;
+				}
+				cnt+=validEmail2($("#REmail").val());
+				if($("#RPhone").val()==""){
+					cnt+=1;
+				}
+				cnt+=phoneno2($("#RPhone").val());
+				if($("#RZip").val()==""){
+					cnt+=1;
+				}
+				if(strPrc==""){
+					cnt+=1;
+				}
+				if(cnt>0)
+				{
+					if($("#RName").val()==""){
+						$("#RName").css("border","2px solid red");
+						$("#RName").parent().find("label").css("color","red");
+						$("#RName").parent().find("label").shake();
+					}
+					if($("#RPname").val()==""){
+						$("#RPname").css("border","2px solid red");
+						$("#RPname").parent().find("label").css("color","red");
+						$("#RPname").parent().find("label").shake();
+					}
+					if($("#REmail").val()==""){
+						$("#REmail").css("border","2px solid red");
+						$("#REmail").parent().find("label").css("color","red");
+						$("#REmail").parent().find("label").shake();
+					}
+					if(validEmail2($("#REmail").val())==1){
+									$("#REmail").parent().find("label").shake();
+								} 
+					if($("#RPhone").val()==""){
+						$("#RPhone").css("border","2px solid red");
+						$("#RPhone").parent().find("label").css("color","red");
+						$("#RPhone").parent().find("label").shake();
+					}
+					if($("#RPhone").val().length!=10)
+						{
+							$("#RPhone").parent().find("label").shake();
+						}
+					if($("#RZip").val()==""){
+						$("#RZip").css("border","2px solid red");
+						$("#RZip").parent().find("label").css("color","red");
+						$("#RZip").parent().find("label").shake();
+					}
+					if(strPrc==""){
+						$("#Nofpro").parent().addClass("BCRed");
+						$("#Nofpro").parent().find("label").css("color","red");
+						$("#Nofpro").parent().find("label").shake();						
+					}
+					return false;
+					}
+					else
+					{
+						alert("Success");
+					}
+				});
+			$("#Nofpro").change(function(){
+				$(this).parent().removeClass("BCRed");
+					$(this).parent().find("label").css("color","#2c98f7");
+					$(this).css("color","#2c98f7");
+			})
+
+			function phoneno2(val){
+				if(val.length==10)  {
+				$("#RPhone").css("border","2px solid #2c98f7");
+					$("#RPhone").parent().find("label").css("color","#2c98f7");
+					$("#RPhone").css("color","#2c98f7");
+					return 0;                
+				}
+				else{
+					$("#RPhone").css("border","2px solid red");
+					$("#RPhone").parent().find("label").css("color","red");
+					$("#RPhone").css("color","red");              
+					return 1;
+				} 
+		}
+
+
+			document.getElementById("RPhone").onkeyup = function() {
+				document.getElementById("RPhone").value = document.getElementById("RPhone").value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+				phoneno2(document.getElementById("RPhone").value);
+			};
+
+		document.getElementById("seml").onblur =function() {
+			var eml=document.getElementById("seml").value;
+			validEmail(eml);
+		};
+
+		function validEmail2(email) {
+				var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				if(re.test(email)==false){
+					$("#REmail").css("border","2px solid red");
+						$("#REmail").parent().find("label").css("color","red");
+						$("#REmail").css("color","red");
+						return 1;
+				}
+				else
+				{
+					return 0;
+				}
+				// return re.test(email);
+		};
 		</script>
 
 	 </body>
