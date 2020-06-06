@@ -836,29 +836,20 @@ z-index: 10000;
 }
 .GetUp
 {
-<<<<<<< HEAD
     margin-top: -8.9rem;
-=======
     position: absolute;
     margin-top: -9.4rem;
->>>>>>> fca4c01ad1a1315fb5e402d91f722455f58b90b4
     width: 29.6%;
     overflow: hidden;
-<<<<<<< HEAD
-=======
 }
 .outer-position{
     left: 33% !important;
-    top: 125% !important;
+    top: 70% !important;
 }
 .inner-width{
     width: 45% !important;
     height: 0% !important;
-<<<<<<< HEAD
->>>>>>> 7001e5f844623b1281221a3062370487e8bb6479
-=======
     margin-top: -2rem;
->>>>>>> fca4c01ad1a1315fb5e402d91f722455f58b90b4
 }
 /*------compititors result page end----------------*/
 
