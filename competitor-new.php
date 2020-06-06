@@ -18,11 +18,12 @@ $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	 <head>
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">      
+	 <head>			      
 			<title>
 				 Competitor Checker  | IBridge Digital
 			</title>
+			<meta charset="utf-8">
+  			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 			<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
@@ -50,7 +51,7 @@ $result = $conn->query($sql);
 						<p>Acupuncturist</p>
 					</li>
 					<li>
-						<button>Request Consultation &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+						<button data-toggle="modal" data-target="#ReqMod">Request Consultation &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 					</li>
 				</ul>
 			</div>
@@ -72,7 +73,7 @@ $result = $conn->query($sql);
 					</div>          
 				</div>
 				<div class="col-sm-5 text-right pad_0">
-					<div><img src="com-assets/img/resuBac.png"></div>
+					<div><img src="com-assets/img/resuBac.png" class="WidXs"></div>
 				</div>
 			</div>      
 		</div>
@@ -206,14 +207,14 @@ $result = $conn->query($sql);
 		<div class="ResMap">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png"></div>
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">           
 						<h2>Google rank</h2>
 						<p>This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
 						<ul id="google_rank_div">
 							
 						</ul>
-						<div class="pad_grph"><b><span class="BClr">How was this calculated?</span></b></div>
+						<div class="pad_grph"><b><span class="BClr GetOpn">How was this calculated?</span></b></div>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -351,7 +352,7 @@ $result = $conn->query($sql);
 		<div class="ResMap">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png"></div>
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">           
 						<h2>Website</h2>
 						<p>Your website score is calculated based on the following factors:</p>
@@ -381,7 +382,7 @@ $result = $conn->query($sql);
 								</div>
 							</li> -->
 						</ul>
-						<div class="pad_grph"><b><span class="BClr">How was this calculated?</span></b></div>
+						<div class="pad_grph CalWEB"><b><span class="BClr">How was this calculated?</span></b></div>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -435,7 +436,7 @@ $result = $conn->query($sql);
 		<div class="ResMap">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png"></div>
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">
 						<h2>SEO Score</h2>
 						<p>Your reputation score was calculated based on the following factors across the most popular review sites.</p>
@@ -519,7 +520,7 @@ $result = $conn->query($sql);
 		<div class="ResMap">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png"></div>
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">
 						<h2>Reputation</h2>
 						<p>Your reputation score was calculated based on the following factors across the most popular review sites.</p><br>
@@ -551,7 +552,7 @@ $result = $conn->query($sql);
 								</div>
 							</li> -->
 						</ul>
-						<div class="pad_grph"><b><span class="BClr">How was this calculated?</span></b></div>
+						<div class="pad_grph ReFac"><b><span class="BClr">How was this calculated?</span></b></div>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -604,8 +605,8 @@ $result = $conn->query($sql);
 	<section class="ResFinBac">
 		<div class="ResFin">
 			<div class="row">
-				<div class="col-sm-6">
-					<img src="com-assets/img/hse.png">
+				<div class="col-sm-6 texCen">
+					<img src="com-assets/img/hse.png" class="WMid">
 					<h1>Your overall practice growth score is <span>poor</span></h1>
 					<h4>Your practice is <span>behind the competition</span> in practice growth. A complete audit of your processes is strongly recommended.</h4>
 					<button class="btnFinGrph">Schedule a free consultation &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
@@ -792,9 +793,276 @@ $result = $conn->query($sql);
 					</div>
 				</div>
 			</section>
-		</div>      
-				
+		</div>
 
+
+
+	<!-- Modal Request Start -->
+  <div class="modal fade" id="ReqMod" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body FrmReqRes">
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h3>Request a Demo</h3>
+	          <p>Please complete the form below so we can contact you with more information about how PatientPop can help grow your practice.</p>
+	          <form>
+	          	<div class="PosRel">
+					<label for="FirName">Full Name *</label>
+					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+				</div>
+				<div class="PosRel">
+					<label for="FirName">Practice Name *</label>
+					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+				</div>
+				<div class="PosRel">
+					<label for="FirName">Email *</label>
+					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+				</div>
+				<div class="PosRel">
+					<label for="FirName">Phone *</label>
+					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+				</div>
+				<div class="PosRel">
+					<label for="FirName">ZIP *</label>
+					<input type="text" class="form-control" id="" oninput="ChkInpSts(this)">
+				</div>
+				<div class="PosRel">
+					<label for="FirName">Number of providers *</label>
+					<select class="form-control" id="Nofpro">
+						<option value=""></option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+					</select>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btnFinGrph">SUBMIT</button>
+				</div>
+          </form>        
+        </div>
+      </div>      
+    </div>
+  </div>
+  	<!-- Modal Request End -->
+
+  	<div class="GoogRnk">
+  		<div class="InGooRnk">
+  			<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+  			<h2>Google Rank</h2>
+  			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
+  			<ul>
+  				<li class="TimLin"></li>
+  				<li class="LiGP">
+  					<p class="GP1">Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</p>
+  					<p class="GP2">http://www.emizani.com/</p>
+  					<p class="GPs1"></p>
+  					<p class="GPs2"></p>
+  				</li>
+  				<li class="LiGP">
+  					<p class="GP1">Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</p>
+  					<p class="GP2">http://soroyabacchusmd.com/</p>
+  					<p class="GPs1"></p>
+  					<p class="GPs2"></p>
+  				</li>
+  				<li class="LiGP">
+  					<p class="GP1">Calming Goat Addiction Medicine</p>
+  					<p class="GP2">https://calminggoat.com/</p>
+  					<p class="GPs1"></p>
+  					<p class="GPs2"></p>
+  				</li>
+  				<li class="LiGP">
+  					<p class="GP1">Your Practice</p>
+  					<p class="GP2">http://www.hollywoodsign.org</p>
+  					<p class="GPs1"></p>
+  					<p class="GPs2"></p>
+  				</li>
+  			</ul>
+  		</div>
+  	</div>		
+
+<div class="WebDis">
+	<div class="InGooRnk">
+		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+		<h2>Website</h2>
+		<p class="SubP">Your website score is calculated based on the factors below.</p>
+		<h5>Your practice</h5>
+		<div class="row">
+			<div class="col-sm-6 pad_0">
+				<div class="row">
+					<div class="col-xs-2 pad_0">
+						<img src="com-assets\img\scoAir.png">
+					</div>
+					<div class="col-xs-10">
+						<div class="XSPAD">
+							<h6>Desktop Speed</h6>
+							<span class="ScRNo">50</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 pad_0">
+				<div class="row">
+					<div class="col-xs-2 pad_0">
+						<img src="com-assets\img\mob.png">
+					</div>
+					<div class="col-xs-10">
+						<div class="XSPAD">
+							<h6>Mobile Speed</h6>
+							<span class="ScRNo">50</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row MArT">
+			<div class="col-sm-6 pad_0">
+				<div class="row">
+					<div class="col-xs-2 pad_0">
+						<img src="com-assets\img\pro.png">
+					</div>
+					<div class="col-xs-10">
+						<div class="XSPAD">
+							<h6>Security</h6>
+							<span class="ScRNo CLRG">Pass</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 pad_0">
+				<div class="row">
+					<div class="col-xs-2 pad_0">
+						<img src="com-assets\img\ser.png">
+					</div>
+					<div class="col-xs-10">
+						<div class="XSPAD">
+							<h6>Searchability</h6>
+							<span class="ScRNo CLRR">Fail</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h5 class="MArT">Your practice</h5>
+		<div class="table-responsive">
+		
+		<table class="table">
+		    <thead>
+		      <tr>
+		        <th width="26%">Practice</th>
+		        <th width="21%">Desktop Speed</th>
+		        <th width="21%">Mobile Speed</th>
+		        <th width="21%">Security</th>
+		        <th width="21%">Searchability</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
+		        <td>Not found</td>
+		        <td>Not found</td>
+		        <td>Fail</td>
+		        <td>Pass</td>
+		      </tr>
+		      <tr>
+		        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
+		        <td>74</td>
+		        <td>38</td>		        
+		        <td>Fail</td>
+		        <td>Fail</td>
+		      </tr>
+		      <tr>
+		        <td>Calming Goat Addiction Medicine</td>
+		        <td>58</td>
+		        <td>16</td>
+		        <td>Fail</td>
+		        <td>Fail</td>
+		      </tr>
+		    </tbody>
+	  </table>
+	  </div>		
+	</div>
+</div>
+
+<div class="REpFa">
+	<div class="InGooRnk">
+		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+		<h2>Reputation Factors</h2>
+		<p class="SubP">The reputation scores were calculated based on a combination of the average star rating, and total number of reviews.</p>
+		<h5>Average Star Rating</h5>
+		<div class="table-responsive">
+		<table class="table tbl">
+		    <thead>
+		      <tr>
+		        <th width="26%">Practices</th>
+		        <th width="21%" class="BAGTD">Average</th>
+		        <th width="21%"><img src="com-assets\img\fbImg.png"></th>
+		        <th width="21%"><img src="com-assets\img\goog.png"></th>
+		        <th width="21%" class="BAGTD2"><img src="com-assets\img\yep.png"></th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>Your Practice</td>
+		        <td class="BAGTD">1.5 stars</td>
+		        <td></td>
+		        <td>4.5</td>
+		        <td class="BAGTD2">0</td>
+		      </tr>
+		      <tr>
+		        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
+		        <td class="BAGTD">2.8 stars</td>
+		        <td>38</td>		        
+		        <td>Fail</td>
+		        <td class="BAGTD2">Fail</td>
+		      </tr>
+		      <tr>
+		        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
+		        <td class="BAGTD">2.3 stars</td>
+		        <td>16</td>
+		        <td>Fail</td>
+		        <td class="BAGTD2">Fail</td>
+		      </tr>
+		    </tbody>
+	  </table>
+	</div>
+	  <h5>Total Number of Reviews</h5>
+	  <div class="table-responsive">
+		<table class="table tbl">
+		    <thead>
+		      <tr>
+		        <th width="26%">Practices</th>
+		        <th width="21%" class="BAGTD">Average</th>
+		        <th width="21%"><img src="com-assets\img\fbImg.png"></th>
+		        <th width="21%"><img src="com-assets\img\goog.png"></th>
+		        <th width="21%" class="BAGTD2"><img src="com-assets\img\yep.png"></th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>Your Practice</td>
+		        <td class="BAGTD">1.5 stars</td>
+		        <td></td>
+		        <td>4.5</td>
+		        <td class="BAGTD2">0</td>
+		      </tr>
+		      <tr>
+		        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
+		        <td class="BAGTD">2.8 stars</td>
+		        <td>38</td>		        
+		        <td>Fail</td>
+		        <td class="BAGTD2">Fail</td>
+		      </tr>
+		      <tr>
+		        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
+		        <td class="BAGTD">2.3 stars</td>
+		        <td>16</td>
+		        <td>Fail</td>
+		        <td class="BAGTD2">Fail</td>
+		      </tr>
+		    </tbody>
+	  </table>
+	  </div>		
+	</div>
+</div>
 				<!-- Modal -->
 	<div class="modal fade" id="pracFrm" role="dialog">
 		<div class="modal-dialog">
@@ -1587,7 +1855,28 @@ function move() {
 				});
 			});
 		</script>
-		</div>
+
+		<script type="text/javascript">
+			$("#Nofpro").click(function(){
+				$(this).parent().find('label').addClass('actInp');
+			});
+			$(".GetOpn").click(function(){
+				$(".GoogRnk").addClass("W66");
+				$(".InGooRnk").fadeIn(2000);
+			});
+			$(".CalWEB").click(function(){
+				$(".WebDis").addClass("W66");
+				$(".InGooRnk").fadeIn(2000);
+			});
+			$(".ReFac").click(function(){
+				$(".REpFa").addClass("W66");
+				$(".InGooRnk").fadeIn(2000);
+			});
+			$(".ClsSL").click(function(){
+				$(this).parent().parent().parent().removeClass("W66");
+				$(".InGooRnk").fadeOut(100);
+			});
+		</script>
 
 	 </body>
 </html>
