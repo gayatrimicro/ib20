@@ -65,10 +65,46 @@ $result = $conn->query($sql);
 						<h1>Your personalized practice growth results</h1>
 						<p>We compared you against the 3 top-ranking competitors on Google for your local market and specialty. These are the most important factors affecting your practice growth.</p>
 						<ul>
-							<li><p><img src="com-assets/img/goico.png">Google Ranking</p></li>
-							<li><p><img src="com-assets/img/webPre.png">Web Presence</p></li>
-							<li><p><img src="com-assets/img/pcico.png">Website</p></li>
-							<li><p><img src="com-assets/img/strico.png">Reputation</p></li>
+							<li>
+								<p>
+									<img src="com-assets/img/goico.png">
+									<span>
+										<a href="#google_rank_section">Google Ranking</a>
+									</span>
+								</p>
+							</li>							
+							<li>
+								<p>
+									<img src="com-assets/img/pcico.png">
+									<span>
+										<a href="#website_section">Website</a>
+									</span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<img src="com-assets/img/webPre.png">
+									<span>
+										<a href="#seo_score_section">SEO Score</a>
+									</span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<img src="com-assets/img/strico.png">
+									<span>
+										<a href="#reputation_section">Reputation</a>
+									</span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<img src="com-assets/img/webPre.png">
+									<span>
+										<a href="#mobile_friendly_section">Mobile Friendly</a>
+									</span>
+								</p>
+							</li>
 						</ul>
 					</div>          
 				</div>
@@ -115,7 +151,7 @@ $result = $conn->query($sql);
 				</div>
 			</div>
 			<div class="text-right">
-				<p class="NxtRslt"><b>Next:</b> <span class="BClr">Google Rank &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
+				<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#google_rank_section">Google Rank &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
 			</div>
 		</div>
 	</section>
@@ -204,7 +240,7 @@ $result = $conn->query($sql);
 		</div>
 	</section> -->
 	<section>
-		<div class="ResMap">
+		<div class="ResMap" id="google_rank_section">
 			<div class="row">
 				<div class="col-sm-4">
 					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
@@ -220,136 +256,24 @@ $result = $conn->query($sql);
 				<div class="col-sm-8">
 					<div class="bac_clrMap">
 						<h4 class="BClr">"You need your practice to rank as high as possible. Search results listed on page 1 of Google get 95% of all web traffic."</h4>
-						<div class="DrName"><span>NBCNews.com</span></div>
 						<section class="main_br" id="main_br1">
 							<ul class="graph-container" id="google_rank_graph">
-								<!-- <li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
-										</div>
-									</div>
-								</li> -->
+								
 							</ul>
 						</section>
 						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Web Presence &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
+							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#website_section">Website &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
 						</div>
 						<div class="text-left">
-							<p class="OfRes"><b>3</b> <span>of 7</span></p>
+							<p class="OfRes"><b>2</b> <span>of 6</span></p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- <section>
-		<div class="ResMap">
-			<div class="row">
-				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png"></div>
-					<div class="TxtGrap">
-						<h2>Web Presence</h2>
-						<p>Your web presence score is calculated based on the number of existing and accurate web profiles your practice has.</p>
-						<ul>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><span><b>Your Score</b></span></div>
-									<div class="col-sm-2"><span class="fot_pink">63</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Fulton Street</p></div>
-									<div class="col-sm-2"><span class="fot_orr">76</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>Acupuncture Remedies</p></div>
-									<div class="col-sm-2"><span class="fot_orr">72</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Columbus Circle - CLOSED</p></div>
-									<div class="col-sm-2"><span class="fot_pink">66</span></div>
-								</div>
-							</li>
-						</ul>
-						<div class="pad_grph"><b><span class="BClr">How was this calculated?</span></b></div>
-					</div>
-				</div>
-				<div class="col-sm-8">
-					<div class="bac_clrMap">
-						<h4 class="BClr">"The more often search engines see your information, the more likely they are to prioritize it in search results."</h4>
-						<div class="DrName"><span>Search Engine Land, April 30th, 2018</span></div>
-						<section class="main_br" id="main_br2">
-							<ul class="graph-container">
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</section>
-						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Website &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
-						</div>
-						<div class="text-left">
-							<p class="OfRes"><b>4</b> <span>of 7</span></p>
-						</div>
-					</div>          
-				</div>
-			</div>
-		</div>
-	</section> -->
 	<section>
-		<div class="ResMap">
+		<div class="ResMap" id="website_section">
 			<div class="row">
 				<div class="col-sm-4">
 					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
@@ -357,30 +281,7 @@ $result = $conn->query($sql);
 						<h2>Website</h2>
 						<p>Your website score is calculated based on the following factors:</p>
 						<ul id="website_div">
-							<!-- <li>
-								<div class="row">
-									<div class="col-sm-10"><span><b>Your Score</b></span></div>
-									<div class="col-sm-2"><span class="fot_pink">63</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Fulton Street</p></div>
-									<div class="col-sm-2"><span class="fot_orr">76</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>Acupuncture Remedies</p></div>
-									<div class="col-sm-2"><span class="fot_orr">72</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Columbus Circle - CLOSED</p></div>
-									<div class="col-sm-2"><span class="fot_pink">66</span></div>
-								</div>
-							</li> -->
+							
 						</ul>
 						<div class="pad_grph CalWEB"><b><span class="BClr">How was this calculated?</span></b></div>
 					</div>
@@ -391,41 +292,14 @@ $result = $conn->query($sql);
 						<div class="DrName"><span></span></div>
 						<section class="main_br" id="main_br3">
 							<ul class="graph-container" id="website_graph">
-								<!-- <li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
-										</div>
-									</div>
-								</li> -->
+								
 							</ul>
 						</section>
 						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Reputation &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
+							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
 						</div>
 						<div class="text-left">
-							<p class="OfRes"><b>5</b> <span>of 7</span></p>
+							<p class="OfRes"><b>3</b> <span>of 6</span></p>
 						</div>
 					</div>          
 				</div>
@@ -433,7 +307,7 @@ $result = $conn->query($sql);
 		</div>
 	</section>
 	<section>
-		<div class="ResMap">
+		<div class="ResMap" id="seo_score_section">
 			<div class="row">
 				<div class="col-sm-4">
 					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
@@ -441,30 +315,7 @@ $result = $conn->query($sql);
 						<h2>SEO Score</h2>
 						<p>Your reputation score was calculated based on the following factors across the most popular review sites.</p>
 						<ul id="seo_div">
-							<!-- <li>
-								<div class="row">
-									<div class="col-sm-10"><span><b>Your Score</b></span></div>
-									<div class="col-sm-2"><span class="fot_pink">63</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Fulton Street</p></div>
-									<div class="col-sm-2"><span class="fot_orr">76</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>Acupuncture Remedies</p></div>
-									<div class="col-sm-2"><span class="fot_orr">72</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Columbus Circle - CLOSED</p></div>
-									<div class="col-sm-2"><span class="fot_pink">66</span></div>
-								</div>
-							</li> -->
+							
 						</ul>
 						<div class="pad_grph GetOpn2"><b><span class="BClr">How was this calculated?</span></b></div>
 					</div>
@@ -475,41 +326,14 @@ $result = $conn->query($sql);
 						<div class="DrName"><span></span></div>
 						<section class="main_br" id="main_br4">
 							<ul class="graph-container" id="seo_graph">
-								<!-- <li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
-										</div>
-									</div>
-								</li> -->
+								
 							</ul>
 						</section>
 						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Summary &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
+							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#reputation_section">Reputation &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
 						</div>
 						<div class="text-left">
-							<p class="OfRes"><b>6</b> <span>of 7</span></p>
+							<p class="OfRes"><b>4</b> <span>of 6</span></p>
 						</div>
 					</div>          
 				</div>
@@ -517,7 +341,7 @@ $result = $conn->query($sql);
 		</div>
 	</section>
 	<section>
-		<div class="ResMap">
+		<div class="ResMap" id="reputation_section">
 			<div class="row">
 				<div class="col-sm-4">
 					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
@@ -527,30 +351,7 @@ $result = $conn->query($sql);
 						<p><b>Average star rating<br>
 							Total number of reviews</b></p>
 						<ul id="reputation_div">
-							<!-- <li>
-								<div class="row">
-									<div class="col-sm-10"><span><b>Your Score</b></span></div>
-									<div class="col-sm-2"><span class="fot_pink">63</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Fulton Street</p></div>
-									<div class="col-sm-2"><span class="fot_orr">76</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>Acupuncture Remedies</p></div>
-									<div class="col-sm-2"><span class="fot_orr">72</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Columbus Circle - CLOSED</p></div>
-									<div class="col-sm-2"><span class="fot_pink">66</span></div>
-								</div>
-							</li> -->
+							
 						</ul>
 						<div class="pad_grph ReFac"><b><span class="BClr">How was this calculated?</span></b></div>
 					</div>
@@ -561,48 +362,22 @@ $result = $conn->query($sql);
 						<div class="DrName"><span></span></div>
 						<section class="main_br" id="main_br4">
 							<ul class="graph-container" id="reputation_graph">
-								<!-- <li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
-										</div>
-									</div>
-								</li> -->
+								
 							</ul>
 						</section>
 						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Summary &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
+							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Mobile Friendly &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
 						</div>
 						<div class="text-left">
-							<p class="OfRes"><b>6</b> <span>of 7</span></p>
+							<p class="OfRes"><b>5</b> <span>of 6</span></p>
 						</div>
 					</div>          
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="ResFinBac">
+
+	<section class="ResFinBac" hidden>
 		<div class="ResFin">
 			<div class="row">
 				<div class="col-sm-6 texCen">
@@ -1800,6 +1575,8 @@ function move() {
 								data: {competitors:competitor_jsonData.competitors},
 								success: function(responseData) {
 									var website_speed_jsonData = JSON.parse(responseData);
+									website_param++;
+									recursive_function(website_param);
 									if(website_speed_jsonData.status=='true')
 									{
 										$.ajax({
@@ -1810,12 +1587,13 @@ function move() {
 												var mobile_speed_jsonData = JSON.parse(responseData);
 												if(mobile_speed_jsonData.status=='true')
 												{
-													website_param = 1;
 													$('#website_div').empty();
 													$('#website_div').html(mobile_speed_jsonData.website);
 													$('#website_graph').empty();
 													$('#website_graph').html(mobile_speed_jsonData.website_chart);
-													$('.RsltSec').css('display', 'block');
+													// $('.RsltSec').css('display', 'block');
+													website_param++;
+													recursive_function(website_param);
 												}
 												else{
 													console.log("Something went wrong");
@@ -1848,6 +1626,8 @@ function move() {
 										$('#seo_div').html(seo_score_jsonData.seo_score);
 										$('#seo_graph').empty();
 										$('#seo_graph').html(seo_score_jsonData.seo_chart);
+										website_param++;
+										recursive_function(website_param);
 									}
 									else{
 										console.log("Something went wrong");
@@ -1876,13 +1656,14 @@ function move() {
 							// 		console.log(errorThrown);
 							// 	}
 							// });
-							console.log('website_param ' + website_param);
-							console.log('seo_param ' + seo_param);
+							// console.log('website_param ' + website_param);
+							// console.log('seo_param ' + seo_param);
 							// console.log('mobile_friendly_param ' + mobile_friendly_param);
-							if(website_param==1 && seo_param==1)
-							{
-								$('.RsltSec').css('display', 'block');
-							}
+							// if(website_param==1 && seo_param==1)
+							// {
+							// 	$('.RsltSec').css('display', 'block');
+							// 	$('.lodr_sec').css('display', 'none');
+							// }
 						}
 						else{
 							console.log("Something went wrong");
@@ -1893,6 +1674,21 @@ function move() {
 					}
 				});
 			});
+
+			function recursive_function(number)
+			{
+				console.log("Number " + number);
+				if(number > 2)
+				// if(number == 4)
+				{
+					$('.RsltSec').css('display', 'block');
+					$('.lodr_sec').css('display', 'none');
+				}
+				else{
+					$('.RsltSec').css('display', 'none');
+					$('.lodr_sec').css('display', 'block');
+				}
+			}
 		</script>
 
 		<script type="text/javascript">
