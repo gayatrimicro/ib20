@@ -76,11 +76,13 @@ $competitors_ar = array();
 $competitors_html = array();
 $google_rank = array();
 $google_rank_html = array();
+$google_rank_detail = array();
 
 $reputation = array();
 $reputation_chart = array();
-$reputation_detail = array();
-
+$total_reviews = array();
+$average_rating = array();
+array_push($google_rank_detail, '<li class="TimLin"></li>');
 $result = array();
 $client = new GuzzleHttp\Client();
 $response = $client->request('GET', $url);
@@ -159,6 +161,7 @@ if($response->getStatusCode() == 200)
 			// $ar = array('name'=>$name, 'g_rank'=>$g_rank);
 			array_push($google_rank, '<li><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height:'.$g_rank.'%;"><span class="tooltiptext">'.$g_rank.' Excellent</span></div></div></div></li>');
 			array_push($google_rank_html, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink">'.$g_rank.'</span></div></div></li>');
+			array_push($google_rank_detail, '<li class="LiGP"><p class="GP1">'.$name.'</p><p class="GP2">'.$website_str.'</p><p class="GPs1"></p><p class="GPs2"></p></li>');
 			if(($row['rating']*20) == 100)
 			{ 
 				$reputation_var1 = ($row['rating'] * 20); 
@@ -205,7 +208,8 @@ if($response->getStatusCode() == 200)
 								</li>');
 
 			// $reputation_detail_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
-			// array_push($reputation_detail, $reputation_ar);			
+			array_push($total_reviews, '<tr><td>'.$name.'</td><td>'.$reviews.'</td></tr>');
+			array_push($average_rating, '<tr><td>'.$name.'</td><td>'.$rating.'</td></tr>');
 		}
 		if($your_organization_flag==false)
 		{
@@ -218,8 +222,11 @@ if($response->getStatusCode() == 200)
 			// $ar = array('name'=>$name, 'g_rank'=>$g_rank);
 			array_push($google_rank, '<li><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height:60%;"><span class="tooltiptext">60 Poor</span></div></div></div></li>');
 			array_push($google_rank_html, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink">'.$g_rank.'</span></div></div></li>');
+			array_push($google_rank_detail, '<li class="LiGP"><p class="GP1">'.$name.'</p><p class="GP2">'.$_POST['website'].'</p><p class="GPs1"></p><p class="GPs2"></p></li>');
 
-			// $reputation_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
+
+			$reputation_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
+
 			array_push($reputation, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink">'.$reputation_var.'</span></div></div></li>');
 
 			// $reputation_chart_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
@@ -232,15 +239,18 @@ if($response->getStatusCode() == 200)
 								</li>');
 
 			// $reputation_detail_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
-			// array_push($reputation_detail, $reputation_detail_ar);
+			array_push($total_reviews, '<tr><td>'.$name.'</td><td>'.$reviews.'</td></tr>');
+			array_push($average_rating, '<tr><td>'.$name.'</td><td>'.$rating.'</td></tr>');
 		}
 		$result['competitors'] = $competitors_ar;
 		$result['competitors_div'] = implode('', $competitors_html);
 		$result['google_rank'] = implode('', $google_rank_html);
 		$result['google_rank_chart'] = implode('', $google_rank);
+		$result['google_rank_detail'] = implode('', $google_rank_detail);
 		$result['reputation'] = implode('', $reputation);
 		$result['reputation_chart'] = implode('', $reputation_chart);
-		$result['reputation_detail'] = implode('', $reputation_detail);
+		$result['total_reviews'] = implode('', $total_reviews);
+		$result['average_rating'] = implode('', $average_rating);
 		$result['organization_name'] = $name;
 		$result['category_name'] = $category;
 		$result['status'] = 'true';
