@@ -4,6 +4,7 @@ include "../vendor/autoload.php";
 $mobile = array();
 $website = array();
 $website_chart = array();
+$website_detail = array();
 try
 {
 	foreach($_POST['competitors'] as $row)
@@ -31,12 +32,14 @@ try
 				$mobile_speed = $mobile_website_res11['lighthouseResult']['categories']['performance']['score'] * 100;
 				$mobile_speed_score = $mobile_website_res11['lighthouseResult']['categories']['performance']['score'] * 100;
 			}
+			$website_str = $row['website'];
 		}
 		else{
 			$mobile_speed = "Not Found";
 			$mobile_speed_score = 0;
 			$security = "Fail";
 			$security_score = 0;
+			$website_str = "Not Found";
 		}
 		if($row['desktop_speed']=="Not Found")
 		{
@@ -75,24 +78,20 @@ try
 
 		// array_push($mobile, ['name'=>$row['name'], 'website'=>$row['website'], 'mobile_speed'=>$mobile_speed, 'security'=>$security]);
 
-		array_push($website, '<li>
-								<div class="row">
-									<div class="col-sm-10"><span><b>'.$row['name'].'</b></span></div>
-									<div class="col-sm-2"><span class="fot_pink">'.$website_heading.'</span></div>
-								</div>
-							</li>');
+		array_push($website, '<li><div class="row"><div class="col-sm-10"><span><b>'.$row['name'].'</b></span></div><div class="col-sm-2"><span class="fot_pink">'.$website_heading.'</span></div></div></li>');
 
-		array_push($website_chart, '<li>
-								<div class="bar-wrapper">
-									<div class="bar-container">
-										<div class="bar-inner" style="height: '.round($average).'%;"><span class="tooltiptext">'.round($average).' '.$title.'</span></div>
-									</div>
-								</div>
-							</li>');
+		array_push($website_chart, '<li><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height: '.round($average).'%;"><span class="tooltiptext">'.round($average).' '.$title.'</span></div></div></div></li>');
+		array_push($website_detail, '<tr>
+		        <td>'. $row['name'] .'</td>
+		        <td><a href="https://developers.google.com/speed/docs/insights/v5/reference/pagespeedapi/runpagespeed?apix=true">'. $row['desktop_speed'] .'</a></td>
+		        <td><a href="https://developers.google.com/speed/docs/insights/v5/reference/pagespeedapi/runpagespeed?apix=true">'. $mobile_speed .'</a></td>
+		        <td>'. $security .'</td>
+		      </tr>');
 
 	}
 	$result['website'] = $website;
 	$result['website_chart'] = $website_chart;
+	$result['website_detail'] = $website_detail;
 	$result['status'] = 'true';
 	echo json_encode($result);
 }

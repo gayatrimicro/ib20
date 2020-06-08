@@ -2,6 +2,8 @@
 include "../vendor/autoload.php";
 $seo_score_ar =array();
 $seo_chart_ar =array();
+$seo_score_detail =array();
+array_push($seo_score_detail, '<li class="TimLin"></li>');
 try
 {
 	foreach($_POST['competitors'] as $row)
@@ -53,9 +55,12 @@ try
 		array_push($seo_score_ar, '<li><div class="row"><div class="col-sm-10"><span><b>'.$row['name'].'</b></span></div><div class="col-sm-2"><span class="fot_pink">'.$website_heading.'</span></div></div></li>');
 
 		array_push($seo_chart_ar, '<li><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height: '.$seo_score.'%;"><span class="tooltiptext">'.$seo_score.' '.$title.'</span></div></div></div></li>');
+
+		array_push($seo_score_detail, '<li class="LiGP"><p class="GP1">'.$row['name'].'</p><p class="GP2"><a target="_blank" href="https://developers.google.com/speed/docs/insights/v5/reference/pagespeedapi/runpagespeed?apix=true">'.$row['website'].'</a></p><p class="GPs1"></p><p class="GPs2"></p></li>');
 	}
 	$result['seo_score'] = $seo_score_ar;
 	$result['seo_chart'] = $seo_chart_ar;
+	$result['seo_score_detail'] = $seo_score_detail;
 	$result['status'] = 'true';
 	echo json_encode($result);
 }
