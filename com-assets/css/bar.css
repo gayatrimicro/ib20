@@ -228,21 +228,25 @@
 /* Change bars fill when a Product is selected */
 /* None */
 .graph-container > li .bar-inner { height: 0; bottom:0; }
-.RedZone > li:nth-child(1) .bar-inner { background-color: #e2c6c8; }
-.RedZone > li:nth-child(1) .bar-inner:before { background-color: #f25562; }
-.RedZone > li:nth-child(1) .bar-inner:after { background-color: #e8dce6; }
+.RedZone .bar-inner { background-color: #e2c6c8; }
+.RedZone .bar-inner:before { background-color: #f25562; }
+.RedZone .bar-inner:after { background-color: #e8dce6; }
 
-.graph-container > li:nth-child(2) .bar-inner { background-color: #a3dacd; }
-.graph-container > li:nth-child(2) .bar-inner:before { background-color: #07c597; }
-.graph-container > li:nth-child(2) .bar-inner:after { background-color: #b9ece6; }
+.GreenZone .bar-inner { background-color: #a3dacd; }
+.GreenZone .bar-inner:before { background-color: #07c597; }
+.GreenZone .bar-inner:after { background-color: #b9ece6; }
 
-.graph-container > li:nth-child(3) .bar-inner { background-color: #cbd5de; }
-.graph-container > li:nth-child(3) .bar-inner:before { background-color: #1f8bf7; }
-.graph-container > li:nth-child(3) .bar-inner:after { background-color: #88bce6; }
+.BlueZone .bar-inner { background-color: #cbd5de; }
+.BlueZone .bar-inner:before { background-color: #1f8bf7; }
+.BlueZone .bar-inner:after { background-color: #88bce6; }
 
-.graph-container > li:nth-child(4) .bar-inner { background-color: #e8dcc3; }
-.graph-container > li:nth-child(4) .bar-inner:before { background-color: #f9bc3c; }
-.graph-container > li:nth-child(4) .bar-inner:after { background-color: #f7ddab; }
+.OrangeZone .bar-inner { background-color: #e8dcc3; }
+.OrangeZone .bar-inner:before { background-color: #f9bc3c; }
+.OrangeZone .bar-inner:after { background-color: #f7ddab; }
+
+.GreyZone .bar-inner { background-color: #cfd2de; }
+.GreyZone .bar-inner:before { background-color: #979bab; }
+.GreyZone .bar-inner:after { background-color: #bcc0cd; }
 
 
 .graph-container > li:nth-child(1) .bar-inner { height: 0%; bottom: 0; transition-delay: 0.00s; }
