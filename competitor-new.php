@@ -35,6 +35,21 @@ $result = $conn->query($sql);
 				h2{
 					color: inherit;
 				}
+				.font-color-green{
+					color:  #07c597;
+				}
+				.font-color-blue{
+					color:  #1f8bf7;
+				}
+				.font-color-orange{
+					color:  #f9bc3c;
+				}
+				.font-color-red{
+					color:  #f25562;
+				}
+				.font-color-grey{
+					color:  #bcc0cd;
+				}
 			</style>
 		</head>
 	 <body class="custom-landing-page patient-visitor-guide browser-large BacClr" data-gr-c-s-loaded="true">

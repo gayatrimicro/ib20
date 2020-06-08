@@ -59,20 +59,30 @@ try
 		}
 		$average = ($security_score + $mobile_speed_score + $desktop_speed_score) / 3;
 
-		if((100 <= $average) && ($average >= 90)){
+		if((100 >= $average) && ($average >= 90)){
 			$title = "Excellent";
+			$font_color = "font-color-green";
+			$chart_color = "GreenZone";
 		}
-		elseif((89 <= $average) && ($average >= 80)){
+		elseif((89 >= $average) && ($average >= 80)){
 			$title = "Good";
+			$font_color = "font-color-blue";
+			$chart_color = "BlueZone";
 		}
-		elseif((79 <= $average) && ($average >= 70)){
+		elseif((79 >= $average) && ($average >= 70)){
 			$title = "Fair";
+			$font_color = "font-color-orange";
+			$chart_color = "OrangeZone";
 		}
-		elseif((69 <= $average) && ($average >= 60)){
+		elseif((69 >= $average) && ($average >= 60)){
 			$title = "Poor";
+			$font_color = "font-color-red";
+			$chart_color = "RedZone";
 		}
 		else{
 			$title = "Very Poor";
+			$font_color = "font-color-grey";
+			$chart_color = "GreyZone";
 		}
 
 		if($average < 60)
@@ -85,9 +95,9 @@ try
 
 		// array_push($mobile, ['name'=>$row['name'], 'website'=>$row['website'], 'mobile_speed'=>$mobile_speed, 'security'=>$security]);
 
-		array_push($website, '<li><div class="row"><div class="col-sm-10"><span><b>'.$row['name'].'</b></span></div><div class="col-sm-2"><span class="fot_pink">'.$website_heading.'</span></div></div></li>');
+		array_push($website, '<li><div class="row"><div class="col-sm-10"><span><b>'.$row['name'].'</b></span></div><div class="col-sm-2"><span class="fot_pink '.$font_color.'">'.$website_heading.'</span></div></div></li>');
 
-		array_push($website_chart, '<li><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height: '.round($average).'%;"><span class="tooltiptext">'.round($average).' '.$title.'</span></div></div></div></li>');
+		array_push($website_chart, '<li class="'.$chart_color.'"><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height: '.round($average).'%;"><span class="tooltiptext">'.round($average).' '.$title.'</span></div></div></div></li>');
 		array_push($website_detail, '<tr>
 		        <td>'. $row['name'] .'</td>
 		        <td><a href="https://developers.google.com/speed/pagespeed/insights/?url='.$row['website'].'">'. round($row['desktop_speed']) .'</a></td>
