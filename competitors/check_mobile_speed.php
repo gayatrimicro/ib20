@@ -83,8 +83,8 @@ try
 		array_push($website_chart, '<li><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height: '.round($average).'%;"><span class="tooltiptext">'.round($average).' '.$title.'</span></div></div></div></li>');
 		array_push($website_detail, '<tr>
 		        <td>'. $row['name'] .'</td>
-		        <td><a href="https://developers.google.com/speed/docs/insights/v5/reference/pagespeedapi/runpagespeed?apix=true">'. $row['desktop_speed'] .'</a></td>
-		        <td><a href="https://developers.google.com/speed/docs/insights/v5/reference/pagespeedapi/runpagespeed?apix=true">'. $mobile_speed .'</a></td>
+		        <td><a href="https://developers.google.com/speed/pagespeed/insights/">'. $row['desktop_speed'] .'</a></td>
+		        <td><a href="https://developers.google.com/speed/pagespeed/insights/">'. $mobile_speed .'</a></td>
 		        <td>'. $security .'</td>
 		      </tr>');
 
