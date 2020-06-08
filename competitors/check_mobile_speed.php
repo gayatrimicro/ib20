@@ -21,18 +21,25 @@ try
 				$security = "Fail";
 				$security_score = 0;
 			}
-			$get_mobile_speed_data_url = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='.$row['website'].'&key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM&strategy=mobile&category=PERFORMANCE';
-			$mobile_website_client = new GuzzleHttp\Client();
-			$mobile_website_response = $mobile_website_client->request('GET', $get_mobile_speed_data_url);
-			if($mobile_website_response->getStatusCode() == 200)
-			{
-				$mobile_website_res1 = $mobile_website_response->getBody();
-				$mobile_website_res11 = json_decode($mobile_website_res1, true);
-				
-				$mobile_speed = $mobile_website_res11['lighthouseResult']['categories']['performance']['score'] * 100;
-				$mobile_speed_score = $mobile_website_res11['lighthouseResult']['categories']['performance']['score'] * 100;
-			}
 			$website_str = $row['website'];
+			try{
+				$get_mobile_speed_data_url = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='.$row['website'].'&key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM&strategy=mobile&category=PERFORMANCE';
+				$mobile_website_client = new GuzzleHttp\Client();
+				$mobile_website_response = $mobile_website_client->request('GET', $get_mobile_speed_data_url);
+				if($mobile_website_response->getStatusCode() == 200)
+				{
+					$mobile_website_res1 = $mobile_website_response->getBody();
+					$mobile_website_res11 = json_decode($mobile_website_res1, true);
+					
+					$mobile_speed = $mobile_website_res11['lighthouseResult']['categories']['performance']['score'] * 100;
+					$mobile_speed_score = $mobile_website_res11['lighthouseResult']['categories']['performance']['score'] * 100;
+				}
+			}
+			catch(exception $e1)
+			{
+				$mobile_speed = "Not Found";
+				$mobile_speed_score = 0;
+			}
 		}
 		else{
 			$mobile_speed = "Not Found";

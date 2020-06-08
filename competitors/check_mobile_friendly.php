@@ -8,30 +8,38 @@ try
 	{
 		if($row['website']!="")
 		{
-			$get_mobile_friendly_data_url = 'https://searchconsole.googleapis.com/v1/urlTestingTools/mobileFriendlyTest:run?key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM';
-			$ar = 	[
-					'form_params' =>	[
-							'url' => $row['website'],
-							'requestScreenshot' => 'true'
-						]];
-			$mobile_friendly_client = new GuzzleHttp\Client();
-			$mobile_friendly_response = $mobile_friendly_client->request('POST', $get_mobile_friendly_data_url, $ar);
-			if($mobile_friendly_response->getStatusCode() == 200)
+			try
 			{
-				$mobile_friendly_res1 = $mobile_friendly_response->getBody();
-				$mobile_friendly_res11 = json_decode($mobile_friendly_res1, true);
-				if($mobile_friendly_res11['mobileFriendliness'] == "MOBILE_FRIENDLY")
+				$get_mobile_friendly_data_url = 'https://searchconsole.googleapis.com/v1/urlTestingTools/mobileFriendlyTest:run?key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM';
+				$ar = 	[
+						'form_params' =>	[
+								'url' => $row['website'],
+								'requestScreenshot' => 'true'
+							]];
+				$mobile_friendly_client = new GuzzleHttp\Client();
+				$mobile_friendly_response = $mobile_friendly_client->request('POST', $get_mobile_friendly_data_url, $ar);
+				if($mobile_friendly_response->getStatusCode() == 200)
 				{
-					$mobile_friendly_score = "TRUE";
-					$screen_shot = '<img width="200" height="300" src="data:'. $mobile_friendly_res11['screenshot']['mimeType'] .';base64,' . $mobile_friendly_res11['screenshot']['data'] . '" />';
-					// $screen_shot = "";
+					$mobile_friendly_res1 = $mobile_friendly_response->getBody();
+					$mobile_friendly_res11 = json_decode($mobile_friendly_res1, true);
+					if($mobile_friendly_res11['mobileFriendliness'] == "MOBILE_FRIENDLY")
+					{
+						$mobile_friendly_score = "TRUE";
+						$screen_shot = '<img width="200" height="300" src="data:'. $mobile_friendly_res11['screenshot']['mimeType'] .';base64,' . $mobile_friendly_res11['screenshot']['data'] . '" />';
+						// $screen_shot = "";
+					}
+					else{
+						$mobile_friendly_score = "FALSE";
+						$screen_shot = "";
+					}
 				}
 				else{
 					$mobile_friendly_score = "FALSE";
 					$screen_shot = "";
 				}
 			}
-			else{
+			catch(exception $e1)
+			{
 				$mobile_friendly_score = "FALSE";
 				$screen_shot = "";
 			}

@@ -10,17 +10,23 @@ try
 	{
 		if($row['website']!="")
 		{
-			$get_seo_data_url = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='.$row['website'].'&key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM&category=SEO';
-			$seo_client = new GuzzleHttp\Client();
-			$seo_response = $seo_client->request('GET', $get_seo_data_url);
-			if($seo_response->getStatusCode() == 200)
-			{
-				$seo_res1 = $seo_response->getBody();
-				$seo_res11 = json_decode($seo_res1, true);
-				
-				$seo_score = $seo_res11['lighthouseResult']['categories']['seo']['score'] * 100;
+			try{
+				$get_seo_data_url = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='.$row['website'].'&key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM&category=SEO';
+				$seo_client = new GuzzleHttp\Client();
+				$seo_response = $seo_client->request('GET', $get_seo_data_url);
+				if($seo_response->getStatusCode() == 200)
+				{
+					$seo_res1 = $seo_response->getBody();
+					$seo_res11 = json_decode($seo_res1, true);
+					
+					$seo_score = $seo_res11['lighthouseResult']['categories']['seo']['score'] * 100;
+				}
+				else{
+					$seo_score = "0";
+				}
 			}
-			else{
+			catch(exception $e1)
+			{
 				$seo_score = "0";
 			}
 		}
