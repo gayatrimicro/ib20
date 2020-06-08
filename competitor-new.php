@@ -38,7 +38,7 @@ $result = $conn->query($sql);
 			</style>
 		</head>
 	 <body class="custom-landing-page patient-visitor-guide browser-large BacClr" data-gr-c-s-loaded="true">
-<div class="RsltSec">
+<div class="RsltSec_">
 	<section class="HedResult">
 		<div class="row">
 			<div class="col-sm-6">
@@ -1104,31 +1104,40 @@ function move() {
 				var strUser = e.options[e.selectedIndex].value;
 				var cont=0;
 				if($("#street_number").val()==""){
+					$("#street_number").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#route").val()==""){
+					$("#route").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#locality").val()==""){
+					$("#locality").parent().find("label").shake();
 					cont+=1;
 				}
-				if($("#administrative_area_level_1").val==""){
+				if($("#administrative_area_level_1").val()==""){
+					$("#administrative_area_level_1").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#postal_code").val()==""){
+					$("#postal_code").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#country").val()==""){
+					$("#country").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#website").val()==""){
+					$("#website").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#name").val()==""){
+					$("#name").parent().find("label").shake();
 					cont+=1;
 				}
 				if(strUser=="")
 				{
+					$("#e1").parent().find("label").shake();
 					cont+=1;
 				}
 				if(cont>0)

@@ -668,6 +668,11 @@ z-index: 10000;
     color: #343a4b;
     line-height: 65px;
     margin-bottom: 40px;
+    text-align: left;
+}
+.BacTxt p a
+{
+    color: #343a4b;
 }
 .BanRes p
 {
@@ -685,7 +690,7 @@ z-index: 10000;
 {
     list-style: none;
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 17px;
 }
 .BacTxt li:last-child
 {
@@ -697,7 +702,7 @@ z-index: 10000;
 }
 .BacTxt li img
 {
-    margin-right: 10px;
+    margin-right: 0px;
 }
 .ScoreRes
 {
@@ -711,6 +716,7 @@ z-index: 10000;
     color: #f6606e;
     margin: 0;
     margin-bottom: 15px;
+    text-align: left;
 }
 .ScoreRes p
 {
@@ -725,6 +731,7 @@ z-index: 10000;
     color: #343a4b;
     margin: 0;
     margin-bottom: 15px;
+    text-align: left;
 }
 .pracGrow p
 {
@@ -776,6 +783,7 @@ z-index: 10000;
     line-height: 48px;
     margin: 0;
     margin-bottom: 30px;
+    text-align: left;
 }
 .TxtGrap
 {
