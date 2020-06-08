@@ -906,7 +906,7 @@ jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
 	return this;
 };
 </script>
-<script>
+<!-- <script>
 var set_i = 0;
 function move() {
 	if (set_i == 0) {
@@ -926,7 +926,7 @@ function move() {
 		}
 	}
 }
-</script>
+</script> -->
 	<script type="text/javascript">
 		$('.LodSlid').slick({
 			infinite: true,
@@ -1111,7 +1111,7 @@ function move() {
 							$(".Step3str label").css("color","#000");
 							$('#pracFrm').modal('hide');
 							$('.btn_Modal').hide();
-							move();
+							// move();
 							$(".SlickSli").removeClass("op0zin");
 							$(".disMsg").removeClass("op0zin");
 							$(".btn_fin").click();
@@ -1555,17 +1555,34 @@ function move() {
 			function recursive_function(number)
 			{
 				console.log("Number " + number);
+				if(number == 1)
+				{
+					$("#myBar").css("width","50%");
+					$("#my_per").html("50%");
+				}
+				else if(number == 2)
+				{
+					$("#myBar").css("width","90%");
+					$("#my_per").html("90%");
+				}
+				else if(number == 3)
+				{
+					$("#myBar").css("width","100%");
+					$("#my_per").html("100%");
+				}
+
 				if(number > 2)
 				// if(number == 4)
 				{
 					$('.RsltSec').css('display', 'block');
 					$('.lodr_sec').css('display', 'none');
-					$('#myProgress').css('display', 'none');
+					$('#myProgress').css('display', 'none');					
 				}
 				else{
 					$('.RsltSec').css('display', 'none');
 					$('.lodr_sec').css('display', 'block');
 				}
+				
 			}
 		</script>
 

@@ -485,6 +485,7 @@ z-index: 10000;
   line-height: 30px;
   color: white;
   position: relative;
+  transition: 0.8s all;
 }
 #my_per
 {
