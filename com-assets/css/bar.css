@@ -228,9 +228,9 @@
 /* Change bars fill when a Product is selected */
 /* None */
 .graph-container > li .bar-inner { height: 0; bottom:0; }
-.graph-container > li:nth-child(1) .bar-inner { background-color: #e2c6c8; }
-.graph-container > li:nth-child(1) .bar-inner:before { background-color: #f25562; }
-.graph-container > li:nth-child(1) .bar-inner:after { background-color: #e8dce6; }
+.RedZone > li:nth-child(1) .bar-inner { background-color: #e2c6c8; }
+.RedZone > li:nth-child(1) .bar-inner:before { background-color: #f25562; }
+.RedZone > li:nth-child(1) .bar-inner:after { background-color: #e8dce6; }
 
 .graph-container > li:nth-child(2) .bar-inner { background-color: #a3dacd; }
 .graph-container > li:nth-child(2) .bar-inner:before { background-color: #07c597; }
