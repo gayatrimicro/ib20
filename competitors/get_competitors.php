@@ -133,7 +133,13 @@ if($response->getStatusCode() == 200)
 						$website_res11 = json_decode($website_res1, true);
 						if(isset($website_res11['result']['website']))
 						{
-							$website_str = $website_res11['result']['website'];
+							if($website_res11['result']['website']!="undefined")
+							{
+								$website_str = $website_res11['result']['website'];
+							}
+							else{
+								$website_str = "";
+							}
 						}
 						else{
 							$website_str = "";
@@ -215,14 +221,22 @@ if($response->getStatusCode() == 200)
 		{
 			$g_rank = 60;
 			// $name = "Your Organization";
+			if($_POST['website']!="undefined")
+			{
+				$your_website_str = $_POST['website'];
+			}
+			else{
+				$your_website_str = "";
+			}
+
 			$name = $_POST['name'];
-			array_push($competitors_ar, ['name'=>$name, 'website'=>$_POST['website']]);
+			array_push($competitors_ar, ['name'=>$name, 'website'=>$your_website_str]);
 			array_push($competitors_html, '<li><p><span class="Rnk">4th</span><span class="RTxt"> '.$name.'</span></p></li>');
 
 			// $ar = array('name'=>$name, 'g_rank'=>$g_rank);
 			array_push($google_rank, '<li><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height:60%;"><span class="tooltiptext">60 Poor</span></div></div></div></li>');
 			array_push($google_rank_html, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink">'.$g_rank.'</span></div></div></li>');
-			array_push($google_rank_detail, '<li class="LiGP"><p class="GP1">'.$name.'</p><p class="GP2">'.$_POST['website'].'</p><p class="GPs1"></p><p class="GPs2"></p></li>');
+			array_push($google_rank_detail, '<li class="LiGP"><p class="GP1">'.$name.'</p><p class="GP2">'.$your_website_str.'</p><p class="GPs1"></p><p class="GPs2"></p></li>');
 
 
 			$reputation_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
