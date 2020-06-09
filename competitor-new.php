@@ -50,28 +50,6 @@ $result = $conn->query($sql);
 				.font-color-grey{
 					color:  #bcc0cd;
 				}
-				#dot {
-					position: absolute;
-					bottom: 50px;
-					left: 27px;
-					transform-origin: center bottom;
-					animation: dot 1.5s ease-in-out infinite
-				}
-
-				@-webkit-keyframes dot {
-					0% {
-						transform: matrix(1, 0, 0, 1, 0, 0)
-					}
-					33.33% {
-						transform: matrix(1, 0, 0, 1, 0, -20.0782)
-					}
-					66.66% {
-						transform: matrix(1, 0, 0, 0.54, 0, -20)
-					}
-					100% {
-						transform: matrix(1, 0, 0, 1, 0, 0)
-					}
-				}
 			</style>
 		</head>
 	 <body class="custom-landing-page patient-visitor-guide browser-large BacClr" data-gr-c-s-loaded="true">
@@ -79,10 +57,7 @@ $result = $conn->query($sql);
 	<section class="HedResult">
 		<div class="row">
 			<div class="col-sm-6">
-				<div>
-					<img src="assets/images/ib-logo.svg" style="margin: 0px;">
-					<!-- <object data="assets/images/ib-logo.svg" type="image/svg+xml" width="170px;"></object> -->
-				</div>
+				<div><img src="com-assets/img/logo.png"></div>
 			</div>
 			<div class="col-sm-6 text-right">
 				<ul>
@@ -90,7 +65,7 @@ $result = $conn->query($sql);
 						<h2 id="organization_name"></h2>
 						<p id="category_name"></p>
 					</li>
-					<li style="margin-top: 7px;">
+					<li>
 						<button data-toggle="modal" data-target="#ReqMod">Request Consultation &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 					</li>
 				</ul>
@@ -139,7 +114,7 @@ $result = $conn->query($sql);
 							</li>
 							<li>
 								<p>
-									<img src="com-assets/img/mob.png">
+									<img src="com-assets/img/webPre.png">
 									<span>
 										<a href="#mobile_friendly_section">Mobile Friendly</a>
 									</span>
@@ -199,7 +174,7 @@ $result = $conn->query($sql);
 		<div class="ResMap" id="google_rank_section">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/google-bac2.png" class="WidXs"></div>
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">           
 						<h2>Google rank</h2>
 						<p>This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
@@ -232,7 +207,7 @@ $result = $conn->query($sql);
 		<div class="ResMap" id="website_section">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/web-bac2.png" class="WidXs"></div>
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">           
 						<h2>Website</h2>
 						<p>Your website score is calculated based on the following factors:</p>
@@ -263,45 +238,10 @@ $result = $conn->query($sql);
 		</div>
 	</section>
 	<section>
-		<div class="ResMap" id="website_section">
-			<div class="row">
-				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
-					<div class="TxtGrap">           
-						<h2>Mobile Friendly</h2>
-						<p>Test Your website is Mobile Friendly or Not ?</p>
-						<ul id="website_div">
-							
-						</ul>
-						<div class="pad_grph CalWEB"><b><span class="BClr">How was this calculated?</span></b></div>
-					</div>
-				</div>
-				<div class="col-sm-8">
-					<div class="bac_clrMap">
-						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
-						<div class="DrName"><span></span></div>
-						<div class="MobScreen">
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-						</div>
-						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
-						</div>
-						<div class="text-left">
-							<p class="OfRes"><b>3</b> <span>of 6</span></p>
-						</div>
-					</div>          
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
 		<div class="ResMap" id="seo_score_section">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/seo-bac2.png" class="WidXs"></div>
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">
 						<h2>SEO Score</h2>
 						<p>Your reputation score was calculated based on the following factors across the most popular review sites.</p>
@@ -335,7 +275,7 @@ $result = $conn->query($sql);
 		<div class="ResMap" id="reputation_section">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/repo-bac2.png" class="WidXs"></div>
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">
 						<h2>Reputation</h2>
 						<p>Your reputation score was calculated based on the following factors across the most popular review sites.</p><br>
@@ -357,7 +297,7 @@ $result = $conn->query($sql);
 							</ul>
 						</section>
 						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Mobile Friendly &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
+							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#mobile_friendly_section">Mobile Friendly &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
 						</div>
 						<div class="text-left">
 							<p class="OfRes"><b>5</b> <span>of 6</span></p>
@@ -367,7 +307,41 @@ $result = $conn->query($sql);
 			</div>
 		</div>
 	</section>
-
+	<section>
+		<div class="ResMap" id="mobile_friendly_section">
+			<div class="row">
+				<div class="col-sm-4">
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
+					<div class="TxtGrap">           
+						<h2>Mobile Friendly</h2>
+						<p>Test Your website is Mobile Friendly or Not ?</p>
+						<ul id="mobile_friendly_div">
+							
+						</ul>
+						<div class="pad_grph CalWEB"><b><span class="BClr">How was this calculated?</span></b></div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="bac_clrMap">
+						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
+						<div class="DrName"><span></span></div>
+						<div class="MobScreen" id="mobile_friendly_screens">
+							<!-- <span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span> -->
+						</div>
+						<div class="text-right">
+							<!-- <p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p> -->
+						</div>
+						<div class="text-left">
+							<p class="OfRes"><b>6</b> <span>of 6</span></p>
+						</div>
+					</div>          
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="ResFinBac" hidden>
 		<div class="ResFin">
 			<div class="row">
@@ -466,7 +440,7 @@ $result = $conn->query($sql);
 				<div class="HdrNav">
 					<div class="row">
 						<div class="col-sm-5">
-							<div><img src="assets/images/ib-logo.svg" style="margin: 0px;width: 170px;"></div>
+							<div><img src="com-assets/img/logo.png"></div>
 						</div>
 						<div class="col-sm-7">
 							<div class="disMsg op0zin">
@@ -1518,6 +1492,38 @@ function move() {
 							event.preventDefault();
 							$.ajax({
 								type: "post",
+								url: "competitors/check_mobile_friendly.php",
+								data: {competitors:competitor_jsonData.competitors},
+								success: function(responseData) {
+									var mobile_friendly_jsonData = JSON.parse(responseData);
+									if(mobile_friendly_jsonData.status=='true')
+									{
+										$('#mobile_friendly_div').empty();
+										$('#mobile_friendly_div').html(mobile_friendly_jsonData.mobile_friendly_score);
+										$('#mobile_friendly_screens').empty();
+										$('#mobile_friendly_screens').html(mobile_friendly_jsonData.mobile_friendly_screens);
+										website_param++;
+										recursive_function(website_param);
+									}
+									else{
+										console.log("Something went wrong");
+									}
+								},
+								error: function(jqXHR, textStatus, errorThrown) {
+									console.log(errorThrown);
+								}
+							});
+							console.log('website_param ' + website_param);
+							console.log('seo_param ' + seo_param);
+							console.log('mobile_friendly_param ' + mobile_friendly_param);
+							if(website_param==1 && seo_param==1)
+							{
+								$('.RsltSec').css('display', 'block');
+								$('.lodr_sec').css('display', 'none');
+							}
+
+							$.ajax({
+								type: "post",
 								url: "competitors/check_website_speed.php",
 								data: {competitors:competitor_jsonData.competitors},
 								success: function(responseData) {
@@ -1589,33 +1595,6 @@ function move() {
 									console.log(errorThrown);
 								}
 							});
-
-							// $.ajax({
-							// 	type: "post",
-							// 	url: "competitors/check_mobile_friendly.php",
-							// 	data: {competitors:competitor_jsonData.competitors},
-							// 	success: function(responseData) {
-							// 		var mobile_friendly_jsonData = JSON.parse(responseData);
-							// 		if(mobile_friendly_jsonData.status=='true')
-							// 		{
-							// 			mobile_friendly_param = 1;
-							// 		}
-							// 		else{
-							// 			console.log("Something went wrong");
-							// 		}
-							// 	},
-							// 	error: function(jqXHR, textStatus, errorThrown) {
-							// 		console.log(errorThrown);
-							// 	}
-							// });
-							// console.log('website_param ' + website_param);
-							// console.log('seo_param ' + seo_param);
-							// console.log('mobile_friendly_param ' + mobile_friendly_param);
-							// if(website_param==1 && seo_param==1)
-							// {
-							// 	$('.RsltSec').css('display', 'block');
-							// 	$('.lodr_sec').css('display', 'none');
-							// }
 						}
 						else{
 							console.log("Something went wrong");
@@ -1802,6 +1781,14 @@ function move() {
 				}
 				// return re.test(email);
 		};
+
+$("input").keyup(function(){
+	$(this).parent().find('label').addClass('actInp');
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   $(".nxtPge").click();
+  }
+  });
 		</script>
 
 	 </body>
