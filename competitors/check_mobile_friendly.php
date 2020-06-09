@@ -2,6 +2,8 @@
 include "../vendor/autoload.php";
 
 $mobile_friendly_score_ar = array();
+$mobile_friendly_score = array();
+$mobile_friendly_screens = array();
 try
 {
 	foreach($_POST['competitors'] as $row)
@@ -22,35 +24,52 @@ try
 				{
 					$mobile_friendly_res1 = $mobile_friendly_response->getBody();
 					$mobile_friendly_res11 = json_decode($mobile_friendly_res1, true);
-					if($mobile_friendly_res11['mobileFriendliness'] == "MOBILE_FRIENDLY")
+					if(isset($mobile_friendly_res11['mobileFriendliness']))
 					{
-						$mobile_friendly_score = "TRUE";
-						$screen_shot = '<img width="200" height="300" src="data:'. $mobile_friendly_res11['screenshot']['mimeType'] .';base64,' . $mobile_friendly_res11['screenshot']['data'] . '" />';
-						// $screen_shot = "";
+						if($mobile_friendly_res11['mobileFriendliness'] == "MOBILE_FRIENDLY")
+						{
+							$mobile_friendly_score_str = "TRUE";
+							$screen_shot = '<img src="data:'. $mobile_friendly_res11['screenshot']['mimeType'] .';base64,' . $mobile_friendly_res11['screenshot']['data'] . '" />';
+							// $screen_shot = "";
+							$font_color = "font-color-green";
+						}
+						else{
+							$mobile_friendly_score_str = "FALSE";
+							$screen_shot = "";
+							$font_color = "font-color-red";
+						}
 					}
 					else{
-						$mobile_friendly_score = "FALSE";
+						$mobile_friendly_score_str = "FALSE";
 						$screen_shot = "";
+						$font_color = "font-color-red";
 					}
 				}
 				else{
-					$mobile_friendly_score = "FALSE";
+					$mobile_friendly_score_str = "FALSE";
 					$screen_shot = "";
+					$font_color = "font-color-red";
 				}
 			}
 			catch(exception $e1)
 			{
-				$mobile_friendly_score = "FALSE";
+				$mobile_friendly_score_str = "FALSE";
 				$screen_shot = "";
+				$font_color = "font-color-red";
 			}
 		}
 		else{
-			$mobile_friendly_score = "FALSE";
+			$mobile_friendly_score_str = "FALSE";
 			$screen_shot = "";
+			$font_color = "font-color-red";
 		}
-		array_push($mobile_friendly_score_ar, ['name'=>$row['name'], 'website'=>$row['website'], 'mobile_friendly'=>$mobile_friendly_score, 'screen_shot'=>$screen_shot]);
+
+		// array_push($mobile_friendly_score_ar, ['name'=>$row['name'], 'website'=>$row['website'], 'mobile_friendly'=>$mobile_friendly_score, 'screen_shot'=>$screen_shot]);
+		array_push($mobile_friendly_score, '<li><div class="row"><div class="col-sm-10"><span><b>'.$row['name'].'</b></span></div><div class="col-sm-2"><span class="fot_pink '.$font_color.'">'.$mobile_friendly_score_str.'</span></div></div></li>');
+		array_push($mobile_friendly_screens, '<span class="DisSpn"><span class="MobSit">'.$screen_shot.'</span><img src="com-assets/img/border.png"></span>');
 	}
-	$result['mobile_friendly'] = $mobile_friendly_score_ar;
+	$result['mobile_friendly_score'] = implode('', $mobile_friendly_score);
+	$result['mobile_friendly_screens'] = implode('', $mobile_friendly_screens);
 	$result['status'] = 'true';
 	echo json_encode($result);
 }
