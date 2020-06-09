@@ -1422,12 +1422,61 @@ z-index: 1;
     background-image: none !important;
     height: 0px;
 }
+.pracGrow
+{
+    padding: 0px 65px;
+}
+.MobScreen img
+{
+    width: 165px;
+    margin-right: 22px;
+    position: relative;
+    z-index: 1;
+}
+.MobScreen
+{
+    padding: 50px 0px;
+}
+.DisSpn
+{
+    position: relative;
+    display: inline-block;
+}
+.MobSit
+{
+    position: absolute;
+    top: 38px;
+    width: 77%;
+    height: 77%;
+    left: 10px;
+    margin: 0 auto;
+}
+.MobSit img
+{
+    width: 100%;
+}
 
 /*------compititors result page end----------------*/
 
 /*----------------------------------*/
 
 @media(min-width: 320px) and (max-width: 767px){
+    .pracGrow {
+    padding: 0px 10px;
+}
+.MobScreen img {
+    width: 130px;
+    margin-right: 13px;
+    margin-bottom: 25px;
+}
+.MobSit {
+    top: 30px;
+    width: 79%;
+    left: 8px;
+}
+.MobSit img {
+    width: 100%;
+}
     .inn_progbar {
     padding: 60px 0px 35px 0px;
     width: 80%;
@@ -1477,7 +1526,7 @@ z-index: 1;
 }
 .pracGrow p {
     font-size: 17px;
-    text-align: center;
+    text-align: left;
 }
 .TxtGrap {
     padding: 0px 10px;
@@ -1493,6 +1542,7 @@ z-index: 1;
 }
 .ResMap h2 {
     font-size: 30px;
+        text-align: center;
 }
 .ScoreRes h2 {
     font-size: 30px;
@@ -1580,7 +1630,10 @@ z-index: 1;
     margin-top: 45px;
 }
 .graph-container > li .bar-container {
-    margin-right: 11px;
+    margin-right: 20px !important;
+}
+.graph-container {
+    font-size: 7px;
 }
 
 }
