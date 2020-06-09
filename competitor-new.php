@@ -492,7 +492,7 @@ $result = $conn->query($sql);
 								<div>
 									<div class="row">
 										<div class="col-sm-4">
-											<div><img src="com-assets/img/com1png.png"></div>
+											<div><img src="com-assets/img/loader1.png"></div>
 										</div>
 										<div class="col-sm-8">
 											<div class="txtSli">
@@ -505,7 +505,7 @@ $result = $conn->query($sql);
 								<div>
 									<div class="row">
 										<div class="col-sm-4">
-											<div><img src="com-assets/img/com1png.png"></div>
+											<div><img src="com-assets/img/loader4.png"></div>
 										</div>
 										<div class="col-sm-8">
 											<div class="txtSli">
@@ -518,7 +518,7 @@ $result = $conn->query($sql);
 								<div>
 									<div class="row">
 										<div class="col-sm-4">
-											<div><img src="com-assets/img/com1png.png"></div>
+											<div><img src="com-assets/img/loader2.png"></div>
 										</div>
 										<div class="col-sm-8">
 											<div class="txtSli">
@@ -531,7 +531,7 @@ $result = $conn->query($sql);
 								<div>
 									<div class="row">
 										<div class="col-sm-4">
-											<div><img src="com-assets/img/com1png.png"></div>
+											<div><img src="com-assets/img/loader5.png"></div>
 										</div>
 										<div class="col-sm-8">
 											<div class="txtSli">
@@ -544,7 +544,7 @@ $result = $conn->query($sql);
 								<div>
 									<div class="row">
 										<div class="col-sm-4">
-											<div><img src="com-assets/img/com1png.png"></div>
+											<div><img src="com-assets/img/loader3.png"></div>
 										</div>
 										<div class="col-sm-8">
 											<div class="txtSli">

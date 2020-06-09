@@ -2434,7 +2434,11 @@ html.is-mobile .o-cursor:not(.-top-mobile):not(.-center-mobile) {
 }
 
 [data-theme=dark] .o-page:not(.-transparent) {
-	background-color: #001b44
+	/*background-color: #001b44*/
+	background-color: #001646;
+    background-image: url(../images/background_light.png),url(../images/background_pattern.jpg);
+    background-repeat: repeat-y,repeat;
+    background-size: contain,100px 100px;
 }
 
 .is-in-love .o-page {
@@ -4229,6 +4233,10 @@ button.swiper-pagination-bullet {
 	bottom: 0;
 	left: 0;
 	background-color: #001b44;
+	background-color: #001646;
+    background-image: url(../images/background_light.png),url(../images/background_pattern.jpg);
+    background-repeat: repeat-y,repeat;
+    background-size: contain,100px 100px;
 	transition: transform .6s cubic-bezier(.645, .045, .355, 1);
 	transform-origin: center bottom;
 	transform: scaleY(1)
@@ -5092,7 +5100,12 @@ html.has-nav-open .c-header_burger:before {
 }
 
 .c-footer .c-heading-lines_title {
-	background-color: #001b44
+	/*background-color: #001b44;*/
+	background-color: #001646;
+    background-image: url(../images/background_light.png),url(../images/background_pattern.jpg);
+    background-repeat: repeat-y,repeat;
+    background-size: contain,100px 100px;
+
 }
 
 .c-heading-lines_title.-medium {
