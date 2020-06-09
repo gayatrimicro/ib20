@@ -1816,7 +1816,7 @@ $(document).ready(function() {
 
  
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 
 
 $('#myid').click(function(){
@@ -1833,35 +1833,35 @@ $('#myid').click(function(){
 	}
 });
 
-$('#vid_seco').click(function(){
-	var vid = document.getElementById("desk_vid1");	
-	if(vid.paused)
-	{
-		vid.play();
-		$(".cur_txt").text("Pause");
-	}
-	else
-	{
-		vid.pause();
-		$(".cur_txt").text("Play");
-	}
-});
+// $('#vid_seco').click(function(){
+// 	var vid = document.getElementById("desk_vid1");	
+// 	if(vid.paused)
+// 	{
+// 		vid.play();
+// 		$(".cur_txt").text("Pause");
+// 	}
+// 	else
+// 	{
+// 		vid.pause();
+// 		$(".cur_txt").text("Play");
+// 	}
+// });
 
-$('#vid_tri').click(function(){
-	var vid = document.getElementById("normal_vid");	
-	if(vid.paused)
-	{
-		vid.play();
-		$(".cur_txt").text("Pause");
-	}
-	else
-	{
-		vid.pause();
-		$(".cur_txt").text("Play");
-	}
-});
+// $('#vid_tri').click(function(){
+// 	var vid = document.getElementById("normal_vid");	
+// 	if(vid.paused)
+// 	{
+// 		vid.play();
+// 		$(".cur_txt").text("Pause");
+// 	}
+// 	else
+// 	{
+// 		vid.pause();
+// 		$(".cur_txt").text("Play");
+// 	}
+// });
 
-</script> -->
+</script>
 <script type="text/javascript">
 
 	// $("#desk_vid").click(function(){
