@@ -238,41 +238,6 @@ $result = $conn->query($sql);
 		</div>
 	</section>
 	<section>
-		<div class="ResMap" id="website_section">
-			<div class="row">
-				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
-					<div class="TxtGrap">           
-						<h2>Mobile Friendly</h2>
-						<p>Test Your website is Mobile Friendly or Not ?</p>
-						<ul id="website_div">
-							
-						</ul>
-						<div class="pad_grph CalWEB"><b><span class="BClr">How was this calculated?</span></b></div>
-					</div>
-				</div>
-				<div class="col-sm-8">
-					<div class="bac_clrMap">
-						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
-						<div class="DrName"><span></span></div>
-						<div class="MobScreen">
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-						</div>
-						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
-						</div>
-						<div class="text-left">
-							<p class="OfRes"><b>3</b> <span>of 6</span></p>
-						</div>
-					</div>          
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
 		<div class="ResMap" id="seo_score_section">
 			<div class="row">
 				<div class="col-sm-4">
@@ -332,7 +297,7 @@ $result = $conn->query($sql);
 							</ul>
 						</section>
 						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Mobile Friendly &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
+							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#mobile_friendly_section">Mobile Friendly &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
 						</div>
 						<div class="text-left">
 							<p class="OfRes"><b>5</b> <span>of 6</span></p>
@@ -342,7 +307,41 @@ $result = $conn->query($sql);
 			</div>
 		</div>
 	</section>
-
+	<section>
+		<div class="ResMap" id="mobile_friendly_section">
+			<div class="row">
+				<div class="col-sm-4">
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
+					<div class="TxtGrap">           
+						<h2>Mobile Friendly</h2>
+						<p>Test Your website is Mobile Friendly or Not ?</p>
+						<ul id="mobile_friendly_div">
+							
+						</ul>
+						<div class="pad_grph CalWEB"><b><span class="BClr">How was this calculated?</span></b></div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="bac_clrMap">
+						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
+						<div class="DrName"><span></span></div>
+						<div class="MobScreen" id="mobile_friendly_screens">
+							<!-- <span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span> -->
+						</div>
+						<div class="text-right">
+							<!-- <p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p> -->
+						</div>
+						<div class="text-left">
+							<p class="OfRes"><b>6</b> <span>of 6</span></p>
+						</div>
+					</div>          
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="ResFinBac" hidden>
 		<div class="ResFin">
 			<div class="row">
@@ -1493,6 +1492,38 @@ function move() {
 							event.preventDefault();
 							$.ajax({
 								type: "post",
+								url: "competitors/check_mobile_friendly.php",
+								data: {competitors:competitor_jsonData.competitors},
+								success: function(responseData) {
+									var mobile_friendly_jsonData = JSON.parse(responseData);
+									if(mobile_friendly_jsonData.status=='true')
+									{
+										$('#mobile_friendly_div').empty();
+										$('#mobile_friendly_div').html(mobile_friendly_jsonData.mobile_friendly_score);
+										$('#mobile_friendly_screens').empty();
+										$('#mobile_friendly_screens').html(mobile_friendly_jsonData.mobile_friendly_screens);
+										website_param++;
+										recursive_function(website_param);
+									}
+									else{
+										console.log("Something went wrong");
+									}
+								},
+								error: function(jqXHR, textStatus, errorThrown) {
+									console.log(errorThrown);
+								}
+							});
+							console.log('website_param ' + website_param);
+							console.log('seo_param ' + seo_param);
+							console.log('mobile_friendly_param ' + mobile_friendly_param);
+							if(website_param==1 && seo_param==1)
+							{
+								$('.RsltSec').css('display', 'block');
+								$('.lodr_sec').css('display', 'none');
+							}
+
+							$.ajax({
+								type: "post",
 								url: "competitors/check_website_speed.php",
 								data: {competitors:competitor_jsonData.competitors},
 								success: function(responseData) {
@@ -1564,33 +1595,6 @@ function move() {
 									console.log(errorThrown);
 								}
 							});
-
-							// $.ajax({
-							// 	type: "post",
-							// 	url: "competitors/check_mobile_friendly.php",
-							// 	data: {competitors:competitor_jsonData.competitors},
-							// 	success: function(responseData) {
-							// 		var mobile_friendly_jsonData = JSON.parse(responseData);
-							// 		if(mobile_friendly_jsonData.status=='true')
-							// 		{
-							// 			mobile_friendly_param = 1;
-							// 		}
-							// 		else{
-							// 			console.log("Something went wrong");
-							// 		}
-							// 	},
-							// 	error: function(jqXHR, textStatus, errorThrown) {
-							// 		console.log(errorThrown);
-							// 	}
-							// });
-							// console.log('website_param ' + website_param);
-							// console.log('seo_param ' + seo_param);
-							// console.log('mobile_friendly_param ' + mobile_friendly_param);
-							// if(website_param==1 && seo_param==1)
-							// {
-							// 	$('.RsltSec').css('display', 'block');
-							// 	$('.lodr_sec').css('display', 'none');
-							// }
 						}
 						else{
 							console.log("Something went wrong");
