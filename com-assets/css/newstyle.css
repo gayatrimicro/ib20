@@ -388,7 +388,7 @@ input
 }
 .nxtPge
 {
-    background-color: #0256b8;
+    background-color: #001b44;
     color: #fff;
     padding: 14px 40px;
     font-size: 16px;
@@ -402,7 +402,7 @@ input
 .bckPge
 {
     background-color: transparent;
-    color: #0256b8;
+    color: #001b44;
     padding: 14px 0px;
     font-size: 16px;
     outline: none;
@@ -480,7 +480,7 @@ z-index: 10000;
 #myBar {
   width: 42%;
   height: 11px;
-  background-color: #0256b8;
+  background-color: #001b44;
   text-align: center;
   line-height: 30px;
   color: white;
@@ -493,7 +493,7 @@ z-index: 10000;
     top: -33px;
     width: 33px;
     height: 33px;
-    color: #0256b8;
+    color: #001b44;
     font-size: 25px;
     font-weight: 700;
     z-index: 10000;
@@ -544,8 +544,8 @@ z-index: 10000;
     right: 0;
     margin: 0 auto;
     background-color: #fff;
-    color: #0256b8;
-    border: 2px solid #0256b8;
+    color: #001b44;
+    border: 2px solid #001b44;
     padding: 15px 0px;
     text-align: center;
     font-size: 21px;
@@ -554,7 +554,7 @@ z-index: 10000;
 }
 .btn_Modal:hover
 {
-    background-color: #0256b8;
+    background-color: #001b44;
     color: #fff;
     transition: 0.8s all;
 }
@@ -575,7 +575,7 @@ z-index: 10000;
 .txtSli h2
 {
     font-size: 24px;
-    color: #0256b8;
+    color: #001b44;
     margin: 0px;
     margin-bottom: 20px;
     text-align: left;
@@ -641,9 +641,9 @@ z-index: 10000;
 }
 .HedResult button
 {
-    background-color: #0256b8;
+    background-color: #001b44;
     border-radius: 50px;
-    border: 1px solid #0256b8;
+    border: 1px solid #001b44;
     color: #fff;
     padding: 8px 22px;
     font-size: 13px;
@@ -653,8 +653,8 @@ z-index: 10000;
 .HedResult button:hover
 {
     background-color: #fff;
-    border: 1px solid #0256b8;
-    color: #0256b8;
+    border: 1px solid #001b44;
+    color: #001b44;
     transition: 0.8s all;
 }
 .BanRes
@@ -885,9 +885,9 @@ z-index: 10000;
 }
 .btnFinGrph
 {
-    background-color: #0256b8;
+    background-color: #001b44;
     border-radius: 50px;
-    border: 1px solid #0256b8;
+    border: 1px solid #001b44;
     color: #fff;
     padding: 15px 22px;
     font-size: 17px;
@@ -1145,7 +1145,7 @@ z-index: 1;
     top: -15px;
     width: 38px;
     height: 38px;
-    background-color: #0256b8;
+    background-color: #001b44;
     color: #fff;
     z-index: 100;
     opacity: 1;
