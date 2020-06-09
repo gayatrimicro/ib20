@@ -7,24 +7,23 @@ try
 	{
 		if($row['website']!="")
 		{
-			// $security_arr = explode('://', $website_str);
-			// if($security_arr[0]=="https")
-			// {
-			// 	$security = "Pass";
-			// }
-			// else{
-			// 	$security = "Fail";
-			// }
-			$get_desktop_speed_data_url = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='.$row['website'].'&key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM&strategy=desktop&category=PERFORMANCE';
-			$desktop_website_client = new GuzzleHttp\Client();
-			$desktop_website_response = $desktop_website_client->request('GET', $get_desktop_speed_data_url);
-			if($desktop_website_response->getStatusCode() == 200)
+			try
 			{
-				$desktop_website_res1 = $desktop_website_response->getBody();
-				$desktop_website_res11 = json_decode($desktop_website_res1, true);
+				$get_desktop_speed_data_url = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='.$row['website'].'&key=AIzaSyASdVd39MsNnjcRp-bTz-ukZAqswBza_gM&strategy=desktop&category=PERFORMANCE';
+				$desktop_website_client = new GuzzleHttp\Client();
+				$desktop_website_response = $desktop_website_client->request('GET', $get_desktop_speed_data_url);
+				if($desktop_website_response->getStatusCode() == 200)
+				{
+					$desktop_website_res1 = $desktop_website_response->getBody();
+					$desktop_website_res11 = json_decode($desktop_website_res1, true);
 
-				$desktop_speed = $desktop_website_res11['lighthouseResult']['categories']['performance']['score'] * 100;
-			}	
+					$desktop_speed = $desktop_website_res11['lighthouseResult']['categories']['performance']['score'] * 100;
+				}
+			}
+			catch(exception $e1)
+			{
+				$desktop_speed = "Not Found";
+			}
 		}
 		else{
 			$desktop_speed = "Not Found";

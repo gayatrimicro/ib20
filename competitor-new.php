@@ -35,6 +35,21 @@ $result = $conn->query($sql);
 				h2{
 					color: inherit;
 				}
+				.font-color-green{
+					color:  #07c597;
+				}
+				.font-color-blue{
+					color:  #1f8bf7;
+				}
+				.font-color-orange{
+					color:  #f9bc3c;
+				}
+				.font-color-red{
+					color:  #f25562;
+				}
+				.font-color-grey{
+					color:  #bcc0cd;
+				}
 			</style>
 		</head>
 	 <body class="custom-landing-page patient-visitor-guide browser-large BacClr" data-gr-c-s-loaded="true">
@@ -154,91 +169,7 @@ $result = $conn->query($sql);
 				<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#google_rank_section">Google Rank &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
 			</div>
 		</div>
-	</section>
-	<!-- <section>
-		<div class="ResMap boxShd">
-			<div class="row">
-				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png"></div>
-					<div class="TxtGrap">           
-						<h2>Overall practice growth score</h2>
-						<p>This is the average of all the scores from each of the factors affecting your growth.</p>
-						<ul>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><span><b>Your Score</b></span></div>
-									<div class="col-sm-2"><span class="fot_pink">63</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Fulton Street</p></div>
-									<div class="col-sm-2"><span class="fot_orr">76</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>Acupuncture Remedies</p></div>
-									<div class="col-sm-2"><span class="fot_orr">72</span></div>
-								</div>
-							</li>
-							<li>
-								<div class="row">
-									<div class="col-sm-10"><p>City Acupuncture Columbus Circle - CLOSED</p></div>
-									<div class="col-sm-2"><span class="fot_pink">66</span></div>
-								</div>
-							</li>
-						</ul>
-						<div class="pad_grph"><b><span class="BClr">What does this mean?</span></b></div>
-					</div>
-				</div>
-				<div class="col-sm-8">
-					<div class="bac_clrMap">
-						<h4 class="BClr">"PatientPop builds your website, handles your local listings, online reputation, and online scheduling. It's a remarkable solution."</h4>
-						<div class="DrName"><span>Dr. Kambiz Silani, Beverly Hills, CA</span></div>
-						<section class="main_br" id="main_br">
-							<ul class="graph-container">
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">96 Excellent</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">52 Good </span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">36 Poor</span></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner"><span class="tooltiptext">76 Good </span></div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</section>
-						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Google Rank &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
-						</div>
-						<div class="text-left">
-							<p class="OfRes"><b>2</b> <span>of 7</span></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
+	</section>	
 	<section>
 		<div class="ResMap" id="google_rank_section">
 			<div class="row">
@@ -624,8 +555,8 @@ $result = $conn->query($sql);
   			<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
   			<h2>Google Rank</h2>
   			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
-  			<ul>
-  				<li class="TimLin"></li>
+  			<ul id="google_rank_details">
+  				<!-- <li class="TimLin"></li>
   				<li class="LiGP">
   					<p class="GP1">Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</p>
   					<p class="GP2">http://www.emizani.com/</p>
@@ -649,7 +580,7 @@ $result = $conn->query($sql);
   					<p class="GP2">http://www.hollywoodsign.org</p>
   					<p class="GPs1"></p>
   					<p class="GPs2"></p>
-  				</li>
+  				</li> -->
   			</ul>
   		</div>
   	</div>		
@@ -659,7 +590,7 @@ $result = $conn->query($sql);
 		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
 		<h2>Website</h2>
 		<p class="SubP">Your website score is calculated based on the factors below.</p>
-		<h5>Your practice</h5>
+		<!-- <h5>Your practice</h5>
 		<div class="row">
 			<div class="col-sm-6 pad_0">
 				<div class="row">
@@ -702,20 +633,7 @@ $result = $conn->query($sql);
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 pad_0">
-				<div class="row">
-					<div class="col-xs-2 pad_0">
-						<img src="com-assets\img\ser.png">
-					</div>
-					<div class="col-xs-10">
-						<div class="XSPAD">
-							<h6>Searchability</h6>
-							<span class="ScRNo CLRR">Fail</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		</div> -->
 		<h5 class="MArT">Your practice</h5>
 		<div class="table-responsive">
 		
@@ -726,31 +644,9 @@ $result = $conn->query($sql);
 		        <th width="21%">Desktop Speed</th>
 		        <th width="21%">Mobile Speed</th>
 		        <th width="21%">Security</th>
-		        <th width="21%">Searchability</th>
 		      </tr>
 		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
-		        <td>Not found</td>
-		        <td>Not found</td>
-		        <td>Fail</td>
-		        <td>Pass</td>
-		      </tr>
-		      <tr>
-		        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
-		        <td>74</td>
-		        <td>38</td>		        
-		        <td>Fail</td>
-		        <td>Fail</td>
-		      </tr>
-		      <tr>
-		        <td>Calming Goat Addiction Medicine</td>
-		        <td>58</td>
-		        <td>16</td>
-		        <td>Fail</td>
-		        <td>Fail</td>
-		      </tr>
+		    <tbody id="website_details">
 		    </tbody>
 	  </table>
 	  </div>		
@@ -762,8 +658,8 @@ $result = $conn->query($sql);
   			<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
   			<h2>SEO Score</h2>
   			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
-  			<ul>
-  				<li class="TimLin"></li>
+  			<ul id="seo_score_details">
+  				<!-- <li class="TimLin"></li>
   				<li class="LiGP">
   					<p class="GP1">Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</p>
   					<p class="GP2">http://www.emizani.com/</p>
@@ -787,7 +683,7 @@ $result = $conn->query($sql);
   					<p class="GP2">http://www.hollywoodsign.org</p>
   					<p class="GPs1"></p>
   					<p class="GPs2"></p>
-  				</li>
+  				</li> -->
   			</ul>
   		</div>
   	</div>
@@ -799,75 +695,51 @@ $result = $conn->query($sql);
 		<p class="SubP">The reputation scores were calculated based on a combination of the average star rating, and total number of reviews.</p>
 		<h5>Average Star Rating</h5>
 		<div class="table-responsive">
-		<table class="table tbl">
-		    <thead>
-		      <tr>
-		        <th width="26%">Practices</th>
-		        <th width="21%" class="BAGTD">Average</th>
-		        <th width="21%"><img src="com-assets\img\fbImg.png"></th>
-		        <th width="21%"><img src="com-assets\img\goog.png"></th>
-		        <th width="21%" class="BAGTD2"><img src="com-assets\img\yep.png"></th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>Your Practice</td>
-		        <td class="BAGTD">1.5 stars</td>
-		        <td></td>
-		        <td>4.5</td>
-		        <td class="BAGTD2">0</td>
-		      </tr>
-		      <tr>
-		        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
-		        <td class="BAGTD">2.8 stars</td>
-		        <td>38</td>		        
-		        <td>Fail</td>
-		        <td class="BAGTD2">Fail</td>
-		      </tr>
-		      <tr>
-		        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
-		        <td class="BAGTD">2.3 stars</td>
-		        <td>16</td>
-		        <td>Fail</td>
-		        <td class="BAGTD2">Fail</td>
-		      </tr>
-		    </tbody>
-	  </table>
-	</div>
+			<table class="table tbl">
+			    <thead>
+			      <tr>
+			        <th width="26%">Practices</th>
+			        <th width="21%"><img src="com-assets\img\goog.png"></th>
+			      </tr>
+			    </thead>
+			    <tbody id="average_rating">
+			      <!-- <tr>
+			        <td>Your Practice</td>
+			        <td></td>
+			      </tr>
+			      <tr>
+			        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
+			        <td>38</td>
+			      </tr>
+			      <tr>
+			        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
+			        <td>16</td>
+			      </tr> -->
+			    </tbody>
+		  </table>
+		</div>
 	  <h5>Total Number of Reviews</h5>
 	  <div class="table-responsive">
 		<table class="table tbl">
 		    <thead>
 		      <tr>
 		        <th width="26%">Practices</th>
-		        <th width="21%" class="BAGTD">Average</th>
-		        <th width="21%"><img src="com-assets\img\fbImg.png"></th>
 		        <th width="21%"><img src="com-assets\img\goog.png"></th>
-		        <th width="21%" class="BAGTD2"><img src="com-assets\img\yep.png"></th>
 		      </tr>
 		    </thead>
-		    <tbody>
-		      <tr>
+		    <tbody id="total_reviews">
+		      <!-- <tr>
 		        <td>Your Practice</td>
-		        <td class="BAGTD">1.5 stars</td>
 		        <td></td>
-		        <td>4.5</td>
-		        <td class="BAGTD2">0</td>
 		      </tr>
 		      <tr>
 		        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
-		        <td class="BAGTD">2.8 stars</td>
-		        <td>38</td>		        
-		        <td>Fail</td>
-		        <td class="BAGTD2">Fail</td>
+		        <td>38</td>
 		      </tr>
 		      <tr>
 		        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
-		        <td class="BAGTD">2.3 stars</td>
 		        <td>16</td>
-		        <td>Fail</td>
-		        <td class="BAGTD2">Fail</td>
-		      </tr>
+		      </tr> -->
 		    </tbody>
 	  </table>
 	  </div>		
@@ -1049,7 +921,7 @@ jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
 	return this;
 };
 </script>
-<script>
+<!-- <script>
 var set_i = 0;
 function move() {
 	if (set_i == 0) {
@@ -1069,7 +941,7 @@ function move() {
 		}
 	}
 }
-</script>
+</script> -->
 	<script type="text/javascript">
 		$('.LodSlid').slick({
 			infinite: true,
@@ -1104,31 +976,40 @@ function move() {
 				var strUser = e.options[e.selectedIndex].value;
 				var cont=0;
 				if($("#street_number").val()==""){
+					$("#street_number").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#route").val()==""){
+					$("#route").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#locality").val()==""){
+					$("#locality").parent().find("label").shake();
 					cont+=1;
 				}
-				if($("#administrative_area_level_1").val==""){
+				if($("#administrative_area_level_1").val()==""){
+					$("#administrative_area_level_1").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#postal_code").val()==""){
+					$("#postal_code").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#country").val()==""){
+					$("#country").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#website").val()==""){
+					$("#website").parent().find("label").shake();
 					cont+=1;
 				}
 				if($("#name").val()==""){
+					$("#name").parent().find("label").shake();
 					cont+=1;
 				}
 				if(strUser=="")
 				{
+					$("#e1").parent().find("label").shake();
 					cont+=1;
 				}
 				if(cont>0)
@@ -1245,7 +1126,7 @@ function move() {
 							$(".Step3str label").css("color","#000");
 							$('#pracFrm').modal('hide');
 							$('.btn_Modal').hide();
-							move();
+							// move();
 							$(".SlickSli").removeClass("op0zin");
 							$(".disMsg").removeClass("op0zin");
 							$(".btn_fin").click();
@@ -1567,7 +1448,13 @@ function move() {
 							$('#reputation_div').html(competitor_jsonData.reputation);
 							$('#reputation_graph').empty();
 							$('#reputation_graph').html(competitor_jsonData.reputation_chart);
-							
+
+							$('#google_rank_details').empty();
+							$('#google_rank_details').html(competitor_jsonData.google_rank_detail);
+							$('#average_rating').empty();
+							$('#average_rating').html(competitor_jsonData.average_rating);
+							$('#total_reviews').empty();
+							$('#total_reviews').html(competitor_jsonData.total_reviews);
 							event.preventDefault();
 							$.ajax({
 								type: "post",
@@ -1591,6 +1478,9 @@ function move() {
 													$('#website_div').html(mobile_speed_jsonData.website);
 													$('#website_graph').empty();
 													$('#website_graph').html(mobile_speed_jsonData.website_chart);
+
+													$('#website_details').empty();
+													$('#website_details').html(mobile_speed_jsonData.website_detail);
 													// $('.RsltSec').css('display', 'block');
 													website_param++;
 													recursive_function(website_param);
@@ -1626,6 +1516,8 @@ function move() {
 										$('#seo_div').html(seo_score_jsonData.seo_score);
 										$('#seo_graph').empty();
 										$('#seo_graph').html(seo_score_jsonData.seo_chart);
+										$('#seo_score_details').empty();
+										$('#seo_score_details').html(seo_score_jsonData.seo_score_detail);
 										website_param++;
 										recursive_function(website_param);
 									}
@@ -1678,16 +1570,34 @@ function move() {
 			function recursive_function(number)
 			{
 				console.log("Number " + number);
+				if(number == 1)
+				{
+					$("#myBar").css("width","50%");
+					$("#my_per").html("50%");
+				}
+				else if(number == 2)
+				{
+					$("#myBar").css("width","90%");
+					$("#my_per").html("90%");
+				}
+				else if(number == 3)
+				{
+					$("#myBar").css("width","100%");
+					$("#my_per").html("100%");
+				}
+
 				if(number > 2)
 				// if(number == 4)
 				{
 					$('.RsltSec').css('display', 'block');
 					$('.lodr_sec').css('display', 'none');
+					$('#myProgress').css('display', 'none');					
 				}
 				else{
 					$('.RsltSec').css('display', 'none');
 					$('.lodr_sec').css('display', 'block');
 				}
+				
 			}
 		</script>
 
