@@ -132,7 +132,7 @@ $result = $conn->query($sql);
 	<section>
 		<div class="ScoreRes">
 			<div class="row">
-				<div class="col-sm-7">
+				<!-- <div class="col-sm-7">
 					<div class="row">
 						<div class="col-sm-6 text-center">
 							<div class="inPerBar">
@@ -151,8 +151,8 @@ $result = $conn->query($sql);
 							<p>Your practice is behind the competition in practice growth. A complete audit of your processes is strongly recommended.</p>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-5">
+				</div> -->
+				<div class="col-sm-12">
 					<div class="pracGrow">
 						<h2>Competitors</h2>
 						<p>Here's how you rank against your competitors based on your overall practice growth scores:</p>
@@ -226,6 +226,41 @@ $result = $conn->query($sql);
 								
 							</ul>
 						</section>
+						<div class="text-right">
+							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
+						</div>
+						<div class="text-left">
+							<p class="OfRes"><b>3</b> <span>of 6</span></p>
+						</div>
+					</div>          
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="ResMap" id="website_section">
+			<div class="row">
+				<div class="col-sm-4">
+					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
+					<div class="TxtGrap">           
+						<h2>Mobile Friendly</h2>
+						<p>Test Your website is Mobile Friendly or Not ?</p>
+						<ul id="website_div">
+							
+						</ul>
+						<div class="pad_grph CalWEB"><b><span class="BClr">How was this calculated?</span></b></div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="bac_clrMap">
+						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
+						<div class="DrName"><span></span></div>
+						<div class="MobScreen">
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
+						</div>
 						<div class="text-right">
 							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
 						</div>
