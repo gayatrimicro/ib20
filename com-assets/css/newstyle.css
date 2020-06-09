@@ -526,6 +526,7 @@ z-index: 10000;
     background-image: url(../../com-assets/img/chrome-base.svg);
     height: 400px;
     position: relative;
+    background-size: cover;
 }
 .imgClock
 {

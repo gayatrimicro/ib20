@@ -1777,6 +1777,14 @@ function move() {
 				}
 				// return re.test(email);
 		};
+
+$("input").keyup(function(){
+	$(this).parent().find('label').addClass('actInp');
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   $(".nxtPge").click();
+  }
+  });
 		</script>
 
 	 </body>
