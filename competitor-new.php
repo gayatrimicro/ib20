@@ -749,7 +749,7 @@ $result = $conn->query($sql);
 									<div class="PosRel SelClik">
 										<label for="FirName">Practice Category</label>
 										<input type="hidden" name="category" id="e1" value="">
-              							<input type="text" id="myInput" class="form-control" onkeyup="SelCatPrac(this)" autocomplete="off">
+              							<input type="text" id="myInput" class="form-control" oninput="SelCatPrac(this)" autocomplete="off">
 											<ul id="ULPrc">
 												<?php while($row = $result->fetch_assoc()) { ?>
 												<li onclick="get_category(<?php echo $row['id'] ?>)"><a><?php echo $row['category'] ?></a></li>
