@@ -460,7 +460,7 @@ $result = $conn->query($sql);
 			<section>
 				<div class="DeskView">
 					<div class="SliSec">
-						<button type="button" class="btn_Modal" data-toggle="modal" data-target="#pracFrm">Patients competitors</button>
+						<button type="button" class="btn_Modal" id="PatComBtn">Patients competitors</button>
 						<div class="SlickSli op0zin">
 							<div class="LodSlid">
 								<div>
@@ -864,6 +864,16 @@ $result = $conn->query($sql);
 								<div class="col-sm-12 cat_js_basic pad_0">
 									<div class="PosRel SelClik">
 										<label for="FirName">Practice Category</label>
+              							<input type="text" id="myInput" class="form-control" onkeyup="SelCatPrac(this)" autocomplete="off">
+											<ul id="ULPrc">
+											  <li><a href="#">Adele</a></li>
+											  <li><a href="#">Agnes</a></li>
+											  <li><a href="#">Billy</a></li>
+											  <li><a href="#">Bob</a></li>
+											  <li><a href="#">Calvin</a></li>
+											  <li><a href="#">Christina</a></li>
+											  <li><a href="#">Cindy</a></li>
+											</ul>
 										<select name="category" onchange="get_category(this.value)" id="e1">
 										<option value=""></option>
 											<?php while($row = $result->fetch_assoc()) { ?>
@@ -1803,6 +1813,48 @@ function countWords(str) {
    str = str.replace(/\n /,"\n");
    return str.split(' ').length;
    }
+
+   $("#PatComBtn").click(function(){
+         $('#pracFrm').modal('show');
+         setTimeout(function(){ getClassModal(); }, 300);
+    });
+
+   function getClassModal(){
+   	if(($("#pracFrm").hasClass("in"))){
+		$("#autocomplete").focus();
+	}
+   }
+
+   function SelCatPrac(val) {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("ULPrc");
+    $("#ULPrc").toggleClass("H200");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+$("#ULPrc li").click(function(){
+var GetTxt=$(this).text();
+$("#myInput").val(GetTxt);
+$("#ULPrc").toggleClass("H200");
+});
+
+$("#myInput").click(function(){
+	$("#ULPrc").toggleClass("H200");
+});
+$(".SelClik label").click(function(){
+	$("#ULPrc").toggleClass("H200");
+});
 		</script>
 
 	 </body>

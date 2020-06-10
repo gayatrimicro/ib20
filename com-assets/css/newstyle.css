@@ -1456,6 +1456,31 @@ z-index: 1;
 {
     width: 100%;
 }
+#ULPrc
+{
+    padding: 0;
+    height: 0px;
+    overflow-y: scroll;
+    box-shadow: 0 4px 6px 0 rgba(32,33,36,.28);
+}
+#ULPrc li
+{
+    list-style: none;
+    padding: 8px 20px;
+    font-size: 16px;
+}
+#ULPrc li a
+{
+    color: #777;
+}
+.H200
+{
+    height: 200px !important;
+}
+#ULPrc li:hover
+{
+    background-color: #ddd;
+}
 
 /*------compititors result page end----------------*/
 
