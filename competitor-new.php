@@ -1049,7 +1049,7 @@ function move() {
 				if(cont>0)
 				{
 					if($("#street_number").val()==""){
-						$(".#street_number").css("border","2px solid red");
+						$("#street_number").css("border","2px solid red");
 						$("#street_number").parent().find("label").css("color","red");
 						$("#street_number").parent().find("label").shake();
 					}
