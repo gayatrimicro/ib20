@@ -1022,7 +1022,7 @@ function move() {
 						{
 							count_n+=1;
 						}
-						count_n+=cntStrnme;
+						//count_n+=cntStrnme;
 						if($("#sno").val()=="")
 						{
 							count_n+=1;
