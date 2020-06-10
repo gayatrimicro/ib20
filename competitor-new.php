@@ -266,7 +266,7 @@ $result = $conn->query($sql);
 		<div class="ResMap" id="website_section">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
+					<div><img src="com-assets/img/mobile-bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">           
 						<h2>Mobile Friendly</h2>
 						<p>Test Your website is Mobile Friendly or Not ?</p>
