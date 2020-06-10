@@ -1839,7 +1839,7 @@ function countWords(str) {
 
    $("#PatComBtn").click(function(){
          $('#pracFrm').modal('show');
-         setTimeout(function(){ getClassModal(); }, 300);
+         setTimeout(function(){ getClassModal(); }, 500);
     });
 
    function getClassModal(){

@@ -9,8 +9,8 @@ if(isset($_POST))
 
 	if($query_result[0] > 3)
 	{
-		$result['status'] = 'false';
-		// $result['status'] = 'true';
+		// $result['status'] = 'false';
+		$result['status'] = 'true';
 		echo json_encode($result); 
 	}
 	else{
