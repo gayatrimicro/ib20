@@ -75,7 +75,7 @@ $result = $conn->query($sql);
 			</style>
 		</head>
 	 <body class="custom-landing-page patient-visitor-guide browser-large BacClr" data-gr-c-s-loaded="true">
-<div class="RsltSec" style="display: block;">
+<div class="RsltSec">
 	<section class="HedResult">
 		<div class="row">
 			<div class="col-sm-6">
@@ -266,7 +266,7 @@ $result = $conn->query($sql);
 		<div class="ResMap" id="website_section">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/bac2.png" class="WidXs"></div>
+					<div><img src="com-assets/img/mobile-bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">           
 						<h2>Mobile Friendly</h2>
 						<p>Test Your website is Mobile Friendly or Not ?</p>
