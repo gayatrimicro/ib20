@@ -460,7 +460,7 @@ $result = $conn->query($sql);
 			<section>
 				<div class="DeskView">
 					<div class="SliSec">
-						<button type="button" class="btn_Modal" data-toggle="modal" data-target="#pracFrm">Patients competitors</button>
+						<button type="button" class="btn_Modal" onclick="get_patients_competitor_form()">Patients competitors</button>
 						<div class="SlickSli op0zin">
 							<div class="LodSlid">
 								<div>
@@ -785,7 +785,7 @@ $result = $conn->query($sql);
 		
 			<!-- Modal content-->
 			<div class="modal-content">
-				<div class="modal-body modbdy">
+				<div class="modal-body modbdy" id="pracFrm_body">
 					<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 					<div class="inFrmStrt">
 						<div class="inn_progbar">
@@ -977,6 +977,28 @@ function move() {
 }
 </script> -->
 	<script type="text/javascript">
+		function get_patients_competitor_form()
+		{
+			$.ajax({
+				type: "post",
+				url: "competitors/check_attempt.php",
+				success: function(responseData) {
+					$('#pracFrm').modal("show");
+					var response = JSON.parse(responseData);
+					if(response.status=='true')
+					{						
+					}
+					else{
+						$('#pracFrm_body').empty();
+						$('#pracFrm_body').html('<div class="Step1str Stepcurr"><h2></h2></div>');
+					}
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					console.log(errorThrown);
+				}
+			});
+		}
+
 		$('.LodSlid').slick({
 			infinite: true,
 			autoplay: true,
