@@ -28,38 +28,38 @@ try
 					{
 						if($mobile_friendly_res11['mobileFriendliness'] == "MOBILE_FRIENDLY")
 						{
-							$mobile_friendly_score_str = "TRUE";
+							$mobile_friendly_score_str = "<i class='fa fa-check' aria-hidden='true'></i>";
 							$screen_shot = '<img src="data:'. $mobile_friendly_res11['screenshot']['mimeType'] .';base64,' . $mobile_friendly_res11['screenshot']['data'] . '" />';
 							// $screen_shot = "";
 							$font_color = "font-color-green";
 						}
 						else{
-							$mobile_friendly_score_str = "FALSE";
+							$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
 							$screen_shot = "";
 							$font_color = "font-color-red";
 						}
 					}
 					else{
-						$mobile_friendly_score_str = "FALSE";
+						$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
 						$screen_shot = "";
 						$font_color = "font-color-red";
 					}
 				}
 				else{
-					$mobile_friendly_score_str = "FALSE";
+					$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
 					$screen_shot = "";
 					$font_color = "font-color-red";
 				}
 			}
 			catch(exception $e1)
 			{
-				$mobile_friendly_score_str = "FALSE";
+				$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
 				$screen_shot = "";
 				$font_color = "font-color-red";
 			}
 		}
 		else{
-			$mobile_friendly_score_str = "FALSE";
+			$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
 			$screen_shot = "";
 			$font_color = "font-color-red";
 		}
