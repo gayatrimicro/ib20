@@ -456,8 +456,8 @@ $result = $conn->query($sql);
 			<section>
 				<div class="DeskView">
 					<div class="SliSec">
-						<button type="button" class="btn_Modal" id="PatComBtn">Patients competitors</button>
-						<button type="button" class="btn_Modal" onclick="get_patients_competitor_form()">Patients competitors</button>
+						<button type="button" class="btn_Modal">Patients competitors</button>
+						<button type="button" class="btn_Modal" id="PatComBtn" onclick="get_patients_competitor_form()">Patients competitors</button>
 						<div class="SlickSli op0zin">
 							<div class="LodSlid">
 								<div>
@@ -746,10 +746,10 @@ $result = $conn->query($sql);
 									</div>
 								</div>
 								<div class="col-sm-12 cat_js_basic pad_0">
-									<div class="PosRel SelClik">
+									<div class="PosRel SelClik" id="ChkClik">
 										<label for="FirName">Practice Category</label>
 										<input type="hidden" name="category" id="e1" value="">
-              							<input type="text" id="myInput" class="form-control" oninput="SelCatPrac(this)" autocomplete="off">
+              							<input type="text" id="SelInpDrop" class="form-control" onkeyup="SelCatPrac(this)" autocomplete="off">
 											<ul id="ULPrc">
 												<?php while($row = $result->fetch_assoc()) { ?>
 												<li onclick="get_category(<?php echo $row['id'] ?>)"><a><?php echo $row['category'] ?></a></li>
@@ -996,9 +996,9 @@ function move() {
 						$("#name").parent().find("label").css("color","red");
 						$("#name").parent().find("label").shake();
 					}
-					if(strUser=="")
+					if($("#e1").val()=="")
 					{
-						 $(".select2-selection--single").css("border","2px solid red");
+						 $("#e1").next().css("border","2px solid red");
 						$(".SelClik label").css("color","red");
 						$(".SelClik label").shake();
 					}
@@ -1022,6 +1022,7 @@ function move() {
 						{
 							count_n+=1;
 						}
+						count_n+=cntStrnme;
 						if($("#sno").val()=="")
 						{
 							count_n+=1;
@@ -1715,7 +1716,7 @@ function countWords(str) {
 
    $("#PatComBtn").click(function(){
          $('#pracFrm').modal('show');
-         setTimeout(function(){ getClassModal(); }, 500);
+         setTimeout(function(){ getClassModal(); }, 300);
     });
 
    function getClassModal(){
@@ -1726,10 +1727,10 @@ function countWords(str) {
 
    function SelCatPrac(val) {
     var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
+    input = document.getElementById("SelInpDrop");
     filter = input.value.toUpperCase();
     ul = document.getElementById("ULPrc");
-    $("#ULPrc").toggleClass("H200");
+    $("#ULPrc").addClass("H200");
     li = ul.getElementsByTagName("li");
 
     for (i = 0; i < li.length; i++) {
@@ -1745,17 +1746,22 @@ function countWords(str) {
 
 $("#ULPrc li").click(function(){
 var GetTxt=$(this).text();
-$("#myInput").val(GetTxt);
+$("#SelInpDrop").val(GetTxt);
 $("#ULPrc").toggleClass("H200");
 });
 
-$("#myInput").click(function(){
-	$("#ULPrc").toggleClass("H200");
+$("#SelInpDrop").click(function(){
+	$("#ULPrc").addClass("H200");
 });
 $(".SelClik label").click(function(){
 	$("#ULPrc").toggleClass("H200");
 });
-		</script>
+$(document).click(function(e) {
+		if (($(e.target).closest("#ChkClik").attr("id") != "ChkClik")){
+		$("#ULPrc").removeClass("H200");
+		}
+});
+</script>
 
 	 </body>
 </html>
