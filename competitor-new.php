@@ -75,7 +75,7 @@ $result = $conn->query($sql);
 			</style>
 		</head>
 	 <body class="custom-landing-page patient-visitor-guide browser-large BacClr" data-gr-c-s-loaded="true">
-<div class="RsltSec" style="display: block;">
+<div class="RsltSec">
 	<section class="HedResult">
 		<div class="row">
 			<div class="col-sm-6">
