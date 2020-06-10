@@ -35,32 +35,32 @@ try
 						}
 						else{
 							$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
-							$screen_shot = '<img src="com-assets/img/imgnava.jpg"';
+							$screen_shot = '<img src="com-assets/img/imgnava.jpg">';
 							$font_color = "font-color-red";
 						}
 					}
 					else{
 						$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
-						$screen_shot = '<img src="com-assets/img/imgnava.jpg"';
+						$screen_shot = '<img src="com-assets/img/imgnava.jpg">';
 						$font_color = "font-color-red";
 					}
 				}
 				else{
 					$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
-					$screen_shot = '<img src="com-assets/img/imgnava.jpg"';
+					$screen_shot = '<img src="com-assets/img/imgnava.jpg">';
 					$font_color = "font-color-red";
 				}
 			}
 			catch(exception $e1)
 			{
 				$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
-				$screen_shot = '<img src="com-assets/img/imgnava.jpg"';
+				$screen_shot = '<img src="com-assets/img/imgnava.jpg">';
 				$font_color = "font-color-red";
 			}
 		}
 		else{
 			$mobile_friendly_score_str = "<i class='fa fa-times' aria-hidden='true'></i>";
-			$screen_shot = '<img src="com-assets/img/imgnava.jpg"';
+			$screen_shot = '<img src="com-assets/img/imgnava.jpg">';
 			$font_color = "font-color-red";
 		}
 
