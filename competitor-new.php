@@ -325,11 +325,7 @@ $result = $conn->query($sql);
 					<div class="bac_clrMap">
 						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
 						<div class="DrName"><span></span></div>
-						<div class="MobScreen" id="mobile_friendly_screens">
-							<!-- <span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span> -->
+						<div class="MobScreen" id="mobile_friendly_screens">							
 						</div>
 						<div class="text-right">
 							<!-- <p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p> -->
@@ -591,31 +587,7 @@ $result = $conn->query($sql);
   			<h2>Google Rank</h2>
   			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
   			<ul id="google_rank_details">
-  				<!-- <li class="TimLin"></li>
-  				<li class="LiGP">
-  					<p class="GP1">Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</p>
-  					<p class="GP2">http://www.emizani.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</p>
-  					<p class="GP2">http://soroyabacchusmd.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Calming Goat Addiction Medicine</p>
-  					<p class="GP2">https://calminggoat.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Your Practice</p>
-  					<p class="GP2">http://www.hollywoodsign.org</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li> -->
+  				
   			</ul>
   		</div>
   	</div>		
@@ -625,50 +597,7 @@ $result = $conn->query($sql);
 		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
 		<h2>Website</h2>
 		<p class="SubP">Your website score is calculated based on the factors below.</p>
-		<!-- <h5>Your practice</h5>
-		<div class="row">
-			<div class="col-sm-6 pad_0">
-				<div class="row">
-					<div class="col-xs-2 pad_0">
-						<img src="com-assets\img\scoAir.png">
-					</div>
-					<div class="col-xs-10">
-						<div class="XSPAD">
-							<h6>Desktop Speed</h6>
-							<span class="ScRNo">50</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 pad_0">
-				<div class="row">
-					<div class="col-xs-2 pad_0">
-						<img src="com-assets\img\mob.png">
-					</div>
-					<div class="col-xs-10">
-						<div class="XSPAD">
-							<h6>Mobile Speed</h6>
-							<span class="ScRNo">50</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row MArT">
-			<div class="col-sm-6 pad_0">
-				<div class="row">
-					<div class="col-xs-2 pad_0">
-						<img src="com-assets\img\pro.png">
-					</div>
-					<div class="col-xs-10">
-						<div class="XSPAD">
-							<h6>Security</h6>
-							<span class="ScRNo CLRG">Pass</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
+		
 		<h5 class="MArT">Your practice</h5>
 		<div class="table-responsive">
 		
@@ -694,31 +623,7 @@ $result = $conn->query($sql);
   			<h2>SEO Score</h2>
   			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
   			<ul id="seo_score_details">
-  				<!-- <li class="TimLin"></li>
-  				<li class="LiGP">
-  					<p class="GP1">Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</p>
-  					<p class="GP2">http://www.emizani.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</p>
-  					<p class="GP2">http://soroyabacchusmd.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Calming Goat Addiction Medicine</p>
-  					<p class="GP2">https://calminggoat.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Your Practice</p>
-  					<p class="GP2">http://www.hollywoodsign.org</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li> -->
+  				
   			</ul>
   		</div>
   	</div>
@@ -738,18 +643,7 @@ $result = $conn->query($sql);
 			      </tr>
 			    </thead>
 			    <tbody id="average_rating">
-			      <!-- <tr>
-			        <td>Your Practice</td>
-			        <td></td>
-			      </tr>
-			      <tr>
-			        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
-			        <td>38</td>
-			      </tr>
-			      <tr>
-			        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
-			        <td>16</td>
-			      </tr> -->
+			      
 			    </tbody>
 		  </table>
 		</div>
@@ -763,18 +657,7 @@ $result = $conn->query($sql);
 		      </tr>
 		    </thead>
 		    <tbody id="total_reviews">
-		      <!-- <tr>
-		        <td>Your Practice</td>
-		        <td></td>
-		      </tr>
-		      <tr>
-		        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
-		        <td>38</td>
-		      </tr>
-		      <tr>
-		        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
-		        <td>16</td>
-		      </tr> -->
+		      
 		    </tbody>
 	  </table>
 	  </div>		
@@ -865,22 +748,14 @@ $result = $conn->query($sql);
 								<div class="col-sm-12 cat_js_basic pad_0">
 									<div class="PosRel SelClik">
 										<label for="FirName">Practice Category</label>
+										<input type="hidden" name="category" id="e1" value="">
               							<input type="text" id="myInput" class="form-control" onkeyup="SelCatPrac(this)" autocomplete="off">
 											<ul id="ULPrc">
-											  <li><a href="#">Adele</a></li>
-											  <li><a href="#">Agnes</a></li>
-											  <li><a href="#">Billy</a></li>
-											  <li><a href="#">Bob</a></li>
-											  <li><a href="#">Calvin</a></li>
-											  <li><a href="#">Christina</a></li>
-											  <li><a href="#">Cindy</a></li>
+												<?php while($row = $result->fetch_assoc()) { ?>
+												<li onclick="get_category(<?php echo $row['id'] ?>)"><a><?php echo $row['category'] ?></a></li>
+												<?php } ?>
 											</ul>
-										<select name="category" onchange="get_category(this.value)" id="e1">
-										<option value=""></option>
-											<?php while($row = $result->fetch_assoc()) { ?>
-										<option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
-											<?php } ?>
-										</select>
+										
 									</div>
 								</div>
 							</div>              
@@ -1040,7 +915,7 @@ function move() {
 
 			if(step=="step2"){
 				var e = document.getElementById("e1");
-				var strUser = e.options[e.selectedIndex].value;
+				var strUser = e.value;
 				var cont=0;
 				if($("#street_number").val()==""){
 					$("#street_number").parent().find("label").shake();
@@ -1334,11 +1209,12 @@ function move() {
 
 	</script>
 	<script>
-			$(document).ready(function() { $("#e1").select2(); });
+			// $(document).ready(function() { $("#e1").select2(); });
 	</script>
 	<script type="text/javascript">
 		function get_category(id)
 		{
+			document.getElementById('e1').value = id;
 			var city = document.getElementById('locality').value;
 			var state = document.getElementById('administrative_area_level_1').value;
 			var country = document.getElementById('country').value;
@@ -1855,6 +1731,7 @@ function countWords(str) {
     ul = document.getElementById("ULPrc");
     $("#ULPrc").toggleClass("H200");
     li = ul.getElementsByTagName("li");
+
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
