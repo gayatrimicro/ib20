@@ -4,6 +4,7 @@ include "../vendor/autoload.php";
 $mobile_friendly_score_ar = array();
 $mobile_friendly_score = array();
 $mobile_friendly_screens = array();
+set_time_limit(16000);
 try
 {
 	foreach($_POST['competitors'] as $row)

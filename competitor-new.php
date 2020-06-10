@@ -456,8 +456,8 @@ $result = $conn->query($sql);
 			<section>
 				<div class="DeskView">
 					<div class="SliSec">
-						<button type="button" class="btn_Modal">Patients competitors</button>
-						<button type="button" class="btn_Modal" id="PatComBtn" onclick="get_patients_competitor_form()">Patients competitors</button>
+						<button type="button" class="btn_Modal" id="PatComBtn">Patients competitors</button>
+						<button type="button" class="btn_Modal" onclick="get_patients_competitor_form()">Patients competitors</button>
 						<div class="SlickSli op0zin">
 							<div class="LodSlid">
 								<div>
@@ -746,10 +746,10 @@ $result = $conn->query($sql);
 									</div>
 								</div>
 								<div class="col-sm-12 cat_js_basic pad_0">
-									<div class="PosRel SelClik" id="ChkClik">
+									<div class="PosRel SelClik">
 										<label for="FirName">Practice Category</label>
 										<input type="hidden" name="category" id="e1" value="">
-              							<input type="text" id="SelInpDrop" class="form-control" onkeyup="SelCatPrac(this)" autocomplete="off">
+              							<input type="text" id="myInput" class="form-control" onkeyup="SelCatPrac(this)" autocomplete="off">
 											<ul id="ULPrc">
 												<?php while($row = $result->fetch_assoc()) { ?>
 												<li onclick="get_category(<?php echo $row['id'] ?>)"><a><?php echo $row['category'] ?></a></li>
@@ -815,7 +815,7 @@ $result = $conn->query($sql);
 			
 		</div>
 	</div>
-
+<input type="hidden" id="my_loader_predictor" value="0">
 <div id="myProgress">
 	<div id="myBar"><div id="my_per">42%</div></div>
 </div>
@@ -996,9 +996,9 @@ function move() {
 						$("#name").parent().find("label").css("color","red");
 						$("#name").parent().find("label").shake();
 					}
-					if($("#e1").val()=="")
+					if(strUser=="")
 					{
-						 $("#e1").next().css("border","2px solid red");
+						 $(".select2-selection--single").css("border","2px solid red");
 						$(".SelClik label").css("color","red");
 						$(".SelClik label").shake();
 					}
@@ -1022,9 +1022,12 @@ function move() {
 						{
 							count_n+=1;
 						}
+<<<<<<< HEAD
 						if(cntStrnme < 2){
 							count_n+=1;
 						}
+=======
+>>>>>>> 469cccc04613d3287cc35f1e7ebd0197728ed020
 						if($("#sno").val()=="")
 						{
 							count_n+=1;
@@ -1375,9 +1378,8 @@ function move() {
 			$("#website_form").submit(function(event) {
 				event.preventDefault();
 				var formData = $('#website_form').serialize();
-				var website_param = 0;
-				var seo_param = 0;
-				var mobile_friendly_param = 0;
+				// var website_param = $('#my_loader_predictor').val(); //0
+				recursive_function();
 				$.ajax({
 					type: "post",
 					url: "competitors/get_competitors.php",
@@ -1388,7 +1390,11 @@ function move() {
 						$('#category_name').html(competitor_jsonData.category_name);
 						$('#organization_name').empty();
 						$('#organization_name').html(competitor_jsonData.organization_name);
-						// alert(jsonData.status);
+						// var website_param = $('#my_loader_predictor').val();
+						// document.getElementById('my_loader_predictor').vlaue = "";
+						var set_var = document.getElementById('my_loader_predictor').value;
+						document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+						recursive_function();
 						if(competitor_jsonData.status=='true')
 						{
 							$('#competitor_div').empty();
@@ -1421,8 +1427,11 @@ function move() {
 										$('#mobile_friendly_div').html(mobile_friendly_jsonData.mobile_friendly_score);
 										$('#mobile_friendly_screens').empty();
 										$('#mobile_friendly_screens').html(mobile_friendly_jsonData.mobile_friendly_screens);
-										website_param++;
-										recursive_function(website_param);
+										// var website_param = $('#my_loader_predictor').val();
+										// document.getElementById('my_loader_predictor').vlaue = "";
+										var set_var = document.getElementById('my_loader_predictor').value;
+										document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+										recursive_function();
 									}
 									else{
 										console.log("Something went wrong");
@@ -1432,14 +1441,6 @@ function move() {
 									console.log(errorThrown);
 								}
 							});
-							console.log('website_param ' + website_param);
-							console.log('seo_param ' + seo_param);
-							console.log('mobile_friendly_param ' + mobile_friendly_param);
-							if(website_param==1 && seo_param==1)
-							{
-								$('.RsltSec').css('display', 'block');
-								$('.lodr_sec').css('display', 'none');
-							}
 
 							$.ajax({
 								type: "post",
@@ -1447,8 +1448,11 @@ function move() {
 								data: {competitors:competitor_jsonData.competitors},
 								success: function(responseData) {
 									var website_speed_jsonData = JSON.parse(responseData);
-									website_param++;
-									recursive_function(website_param);
+									// var website_param = $('#my_loader_predictor').val();
+									// document.getElementById('my_loader_predictor').vlaue = "";
+									var set_var = document.getElementById('my_loader_predictor').value;
+									document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+									recursive_function();
 									if(website_speed_jsonData.status=='true')
 									{
 										$.ajax({
@@ -1466,9 +1470,12 @@ function move() {
 
 													$('#website_details').empty();
 													$('#website_details').html(mobile_speed_jsonData.website_detail);
-													// $('.RsltSec').css('display', 'block');
-													website_param++;
-													recursive_function(website_param);
+													
+													// var website_param = $('#my_loader_predictor').val();
+													// document.getElementById('my_loader_predictor').vlaue = "";
+													var set_var = document.getElementById('my_loader_predictor').value;
+													document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+													recursive_function();
 												}
 												else{
 													console.log("Something went wrong");
@@ -1503,8 +1510,12 @@ function move() {
 										$('#seo_graph').html(seo_score_jsonData.seo_chart);
 										$('#seo_score_details').empty();
 										$('#seo_score_details').html(seo_score_jsonData.seo_score_detail);
-										website_param++;
-										recursive_function(website_param);
+										
+										// var website_param = $('#my_loader_predictor').val();
+										// document.getElementById('my_loader_predictor').vlaue = "";
+										var set_var = document.getElementById('my_loader_predictor').value;
+										document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+										recursive_function();
 									}
 									else{
 										console.log("Something went wrong");
@@ -1525,8 +1536,9 @@ function move() {
 				});
 			});
 
-			function recursive_function(number)
+			function recursive_function()
 			{
+				var number = document.getElementById('my_loader_predictor').value;
 				console.log("Number " + number);
 				if(number == 1)
 				{
@@ -1536,16 +1548,25 @@ function move() {
 				else if(number == 2)
 				{
 					$("#myBar").css("width","90%");
-					$("#my_per").html("90%");
+					$("#my_per").html("60%");
 				}
 				else if(number == 3)
+				{
+					$("#myBar").css("width","100%");
+					$("#my_per").html("70%");
+				}
+				else if(number == 4)
+				{
+					$("#myBar").css("width","100%");
+					$("#my_per").html("80%");
+				}
+				else if(number == 5)
 				{
 					$("#myBar").css("width","100%");
 					$("#my_per").html("100%");
 				}
 
-				if(number > 2)
-				// if(number == 4)
+				if(number == 5)
 				{
 					$('.RsltSec').css('display', 'block');
 					$('.lodr_sec').css('display', 'none');
@@ -1729,10 +1750,10 @@ function countWords(str) {
 
    function SelCatPrac(val) {
     var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("SelInpDrop");
+    input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul = document.getElementById("ULPrc");
-    $("#ULPrc").addClass("H200");
+    $("#ULPrc").toggleClass("H200");
     li = ul.getElementsByTagName("li");
 
     for (i = 0; i < li.length; i++) {
@@ -1748,22 +1769,17 @@ function countWords(str) {
 
 $("#ULPrc li").click(function(){
 var GetTxt=$(this).text();
-$("#SelInpDrop").val(GetTxt);
+$("#myInput").val(GetTxt);
 $("#ULPrc").toggleClass("H200");
 });
 
-$("#SelInpDrop").click(function(){
-	$("#ULPrc").addClass("H200");
+$("#myInput").click(function(){
+	$("#ULPrc").toggleClass("H200");
 });
 $(".SelClik label").click(function(){
 	$("#ULPrc").toggleClass("H200");
 });
-$(document).click(function(e) {
-		if (($(e.target).closest("#ChkClik").attr("id") != "ChkClik")){
-		$("#ULPrc").removeClass("H200");
-		}
-});
-</script>
+		</script>
 
 	 </body>
 </html>
