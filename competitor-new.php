@@ -1,17 +1,5 @@
 <?php
-$servername = "64.207.177.102";
-$username = "usr_google";
-$password = "Kd%x761x";
-// $username = "root";
-// $password = "";
-$databese = 'google';
-// Create connection
-$conn = new mysqli($servername, $username, $password, $databese);
-
-// Check connection
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}
+include('competitors/db_connection.php');
 
 $sql = "SELECT * FROM business_category";
 $result = $conn->query($sql);
