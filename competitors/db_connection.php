@@ -1,9 +1,9 @@
 <?php
-$servername = "64.207.177.102";
-$username = "usr_google";
-$password = "Kd%x761x";
+$servername = "70.32.97.149";
+$username = "usr_ib116com_db";
+$password = "C*y7i3s9df";
 
-$databese = 'google';
+$databese = 'ibcom_db';
 
 $conn = new mysqli($servername, $username, $password, $databese);
 
