@@ -456,8 +456,8 @@ $result = $conn->query($sql);
 			<section>
 				<div class="DeskView">
 					<div class="SliSec">
-						<button type="button" class="btn_Modal" id="PatComBtn">Patients competitors</button>
-						<button type="button" class="btn_Modal" onclick="get_patients_competitor_form()">Patients competitors</button>
+						<button type="button" class="btn_Modal">Patients competitors</button>
+						<button type="button" class="btn_Modal"  id="PatComBtn" onclick="get_patients_competitor_form()">Patients competitors</button>
 						<div class="SlickSli op0zin">
 							<div class="LodSlid">
 								<div>
@@ -746,7 +746,7 @@ $result = $conn->query($sql);
 									</div>
 								</div>
 								<div class="col-sm-12 cat_js_basic pad_0">
-									<div class="PosRel SelClik">
+									<div class="PosRel SelClik" id="selClPr">
 										<label for="FirName">Practice Category</label>
 										<input type="hidden" name="category" id="e1" value="">
               							<input type="text" id="myInput" class="form-control" onkeyup="SelCatPrac(this)" autocomplete="off">
@@ -949,7 +949,7 @@ function move() {
 					$("#name").parent().find("label").shake();
 					cont+=1;
 				}
-				if(strUser=="")
+				if($("#e1").val()=="")
 				{
 					$("#e1").parent().find("label").shake();
 					cont+=1;
@@ -962,43 +962,43 @@ function move() {
 						$("#street_number").parent().find("label").shake();
 					}
 					if($("#route").val()==""){
-						$(".#route").css("border","2px solid red");
+						$("#route").css("border","2px solid red");
 						$("#route").parent().find("label").css("color","red");
 						$("#route").parent().find("label").shake();
 					}
 					if($("#locality").val()==""){
-						$(".#locality").css("border","2px solid red");
+						$("#locality").css("border","2px solid red");
 						$("#locality").parent().find("label").css("color","red");
 						$("#locality").parent().find("label").shake();
 					}
 					if($("#administrative_area_level_1").val==""){
-						$(".#administrative_area_level_1").css("border","2px solid red");
+						$("#administrative_area_level_1").css("border","2px solid red");
 						$("#administrative_area_level_1").parent().find("label").css("color","red");
 						$("#administrative_area_level_1").parent().find("label").shake();
 					}
 					if($("#postal_code").val()==""){
-						$(".#postal_code").css("border","2px solid red");
+						$("#postal_code").css("border","2px solid red");
 						$("#postal_code").parent().find("label").css("color","red");
 						$("#postal_code").parent().find("label").shake();
 					}
 					if($("#country").val()==""){
-						$(".#country").css("border","2px solid red");
+						$("#country").css("border","2px solid red");
 						$("#country").parent().find("label").css("color","red");
 						$("#country").parent().find("label").shake();
 					}
 					if($("#website").val()==""){
-						 $(".#website").css("border","2px solid red");
+						 $("#website").css("border","2px solid red");
 						$("#website").parent().find("label").css("color","red");
 						$("#website").parent().find("label").shake();
 					}
 					if($("#name").val()==""){
-						 $(".#name").css("border","2px solid red");
+						 $("#name").css("border","2px solid red");
 						$("#name").parent().find("label").css("color","red");
 						$("#name").parent().find("label").shake();
 					}
-					if(strUser=="")
+					if($("#e1").val()=="")
 					{
-						 $(".select2-selection--single").css("border","2px solid red");
+						 $("#e1").next().css("border","2px solid red");
 						$(".SelClik label").css("color","red");
 						$(".SelClik label").shake();
 					}
@@ -1022,12 +1022,11 @@ function move() {
 						{
 							count_n+=1;
 						}
-<<<<<<< HEAD
+
 						if(cntStrnme < 2){
 							count_n+=1;
 						}
-=======
->>>>>>> 469cccc04613d3287cc35f1e7ebd0197728ed020
+
 						if($("#sno").val()=="")
 						{
 							count_n+=1;
@@ -1753,7 +1752,7 @@ function countWords(str) {
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul = document.getElementById("ULPrc");
-    $("#ULPrc").toggleClass("H200");
+    $("#ULPrc").addClass("H200");
     li = ul.getElementsByTagName("li");
 
     for (i = 0; i < li.length; i++) {
@@ -1774,11 +1773,17 @@ $("#ULPrc").toggleClass("H200");
 });
 
 $("#myInput").click(function(){
-	$("#ULPrc").toggleClass("H200");
+	$("#ULPrc").addClass("H200");
 });
 $(".SelClik label").click(function(){
 	$("#ULPrc").toggleClass("H200");
 });
+
+$(document).click(function(e) {
+		if (($(e.target).closest("#selClPr").attr("id") != "selClPr")) {
+		$("#ULPrc").removeClass("H200");
+		}
+		});
 		</script>
 
 	 </body>
