@@ -773,7 +773,7 @@ $result = $conn->query($sql);
 									<input type="hidden" id="frm_category" name="category" value="" />
 
 									<div class="PosRel fidSet1">
-										<label for="FirName">Name</label>
+										<label for="FirName">Full Name</label>
 										<input type="text" name="user_name" class="form-control" id="snme" maxlength="40" autocomplete="off" oninput="ChkInpSts(this)">
 									</div>
 									<div class="PosRel fidSet2">
@@ -1534,17 +1534,17 @@ function move() {
 				}
 				else if(number == 2)
 				{
-					$("#myBar").css("width","90%");
+					$("#myBar").css("width","60%");
 					$("#my_per").html("60%");
 				}
 				else if(number == 3)
 				{
-					$("#myBar").css("width","100%");
+					$("#myBar").css("width","70%");
 					$("#my_per").html("70%");
 				}
 				else if(number == 4)
 				{
-					$("#myBar").css("width","100%");
+					$("#myBar").css("width","80%");
 					$("#my_per").html("80%");
 				}
 				else if(number == 5)
@@ -1713,7 +1713,7 @@ $("input").keyup(function(){
 	//$(this).parent().find('label').addClass('actInp');
   if (event.keyCode === 13) {
    event.preventDefault();
-   setTimeout(function(){ $(".nxtPge").click(); }, 300);
+   setTimeout(function(){ $(".nxtPge").click(); }, 500);
    
   }
   });
