@@ -771,6 +771,9 @@ $result = $conn->query($sql);
 									<input type="hidden" id="frm_website" name="website" value="" />
 									<input type="hidden" id="frm_name" name="name" value="" />
 									<input type="hidden" id="frm_category" name="category" value="" />
+									<input type="hidden" id="sublocality_level_1" name="area" value="" />
+									<input type="hidden" id="frm_user_rating" name="user_rating" value="" />
+									<input type="hidden" id="frm_user_reviews" name="user_reviews" value="" />
 
 									<div class="PosRel fidSet1">
 										<label for="FirName">Name</label>
@@ -1239,10 +1242,13 @@ function move() {
 			route: 'long_name',
 			locality: 'long_name',
 			administrative_area_level_1: 'long_name',
+			sublocality_level_1: 'long_name',
 			country: 'short_name',
 			postal_code: 'short_name',
 			website: 'website',
-			name: 'name',   
+			name: 'name',
+			frm_user_rating: 'rating',
+			frm_user_reviews: 'user_ratings_total',
 		};
 
 		function initAutocomplete() {
@@ -1284,6 +1290,8 @@ function move() {
 			document.getElementById('name').value = place['name'];
 			document.getElementById('frm_website').value = place['website'];
 			document.getElementById('frm_name').value = place['name'];
+			document.getElementById('frm_user_rating').value = place['rating'];
+			document.getElementById('frm_user_reviews').value = place['user_ratings_total'];
 		}
 
 		// Bias the autocomplete object to the user's geographical location,
@@ -1534,17 +1542,17 @@ function move() {
 				}
 				else if(number == 2)
 				{
-					$("#myBar").css("width","90%");
+					$("#myBar").css("width","60%");
 					$("#my_per").html("60%");
 				}
 				else if(number == 3)
 				{
-					$("#myBar").css("width","100%");
+					$("#myBar").css("width","70%");
 					$("#my_per").html("70%");
 				}
 				else if(number == 4)
 				{
-					$("#myBar").css("width","100%");
+					$("#myBar").css("width","80%");
 					$("#my_per").html("80%");
 				}
 				else if(number == 5)

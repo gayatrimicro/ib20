@@ -14,7 +14,7 @@ $category = $cat_result[1];
 $organization_name = $_POST['name'];
 $organization_website = $_POST['website'];
 
-$str = $category.' '.$_POST['city'].' '.$_POST['state'];
+$str = $category.' '.$_POST['area'].' '.$_POST['city'].' '.$_POST['state'];
 $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='.$str.'&key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4';
 
 $insert_sql = "INSERT INTO contact_details (ip_address, name, email_id, contact_number, organization, city, state, country, category, compared_at)
@@ -105,7 +105,7 @@ if($response->getStatusCode() == 200)
 				$n = 3;
 			}
 
-			if($i>$n)
+			if(count($google_rank) >$n)
 			{
 				break;
 			}
@@ -148,85 +148,86 @@ if($response->getStatusCode() == 200)
 					else{
 						$website_str = "";
 					}
-					
-					if(($i+1)==1){
-						$com_rank = "1st";
-					}elseif(($i+1)==2){
-						$com_rank = "2nd";
-					}elseif(($i+1)==3){
-						$com_rank = "3rd";
-					}elseif(($i+1)==4){
-						$com_rank = "4th";
-					}					
-					array_push($competitors_ar, ['name'=>$name, 'website'=>$website_str]);
-					array_push($competitors_html, '<li><p><span class="Rnk">'.$com_rank.'</span><span class="RTxt"> '.$name.'</span></p></li>');
 				}
 			}
 			$i++;
 			$rank -= 5;
 			// $ar = array('name'=>$name, 'g_rank'=>$g_rank);
-			
-			if(($row['rating']*20) == 100)
-			{ 
-				$reputation_var1 = ($row['rating'] * 20); 
-			}
-			else 
-			{ 
-				$reputation_var1 =  (($row['rating']*20)+1);
-			}
-
-			if((100 >= $reputation_var1) && ($reputation_var1 >= 90)){
-				$reputation_title = "Excellent";
-				$font_color = "font-color-green";
-				$chart_color = "GreenZone";
-			}
-			elseif((89 >= $reputation_var1) && ($reputation_var1 >= 80)){
-				$reputation_title = "Good";
-				$font_color = "font-color-blue";
-				$chart_color = "BlueZone";
-			}
-			elseif((79 >= $reputation_var1) && ($reputation_var1 >= 70)){
-				$reputation_title = "Fair";
-				$font_color = "font-color-orange";
-				$chart_color = "OrangeZone";
-			}
-			elseif((69 >= $reputation_var1) && ($reputation_var1 >= 60)){
-				$reputation_title = "Poor";
-				$font_color = "font-color-red";
-				$chart_color = "RedZone";
-			}
-			else{
-				$reputation_title = "Very Poor";
-				$font_color = "font-color-grey";
-				$chart_color = "GreyZone";
-			}
-
-			if($reputation_var1 < 60)
+			if($website_str!="")
 			{
-				$reputation_var = "Below 60";
-				$reputation_var1 = 60;
-			}
-			else{
-				$reputation_var = $reputation_var1;
-			}
-			array_push($google_rank, '<li class="GreenZone"><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height:'.$g_rank.'%;"><span class="tooltiptext">'.$g_rank.' Excellent</span></div></div></div></li>');
-			array_push($google_rank_html, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink font-color-green">'.$g_rank.'</span></div></div></li>');
-			array_push($google_rank_detail, '<li class="LiGP GreenZone"><p class="GP1">'.$name.'</p><p class="GP2">'.$website_str.'</p><p class="GPs1"></p><p class="GPs2"></p></li>');
-			// $reputation_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
-			array_push($reputation, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink '.$font_color.'">'.$reputation_var.'</span></div></div></li>');
+				if((count($competitors_html)+1)==1){
+					$com_rank = "1st";
+				}elseif((count($competitors_html)+1)==2){
+					$com_rank = "2nd";
+				}elseif((count($competitors_html)+1)==3){
+					$com_rank = "3rd";
+				}elseif((count($competitors_html)+1)==4){
+					$com_rank = "4th";
+				}
+				array_push($competitors_ar, ['name'=>$name, 'website'=>$website_str]);
+				array_push($competitors_html, '<li><p><span class="Rnk">'.$com_rank.'</span><span class="RTxt"> '.$name.'</span></p></li>');
+				if(($row['rating']*20) == 100)
+				{ 
+					$reputation_var1 = ($row['rating'] * 20); 
+				}
+				else 
+				{ 
+					$reputation_var1 =  (($row['rating']*20)+1);
+				}
 
-			// $reputation_chart_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
-			array_push($reputation_chart, '<li class="'.$chart_color.'">
-									<div class="bar-wrapper">
-										<div class="bar-container">
-											<div class="bar-inner" style="height: '.$reputation_var1.'%;"><span class="tooltiptext">'.$reputation_var1.' ',$reputation_title.'</span></div>
+				if((100 >= $reputation_var1) && ($reputation_var1 >= 90)){
+					$reputation_title = "Excellent";
+					$font_color = "font-color-green";
+					$chart_color = "GreenZone";
+				}
+				elseif((89 >= $reputation_var1) && ($reputation_var1 >= 80)){
+					$reputation_title = "Good";
+					$font_color = "font-color-blue";
+					$chart_color = "BlueZone";
+				}
+				elseif((79 >= $reputation_var1) && ($reputation_var1 >= 70)){
+					$reputation_title = "Fair";
+					$font_color = "font-color-orange";
+					$chart_color = "OrangeZone";
+				}
+				elseif((69 >= $reputation_var1) && ($reputation_var1 >= 60)){
+					$reputation_title = "Poor";
+					$font_color = "font-color-red";
+					$chart_color = "RedZone";
+				}
+				else{
+					$reputation_title = "Very Poor";
+					$font_color = "font-color-grey";
+					$chart_color = "GreyZone";
+				}
+
+				if($reputation_var1 < 60)
+				{
+					$reputation_var = "Below 60";
+					$reputation_var1 = 60;
+				}
+				else{
+					$reputation_var = $reputation_var1;
+				}
+				array_push($google_rank, '<li class="GreenZone"><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height:'.$g_rank.'%;"><span class="tooltiptext">'.$g_rank.' Excellent</span></div></div></div></li>');
+				array_push($google_rank_html, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink font-color-green">'.$g_rank.'</span></div></div></li>');
+				array_push($google_rank_detail, '<li class="LiGP GreenZone"><p class="GP1">'.$name.'</p><p class="GP2">'.$website_str.'</p><p class="GPs1"></p><p class="GPs2"></p></li>');
+				// $reputation_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
+				array_push($reputation, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink '.$font_color.'">'.$reputation_var.'</span></div></div></li>');
+
+				// $reputation_chart_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
+				array_push($reputation_chart, '<li class="'.$chart_color.'">
+										<div class="bar-wrapper">
+											<div class="bar-container">
+												<div class="bar-inner" style="height: '.$reputation_var1.'%;"><span class="tooltiptext">'.$reputation_var1.' ',$reputation_title.'</span></div>
+											</div>
 										</div>
-									</div>
-								</li>');
+									</li>');
 
-			// $reputation_detail_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
-			array_push($total_reviews, '<tr><td>'.$name.'</td><td>'.$reviews.'</td></tr>');
-			array_push($average_rating, '<tr><td>'.$name.'</td><td>'.$rating.'</td></tr>');
+				// $reputation_detail_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
+				array_push($total_reviews, '<tr><td>'.$name.'</td><td>'.$reviews.'</td></tr>');
+				array_push($average_rating, '<tr><td>'.$name.'</td><td>'.$rating.'</td></tr>');
+			}
 		}
 		if($your_organization_flag==false)
 		{
@@ -275,7 +276,7 @@ if($response->getStatusCode() == 200)
 			array_push($google_rank_detail, '<li class="LiGP RedZone"><p class="GP1">'.$name.'</p><p class="GP2">'.$your_website_str.'</p><p class="GPs1"></p><p class="GPs2"></p></li>');
 
 
-			$reputation_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
+			$reputation_ar = array('name'=>$name, 'rating'=>$_POST['user_rating'], 'reviews'=>$_POST['user_reviews'], 'reputation' => $reputation_var);
 
 			array_push($reputation, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink '.$font_color.'">'.$reputation_var.'</span></div></div></li>');
 
