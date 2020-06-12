@@ -1710,10 +1710,11 @@ function move() {
 		};
 
 $("input").keyup(function(){
-	$(this).parent().find('label').addClass('actInp');
+	//$(this).parent().find('label').addClass('actInp');
   if (event.keyCode === 13) {
    event.preventDefault();
-   $(".nxtPge").click();
+   setTimeout(function(){ $(".nxtPge").click(); }, 300);
+   
   }
   });
 
