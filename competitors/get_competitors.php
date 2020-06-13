@@ -15,7 +15,7 @@ $organization_name = $_POST['name'];
 $organization_website = $_POST['website'];
 
 $str = $category.' '.$_POST['area'].' '.$_POST['city'].' '.$_POST['state'];
-$url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='.$str.'&key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4';
+$url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='.$str.'&key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU';
 
 $insert_sql = "INSERT INTO contact_details (ip_address, name, email_id, contact_number, organization, city, state, country, category, compared_at)
 VALUES ('".$_SERVER['REMOTE_ADDR']."', '".$_POST['user_name']."', 
@@ -124,7 +124,7 @@ if($response->getStatusCode() == 200)
 					$rating = $row['rating'];
 					$reviews = $row['user_ratings_total'];
 
-					$get_website_data_url = 'https://maps.googleapis.com/maps/api/place/details/json?place_id='.$row['place_id'].'&fields=name,website&key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4';
+					$get_website_data_url = 'https://maps.googleapis.com/maps/api/place/details/json?place_id='.$row['place_id'].'&fields=name,website&key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU';
 					$website_client = new GuzzleHttp\Client();
 					$website_response = $website_client->request('GET', $get_website_data_url);
 					if($website_response->getStatusCode() == 200)
