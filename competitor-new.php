@@ -20,6 +20,10 @@ $result = $conn->query($sql);
 			<link rel="stylesheet" href="com-assets/css/slick.css">
 			<link rel="stylesheet" type="text/css" href="com-assets/css/slick-theme.css">
 			<style type="text/css">
+				.impBlk
+				{
+					display: none !important;
+				}
 				h2{
 					color: inherit;
 				}
@@ -1107,6 +1111,14 @@ function move() {
 					$(".LocFie label").css("color","#2c98f7");
 					$("#autocomplete").css("color","#2c98f7");        
 				}
+				var scr = document.createElement("script");
+				if($("#autocomplete").val().length > 2){
+					$(".pac-container").removeClass("impBlk");
+			}
+			else
+			{
+				$(".pac-container").addClass("impBlk");
+			}
 		};
 
 		function ChkInpSts(inp){
