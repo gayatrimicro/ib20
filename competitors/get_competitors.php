@@ -77,23 +77,8 @@ else
    // echo "Message has been sent successfully";
 }
 
-// $i = 0;
-// $your_organization_flag = false;
-// $competitors_ar = array();
-// $competitors_html = array();
-// $google_rank = array();
-// $google_rank_html = array();
-// $google_rank_detail = array();
-
-// $reputation = array();
-// $reputation_chart = array();
-// $total_reviews = array();
-// $average_rating = array();
-// array_push($google_rank_detail, '<li class="TimLin"></li>');
-// $result = array();
-
 start_search: $search_str = implode(' ', $search_str_ar);
-$str = $category.' '.$search_str;
+$str = echo $category.' '.$search_str;
 $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='.$str.'&key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU';
 $client = new GuzzleHttp\Client();
 $response = $client->request('GET', $url);
@@ -361,7 +346,7 @@ function get_competitor_details($organizationdetails, $data)
 		array_push($google_rank_detail, '<li class="LiGP RedZone"><p class="GP1">'.$name.'</p><p class="GP2">'.$your_website_str.'</p><p class="GPs1"></p><p class="GPs2"></p></li>');
 
 
-		$reputation_ar = array('name'=>$name, 'rating'=>$_POST['user_rating'], 'reviews'=>$_POST['user_reviews'], 'reputation' => $reputation_var);
+		$reputation_ar = array('name'=>$name, 'rating'=>$organizationdetails['user_rating'], 'reviews'=>$organizationdetails['user_reviews'], 'reputation' => $reputation_var);
 
 		array_push($reputation, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink '.$font_color.'">'.$reputation_var.'</span></div></div></li>');
 
@@ -375,8 +360,8 @@ function get_competitor_details($organizationdetails, $data)
 							</li>');
 
 		// $reputation_detail_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
-		array_push($total_reviews, '<tr><td>'.$name.'</td><td>'.$reviews.'</td></tr>');
-		array_push($average_rating, '<tr><td>'.$name.'</td><td>'.$rating.'</td></tr>');
+		array_push($total_reviews, '<tr><td>'.$name.'</td><td>'.$organizationdetails['user_reviews'].'</td></tr>');
+		array_push($average_rating, '<tr><td>'.$name.'</td><td>'.$organizationdetails['user_rating'].'</td></tr>');
 	}
 
 	$result['competitors'] = $competitors_ar;
