@@ -525,30 +525,31 @@ $result = $conn->query($sql);
         	<button type="button" class="close" data-dismiss="modal">&times;</button>
 	          <h3>Request a Demo</h3>
 	          <p>Please complete the form below so we can contact you with more information about how PatientPop can help grow your practice.</p>
-	          <form>
+	          <p class="demo_request_message"></p>
+	          <form id="request_demo_form">
 	          	<div class="PosRel">
 					<label for="FirName">Full Name *</label>
-					<input type="text" class="form-control" id="RName" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RName" oninput="ChkInpSts(this)" name="full_name">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Practice Name *</label>
-					<input type="text" class="form-control" id="RPname" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RPname" oninput="ChkInpSts(this)" name="practice_name">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Email *</label>
-					<input type="email" class="form-control" id="REmail" maxlength="30" autocomplete="off" oninput="ChkInpSts(this)">
+					<input type="email" class="form-control" id="REmail" maxlength="30" autocomplete="off" oninput="ChkInpSts(this)" name="email">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Phone *</label>
-					<input type="text" class="form-control" id="RPhone" maxlength="10" autocomplete="off" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RPhone" maxlength="10" autocomplete="off" oninput="ChkInpSts(this)" name="phone">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">ZIP *</label>
-					<input type="text" class="form-control" id="RZip" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RZip" oninput="ChkInpSts(this)" name="zip">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Number of providers *</label>
-					<select class="form-control" id="Nofpro">
+					<select class="form-control" id="Nofpro" name="provider_number">
 						<option value=""></option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -557,7 +558,7 @@ $result = $conn->query($sql);
 				<div class="text-center">
 					<button type="submit" class="btnFinGrph">SUBMIT</button>
 				</div>
-          </form>        
+          	  </form>
         </div>
       </div>      
     </div>
@@ -1384,6 +1385,24 @@ function move() {
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"
 		async defer></script>
 		<script type="text/javascript">
+			$("#request_demo_form").submit(function(event) {
+				event.preventDefault();
+				var formData = $('#request_demo_form').serialize();
+				$.ajax({
+					type: "post",
+					url: "competitors/request_demo_form.php",
+					data: formData,
+					success: function(data) {
+						if(data.status=='true')
+						{
+							$('.demo_request_message').empty().text('Your request has been sent successfully');
+						}
+						else{
+							$('.demo_request_message').empty().text('Something went wrong');
+						}
+					}
+				});
+			});
 			$("#website_form").submit(function(event) {
 				event.preventDefault();
 				var formData = $('#website_form').serialize();
