@@ -24,19 +24,19 @@ $result = $conn->query($sql);
 					color: inherit;
 				}
 				.font-color-green{
-					color:  #07c597;
+					color:  #07c597 !important;
 				}
 				.font-color-blue{
-					color:  #1f8bf7;
+					color:  #1f8bf7 !important;
 				}
 				.font-color-orange{
-					color:  #f9bc3c;
+					color:  #f9bc3c !important;
 				}
 				.font-color-red{
-					color:  #f25562;
+					color:  #f25562 !important;
 				}
 				.font-color-grey{
-					color:  #bcc0cd;
+					color:  #bcc0cd !important;
 				}
 			</style>
 		</head>
@@ -120,7 +120,7 @@ $result = $conn->query($sql);
 	<section>
 		<div class="ScoreRes">
 			<div class="row">
-				<!-- <div class="col-sm-7">
+				<div class="col-sm-7">
 					<div class="row">
 						<div class="col-sm-6 text-center">
 							<div class="inPerBar">
@@ -134,21 +134,16 @@ $result = $conn->query($sql);
 								</svg> 
 							</div>
 						</div>
-						<div class="col-sm-6">
-							<h3>Poor</h3>
-							<p>Your practice is behind the competition in practice growth. A complete audit of your processes is strongly recommended.</p>
+						<div class="col-sm-6" id="your_growth">
+							
 						</div>
 					</div>
-				</div> -->
-				<div class="col-sm-12">
+				</div>
+				<div class="col-sm-5">
 					<div class="pracGrow">
 						<h2>Competitors</h2>
 						<p>Here's how you rank against your competitors based on your overall practice growth scores:</p>
 						<ul id="competitor_div">
-							<!-- <li><p><span class="Rnk">1st</span><span class="RTxt"> City Acupuncture Fulton Street</span></p></li>
-							<li><p><span class="Rnk">2nd</span><span class="RTxt"> Acupuncture Remedies</span></p></li>
-							<li><p><span class="Rnk">3rd</span><span class="RTxt"> City Acupuncture Columbus Circle - CLOSED</span></p></li>
-							<li><p><span class="Rnk">4th</span><span class="RTxt BClr"> Your Practice</span></p></li> -->
 						</ul>
 					</div>
 				</div>
@@ -1094,38 +1089,38 @@ function move() {
 				$(".Step3str").css("display","none");
 			}
 		}
-var kcnt=0;
+		var kcnt=0;
 		document.getElementById("autocomplete").oninput = function() {
-				if($("#autocomplete").val()==""){
-					$(".LocFie input").css("border","2px solid red");
-					$(".LocFie label").css("color","red");
-					$(".LocFie label").shake();
-				}
-				else
-				{
-					$(".LocFie input").css("border","2px solid #2c98f7");
-					$(".LocFie label").css("color","#2c98f7");
-					$("#autocomplete").css("color","#2c98f7");        
-				}
-								
-				if($("#autocomplete").val().length > 2){
-					kcnt++;
-				if(kcnt==2){
-					var scr = document.createElement("script");
-					scr.type = "text/javascript";
-				scr.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete";
-				$("body").append(scr);
-				console.log(kcnt);
-			}
-			else{
-				console.log(kcnt);
-			}				
+			if($("#autocomplete").val()==""){
+				$(".LocFie input").css("border","2px solid red");
+				$(".LocFie label").css("color","red");
+				$(".LocFie label").shake();
 			}
 			else
 			{
-				console.log(kcnt);
-				// $("body").find('script[src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"]').remove();
+				$(".LocFie input").css("border","2px solid #2c98f7");
+				$(".LocFie label").css("color","#2c98f7");
+				$("#autocomplete").css("color","#2c98f7");
 			}
+			// if(($("#autocomplete").val().length % 3)==0){
+			// 	console.log('auto complete value ' + $("#autocomplete").val().length);
+			// 	// kcnt++;
+			// 	// if(kcnt==2){
+			// 		var scr = document.createElement("script");
+			// 		scr.type = "text/javascript";
+			// 		scr.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete";
+			// 		$("body").append(scr);
+			// 		console.log(kcnt);
+			// 	// }
+			// 	// else{
+			// 	// 	console.log(kcnt);
+			// 	// }
+			// }
+			// else
+			// {
+			// 	console.log("else");
+			// 	// $("body").find('script[src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"]').remove();
+			// }
 		};
 
 		function ChkInpSts(inp){
@@ -1337,16 +1332,16 @@ var kcnt=0;
 
 	</script>
 	<script>
-		$(document).ready(function() {
-			var PerVal=80;
-			var clr="#f6606e";
+		function growth(val, color) {
+			var PerVal=val;
+			var clr=color;
 			var selector = document.getElementById('my_id');
 			selector.setAttribute('stroke-dasharray',PerVal+',100');
 			selector.setAttribute('stroke',clr);
 			$(".ScrRes p").css("color",clr);
 			$("#Per").css("color",clr);
-			$('#Per').text(PerVal);
-		});
+			$('#Per').text(val);
+		}
 
 		$(window).scroll(function() {
 			if ($(window).scrollTop() > 280) {
@@ -1386,8 +1381,8 @@ var kcnt=0;
 		$(".MreRslt").addClass("HidAcc");
 		});
 	</script>
-	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"
-		async defer></script> -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"
+		async defer></script>
 		<script type="text/javascript">
 			$("#website_form").submit(function(event) {
 				event.preventDefault();
@@ -1472,7 +1467,7 @@ var kcnt=0;
 										$.ajax({
 											type: "post",
 											url: "competitors/check_mobile_speed.php",
-											data: {competitors:website_speed_jsonData.website_speed},
+											data: {competitors:website_speed_jsonData.website_speed, your_rank:competitor_jsonData.your_rank, organization:competitor_jsonData.organization_name},
 											success: function(responseData) {
 												var mobile_speed_jsonData = JSON.parse(responseData);
 												if(mobile_speed_jsonData.status=='true')
@@ -1484,7 +1479,10 @@ var kcnt=0;
 
 													$('#website_details').empty();
 													$('#website_details').html(mobile_speed_jsonData.website_detail);
-													
+
+													$('#your_growth').empty();
+													$('#your_growth').html(mobile_speed_jsonData.your_growth);
+													growth(mobile_speed_jsonData.your_growth_score, mobile_speed_jsonData.your_growth_color);
 													// var website_param = $('#my_loader_predictor').val();
 													// document.getElementById('my_loader_predictor').vlaue = "";
 													var set_var = document.getElementById('my_loader_predictor').value;
