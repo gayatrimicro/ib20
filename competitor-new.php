@@ -20,10 +20,6 @@ $result = $conn->query($sql);
 			<link rel="stylesheet" href="com-assets/css/slick.css">
 			<link rel="stylesheet" type="text/css" href="com-assets/css/slick-theme.css">
 			<style type="text/css">
-				.impBlk
-				{
-					display: none !important;
-				}
 				h2{
 					color: inherit;
 				}
@@ -1098,7 +1094,7 @@ function move() {
 				$(".Step3str").css("display","none");
 			}
 		}
-
+var kcnt=0;
 		document.getElementById("autocomplete").oninput = function() {
 				if($("#autocomplete").val()==""){
 					$(".LocFie input").css("border","2px solid red");
@@ -1111,13 +1107,24 @@ function move() {
 					$(".LocFie label").css("color","#2c98f7");
 					$("#autocomplete").css("color","#2c98f7");        
 				}
-				var scr = document.createElement("script");
+								
 				if($("#autocomplete").val().length > 2){
-					$(".pac-container").removeClass("impBlk");
+					kcnt++;
+				if(kcnt==2){
+					var scr = document.createElement("script");
+					scr.type = "text/javascript";
+				scr.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete";
+				$("body").append(scr);
+				console.log(kcnt);
+			}
+			else{
+				console.log(kcnt);
+			}				
 			}
 			else
 			{
-				$(".pac-container").addClass("impBlk");
+				console.log(kcnt);
+				// $("body").find('script[src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"]').remove();
 			}
 		};
 
@@ -1379,8 +1386,8 @@ function move() {
 		$(".MreRslt").addClass("HidAcc");
 		});
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"
-		async defer></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"
+		async defer></script> -->
 		<script type="text/javascript">
 			$("#website_form").submit(function(event) {
 				event.preventDefault();
