@@ -85,6 +85,103 @@ try
 			$chart_color = "GreyZone";
 		}
 
+		if($_POST['organization']==$row['name'])
+		{
+			if((0 >= $desktop_speed_score) && ($desktop_speed_score >= 9)){
+				$desktop_deduct = 10;
+			}
+			elseif((10 >= $desktop_speed_score) && ($desktop_speed_score >= 19)){
+				$desktop_deduct = 9;
+			}
+			elseif((20 >= $desktop_speed_score) && ($desktop_speed_score >= 29)){
+				$desktop_deduct = 8;
+			}
+			elseif((30 >= $desktop_speed_score) && ($desktop_speed_score >= 39)){
+				$desktop_deduct = 7;
+			}
+			elseif((40 >= $desktop_speed_score) && ($desktop_speed_score >= 49)){
+				$desktop_deduct = 6;
+			}
+			elseif((50 >= $desktop_speed_score) && ($desktop_speed_score >= 59)){
+				$desktop_deduct = 5;
+			}
+			elseif((60 >= $desktop_speed_score) && ($desktop_speed_score >= 69)){
+				$desktop_deduct = 4;
+			}
+			elseif((70 >= $desktop_speed_score) && ($desktop_speed_score >= 79)){
+				$desktop_deduct = 3;
+			}
+			elseif((80 >= $desktop_speed_score) && ($desktop_speed_score >= 89)){
+				$desktop_deduct = 2;
+			}
+			else{
+				$desktop_deduct = 1;
+			}
+
+			if((0 >= $mobile_speed_score) && ($mobile_speed_score >= 9)){
+				$mobile_deduct = 10;
+			}
+			elseif((10 >= $mobile_speed_score) && ($mobile_speed_score >= 19)){
+				$mobile_deduct = 9;
+			}
+			elseif((20 >= $mobile_speed_score) && ($mobile_speed_score >= 29)){
+				$mobile_deduct = 8;
+			}
+			elseif((30 >= $mobile_speed_score) && ($mobile_speed_score >= 39)){
+				$mobile_deduct = 7;
+			}
+			elseif((40 >= $mobile_speed_score) && ($mobile_speed_score >= 49)){
+				$mobile_deduct = 6;
+			}
+			elseif((50 >= $mobile_speed_score) && ($mobile_speed_score >= 59)){
+				$mobile_deduct = 5;
+			}
+			elseif((60 >= $mobile_speed_score) && ($mobile_speed_score >= 69)){
+				$mobile_deduct = 4;
+			}
+			elseif((70 >= $mobile_speed_score) && ($mobile_speed_score >= 79)){
+				$mobile_deduct = 3;
+			}
+			elseif((80 >= $mobile_speed_score) && ($mobile_speed_score >= 89)){
+				$mobile_deduct = 2;
+			}
+			else{
+				$mobile_deduct = 1;
+			}
+
+			$your_growth_score = $_POST['your_rank'] - ($mobile_deduct+$desktop_deduct);
+
+			if((100 >= $your_growth_score) && ($your_growth_score >= 90)){
+				$growth_title = "Excellent";
+				$growth_font_color = "font-color-green";
+				$growth_color = "#07c597";
+			}
+			elseif((89 >= $your_growth_score) && ($your_growth_score >= 80)){
+				$growth_title = "Good";
+				$growth_font_color = "font-color-blue";
+				$growth_color = "#1f8bf7";
+			}
+			elseif((79 >= $your_growth_score) && ($your_growth_score >= 70)){
+				$growth_title = "Fair";
+				$growth_font_color = "font-color-orange";
+				$growth_color = "#f9bc3c";
+			}
+			elseif((69 >= $your_growth_score) && ($your_growth_score >= 60)){
+				$growth_title = "Poor";
+				$growth_font_color = "font-color-red";
+				$growth_color = "#f25562";
+			}
+			else{
+				$growth_title = "Very Poor";
+				$growth_font_color = "font-color-grey";
+				$growth_color = "#bcc0cd";
+			}
+
+			$your_growth = '<h3 class="'.$growth_font_color.'">'.$growth_title.'</h3>
+							<p>Your practice is behind the competition in practice growth. A complete audit of your processes is strongly recommended.</p>';
+		}
+
+
 		if($average < 60)
 		{
 			$website_heading = "Below 60";
@@ -109,6 +206,9 @@ try
 	$result['website'] = $website;
 	$result['website_chart'] = $website_chart;
 	$result['website_detail'] = $website_detail;
+	$result['your_growth'] = $your_growth;
+	$result['your_growth_score'] = $your_growth_score;
+	$result['your_growth_color'] = $growth_color;
 	$result['status'] = 'true';
 	echo json_encode($result);
 }
