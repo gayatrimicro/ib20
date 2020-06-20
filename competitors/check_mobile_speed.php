@@ -1,4 +1,5 @@
 <?php
+
 include "../vendor/autoload.php";
 
 $mobile = array();
@@ -182,6 +183,7 @@ try
 							<p>Your practice is behind the competition in practice growth. A complete audit of your processes is strongly recommended.</p>';
 			if($security_score==0)
 			{
+				// if searched organization's security score is 0 then website score is 0
 				$average = 0;
 			}
 		}
