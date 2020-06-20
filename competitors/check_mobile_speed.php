@@ -57,7 +57,8 @@ try
 			$desktop_speed = $row['desktop_speed'];
 			$desktop_speed_score = $row['desktop_speed'];
 		}
-		$average = ($security_score + $mobile_speed_score + $desktop_speed_score) / 3;
+		// $average = ($security_score + $mobile_speed_score + $desktop_speed_score) / 3;
+		$average = ($mobile_speed_score + $desktop_speed_score) / 2;
 
 		if((100 >= $average) && ($average >= 90)){
 			$title = "Excellent";
@@ -179,6 +180,10 @@ try
 
 			$your_growth = '<h3 class="'.$growth_font_color.'">'.$growth_title.'</h3>
 							<p>Your practice is behind the competition in practice growth. A complete audit of your processes is strongly recommended.</p>';
+			if($security_score==0)
+			{
+				$average = 0;
+			}
 		}
 
 
