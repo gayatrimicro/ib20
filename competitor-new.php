@@ -102,7 +102,7 @@ $result = $conn->query($sql);
 							</li>
 							<li>
 								<p>
-									<img src="com-assets/img/webPre.png">
+									<img src="com-assets/img/mob.png">
 									<span>
 										<a href="#mobile_friendly_section">Mobile Friendly</a>
 									</span>
@@ -525,30 +525,31 @@ $result = $conn->query($sql);
         	<button type="button" class="close" data-dismiss="modal">&times;</button>
 	          <h3>Request a Demo</h3>
 	          <p>Please complete the form below so we can contact you with more information about how PatientPop can help grow your practice.</p>
-	          <form>
+	          <p class="demo_request_message"></p>
+	          <form id="request_demo_form">
 	          	<div class="PosRel">
 					<label for="FirName">Full Name *</label>
-					<input type="text" class="form-control" id="RName" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RName" oninput="ChkInpSts(this)" name="full_name">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Practice Name *</label>
-					<input type="text" class="form-control" id="RPname" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RPname" oninput="ChkInpSts(this)" name="practice_name">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Email *</label>
-					<input type="email" class="form-control" id="REmail" maxlength="30" autocomplete="off" oninput="ChkInpSts(this)">
+					<input type="email" class="form-control" id="REmail" maxlength="30" autocomplete="off" oninput="ChkInpSts(this)" name="email">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Phone *</label>
-					<input type="text" class="form-control" id="RPhone" maxlength="10" autocomplete="off" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RPhone" maxlength="10" autocomplete="off" oninput="ChkInpSts(this)" name="phone">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">ZIP *</label>
-					<input type="text" class="form-control" id="RZip" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RZip" oninput="ChkInpSts(this)" name="zip">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Number of providers *</label>
-					<select class="form-control" id="Nofpro">
+					<select class="form-control" id="Nofpro" name="provider_number">
 						<option value=""></option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -557,7 +558,7 @@ $result = $conn->query($sql);
 				<div class="text-center">
 					<button type="submit" class="btnFinGrph">SUBMIT</button>
 				</div>
-          </form>        
+          	  </form>
         </div>
       </div>      
     </div>
@@ -601,15 +602,27 @@ $result = $conn->query($sql);
 </div>
 
 <div class="GoogRnk2">
-  		<div class="InGooRnk">
-  			<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
-  			<h2>SEO Score</h2>
-  			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
-  			<ul id="seo_score_details">
-  				
-  			</ul>
-  		</div>
-  	</div>
+	<div class="InGooRnk">
+		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+		<h2>SEO Score</h2>
+		<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th width="26%">Practice</th>
+						<th width="21%">SEO Score</th>
+						<th width="21%">Performance</th>
+						<th width="21%">Accessibility</th>
+					</tr>
+				</thead>
+				<tbody id="seo_score_details">
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
 
 <div class="REpFa">
 	<div class="InGooRnk">
@@ -1384,6 +1397,24 @@ function move() {
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"
 		async defer></script>
 		<script type="text/javascript">
+			$("#request_demo_form").submit(function(event) {
+				event.preventDefault();
+				var formData = $('#request_demo_form').serialize();
+				$.ajax({
+					type: "post",
+					url: "competitors/request_demo_form.php",
+					data: formData,
+					success: function(data) {
+						if(data.status=='true')
+						{
+							$('.demo_request_message').empty().text('Your request has been sent successfully');
+						}
+						else{
+							$('.demo_request_message').empty().text('Something went wrong');
+						}
+					}
+				});
+			});
 			$("#website_form").submit(function(event) {
 				event.preventDefault();
 				var formData = $('#website_form').serialize();

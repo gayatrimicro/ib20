@@ -22,7 +22,12 @@ $organizationdetails['category'] = $category;
 
 $pre_comp_ar = array();
 $index = 0;
-$search_str_ar = [$_POST['area'], $_POST['city'], $_POST['state'], $_POST['country']];
+$initial_area = ($_POST['area']=="unknown") ? "" : $_POST['area'];
+$initial_city = ($_POST['city']=="unknown") ? "" : $_POST['city'];
+$initial_state = ($_POST['state']=="unknown") ? "" : $_POST['state'];
+$initial_country = ($_POST['country']=="unknown") ? "" : $_POST['country'];
+$search_str_ar = [$initial_area, $initial_city, $initial_state, $initial_country];
+//$search_str_ar = [$_POST['city'], $_POST['state']];
 
 $insert_sql = "INSERT INTO contact_details (ip_address, name, email_id, contact_number, organization, city, state, country, category, compared_at)
 VALUES ('".$_SERVER['REMOTE_ADDR']."', '".$_POST['user_name']."', 
@@ -77,21 +82,6 @@ else
    // echo "Message has been sent successfully";
 }
 
-// $i = 0;
-// $your_organization_flag = false;
-// $competitors_ar = array();
-// $competitors_html = array();
-// $google_rank = array();
-// $google_rank_html = array();
-// $google_rank_detail = array();
-
-// $reputation = array();
-// $reputation_chart = array();
-// $total_reviews = array();
-// $average_rating = array();
-// array_push($google_rank_detail, '<li class="TimLin"></li>');
-// $result = array();
-
 start_search: $search_str = implode(' ', $search_str_ar);
 $str = $category.' '.$search_str;
 $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='.$str.'&key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU';
@@ -143,16 +133,18 @@ function get_competitor_list($organizationdetails, $org_name_ar)
 	$org_name = $organizationdetails['name'];
 	$ar_count = count($org_name_ar);
 	$comp_ar = array();
-	if(in_array($org_name, $org_name_ar))
-	{
+	//if(in_array($org_name, $org_name_ar))
+	//{
 		//if organization name is exists in first page result means in frist 20 result
-		if($org_name_ar[0]!=$org_name && $org_name_ar[1]!=$org_name && $org_name_ar[2]!=$org_name)
+		if($org_name_ar[0]!=$org_name && $org_name_ar[1]!=$org_name && $org_name_ar[2]!=$org_name && $org_name_ar[3]!=$org_name)
 		{
 			$key = array_search($org_name, $org_name_ar);
-			for($i=$key-3; $i<=$key; $i++)
+			//for($i=$key-3; $i<=$key; $i++)
+			for($i=0; $i<3; $i++)
 			{
 				array_push($comp_ar, $org_name_ar[$i]);
-			}			
+			}
+			//print_r($comp_ar); exit();
 			$result = get_competitor_details($organizationdetails, $comp_ar);
 			echo json_encode($result);
 			// return $comp_ar;
@@ -162,25 +154,26 @@ function get_competitor_list($organizationdetails, $org_name_ar)
 			{
 				array_push($comp_ar, $org_name_ar[$i]);
 			}
+			//print_r($comp_ar); exit();
 			$result = get_competitor_details($organizationdetails, $comp_ar);
 			echo json_encode($result);
 		}
-	}
+	/*}
 	else{
-		if($ar_count > 3)
-		{
-			for($i=$ar_count-3; $i<$ar_count; $i++)
+		//if($ar_count > 3)
+		//{
+			for($i=0; $i<3; $i++)
 			{
 				array_push($comp_ar, $org_name_ar[$i]);
 			}
 			$result = get_competitor_details($organizationdetails, $comp_ar);
 			echo json_encode($result);
-		}
-		else{
-			$result = get_competitor_details($organizationdetails, $org_name_ar);
-			echo json_encode($result);
-		}
-	}
+		//}
+		//else{
+		//	$result = get_competitor_details($organizationdetails, $org_name_ar);
+		//	echo json_encode($result);
+		//}
+	}*/
 }
 function get_competitor_details($organizationdetails, $data)
 {
@@ -201,15 +194,29 @@ function get_competitor_details($organizationdetails, $data)
 	$result = array();
 
 	$google_rank = array();
-	$rank = 100;
+	$rank = 80;
 	$i = 0;
 	$user_rating = $organizationdetails['user_rating'];
 	$user_reviews = $organizationdetails['user_reviews'];
 	$organization_name = $organizationdetails['name'];
 	$organization_website = $organizationdetails['website'];
 	foreach($data as $row)
-	{		
-		$g_rank = $rank;
+	{
+		if($i==0)
+		{
+			$g_rank = 80;
+		}
+		elseif($i==1)
+		{
+			$g_rank = 72;
+		}
+		elseif($i==2)
+		{
+			$g_rank = 68;
+		}else{
+			$g_rank = 60;
+		}
+			
 		$name = $row['name'];
 		$rating = $row['rating'];
 		$reviews = $row['user_ratings_total'];
@@ -295,7 +302,7 @@ function get_competitor_details($organizationdetails, $data)
 			}
 			if($name==$organizationdetails['name'])
 			{
-				$your_rank = $g_rank;
+				$your_rank = $g_rank;				
 			}
 			array_push($google_rank, '<li class="GreenZone"><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height:'.$g_rank.'%;"><span class="tooltiptext">'.$g_rank.' Excellent</span></div></div></div></li>');
 			array_push($google_rank_html, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink font-color-green">'.$g_rank.'</span></div></div></li>');
@@ -361,7 +368,7 @@ function get_competitor_details($organizationdetails, $data)
 		array_push($google_rank_detail, '<li class="LiGP RedZone"><p class="GP1">'.$name.'</p><p class="GP2">'.$your_website_str.'</p><p class="GPs1"></p><p class="GPs2"></p></li>');
 
 
-		$reputation_ar = array('name'=>$name, 'rating'=>$_POST['user_rating'], 'reviews'=>$_POST['user_reviews'], 'reputation' => $reputation_var);
+		$reputation_ar = array('name'=>$name, 'rating'=>$organizationdetails['user_rating'], 'reviews'=>$organizationdetails['user_reviews'], 'reputation' => $reputation_var);
 
 		array_push($reputation, '<li><div class="row"><div class="col-sm-10"><span><b>'.$name.'</b></span></div><div class="col-sm-2"><span class="fot_pink '.$font_color.'">'.$reputation_var.'</span></div></div></li>');
 
@@ -375,8 +382,8 @@ function get_competitor_details($organizationdetails, $data)
 							</li>');
 
 		// $reputation_detail_ar = array('name'=>$name, 'rating'=>$rating, 'reviews'=>$reviews, 'reputation' => $reputation_var);
-		array_push($total_reviews, '<tr><td>'.$name.'</td><td>'.$reviews.'</td></tr>');
-		array_push($average_rating, '<tr><td>'.$name.'</td><td>'.$rating.'</td></tr>');
+		array_push($total_reviews, '<tr><td>'.$name.'</td><td>'.$organizationdetails['user_reviews'].'</td></tr>');
+		array_push($average_rating, '<tr><td>'.$name.'</td><td>'.$organizationdetails['user_rating'].'</td></tr>');
 	}
 
 	$result['competitors'] = $competitors_ar;
