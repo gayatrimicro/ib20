@@ -102,7 +102,7 @@ $result = $conn->query($sql);
 							</li>
 							<li>
 								<p>
-									<img src="com-assets/img/webPre.png">
+									<img src="com-assets/img/mob.png">
 									<span>
 										<a href="#mobile_friendly_section">Mobile Friendly</a>
 									</span>
@@ -602,15 +602,27 @@ $result = $conn->query($sql);
 </div>
 
 <div class="GoogRnk2">
-  		<div class="InGooRnk">
-  			<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
-  			<h2>SEO Score</h2>
-  			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
-  			<ul id="seo_score_details">
-  				
-  			</ul>
-  		</div>
-  	</div>
+	<div class="InGooRnk">
+		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+		<h2>SEO Score</h2>
+		<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th width="26%">Practice</th>
+						<th width="21%">SEO Score</th>
+						<th width="21%">Performance</th>
+						<th width="21%">Accessibility</th>
+					</tr>
+				</thead>
+				<tbody id="seo_score_details">
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
 
 <div class="REpFa">
 	<div class="InGooRnk">
