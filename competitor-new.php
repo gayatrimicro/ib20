@@ -301,7 +301,7 @@ $result = $conn->query($sql);
 						<ul id="mobile_friendly_div">
 							
 						</ul>
-						<div class="pad_grph CalWEB"><b><span class="BClr">How was this calculated?</span></b></div>
+						<div class="pad_grph CalWEB2"><b><span class="BClr">How was this calculated?</span></b></div>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -580,6 +580,31 @@ $result = $conn->query($sql);
 	<div class="InGooRnk">
 		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
 		<h2>Website</h2>
+		<p class="SubP">Your website score is calculated based on the factors below.</p>
+		
+		<h5 class="MArT">Your practice</h5>
+		<div class="table-responsive">
+		
+		<table class="table">
+		    <thead>
+		      <tr>
+		        <th width="26%">Practice</th>
+		        <th width="21%">Desktop Speed</th>
+		        <th width="21%">Mobile Speed</th>
+		        <th width="21%">Security</th>
+		      </tr>
+		    </thead>
+		    <tbody id="website_details">
+		    </tbody>
+	  </table>
+	  </div>		
+	</div>
+</div>
+
+<div class="WebDis2">
+	<div class="InGooRnk">
+		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+		<h2>Mobile Friendly</h2>
 		<p class="SubP">Your website score is calculated based on the factors below.</p>
 		
 		<h5 class="MArT">Your practice</h5>
@@ -1633,6 +1658,10 @@ function move() {
 			});
 			$(".CalWEB").click(function(){
 				$(".WebDis").addClass("W66");
+				$(".InGooRnk").fadeIn(2000);
+			});
+			$(".CalWEB2").click(function(){
+				$(".WebDis2").addClass("W66");
 				$(".InGooRnk").fadeIn(2000);
 			});
 			$(".ReFac").click(function(){
