@@ -331,6 +331,15 @@ function get_competitor_details($organizationdetails, $data)
 		else{
 			$your_website_str = "";
 		}
+		
+		if(($organizationdetails['user_rating']*20) == 100)
+		{ 
+			$reputation_var1 = ($organizationdetails['user_rating'] * 20); 
+		}
+		else 
+		{ 
+			$reputation_var1 =  (($organizationdetails['user_rating']*20)+1);
+		}
 
 		if((100 >= $reputation_var1) && ($reputation_var1 >= 90)){
 			$reputation_title = "Excellent";
@@ -356,6 +365,14 @@ function get_competitor_details($organizationdetails, $data)
 			$reputation_title = "Very Poor";
 			$font_color = "font-color-grey";
 			$chart_color = "GreyZone";
+		}
+		if($reputation_var1 < 60)
+		{
+			$reputation_var = "Below 60";
+			$reputation_var1 = 60;
+		}
+		else{
+			$reputation_var = $reputation_var1;
 		}
 		$name = $_POST['name'];
 		$your_rank = 60;

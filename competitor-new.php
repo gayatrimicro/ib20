@@ -614,12 +614,10 @@ $result = $conn->query($sql);
 		    <thead>
 		      <tr>
 		        <th width="26%">Practice</th>
-		        <th width="21%">Desktop Speed</th>
-		        <th width="21%">Mobile Speed</th>
-		        <th width="21%">Security</th>
+		        <th width="21%">Mobile Friendly or not?</th>
 		      </tr>
 		    </thead>
-		    <tbody id="website_details">
+		    <tbody id="mobile_friendly_details">
 		    </tbody>
 	  </table>
 	  </div>		
@@ -1492,6 +1490,9 @@ function move() {
 										$('#mobile_friendly_div').html(mobile_friendly_jsonData.mobile_friendly_score);
 										$('#mobile_friendly_screens').empty();
 										$('#mobile_friendly_screens').html(mobile_friendly_jsonData.mobile_friendly_screens);
+										
+										$('#mobile_friendly_details').empty();
+										$('#mobile_friendly_details').html(mobile_friendly_jsonData.mobile_friendly_details);
 										// var website_param = $('#my_loader_predictor').val();
 										// document.getElementById('my_loader_predictor').vlaue = "";
 										var set_var = document.getElementById('my_loader_predictor').value;
