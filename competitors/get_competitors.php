@@ -331,6 +331,15 @@ function get_competitor_details($organizationdetails, $data)
 		else{
 			$your_website_str = "";
 		}
+		
+		if(($organizationdetails['user_rating']*20) == 100)
+		{ 
+			$reputation_var1 = ($organizationdetails['user_rating'] * 20); 
+		}
+		else 
+		{ 
+			$reputation_var1 =  (($organizationdetails['user_rating']*20)+1);
+		}
 
 		if((100 >= $reputation_var1) && ($reputation_var1 >= 90)){
 			$reputation_title = "Excellent";
