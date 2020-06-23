@@ -204,8 +204,8 @@ try
 		array_push($website_chart, '<li class="'.$chart_color.'"><div class="bar-wrapper"><div class="bar-container"><div class="bar-inner" style="height: '.round($average).'%;"><span class="tooltiptext">'.round($average).' '.$title.'</span></div></div></div></li>');
 		array_push($website_detail, '<tr>
 		        <td>'. $row['name'] .'</td>
-		        <td><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url='.$row['website'].'">'. round($row['desktop_speed']) .'</a></td>
-		        <td><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url='.$row['website'].'">'. round($mobile_speed) .'</a></td>
+		        <td>'. round($row['desktop_speed']) .'</td>
+		        <td>'. round($mobile_speed) .'</td>
 		        <td>'. $security .'</td>
 		      </tr>');
 

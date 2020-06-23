@@ -366,6 +366,14 @@ function get_competitor_details($organizationdetails, $data)
 			$font_color = "font-color-grey";
 			$chart_color = "GreyZone";
 		}
+		if($reputation_var1 < 60)
+		{
+			$reputation_var = "Below 60";
+			$reputation_var1 = 60;
+		}
+		else{
+			$reputation_var = $reputation_var1;
+		}
 		$name = $_POST['name'];
 		$your_rank = 60;
 		array_push($competitors_ar, ['name'=>$name, 'website'=>$your_website_str]);
