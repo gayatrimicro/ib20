@@ -1081,6 +1081,52 @@
                  <div class="o-container || o-section -margin-tiny">
                     <div class="c-projectList">
                         <div class="o-loader c-projectList_loader"><span></span></div>
+                        <div class="c-projectList_section o-layout -bottom -gutter-small -gutter-bottom">
+                                    <div class="c-projectList_item o-layout_item u-2/3@from-small js-animate" >
+                                        <a
+                                            class="c-projectList_link"
+                                            href="#"
+                                            style="background-color:transparent;">
+                                            <span class="c-projectList_content">
+                                                <span class="c-projectList_title o-h5" style="color: #003;margin: 3.33333rem;">
+                                                    <span class="title-web">Harsha Enterprises</span>
+                                                    <span class="c-projectList_expertise">
+                                                            <span>UI & Website</span>
+                                                    </span>
+                        
+                                                </span>
+                                                <span
+                                                    class="c-projectList_image">
+                                                    <span class="c-projectList_image_wrap">
+                                                        <img src="../uploads/projects/Harsha/thumbnail.jpg">
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="c-projectList_item o-layout_item u-1/3@from-small js-animate"  data-speed="2">
+                                        <a
+                                            class="c-projectList_link"
+                                            href="#"
+                                            style="background-color:#F0F0F0;">
+                                            <span class="c-projectList_content">
+                                                <span class="c-projectList_title o-h5">
+                                                    <span class="title-web">TILT</span>
+                                                    <span class="c-projectList_expertise">
+                                                            <span>Digital</span>
+                                                    </span>
+                        
+                                                </span>
+                                                <span
+                                                    class="c-projectList_image -left">
+                                                    <span class="c-projectList_image_wrap">
+                                                        <img src="../uploads/projects/Bayswater/thumbnail.png">
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            </div>
                             <div class="c-projectList_section o-layout -bottom -gutter-small -gutter-bottom">
                                     <div class="c-projectList_item o-layout_item u-3/3@from-small js-animate" >
                                         <a
@@ -1108,54 +1154,10 @@
                                             </span>
                                         </a>
                                     </div>
-                                    <div class="c-projectList_item o-layout_item u-1/3@from-small js-animate"  data-speed="2">
-                                        <a
-                                            class="c-projectList_link"
-                                            href="#"
-                                            style="background-color:#E2E2E2;">
-                                            <span class="c-projectList_content">
-                                                <span class="c-projectList_title o-h5">
-                                                    <span class="title-web">Home Société</span>
-                                                    <span class="c-projectList_expertise">
-                                                            <span>Digital</span>
-                                                    </span>
-                        
-                                                </span>
-                                                <span
-                                                    class="c-projectList_image -all">
-                                                    <span class="c-projectList_image_wrap">
-                                                        <img src="../uploads/projects/Bayswater/thumbnail.png">
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="c-projectList_item o-layout_item u-1/3@from-small js-animate"  data-speed="2">
-                                        
-                                    </div>
-                                    <div class="c-projectList_item o-layout_item u-1/3@from-small js-animate" >
-                                        <a
-                                            class="c-projectList_link"
-                                            href="#"
-                                            style="background-color:#60B2C4;">
-                                            <span class="c-projectList_content">
-                                                <span class="c-projectList_title o-h5">
-                                                    <span class="title-web">Spire</span>
-                                                    <span class="c-projectList_expertise">
-                                                            <span>Digital</span>
-                                                    </span>
-                        
-                                                </span>
-                                                <span
-                                                    class="c-projectList_image">
-                                                    <span class="c-projectList_image_wrap">
-                                                        <img src="../uploads/projects/Bayswater/thumbnail.png">
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
+                                    
+                                    
                             </div>
+                            
                             <div class="c-projectList_section o-layout -bottom -gutter-small -gutter-bottom">
                                     <div class="c-projectList_item o-layout_item u-2/3@from-small js-animate" >
                                         <a
