@@ -395,38 +395,21 @@ button:focus,
 button:hover {
 	text-decoration: none
 }
-
 @font-face {
-	font-family: Haas;
-	src: url(../fonts/haasgrotdisp-55roman.woff2) format("woff2"), url(../fonts/haasgrotdisp-55roman.woff) format("woff");
+	font-family: Proxima-Nova-Thin-Regular;
+	src: url(../fonts/Proxima-Nova.otf) format("opentype"), url(../fonts/Proxima-Nova.otf) format("opentype");
 	font-style: normal;
-	font-weight: 400
+	font-weight: 100 !important;
 }
-
 @font-face {
-	font-family: Haas;
-	src: url(../fonts/haasgrotdisp-45light.woff2) format("woff2"), url(../fonts/haasgrotdisp-45light.woff) format("woff");
+	font-family: Proxima-Nova-Thin;
+	src: url(../fonts/ProximaNova-Regular.otf) format("opentype"), url(../fonts/ProximaNova-Regular.otf) format("opentype");
 	font-style: normal;
-	font-weight: 300
+	font-weight: 200
 }
-
-@font-face {
-	font-family: Haas;
-	src: url(../fonts/haasgrotdisp-56italic.woff2) format("woff2"), url(../fonts/haasgrotdisp-56italic.woff) format("woff");
-	font-style: italic;
-	font-weight: 400
-}
-
-@font-face {
-	font-family: DomaineDisplay;
-	src: url(../fonts/Domaine_Display_Semibold.woff2) format("woff2"), url(../fonts/Domaine_Display_Semibold.woff) format("woff");
-	font-style: normal;
-	font-weight: 400
-}
-
 html {
 	color: #1e1f21;
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -1924,7 +1907,7 @@ html.is-dragging .o-scrollbar {
 .o-header-block_title {
 	font-size: .93333rem;
 	font-weight: 400;
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	margin-bottom: 2rem;
 	box-sizing: border-box;
 	padding-top: .66667rem
@@ -2686,7 +2669,7 @@ html.is-mobile .o-cursor:not(.-top-mobile):not(.-center-mobile) {
 
 .o-section_text {
 	font-size: 2.4rem;
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	line-height: 1.15;
 	margin-bottom: 2.8rem
 }
@@ -4301,7 +4284,7 @@ button.swiper-pagination-bullet {
 	color: #fff;
 	text-align: left;
 	font-size: 2.5vw;
-	font-family: Haas, sans-serif
+	font-family: Proxima-Nova-Thin
 }
 
 @media(max-width:699px) {
@@ -6202,7 +6185,7 @@ html[data-template=play] .c-play-canvas {
 	top: 20%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	margin: auto;
 	line-height: 1.3
 }
@@ -7258,7 +7241,7 @@ html.has-dom-animated .c-project_awards_list.is-show li:nth-child(10) {
 
 .c-stats_number {
 	font-size: 12.33333rem;
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	line-height: 1.1
 }
 
@@ -7648,7 +7631,7 @@ html.is-ie .c-filters_list {
 .c-team_item {
 	position: relative;
 	font-weight: 300;
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	cursor: help;
 	z-index: 1;
 	transition: z-index 0s linear .12s
@@ -8002,7 +7985,7 @@ html.is-ie .c-filters_list {
 	transform: translate(-50%, -50%);
 	pointer-events: none;
 	text-align: center;
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	transition: color .25s ease
 }
 
@@ -8144,7 +8127,7 @@ html.is-ie .c-filters_list {
 	top: 0;
 	left: 0;
 	line-height: 1;
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	font-weight: 300;
 	padding: 0 16.66667rem;
 	margin-top: 3.33333rem
@@ -8306,7 +8289,7 @@ html.has-smooth-scroll .c-video-player.-parallax .c-video-player_preview {
 }
 
 .c-hidden-words {
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	text-transform: uppercase;
 	line-height: 1;
 	font-size: 0
@@ -8592,7 +8575,7 @@ html.has-smooth-scroll .c-video-player.-parallax .c-video-player_preview {
 }
 
 .c-nav_list_item {
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	font-size: 4vw;
 	line-height: 1.2;
 	display: inline-block;
@@ -8970,7 +8953,7 @@ html.has-smooth-scroll .c-video-player.-parallax .c-video-player_preview {
 }
 
 .c-nav_play_title {
-	font-family: Haas, sans-serif;
+	font-family: Proxima-Nova-Thin;
 	line-height: 1;
 	color: #fff
 }
@@ -9505,7 +9488,7 @@ html:not(.has-slider-grabbing) .c-home_title_mobile_item.is-active {
 }
 
 .c-list {
-	font-family: Haas, sans-serif
+	font-family: Proxima-Nova-Thin
 }
 
 .c-list_item {
