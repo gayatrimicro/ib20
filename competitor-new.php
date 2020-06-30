@@ -1,17 +1,5 @@
 <?php
-$servername = "64.207.177.102";
-$username = "usr_google";
-$password = "Kd%x761x";
-// $username = "root";
-// $password = "";
-$databese = 'google';
-// Create connection
-$conn = new mysqli($servername, $username, $password, $databese);
-
-// Check connection
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}
+include('competitors/db_connection.php');
 
 $sql = "SELECT * FROM business_category";
 $result = $conn->query($sql);
@@ -36,41 +24,19 @@ $result = $conn->query($sql);
 					color: inherit;
 				}
 				.font-color-green{
-					color:  #07c597;
+					color:  #07c597 !important;
 				}
 				.font-color-blue{
-					color:  #1f8bf7;
+					color:  #1f8bf7 !important;
 				}
 				.font-color-orange{
-					color:  #f9bc3c;
+					color:  #f9bc3c !important;
 				}
 				.font-color-red{
-					color:  #f25562;
+					color:  #f25562 !important;
 				}
 				.font-color-grey{
-					color:  #bcc0cd;
-				}
-				#dot {
-					position: absolute;
-					bottom: 50px;
-					left: 27px;
-					transform-origin: center bottom;
-					animation: dot 1.5s ease-in-out infinite
-				}
-
-				@-webkit-keyframes dot {
-					0% {
-						transform: matrix(1, 0, 0, 1, 0, 0)
-					}
-					33.33% {
-						transform: matrix(1, 0, 0, 1, 0, -20.0782)
-					}
-					66.66% {
-						transform: matrix(1, 0, 0, 0.54, 0, -20)
-					}
-					100% {
-						transform: matrix(1, 0, 0, 1, 0, 0)
-					}
+					color:  #bcc0cd !important;
 				}
 			</style>
 		</head>
@@ -79,10 +45,7 @@ $result = $conn->query($sql);
 	<section class="HedResult">
 		<div class="row">
 			<div class="col-sm-6">
-				<div>
-					<img src="assets/images/ib-logo.svg" style="margin: 0px;">
-					<!-- <object data="assets/images/ib-logo.svg" type="image/svg+xml" width="170px;"></object> -->
-				</div>
+				<div><img src="assets/images/ib-logo.svg" style="margin: 0px;"></div>
 			</div>
 			<div class="col-sm-6 text-right">
 				<ul>
@@ -90,7 +53,7 @@ $result = $conn->query($sql);
 						<h2 id="organization_name"></h2>
 						<p id="category_name"></p>
 					</li>
-					<li style="margin-top: 7px;">
+					<li>
 						<button data-toggle="modal" data-target="#ReqMod">Request Consultation &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 					</li>
 				</ul>
@@ -157,7 +120,7 @@ $result = $conn->query($sql);
 	<section>
 		<div class="ScoreRes">
 			<div class="row">
-				<!-- <div class="col-sm-7">
+				<div class="col-sm-7">
 					<div class="row">
 						<div class="col-sm-6 text-center">
 							<div class="inPerBar">
@@ -171,21 +134,16 @@ $result = $conn->query($sql);
 								</svg> 
 							</div>
 						</div>
-						<div class="col-sm-6">
-							<h3>Poor</h3>
-							<p>Your practice is behind the competition in practice growth. A complete audit of your processes is strongly recommended.</p>
+						<div class="col-sm-6" id="your_growth">
+							
 						</div>
 					</div>
-				</div> -->
-				<div class="col-sm-12">
+				</div>
+				<div class="col-sm-5">
 					<div class="pracGrow">
 						<h2>Competitors</h2>
 						<p>Here's how you rank against your competitors based on your overall practice growth scores:</p>
 						<ul id="competitor_div">
-							<!-- <li><p><span class="Rnk">1st</span><span class="RTxt"> City Acupuncture Fulton Street</span></p></li>
-							<li><p><span class="Rnk">2nd</span><span class="RTxt"> Acupuncture Remedies</span></p></li>
-							<li><p><span class="Rnk">3rd</span><span class="RTxt"> City Acupuncture Columbus Circle - CLOSED</span></p></li>
-							<li><p><span class="Rnk">4th</span><span class="RTxt BClr"> Your Practice</span></p></li> -->
 						</ul>
 					</div>
 				</div>
@@ -263,45 +221,10 @@ $result = $conn->query($sql);
 		</div>
 	</section>
 	<section>
-		<div class="ResMap" id="website_section">
-			<div class="row">
-				<div class="col-sm-4">
-					<div><img src="com-assets/img/mobile-bac2.png" class="WidXs"></div>
-					<div class="TxtGrap">           
-						<h2>Mobile Friendly</h2>
-						<p>Test Your website is Mobile Friendly or Not ?</p>
-						<ul id="website_div">
-							
-						</ul>
-						<div class="pad_grph CalWEB"><b><span class="BClr">How was this calculated?</span></b></div>
-					</div>
-				</div>
-				<div class="col-sm-8">
-					<div class="bac_clrMap">
-						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
-						<div class="DrName"><span></span></div>
-						<div class="MobScreen">
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-							<span class="DisSpn"><span class="MobSit"><img src="https://dummyimage.com/143x255/ddd/000000"></span><img src="com-assets/img/border.png"></span>
-						</div>
-						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
-						</div>
-						<div class="text-left">
-							<p class="OfRes"><b>3</b> <span>of 6</span></p>
-						</div>
-					</div>          
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
 		<div class="ResMap" id="seo_score_section">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/seo-bac2.png" class="WidXs"></div>
+					<div><img src="com-assets/img/mobile-bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">
 						<h2>SEO Score</h2>
 						<p>Your reputation score was calculated based on the following factors across the most popular review sites.</p>
@@ -335,7 +258,7 @@ $result = $conn->query($sql);
 		<div class="ResMap" id="reputation_section">
 			<div class="row">
 				<div class="col-sm-4">
-					<div><img src="com-assets/img/repo-bac2.png" class="WidXs"></div>
+					<div><img src="com-assets/img/seo-bac2.png" class="WidXs"></div>
 					<div class="TxtGrap">
 						<h2>Reputation</h2>
 						<p>Your reputation score was calculated based on the following factors across the most popular review sites.</p><br>
@@ -357,7 +280,7 @@ $result = $conn->query($sql);
 							</ul>
 						</section>
 						<div class="text-right">
-							<p class="NxtRslt"><b>Next:</b> <span class="BClr">Mobile Friendly &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></span></p>
+							<p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#mobile_friendly_section">Mobile Friendly &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p>
 						</div>
 						<div class="text-left">
 							<p class="OfRes"><b>5</b> <span>of 6</span></p>
@@ -367,7 +290,37 @@ $result = $conn->query($sql);
 			</div>
 		</div>
 	</section>
-
+	<section>
+		<div class="ResMap" id="mobile_friendly_section">
+			<div class="row">
+				<div class="col-sm-4">
+					<div><img src="com-assets/img/mobile-bac2.png" class="WidXs"></div>
+					<div class="TxtGrap">           
+						<h2>Mobile Friendly</h2>
+						<p>Test Your website is Mobile Friendly or Not ?</p>
+						<ul id="mobile_friendly_div">
+							
+						</ul>
+						<div class="pad_grph CalWEB2"><b><span class="BClr">How was this calculated?</span></b></div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="bac_clrMap">
+						<h4 class="BClr">"More than half of all website visits are abandoned if it takes longer than 3 seconds to load, and it also impacts your Google rank."</h4>
+						<div class="DrName"><span></span></div>
+						<div class="MobScreen" id="mobile_friendly_screens">							
+						</div>
+						<div class="text-right">
+							<!-- <p class="NxtRslt"><b>Next:</b> <span class="BClr"><a href="#seo_score_section">SEO Score &nbsp;<i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span></p> -->
+						</div>
+						<div class="text-left">
+							<p class="OfRes"><b>6</b> <span>of 6</span></p>
+						</div>
+					</div>          
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="ResFinBac" hidden>
 		<div class="ResFin">
 			<div class="row">
@@ -486,7 +439,8 @@ $result = $conn->query($sql);
 			<section>
 				<div class="DeskView">
 					<div class="SliSec">
-						<button type="button" class="btn_Modal" data-toggle="modal" data-target="#pracFrm">Patients competitors</button>
+						<button type="button" class="btn_Modal">Patients competitors</button>
+						<button type="button" class="btn_Modal"  id="PatComBtn" onclick="get_patients_competitor_form()">Patients competitors</button>
 						<div class="SlickSli op0zin">
 							<div class="LodSlid">
 								<div>
@@ -571,30 +525,31 @@ $result = $conn->query($sql);
         	<button type="button" class="close" data-dismiss="modal">&times;</button>
 	          <h3>Request a Demo</h3>
 	          <p>Please complete the form below so we can contact you with more information about how PatientPop can help grow your practice.</p>
-	          <form>
+	          <p class="demo_request_message"></p>
+	          <form id="request_demo_form">
 	          	<div class="PosRel">
 					<label for="FirName">Full Name *</label>
-					<input type="text" class="form-control" id="RName" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RName" oninput="ChkInpSts(this)" name="full_name">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Practice Name *</label>
-					<input type="text" class="form-control" id="RPname" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RPname" oninput="ChkInpSts(this)" name="practice_name">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Email *</label>
-					<input type="email" class="form-control" id="REmail" maxlength="30" autocomplete="off" oninput="ChkInpSts(this)">
+					<input type="email" class="form-control" id="REmail" maxlength="30" autocomplete="off" oninput="ChkInpSts(this)" name="email">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Phone *</label>
-					<input type="text" class="form-control" id="RPhone" maxlength="10" autocomplete="off" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RPhone" maxlength="10" autocomplete="off" oninput="ChkInpSts(this)" name="phone">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">ZIP *</label>
-					<input type="text" class="form-control" id="RZip" oninput="ChkInpSts(this)">
+					<input type="text" class="form-control" id="RZip" oninput="ChkInpSts(this)" name="zip">
 				</div>
 				<div class="PosRel">
 					<label for="FirName">Number of providers *</label>
-					<select class="form-control" id="Nofpro">
+					<select class="form-control" id="Nofpro" name="provider_number">
 						<option value=""></option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -603,7 +558,7 @@ $result = $conn->query($sql);
 				<div class="text-center">
 					<button type="submit" class="btnFinGrph">SUBMIT</button>
 				</div>
-          </form>        
+          	  </form>
         </div>
       </div>      
     </div>
@@ -616,31 +571,7 @@ $result = $conn->query($sql);
   			<h2>Google Rank</h2>
   			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
   			<ul id="google_rank_details">
-  				<!-- <li class="TimLin"></li>
-  				<li class="LiGP">
-  					<p class="GP1">Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</p>
-  					<p class="GP2">http://www.emizani.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</p>
-  					<p class="GP2">http://soroyabacchusmd.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Calming Goat Addiction Medicine</p>
-  					<p class="GP2">https://calminggoat.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Your Practice</p>
-  					<p class="GP2">http://www.hollywoodsign.org</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li> -->
+  				
   			</ul>
   		</div>
   	</div>		
@@ -650,50 +581,7 @@ $result = $conn->query($sql);
 		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
 		<h2>Website</h2>
 		<p class="SubP">Your website score is calculated based on the factors below.</p>
-		<!-- <h5>Your practice</h5>
-		<div class="row">
-			<div class="col-sm-6 pad_0">
-				<div class="row">
-					<div class="col-xs-2 pad_0">
-						<img src="com-assets\img\scoAir.png">
-					</div>
-					<div class="col-xs-10">
-						<div class="XSPAD">
-							<h6>Desktop Speed</h6>
-							<span class="ScRNo">50</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 pad_0">
-				<div class="row">
-					<div class="col-xs-2 pad_0">
-						<img src="com-assets\img\mob.png">
-					</div>
-					<div class="col-xs-10">
-						<div class="XSPAD">
-							<h6>Mobile Speed</h6>
-							<span class="ScRNo">50</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row MArT">
-			<div class="col-sm-6 pad_0">
-				<div class="row">
-					<div class="col-xs-2 pad_0">
-						<img src="com-assets\img\pro.png">
-					</div>
-					<div class="col-xs-10">
-						<div class="XSPAD">
-							<h6>Security</h6>
-							<span class="ScRNo CLRG">Pass</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
+		
 		<h5 class="MArT">Your practice</h5>
 		<div class="table-responsive">
 		
@@ -713,40 +601,51 @@ $result = $conn->query($sql);
 	</div>
 </div>
 
+<div class="WebDis2">
+	<div class="InGooRnk">
+		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+		<h2>Mobile Friendly</h2>
+		<p class="SubP">Your website score is calculated based on the factors below.</p>
+		
+		<h5 class="MArT">Your practice</h5>
+		<div class="table-responsive">
+		
+		<table class="table">
+		    <thead>
+		      <tr>
+		        <th width="26%">Practice</th>
+		        <th width="21%">Mobile Friendly or not?</th>
+		      </tr>
+		    </thead>
+		    <tbody id="mobile_friendly_details">
+		    </tbody>
+	  </table>
+	  </div>		
+	</div>
+</div>
+
 <div class="GoogRnk2">
-  		<div class="InGooRnk">
-  			<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
-  			<h2>SEO Score</h2>
-  			<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
-  			<ul id="seo_score_details">
-  				<!-- <li class="TimLin"></li>
-  				<li class="LiGP">
-  					<p class="GP1">Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</p>
-  					<p class="GP2">http://www.emizani.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</p>
-  					<p class="GP2">http://soroyabacchusmd.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Calming Goat Addiction Medicine</p>
-  					<p class="GP2">https://calminggoat.com/</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li>
-  				<li class="LiGP">
-  					<p class="GP1">Your Practice</p>
-  					<p class="GP2">http://www.hollywoodsign.org</p>
-  					<p class="GPs1"></p>
-  					<p class="GPs2"></p>
-  				</li> -->
-  			</ul>
-  		</div>
-  	</div>
+	<div class="InGooRnk">
+		<div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+		<h2>SEO Score</h2>
+		<p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th width="26%">Practice</th>
+						<th width="21%">SEO Score</th>
+						<th width="21%">Performance</th>
+						<th width="21%">Accessibility</th>
+					</tr>
+				</thead>
+				<tbody id="seo_score_details">
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
 
 <div class="REpFa">
 	<div class="InGooRnk">
@@ -763,18 +662,7 @@ $result = $conn->query($sql);
 			      </tr>
 			    </thead>
 			    <tbody id="average_rating">
-			      <!-- <tr>
-			        <td>Your Practice</td>
-			        <td></td>
-			      </tr>
-			      <tr>
-			        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
-			        <td>38</td>
-			      </tr>
-			      <tr>
-			        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
-			        <td>16</td>
-			      </tr> -->
+			      
 			    </tbody>
 		  </table>
 		</div>
@@ -788,18 +676,7 @@ $result = $conn->query($sql);
 		      </tr>
 		    </thead>
 		    <tbody id="total_reviews">
-		      <!-- <tr>
-		        <td>Your Practice</td>
-		        <td></td>
-		      </tr>
-		      <tr>
-		        <td>Dr. Ellie Mizani, MD - Adult, Child and Adolescent Psychiatrist and Addiction Medicine Specialist</td>
-		        <td>38</td>
-		      </tr>
-		      <tr>
-		        <td>Soroya Bacchus, MD - Addiction Medicine and Psychiatry Specialist</td>
-		        <td>16</td>
-		      </tr> -->
+		      
 		    </tbody>
 	  </table>
 	  </div>		
@@ -811,7 +688,7 @@ $result = $conn->query($sql);
 		
 			<!-- Modal content-->
 			<div class="modal-content">
-				<div class="modal-body modbdy">
+				<div class="modal-body modbdy" id="pracFrm_body">
 					<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 					<div class="inFrmStrt">
 						<div class="inn_progbar">
@@ -888,14 +765,16 @@ $result = $conn->query($sql);
 									</div>
 								</div>
 								<div class="col-sm-12 cat_js_basic pad_0">
-									<div class="PosRel SelClik">
+									<div class="PosRel SelClik" id="selClPr">
 										<label for="FirName">Practice Category</label>
-										<select name="category" onchange="get_category(this.value)" id="e1">
-										<option value=""></option>
-											<?php while($row = $result->fetch_assoc()) { ?>
-										<option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
-											<?php } ?>
-										</select>
+										<input type="hidden" name="category" id="e1" value="">
+              							<input type="text" id="myInput" class="form-control" onkeyup="SelCatPrac(this)" autocomplete="off">
+											<ul id="ULPrc">
+												<?php while($row = $result->fetch_assoc()) { ?>
+												<li onclick="get_category(<?php echo $row['id'] ?>)"><a><?php echo $row['category'] ?></a></li>
+												<?php } ?>
+											</ul>
+										
 									</div>
 								</div>
 							</div>              
@@ -923,9 +802,12 @@ $result = $conn->query($sql);
 									<input type="hidden" id="frm_website" name="website" value="" />
 									<input type="hidden" id="frm_name" name="name" value="" />
 									<input type="hidden" id="frm_category" name="category" value="" />
+									<input type="hidden" id="sublocality_level_1" name="area" value="" />
+									<input type="hidden" id="frm_user_rating" name="user_rating" value="" />
+									<input type="hidden" id="frm_user_reviews" name="user_reviews" value="" />
 
 									<div class="PosRel fidSet1">
-										<label for="FirName">Name</label>
+										<label for="FirName">Full Name</label>
 										<input type="text" name="user_name" class="form-control" id="snme" maxlength="40" autocomplete="off" oninput="ChkInpSts(this)">
 									</div>
 									<div class="PosRel fidSet2">
@@ -955,7 +837,7 @@ $result = $conn->query($sql);
 			
 		</div>
 	</div>
-
+<input type="hidden" id="my_loader_predictor" value="0">
 <div id="myProgress">
 	<div id="myBar"><div id="my_per">42%</div></div>
 </div>
@@ -1003,6 +885,28 @@ function move() {
 }
 </script> -->
 	<script type="text/javascript">
+		function get_patients_competitor_form()
+		{
+			$.ajax({
+				type: "post",
+				url: "competitors/check_attempt.php",
+				success: function(responseData) {
+					$('#pracFrm').modal("show");
+					var response = JSON.parse(responseData);
+					if(response.status=='true')
+					{						
+					}
+					else{
+						$('#pracFrm_body').empty();
+						$('#pracFrm_body').html('<div class="Step1str Stepcurr"><h2></h2></div>');
+					}
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					console.log(errorThrown);
+				}
+			});
+		}
+
 		$('.LodSlid').slick({
 			infinite: true,
 			autoplay: true,
@@ -1033,7 +937,7 @@ function move() {
 
 			if(step=="step2"){
 				var e = document.getElementById("e1");
-				var strUser = e.options[e.selectedIndex].value;
+				var strUser = e.value;
 				var cont=0;
 				if($("#street_number").val()==""){
 					$("#street_number").parent().find("label").shake();
@@ -1067,7 +971,7 @@ function move() {
 					$("#name").parent().find("label").shake();
 					cont+=1;
 				}
-				if(strUser=="")
+				if($("#e1").val()=="")
 				{
 					$("#e1").parent().find("label").shake();
 					cont+=1;
@@ -1075,48 +979,48 @@ function move() {
 				if(cont>0)
 				{
 					if($("#street_number").val()==""){
-						$(".#street_number").css("border","2px solid red");
+						$("#street_number").css("border","2px solid red");
 						$("#street_number").parent().find("label").css("color","red");
 						$("#street_number").parent().find("label").shake();
 					}
 					if($("#route").val()==""){
-						$(".#route").css("border","2px solid red");
+						$("#route").css("border","2px solid red");
 						$("#route").parent().find("label").css("color","red");
 						$("#route").parent().find("label").shake();
 					}
 					if($("#locality").val()==""){
-						$(".#locality").css("border","2px solid red");
+						$("#locality").css("border","2px solid red");
 						$("#locality").parent().find("label").css("color","red");
 						$("#locality").parent().find("label").shake();
 					}
 					if($("#administrative_area_level_1").val==""){
-						$(".#administrative_area_level_1").css("border","2px solid red");
+						$("#administrative_area_level_1").css("border","2px solid red");
 						$("#administrative_area_level_1").parent().find("label").css("color","red");
 						$("#administrative_area_level_1").parent().find("label").shake();
 					}
 					if($("#postal_code").val()==""){
-						$(".#postal_code").css("border","2px solid red");
+						$("#postal_code").css("border","2px solid red");
 						$("#postal_code").parent().find("label").css("color","red");
 						$("#postal_code").parent().find("label").shake();
 					}
 					if($("#country").val()==""){
-						$(".#country").css("border","2px solid red");
+						$("#country").css("border","2px solid red");
 						$("#country").parent().find("label").css("color","red");
 						$("#country").parent().find("label").shake();
 					}
 					if($("#website").val()==""){
-						 $(".#website").css("border","2px solid red");
+						 $("#website").css("border","2px solid red");
 						$("#website").parent().find("label").css("color","red");
 						$("#website").parent().find("label").shake();
 					}
 					if($("#name").val()==""){
-						 $(".#name").css("border","2px solid red");
+						 $("#name").css("border","2px solid red");
 						$("#name").parent().find("label").css("color","red");
 						$("#name").parent().find("label").shake();
 					}
-					if(strUser=="")
+					if($("#e1").val()=="")
 					{
-						 $(".select2-selection--single").css("border","2px solid red");
+						 $("#e1").next().css("border","2px solid red");
 						$(".SelClik label").css("color","red");
 						$(".SelClik label").shake();
 					}
@@ -1134,11 +1038,17 @@ function move() {
 			}
 
 			if(step=="step3"){
+				var cntStrnme=countWords($("#snme").val());
 				var count_n=0;
 						if($("#snme").val()=="")
 						{
 							count_n+=1;
 						}
+
+						if(cntStrnme < 2){
+							count_n+=1;
+						}
+
 						if($("#sno").val()=="")
 						{
 							count_n+=1;
@@ -1156,6 +1066,12 @@ function move() {
 								{
 									$(".fidSet1 input").css("border","2px solid red");
 									$(".fidSet1 label").css("color","red");
+									$(".fidSet1 label").shake();
+								}
+								if(cntStrnme < 2){
+									$(".fidSet1 input").css("border","2px solid red");
+									$(".fidSet1 label").css("color","red");
+									$(".fidSet1 input").css("color","red");
 									$(".fidSet1 label").shake();
 								}
 								if($("#sno").val()=="")
@@ -1209,19 +1125,38 @@ function move() {
 				$(".Step3str").css("display","none");
 			}
 		}
-
+		var kcnt=0;
 		document.getElementById("autocomplete").oninput = function() {
-				if($("#autocomplete").val()==""){
-					$(".LocFie input").css("border","2px solid red");
-					$(".LocFie label").css("color","red");
-					$(".LocFie label").shake();
-				}
-				else
-				{
-					$(".LocFie input").css("border","2px solid #2c98f7");
-					$(".LocFie label").css("color","#2c98f7");
-					$("#autocomplete").css("color","#2c98f7");        
-				}
+			if($("#autocomplete").val()==""){
+				$(".LocFie input").css("border","2px solid red");
+				$(".LocFie label").css("color","red");
+				$(".LocFie label").shake();
+			}
+			else
+			{
+				$(".LocFie input").css("border","2px solid #2c98f7");
+				$(".LocFie label").css("color","#2c98f7");
+				$("#autocomplete").css("color","#2c98f7");
+			}
+			// if(($("#autocomplete").val().length % 3)==0){
+			// 	console.log('auto complete value ' + $("#autocomplete").val().length);
+			// 	// kcnt++;
+			// 	// if(kcnt==2){
+			// 		var scr = document.createElement("script");
+			// 		scr.type = "text/javascript";
+			// 		scr.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete";
+			// 		$("body").append(scr);
+			// 		console.log(kcnt);
+			// 	// }
+			// 	// else{
+			// 	// 	console.log(kcnt);
+			// 	// }
+			// }
+			// else
+			// {
+			// 	console.log("else");
+			// 	// $("body").find('script[src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"]').remove();
+			// }
 		};
 
 		function ChkInpSts(inp){
@@ -1320,11 +1255,12 @@ function move() {
 
 	</script>
 	<script>
-			$(document).ready(function() { $("#e1").select2(); });
+			// $(document).ready(function() { $("#e1").select2(); });
 	</script>
 	<script type="text/javascript">
 		function get_category(id)
 		{
+			document.getElementById('e1').value = id;
 			var city = document.getElementById('locality').value;
 			var state = document.getElementById('administrative_area_level_1').value;
 			var country = document.getElementById('country').value;
@@ -1356,10 +1292,13 @@ function move() {
 			route: 'long_name',
 			locality: 'long_name',
 			administrative_area_level_1: 'long_name',
+			sublocality_level_1: 'long_name',
 			country: 'short_name',
 			postal_code: 'short_name',
 			website: 'website',
-			name: 'name',   
+			name: 'name',
+			frm_user_rating: 'rating',
+			frm_user_reviews: 'user_ratings_total',
 		};
 
 		function initAutocomplete() {
@@ -1401,6 +1340,8 @@ function move() {
 			document.getElementById('name').value = place['name'];
 			document.getElementById('frm_website').value = place['website'];
 			document.getElementById('frm_name').value = place['name'];
+			document.getElementById('frm_user_rating').value = place['rating'];
+			document.getElementById('frm_user_reviews').value = place['user_ratings_total'];
 		}
 
 		// Bias the autocomplete object to the user's geographical location,
@@ -1427,16 +1368,16 @@ function move() {
 
 	</script>
 	<script>
-		$(document).ready(function() {
-			var PerVal=80;
-			var clr="#f6606e";
+		function growth(val, color) {
+			var PerVal=val;
+			var clr=color;
 			var selector = document.getElementById('my_id');
 			selector.setAttribute('stroke-dasharray',PerVal+',100');
 			selector.setAttribute('stroke',clr);
 			$(".ScrRes p").css("color",clr);
 			$("#Per").css("color",clr);
-			$('#Per').text(PerVal);
-		});
+			$('#Per').text(val);
+		}
 
 		$(window).scroll(function() {
 			if ($(window).scrollTop() > 280) {
@@ -1476,15 +1417,32 @@ function move() {
 		$(".MreRslt").addClass("HidAcc");
 		});
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtHgeG6tFU_I7r3bqcLkx5OyKLcgEuMt4&libraries=places&callback=initAutocomplete"
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVxEKUAr7SKD8oJdaX-SVF3FW3wsk0CU&libraries=places&callback=initAutocomplete"
 		async defer></script>
 		<script type="text/javascript">
+			$("#request_demo_form").submit(function(event) {
+				event.preventDefault();
+				var formData = $('#request_demo_form').serialize();
+				$.ajax({
+					type: "post",
+					url: "competitors/request_demo_form.php",
+					data: formData,
+					success: function(data) {
+						if(data.status=='true')
+						{
+							$('.demo_request_message').empty().text('Your request has been sent successfully');
+						}
+						else{
+							$('.demo_request_message').empty().text('Something went wrong');
+						}
+					}
+				});
+			});
 			$("#website_form").submit(function(event) {
 				event.preventDefault();
 				var formData = $('#website_form').serialize();
-				var website_param = 0;
-				var seo_param = 0;
-				var mobile_friendly_param = 0;
+				// var website_param = $('#my_loader_predictor').val(); //0
+				recursive_function();
 				$.ajax({
 					type: "post",
 					url: "competitors/get_competitors.php",
@@ -1495,7 +1453,11 @@ function move() {
 						$('#category_name').html(competitor_jsonData.category_name);
 						$('#organization_name').empty();
 						$('#organization_name').html(competitor_jsonData.organization_name);
-						// alert(jsonData.status);
+						// var website_param = $('#my_loader_predictor').val();
+						// document.getElementById('my_loader_predictor').vlaue = "";
+						var set_var = document.getElementById('my_loader_predictor').value;
+						document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+						recursive_function();
 						if(competitor_jsonData.status=='true')
 						{
 							$('#competitor_div').empty();
@@ -1518,18 +1480,51 @@ function move() {
 							event.preventDefault();
 							$.ajax({
 								type: "post",
+								url: "competitors/check_mobile_friendly.php",
+								data: {competitors:competitor_jsonData.competitors},
+								success: function(responseData) {
+									var mobile_friendly_jsonData = JSON.parse(responseData);
+									if(mobile_friendly_jsonData.status=='true')
+									{
+										$('#mobile_friendly_div').empty();
+										$('#mobile_friendly_div').html(mobile_friendly_jsonData.mobile_friendly_score);
+										$('#mobile_friendly_screens').empty();
+										$('#mobile_friendly_screens').html(mobile_friendly_jsonData.mobile_friendly_screens);
+										
+										$('#mobile_friendly_details').empty();
+										$('#mobile_friendly_details').html(mobile_friendly_jsonData.mobile_friendly_details);
+										// var website_param = $('#my_loader_predictor').val();
+										// document.getElementById('my_loader_predictor').vlaue = "";
+										var set_var = document.getElementById('my_loader_predictor').value;
+										document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+										recursive_function();
+									}
+									else{
+										console.log("Something went wrong");
+									}
+								},
+								error: function(jqXHR, textStatus, errorThrown) {
+									console.log(errorThrown);
+								}
+							});
+
+							$.ajax({
+								type: "post",
 								url: "competitors/check_website_speed.php",
 								data: {competitors:competitor_jsonData.competitors},
 								success: function(responseData) {
 									var website_speed_jsonData = JSON.parse(responseData);
-									website_param++;
-									recursive_function(website_param);
+									// var website_param = $('#my_loader_predictor').val();
+									// document.getElementById('my_loader_predictor').vlaue = "";
+									var set_var = document.getElementById('my_loader_predictor').value;
+									document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+									recursive_function();
 									if(website_speed_jsonData.status=='true')
 									{
 										$.ajax({
 											type: "post",
 											url: "competitors/check_mobile_speed.php",
-											data: {competitors:website_speed_jsonData.website_speed},
+											data: {competitors:website_speed_jsonData.website_speed, your_rank:competitor_jsonData.your_rank, organization:competitor_jsonData.organization_name},
 											success: function(responseData) {
 												var mobile_speed_jsonData = JSON.parse(responseData);
 												if(mobile_speed_jsonData.status=='true')
@@ -1541,9 +1536,15 @@ function move() {
 
 													$('#website_details').empty();
 													$('#website_details').html(mobile_speed_jsonData.website_detail);
-													// $('.RsltSec').css('display', 'block');
-													website_param++;
-													recursive_function(website_param);
+
+													$('#your_growth').empty();
+													$('#your_growth').html(mobile_speed_jsonData.your_growth);
+													growth(mobile_speed_jsonData.your_growth_score, mobile_speed_jsonData.your_growth_color);
+													// var website_param = $('#my_loader_predictor').val();
+													// document.getElementById('my_loader_predictor').vlaue = "";
+													var set_var = document.getElementById('my_loader_predictor').value;
+													document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+													recursive_function();
 												}
 												else{
 													console.log("Something went wrong");
@@ -1578,8 +1579,12 @@ function move() {
 										$('#seo_graph').html(seo_score_jsonData.seo_chart);
 										$('#seo_score_details').empty();
 										$('#seo_score_details').html(seo_score_jsonData.seo_score_detail);
-										website_param++;
-										recursive_function(website_param);
+										
+										// var website_param = $('#my_loader_predictor').val();
+										// document.getElementById('my_loader_predictor').vlaue = "";
+										var set_var = document.getElementById('my_loader_predictor').value;
+										document.getElementById('my_loader_predictor').value = parseInt(set_var)+1;
+										recursive_function();
 									}
 									else{
 										console.log("Something went wrong");
@@ -1589,33 +1594,6 @@ function move() {
 									console.log(errorThrown);
 								}
 							});
-
-							// $.ajax({
-							// 	type: "post",
-							// 	url: "competitors/check_mobile_friendly.php",
-							// 	data: {competitors:competitor_jsonData.competitors},
-							// 	success: function(responseData) {
-							// 		var mobile_friendly_jsonData = JSON.parse(responseData);
-							// 		if(mobile_friendly_jsonData.status=='true')
-							// 		{
-							// 			mobile_friendly_param = 1;
-							// 		}
-							// 		else{
-							// 			console.log("Something went wrong");
-							// 		}
-							// 	},
-							// 	error: function(jqXHR, textStatus, errorThrown) {
-							// 		console.log(errorThrown);
-							// 	}
-							// });
-							// console.log('website_param ' + website_param);
-							// console.log('seo_param ' + seo_param);
-							// console.log('mobile_friendly_param ' + mobile_friendly_param);
-							// if(website_param==1 && seo_param==1)
-							// {
-							// 	$('.RsltSec').css('display', 'block');
-							// 	$('.lodr_sec').css('display', 'none');
-							// }
 						}
 						else{
 							console.log("Something went wrong");
@@ -1627,8 +1605,9 @@ function move() {
 				});
 			});
 
-			function recursive_function(number)
+			function recursive_function()
 			{
+				var number = document.getElementById('my_loader_predictor').value;
 				console.log("Number " + number);
 				if(number == 1)
 				{
@@ -1637,17 +1616,26 @@ function move() {
 				}
 				else if(number == 2)
 				{
-					$("#myBar").css("width","90%");
-					$("#my_per").html("90%");
+					$("#myBar").css("width","60%");
+					$("#my_per").html("60%");
 				}
 				else if(number == 3)
+				{
+					$("#myBar").css("width","70%");
+					$("#my_per").html("70%");
+				}
+				else if(number == 4)
+				{
+					$("#myBar").css("width","80%");
+					$("#my_per").html("80%");
+				}
+				else if(number == 5)
 				{
 					$("#myBar").css("width","100%");
 					$("#my_per").html("100%");
 				}
 
-				if(number > 2)
-				// if(number == 4)
+				if(number == 5)
 				{
 					$('.RsltSec').css('display', 'block');
 					$('.lodr_sec').css('display', 'none');
@@ -1671,6 +1659,10 @@ function move() {
 			});
 			$(".CalWEB").click(function(){
 				$(".WebDis").addClass("W66");
+				$(".InGooRnk").fadeIn(2000);
+			});
+			$(".CalWEB2").click(function(){
+				$(".WebDis2").addClass("W66");
 				$(".InGooRnk").fadeIn(2000);
 			});
 			$(".ReFac").click(function(){
@@ -1802,6 +1794,71 @@ function move() {
 				}
 				// return re.test(email);
 		};
+
+$("input").keyup(function(){
+	//$(this).parent().find('label').addClass('actInp');
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   setTimeout(function(){ $(".nxtPge").click(); }, 500);
+   
+  }
+  });
+
+function countWords(str) {
+   str = str.replace(/(^\s*)|(\s*$)/gi,"");
+   str = str.replace(/[ ]{2,}/gi," ");
+   str = str.replace(/\n /,"\n");
+   return str.split(' ').length;
+   }
+
+   $("#PatComBtn").click(function(){
+         $('#pracFrm').modal('show');
+         setTimeout(function(){ getClassModal(); }, 300);
+    });
+
+   function getClassModal(){
+   	if(($("#pracFrm").hasClass("in"))){
+		$("#autocomplete").focus();
+	}
+   }
+
+   function SelCatPrac(val) {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("ULPrc");
+    $("#ULPrc").addClass("H200");
+    li = ul.getElementsByTagName("li");
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+$("#ULPrc li").click(function(){
+var GetTxt=$(this).text();
+$("#myInput").val(GetTxt);
+$("#ULPrc").toggleClass("H200");
+});
+
+$("#myInput").click(function(){
+	$("#ULPrc").addClass("H200");
+});
+$(".SelClik label").click(function(){
+	$("#ULPrc").toggleClass("H200");
+});
+
+$(document).click(function(e) {
+		if (($(e.target).closest("#selClPr").attr("id") != "selClPr")) {
+		$("#ULPrc").removeClass("H200");
+		}
+		});
 		</script>
 
 	 </body>
