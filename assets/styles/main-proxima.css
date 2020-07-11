@@ -5819,7 +5819,7 @@ html.has-dom-loading .c-play-button {
 	bottom: 0;
 	right: -2px;
 	left: -2px;
-	z-index: 2;
+	z-index: -2px;
 	background-color: #003;
 	opacity: 0;
 	transition: opacity .6s cubic-bezier(.215, .61, .355, 1)

@@ -475,6 +475,7 @@ z-index: 10000;
   position: fixed;
     bottom: 0;
     display: none;
+        z-index: 1;
 }
 
 #myBar {
@@ -1492,6 +1493,10 @@ z-index: 1;
 #ULPrc li:hover
 {
     background-color: #ddd;
+}
+.ShwRes
+{
+    display: none;
 }
 
 /*------compititors result page end----------------*/
