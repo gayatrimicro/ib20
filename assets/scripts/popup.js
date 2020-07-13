@@ -248,8 +248,13 @@ function move() {
 							$(".Step3str label").css("color","#000");
 							$('#pracFrm').hide();
 							$(".modal-backdrop").removeClass("in");
+							$(".modal-backdrop").hide();
 							$('.HidPge').hide();
 							$('.ShwRes').show();
+							$('body').removeClass("modal-open");
+							$("html").css("overflow","unset");
+							$("html").css("background-color","#f7f9fc");
+							
 
 							$("#myProgress").show();
 							// move();

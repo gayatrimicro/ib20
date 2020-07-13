@@ -2980,7 +2980,7 @@ $result = $conn->query($sql);
                     <hr>
                     <div class="row">
                         <div class="col-sm-4 pad_0">
-                            <h4><img src="com-assets/img/goor.png">Google Ranking</h4>
+                            <h4><img src="../com-assets/img/goor.png">Google Ranking</h4>
                         </div>
                         <div class="col-sm-2 text-center fot_pink1">
                             <div class="FotScr">60</div><div class="FotWei">Poor</div>
@@ -3029,6 +3029,172 @@ $result = $conn->query($sql);
             </div>
         </div>
     </section>
+</div>
+
+<!-- Modal Request Start -->
+  <div class="modal fade" id="ReqMod" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body FrmReqRes">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3>Request a Demo</h3>
+              <p>Please complete the form below so we can contact you with more information about how PatientPop can help grow your practice.</p>
+              <p class="demo_request_message"></p>
+              <form id="request_demo_form">
+                <div class="PosRel">
+                    <label for="FirName">Full Name *</label>
+                    <input type="text" class="form-control" id="RName" oninput="ChkInpSts(this)" name="full_name">
+                </div>
+                <div class="PosRel">
+                    <label for="FirName">Practice Name *</label>
+                    <input type="text" class="form-control" id="RPname" oninput="ChkInpSts(this)" name="practice_name">
+                </div>
+                <div class="PosRel">
+                    <label for="FirName">Email *</label>
+                    <input type="email" class="form-control" id="REmail" maxlength="30" autocomplete="off" oninput="ChkInpSts(this)" name="email">
+                </div>
+                <div class="PosRel">
+                    <label for="FirName">Phone *</label>
+                    <input type="text" class="form-control" id="RPhone" maxlength="10" autocomplete="off" oninput="ChkInpSts(this)" name="phone">
+                </div>
+                <div class="PosRel">
+                    <label for="FirName">ZIP *</label>
+                    <input type="text" class="form-control" id="RZip" oninput="ChkInpSts(this)" name="zip">
+                </div>
+                <div class="PosRel">
+                    <label for="FirName">Number of providers *</label>
+                    <select class="form-control" id="Nofpro" name="provider_number">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btnFinGrph">SUBMIT</button>
+                </div>
+              </form>
+        </div>
+      </div>      
+    </div>
+  </div>
+    <!-- Modal Request End -->
+
+    <div class="GoogRnk">
+        <div class="InGooRnk">
+            <div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+            <h2>Google Rank</h2>
+            <p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
+            <ul id="google_rank_details">
+                
+            </ul>
+        </div>
+    </div>      
+
+<div class="WebDis">
+    <div class="InGooRnk">
+        <div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+        <h2>Website</h2>
+        <p class="SubP">Your website score is calculated based on the factors below.</p>
+        
+        <h5 class="MArT">Your practice</h5>
+        <div class="table-responsive">
+        
+        <table class="table">
+            <thead>
+              <tr>
+                <th width="26%">Practice</th>
+                <th width="21%">Desktop Speed</th>
+                <th width="21%">Mobile Speed</th>
+                <th width="21%">Security</th>
+              </tr>
+            </thead>
+            <tbody id="website_details">
+            </tbody>
+      </table>
+      </div>        
+    </div>
+</div>
+
+<div class="WebDis2">
+    <div class="InGooRnk">
+        <div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+        <h2>Mobile Friendly</h2>
+        <p class="SubP">Your website score is calculated based on the factors below.</p>
+        
+        <h5 class="MArT">Your practice</h5>
+        <div class="table-responsive">
+        
+        <table class="table">
+            <thead>
+              <tr>
+                <th width="26%">Practice</th>
+                <th width="21%">Mobile Friendly or not?</th>
+              </tr>
+            </thead>
+            <tbody id="mobile_friendly_details">
+            </tbody>
+      </table>
+      </div>        
+    </div>
+</div>
+
+<div class="GoogRnk2">
+    <div class="InGooRnk">
+        <div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+        <h2>SEO Score</h2>
+        <p class="SubP">This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th width="26%">Practice</th>
+                        <th width="21%">SEO Score</th>
+                        <th width="21%">Performance</th>
+                        <th width="21%">Accessibility</th>
+                    </tr>
+                </thead>
+                <tbody id="seo_score_details">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="REpFa">
+    <div class="InGooRnk">
+        <div class="clsGRnk"><button type="button" class="ClsSL">&times;</button></div>
+        <h2>Reputation Factors</h2>
+        <p class="SubP">The reputation scores were calculated based on a combination of the average star rating, and total number of reviews.</p>
+        <h5>Average Star Rating</h5>
+        <div class="table-responsive">
+            <table class="table tbl">
+                <thead>
+                  <tr>
+                    <th width="26%">Practices</th>
+                    <th width="21%"><img src="../com-assets/img/goog.png"></th>
+                  </tr>
+                </thead>
+                <tbody id="average_rating">
+                  
+                </tbody>
+          </table>
+        </div>
+      <h5>Total Number of Reviews</h5>
+      <div class="table-responsive">
+        <table class="table tbl">
+            <thead>
+              <tr>
+                <th width="26%">Practices</th>
+                <th width="21%"><img src="../com-assets/img/goog.png"></th>
+              </tr>
+            </thead>
+            <tbody id="total_reviews">
+              
+            </tbody>
+      </table>
+      </div>        
+    </div>
 </div>
 <!-----------result page end------------->
 <!-----------loader page start------------->
