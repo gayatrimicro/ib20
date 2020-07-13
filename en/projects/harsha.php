@@ -10,6 +10,7 @@
 	<meta name="keywords" content="Case studies, pwa and wordpress developer, custom web application, award winning web design services in Mumbai, msme & b2b digital marketing solutions, web app developer near you, bespoke web apps">
 	<link rel="canonical" href="https://ibridgedigital.com/bayswater">
 	<title>Works & Portfolio | iBridge Digital</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
 	<link rel="alternate" hreflang="fr" href="../../fr/projets/design-canada.html">
 	
@@ -1429,11 +1430,11 @@
 
 
 
-<figure class="o-image -parallax">
+<!-- <figure class="o-image -parallax">
 	<div class="o-image_inner">
 		<img src="../../uploads/projects/Harsha/img_1920x1260_harsha_info_02.jpg" alt="" class="js-animate" data-speed="-6">
 	</div>
-</figure>
+</figure> -->
 
 
 <figure class="o-image -parallax">
@@ -1443,11 +1444,11 @@
 </figure>
 
 
-<figure class="o-image -parallax">
+<!-- <figure class="o-image -parallax">
 	<div class="o-image_inner">
 		<img src="../../uploads/projects/Harsha/img_1920x1260_harsha_info_01.jpg" alt="" class="js-animate" data-speed="-6">
 	</div>
-</figure>
+</figure> -->
 
 
 
@@ -1483,11 +1484,45 @@
 	</figure>
 </div> -->
 
+<!-- <style type="text/css">
+	 #bg-change{
+	 	background: #ffc801;
+	 	position: relative;
+	 }
+	 #btn-switch{
+	 	border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #EB2931;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 25px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    transform: translate(-50%, 50%);
+	 }
+	 #btn-switch:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style> -->
 
 <section>
-	<div class="o-container demo u-bg-white" style="padding-bottom: 5rem;padding-top: 5rem;">
+	<div class="o-container demo u-bg-white" id="bg-change" style="padding-bottom: 5rem;padding-top: 5rem;">
                     <div class="o-layout ">
-                        <div class="o-layout_item u-1/2@from-small"></div>
+                        <div class="o-layout_item u-1/2@from-small">
+                        	<!-- <button id="btn-switch">Switch Color</button> -->
+                        </div>
                         <div class="o-layout_item u-1/2@from-small">
                             <div class="o-section -padding-top -margin-small">
                                 <div class="u-2/3@from-big">
@@ -1510,7 +1545,27 @@
                     </div>
                 </div>
 </section>
+<!-- <script type="text/javascript">
+	
+	$( document ).ready(function() {
 
+		    var bgcolor = ["#f368e0","#ee5253","#0abde3","#10ac84","#5f27cd"];
+		    // alert(bgcolor[2]);
+			var i = 0;
+			// function myprop(){
+			// 	alert("clicked");
+			// 	i = i < bgcolor.length ? ++i : 0;
+			// 	document.getElementById("#bg-change").style.background = bgcolor[i];
+			// }
+			$("#btn-switch").click(function(){
+			  // alert("clicked");
+				i = i < bgcolor.length ? ++i : 0;
+				document.getElementById("bg-change").style.background = bgcolor[i];
+			});
+
+});
+
+</script> -->
 				<!-- <div class="o-section -padding-v-huge" style="background-color:#ddd;">
 	<figure class="o-container"  data-theme="light">
 		<div class="c-fancy-video c-project_intro_item js-animate -paused has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
@@ -1727,10 +1782,12 @@
 			</div>
 		</div>
 		<figure class="c-feature_visual || o-layout_item u-3/5@from-medium">
-			<div class="o-vimeo-player">
-				<!-- <iframe class="js-animate" data-repeat data-callback="launch.VimeoPlayer()" data-module="VimeoPlayer" src="https://player.vimeo.com/video/330881462?controls=false&amp;autoplay=0&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media"></iframe> -->
-				<!-- <iframe src="https://www.youtube.com/embed/N8vMn4x5jAo?&autoplay=1&controls=0&loop=1&mute=1&playlist=EngW7tLk6R8&amp;showinfo=0" width="640" height="360" frameborder="0" autoplay allowloop muted allow="autoplay;loop;encrypted-media"></iframe> -->
-				<img src="../../uploads/projects/Harsha/img_1920x1260_wireframe_02.jpg" alt="" class="js-animate" data-speed="-6">
+			<div class="c-fancy-video c-project_intro_item js-animate has-video is-show" style="width: 120%;padding-bottom: 0px;margin-top: 3rem;">
+				<div>
+					<video id="anime_vid" class="lazyload" autoplay loop style="width: 120%;">
+					  <source class="lazyload" src="../../assets/videos/anime-harsha.mp4"  type="video/mp4">
+					</video>
+				</div>
 			</div>
 		</figure>
 	</div>
@@ -2025,10 +2082,13 @@ $(document).ready(function() {
 	var vid = document.getElementById("desk_vid1");	
 	var mockup_vid = document.getElementById("desk_vid");
 	var bayswater2 = document.getElementById("normal_vid");
+	var transi_anime = document.getElementById("anime_vid");
 	vid.play();
+	
 	mockup_vid.play();
 	bayswater2.play();
-
+	transi_anime.play();
+	
 
 	
     $('#lead-form').submit(function(event) {
@@ -2102,7 +2162,6 @@ $(document).ready(function() {
 	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
 	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 		<script>

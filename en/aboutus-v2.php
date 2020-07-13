@@ -2509,7 +2509,7 @@ $result = $conn->query($sql);
                         <h4>Step <span class="stpNo">1</span></h4>
                         <h2>Compare your business with your competitors in your local area</h2>
                         <div class="LocFie PosRel">
-                            <label for="FirName">Practice name</label>
+                            <label for="FirName">Business name</label>
                             <input type="text"class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="" />
                         </div>
                         <div class="text-right"><button class="nxtPge hidstpBtn" onclick="NxtStp('step1')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
@@ -2574,7 +2574,7 @@ $result = $conn->query($sql);
                                 </div>
                                 <div class="col-sm-12 cat_js_basic pad_0">
                                     <div class="PosRel SelClik" id="selClPr">
-                                        <label for="FirName">Practice Category</label>
+                                        <label for="FirName">Business Category</label>
                                         <input type="hidden" name="category" id="e1" value="">
                                         <input type="text" id="myInput" class="form-control" onkeyup="SelCatPrac(this)" autocomplete="off">
                                             <ul id="ULPrc">
@@ -2681,8 +2681,8 @@ $result = $conn->query($sql);
             <div class="row">
                 <div class="col-sm-7">
                     <div class="BacTxt">
-                        <h1>Your personalized practice growth results</h1>
-                        <p>We compared you against the 3 top-ranking competitors on Google for your local market and specialty. These are the most important factors affecting your practice growth.</p>
+                        <h1>Your personalized Business growth results</h1>
+                        <p>We compared you against the 3 top-ranking competitors on Google for your local market and specialty. These are the most important factors affecting your Business growth.</p>
                         <ul>
                             <li>
                                 <p>
@@ -3224,7 +3224,7 @@ $result = $conn->query($sql);
             <section>
                 <div class="DeskView">
                     <div class="SliSec">
-                        <div class="SlickSli op0zin">
+                        <div class="SlickSli">
                             <div class="LodSlid">
                                 <div>
                                     <div class="row">

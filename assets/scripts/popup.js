@@ -1,18 +1,18 @@
 
-jQuery.fn.shake = function(intShakes, intDistance, intDuration) {	
-		intShakes = intShakes || 3;
-		intDistance = intDistance || 2;
-		intDuration = intDuration || 300;
+// jQuery.fn.shake = function(intShakes, intDistance, intDuration) {	
+// 		intShakes = intShakes || 3;
+// 		intDistance = intDistance || 2;
+// 		intDuration = intDuration || 300;
 	
-		this.each(function() { 
-				for (var x=1; x<=intShakes; x++) {
-				$(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
-		.animate({left:intDistance}, ((intDuration/intShakes)/2))
-		.animate({left:0}, (((intDuration/intShakes)/4)));
-		}
-	});
-	return this;
-};
+// 		this.each(function() { 
+// 				for (var x=1; x<=intShakes; x++) {
+// 				$(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
+// 		.animate({left:intDistance}, ((intDuration/intShakes)/2))
+// 		.animate({left:0}, (((intDuration/intShakes)/4)));
+// 		}
+// 	});
+// 	return this;
+// };
 
 
 var set_i = 0;
@@ -250,7 +250,7 @@ function move() {
 							$(".modal-backdrop").removeClass("in");
 							$(".modal-backdrop").hide();
 							$('.HidPge').hide();
-							$('.ShwRes').show();
+							$('.ShwRes').css("opacity","1");
 							$('body').removeClass("modal-open");
 							$("html").css("overflow","unset");
 							$("html").css("background-color","#f7f9fc");
