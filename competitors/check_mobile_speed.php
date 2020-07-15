@@ -180,7 +180,7 @@ try
 			}
 
 			$your_growth = '<h3 class="'.$growth_font_color.'">'.$growth_title.'</h3>
-							<p>Your practice is behind the competition in practice growth. A complete audit of your processes is strongly recommended.</p>';
+							<p>Your business is behind the competition in business growth. A complete audit of your website is strongly recommended.</p>';
 			if($security_score==0)
 			{
 				// if searched organization's security score is 0 then website score is 0

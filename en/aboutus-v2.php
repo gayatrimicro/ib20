@@ -2917,7 +2917,7 @@ $result = $conn->query($sql);
                         <ul id="mobile_friendly_div">
                             
                         </ul>
-                        <div class="pad_grph CalWEB2"><b><span class="BClr">How was this calculated?</span></b></div>
+                        <div class="pad_grph CalWEB2"><b><span class="BClr" style="cursor: pointer;">How was this calculated?</span></b></div>
                     </div>
                 </div>
                 <div class="col-sm-8">

@@ -419,7 +419,7 @@ function move() {
 		// parameter when you first load the API. For example:
 		// <script
 		// src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-		var placeSearch, autocomplete, autocomplete2;
+		var placeSearch, autocomplete;
 
 		var componentForm = {
 			street_number: 'short_name',
@@ -451,7 +451,6 @@ function move() {
 			// When the user selects an address from the drop-down, populate the
 			// address fields in the form.
 			autocomplete.addListener('place_changed', fillInAddress);
-			autocomplete2.addListener('place_changed', fillInAddress);
 		}
 
 		function fillInAddress() {
@@ -1088,20 +1087,10 @@ else
 	$('#btnPop').click();
 	$("#autocomplete").val(GetLoc2);
 	$(".LocFie label").addClass("actInp");
+	$("#autocomplete").click();
 	
 }
 });
-
-$("#btnPop").click(function(){
-         $('#pracFrm').modal('show');
-         setTimeout(function(){ getClassModal(); }, 300);
-    });
-
-   function getClassModal(){
-   	if(($("#pracFrm").hasClass("in"))){
-		$("#autocomplete2").focus();
-	}
-   }
 
 
  $('.LodSlid').slick({

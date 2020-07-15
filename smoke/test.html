@@ -2,7 +2,15 @@
 <html ng-app="v3App" id="ng-app">
 <head>
     <title>website designing & web development company | iBridge Digital</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" async>
     <style type="text/css">
+        @font-face {
+    font-family: Proxima-Nova-Thin;
+    src: url(../assets/fonts/ProximaNova-Regular.otf) format("opentype"), url(../assets/fonts/ProximaNova-Regular.otf) format("opentype");
+    font-style: normal;
+    font-weight: 200;
+}
         :-webkit-full-screen-ancestor .highlight-slide:not(.active) {
     visibility: hidden
 }
@@ -19,6 +27,54 @@
 .highlight-slide.active {
     visibility: visible
 }
+.TxtHed{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 35%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.TxtHed h2{
+    font-size: 27px;
+    color: #fff;
+    font-family: Proxima-Nova-Thin;
+    font-weight: 200;
+    margin-top: 13px;
+}
+.TxtHed h5{
+    font-size: 10px;
+    color: #fff;
+    margin: 30px;
+}
+.BckBtn{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    padding: 0;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s all;
+    outline: none;
+}
+.BckBtn:hover{
+    width: 75px;
+    height: 75px;
+    top: 40px;
+    right: 40px;
+    transition: 0.5s all;
+    background-color: blue;
+    border: 2px solid blue;
+}
+
     </style>
 </head>
 <body ng-app="myapp">
@@ -31,6 +87,14 @@
                         <div id="fluid_wrapper" ng-show="showFluid" class="ng-scope">
                           <div id="overlay" class="glass"></div>
                           <canvas id="fluid_container" style="width: 100%;"></canvas>
+                          <button class="BckBtn" onclick="window.location.href='../index.html'"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                          <div class="TxtHed">
+                            <h5>+</h5>
+                            <h2>BORN IN TECHNOLOGY.</h2>
+                            <h2>FORGED IN STRATEGY.</h2>
+                            <h2>WIRED FOR INNOVATION.</h2>
+                            <h5>+</h5>
+                          </div>
                         </div>
                         <div page-loader>
                         </div>
@@ -52,6 +116,6 @@
     <script src="angular-route.js"></script>
     <script src="angular-ui-router.js"></script>
     <script src="app.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>
