@@ -1821,7 +1821,7 @@ $result = $conn->query($sql);
 
                             <div style="margin-top: 50px;">
                                 <div class="o-layout_item u-1/2@from-small">
-                                    <input type="text" name="firstName" class="o-input || js-input" id="autocomplete2" placeholder="Enter Your Company Name..." required>
+                                    <input type="text" name="firstName" class="o-input || js-input" id="autocomplete2" onFocus="geolocate()" placeholder="Enter Your Company Name..." required>
                                 </div>
                                 <!-- <button type="submit" class="o-button -white -white || c-lisa_form-submit" style="color: #fff;background-color: #0000f0;padding: 1rem 2.26667rem;border-radius: 50px;">
                                         <span class="o-button_label -base">See my result</span>

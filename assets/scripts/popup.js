@@ -4,13 +4,13 @@ function shake(thing) {
   var times = 4;
 
   for (var i = 0; i < (times + 1); i++) {
-    $(thing).animate({
-      left:
-        (i % 2 == 0 ? distance : distance * -1)
-    }, interval);
+	$(thing).animate({
+	  left:
+		(i % 2 == 0 ? distance : distance * -1)
+	}, interval);
   }
   $(thing).animate({
-    left: 0
+	left: 0
   }, interval);
 }
 
@@ -440,10 +440,10 @@ function move() {
 			// geographical location types.
 			autocomplete = new google.maps.places.Autocomplete(
 				document.getElementById('autocomplete'), {types: ['establishment']});
-
+			// console.log('autocomplete' + document.getElementById('autocomplete').value);
 			autocomplete2 = new google.maps.places.Autocomplete(
 				document.getElementById('autocomplete2'), { types: ['establishment']});
-
+			// console.log('autocomplete2' + document.getElementById('autocomplete2').value);
 			// Avoid paying for data that you don't need by restricting the set of
 			// place fields that are returned to just the address components.
 			// autocomplete.setFields(['address_component', 'website']);
@@ -451,7 +451,7 @@ function move() {
 			// When the user selects an address from the drop-down, populate the
 			// address fields in the form.
 			autocomplete.addListener('place_changed', fillInAddress);
-			autocomplete2.addListener('place_changed', fillInAddress);
+			autocomplete2.addListener('place_changed', fillInAddress2);
 		}
 
 		function fillInAddress() {
@@ -460,18 +460,46 @@ function move() {
 			var place = autocomplete.getPlace();
 
 			for (var component in componentForm) {
-			document.getElementById(component).value = 'unknown';
-			// document.getElementById(component).disabled = false;
+				document.getElementById(component).value = 'unknown';
+				// document.getElementById(component).disabled = false;
 			}
 			
 			// Get each component of the address from the place details,
 			// and then fill-in the corresponding field on the form.
 			for (var i = 0; i < place.address_components.length; i++) {
-			var addressType = place.address_components[i].types[0];
-			if (componentForm[addressType]) {
-				var val = place.address_components[i][componentForm[addressType]];
-				document.getElementById(addressType).value = val;   
+				var addressType = place.address_components[i].types[0];
+				if (componentForm[addressType]) {
+					var val = place.address_components[i][componentForm[addressType]];
+					document.getElementById(addressType).value = val;   
+				}
 			}
+
+			document.getElementById('website').value = place['website'];
+			document.getElementById('name').value = place['name'];
+			document.getElementById('frm_website').value = place['website'];
+			document.getElementById('frm_name').value = place['name'];
+			document.getElementById('frm_user_rating').value = place['rating'];
+			document.getElementById('frm_user_reviews').value = place['user_ratings_total'];
+		}
+
+		function fillInAddress2() {
+			// Get the place details from the autocomplete object.
+			document.getElementById('address').removeAttribute("hidden");
+			var place = autocomplete2.getPlace();
+
+			for (var component in componentForm) {
+				document.getElementById(component).value = 'unknown';
+				// document.getElementById(component).disabled = false;
+			}
+			
+			// Get each component of the address from the place details,
+			// and then fill-in the corresponding field on the form.
+			for (var i = 0; i < place.address_components.length; i++) {
+				var addressType = place.address_components[i].types[0];
+				if (componentForm[addressType]) {
+					var val = place.address_components[i][componentForm[addressType]];
+					document.getElementById(addressType).value = val;   
+				}
 			}
 
 			document.getElementById('website').value = place['website'];
@@ -494,6 +522,7 @@ function move() {
 				var circle = new google.maps.Circle(
 					{center: geolocation, radius: position.coords.accuracy});
 				autocomplete.setBounds(circle.getBounds());
+				autocomplete2.setBounds(circle.getBounds());
 			});
 			}
 			$(document).keypress(
@@ -1029,33 +1058,33 @@ function countWords(str) {
    }
 
    $("#PatComBtn").click(function(){
-         $('#pracFrm').modal('show');
-         setTimeout(function(){ getClassModal(); }, 300);
-    });
+		 $('#pracFrm').modal('show');
+		 setTimeout(function(){ getClassModal(); }, 300);
+	});
 
    function getClassModal(){
-   	if(($("#pracFrm").hasClass("in"))){
+	if(($("#pracFrm").hasClass("in"))){
 		$("#autocomplete").focus();
 	}
    }
 
    function SelCatPrac(val) {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("ULPrc");
-    $("#ULPrc").addClass("H200");
-    li = ul.getElementsByTagName("li");
+	var input, filter, ul, li, a, i, txtValue;
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	ul = document.getElementById("ULPrc");
+	$("#ULPrc").addClass("H200");
+	li = ul.getElementsByTagName("li");
 
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
+	for (i = 0; i < li.length; i++) {
+		a = li[i].getElementsByTagName("a")[0];
+		txtValue = a.textContent || a.innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			li[i].style.display = "";
+		} else {
+			li[i].style.display = "none";
+		}
+	}
 }
 
 $("#ULPrc li").click(function(){
@@ -1092,25 +1121,25 @@ else
 }
 });
 
-$("#btnPop").click(function(){
-         $('#pracFrm').modal('show');
-         setTimeout(function(){ getClassModal(); }, 300);
-    });
+// $("#btnPop").click(function(){
+//          $('#pracFrm').modal('show');
+//          setTimeout(function(){ getClassModal(); }, 300);
+//     });
 
-   function getClassModal(){
-   	if(($("#pracFrm").hasClass("in"))){
-		$("#autocomplete2").focus();
-	}
-   }
+//    function getClassModal(){
+//    	if(($("#pracFrm").hasClass("in"))){
+// 		$("#autocomplete2").focus();
+// 	}
+//    }
 
 
  $('.LodSlid').slick({
-            infinite: true,
-            autoplay: true,
-            speed: 300,
-            fade: true,
-            cssEase: 'linear'
-        });
+			infinite: true,
+			autoplay: true,
+			speed: 300,
+			fade: true,
+			cssEase: 'linear'
+		});
 
 		document.getElementById("RPhone").onkeyup = function() {
 				document.getElementById("RPhone").value = document.getElementById("RPhone").value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
