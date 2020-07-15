@@ -1,19 +1,18 @@
+function shake(thing) {
+  var interval = 70;
+  var distance = 5;
+  var times = 4;
 
-// jQuery.fn.shake = function(intShakes, intDistance, intDuration) {	
-// 		intShakes = intShakes || 3;
-// 		intDistance = intDistance || 2;
-// 		intDuration = intDuration || 300;
-	
-// 		this.each(function() { 
-// 				for (var x=1; x<=intShakes; x++) {
-// 				$(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
-// 		.animate({left:intDistance}, ((intDuration/intShakes)/2))
-// 		.animate({left:0}, (((intDuration/intShakes)/4)));
-// 		}
-// 	});
-// 	return this;
-// };
-
+  for (var i = 0; i < (times + 1); i++) {
+    $(thing).animate({
+      left:
+        (i % 2 == 0 ? distance : distance * -1)
+    }, interval);
+  }
+  $(thing).animate({
+    left: 0
+  }, interval);
+}
 
 var set_i = 0;
 function move() {
@@ -68,7 +67,7 @@ function move() {
 				{
 					$(".LocFie input").css("border","2px solid red");
 					$(".LocFie label").css("color","red");
-					$(".LocFie label").shake();
+					shake($(".LocFie label"));
 					return false;
 				}
 				else
@@ -87,40 +86,40 @@ function move() {
 				var strUser = e.value;
 				var cont=0;
 				if($("#street_number").val()==""){
-					$("#street_number").parent().find("label").shake();
+					shake($("#street_number").parent().find("label"));
 					cont+=1;
 				}
 				if($("#route").val()==""){
-					$("#route").parent().find("label").shake();
+					shake($("#route").parent().find("label"));
 					cont+=1;
 				}
 				if($("#locality").val()==""){
-					$("#locality").parent().find("label").shake();
+					shake($("#locality").parent().find("label"));
 					cont+=1;
 				}
 				if($("#administrative_area_level_1").val()==""){
-					$("#administrative_area_level_1").parent().find("label").shake();
+					shake($("#administrative_area_level_1").parent().find("label"));
 					cont+=1;
 				}
 				if($("#postal_code").val()==""){
-					$("#postal_code").parent().find("label").shake();
+					shake($("#postal_code").parent().find("label"));
 					cont+=1;
 				}
 				if($("#country").val()==""){
-					$("#country").parent().find("label").shake();
+					shake($("#country").parent().find("label"));
 					cont+=1;
 				}
 				if($("#website").val()==""){
-					$("#website").parent().find("label").shake();
+					shake($("#website").parent().find("label"));
 					cont+=1;
 				}
 				if($("#name").val()==""){
-					$("#name").parent().find("label").shake();
+					shake($("#name").parent().find("label"));
 					cont+=1;
 				}
 				if($("#e1").val()=="")
 				{
-					$("#e1").parent().find("label").shake();
+					shake($("#e1").parent().find("label"));
 					cont+=1;
 				}
 				if(cont>0)
@@ -128,48 +127,48 @@ function move() {
 					if($("#street_number").val()==""){
 						$("#street_number").css("border","2px solid red");
 						$("#street_number").parent().find("label").css("color","red");
-						$("#street_number").parent().find("label").shake();
+						shake($("#street_number").parent().find("label"));
 					}
 					if($("#route").val()==""){
 						$("#route").css("border","2px solid red");
 						$("#route").parent().find("label").css("color","red");
-						$("#route").parent().find("label").shake();
+						shake($("#route").parent().find("label"));
 					}
 					if($("#locality").val()==""){
 						$("#locality").css("border","2px solid red");
 						$("#locality").parent().find("label").css("color","red");
-						$("#locality").parent().find("label").shake();
+						shake($("#locality").parent().find("label"));
 					}
 					if($("#administrative_area_level_1").val==""){
 						$("#administrative_area_level_1").css("border","2px solid red");
 						$("#administrative_area_level_1").parent().find("label").css("color","red");
-						$("#administrative_area_level_1").parent().find("label").shake();
+						shake($("#administrative_area_level_1").parent().find("label"));
 					}
 					if($("#postal_code").val()==""){
 						$("#postal_code").css("border","2px solid red");
 						$("#postal_code").parent().find("label").css("color","red");
-						$("#postal_code").parent().find("label").shake();
+						shake($("#postal_code").parent().find("label"));
 					}
 					if($("#country").val()==""){
 						$("#country").css("border","2px solid red");
 						$("#country").parent().find("label").css("color","red");
-						$("#country").parent().find("label").shake();
+						shake($("#country").parent().find("label"));
 					}
 					if($("#website").val()==""){
 						 $("#website").css("border","2px solid red");
 						$("#website").parent().find("label").css("color","red");
-						$("#website").parent().find("label").shake();
+						shake($("#website").parent().find("label"));
 					}
 					if($("#name").val()==""){
 						 $("#name").css("border","2px solid red");
 						$("#name").parent().find("label").css("color","red");
-						$("#name").parent().find("label").shake();
+						shake($("#name").parent().find("label"));
 					}
 					if($("#e1").val()=="")
 					{
 						 $("#e1").next().css("border","2px solid red");
 						$(".SelClik label").css("color","red");
-						$(".SelClik label").shake();
+						shake($(".SelClik label"));
 					}
 					return false;
 				}
@@ -213,32 +212,32 @@ function move() {
 								{
 									$(".fidSet1 input").css("border","2px solid red");
 									$(".fidSet1 label").css("color","red");
-									$(".fidSet1 label").shake();
+									shake($(".fidSet1 label"));
 								}
 								if(cntStrnme < 2){
 									$(".fidSet1 input").css("border","2px solid red");
 									$(".fidSet1 label").css("color","red");
 									$(".fidSet1 input").css("color","red");
-									$(".fidSet1 label").shake();
+									shake($(".fidSet1 label"));
 								}
 								if($("#sno").val()=="")
 								{
 									$(".fidSet2 input").css("border","2px solid red");
 									$(".fidSet2 label").css("color","red");
-									$(".fidSet2 label").shake();
+									shake($(".fidSet2 label"));
 								}
 								if($("#sno").val().length!=10)
 								{
-									$(".fidSet2 label").shake();
+									shake($(".fidSet2 label"));
 								}
 								if($("#seml").val()=="")
 								{            
 									$(".fidSet3 input").css("border","2px solid red");
 									$(".fidSet3 label").css("color","red");
-									$(".fidSet3 label").shake();
+									shake($(".fidSet3 label"));
 								}
 								if(validEmail($("#seml").val())==1){
-									$(".fidSet3 label").shake();
+									shake($(".fidSet3 label"));
 								}            
 							return false;
 						}
@@ -285,7 +284,7 @@ function move() {
 			if($("#autocomplete").val()==""){
 				$(".LocFie input").css("border","2px solid red");
 				$(".LocFie label").css("color","red");
-				$(".LocFie label").shake();
+				shake($(".LocFie label"));
 			}
 			else
 			{
@@ -301,7 +300,7 @@ function move() {
 			if($(inp).val()==""){
 				$(inp).css("border","2px solid red");
 				$(inp).parent().find("label").css("color","red");
-				$(inp).parent().find("label").shake();
+				shake($(inp).parent().find("label"));
 			}
 			else
 			{
@@ -420,7 +419,7 @@ function move() {
 		// parameter when you first load the API. For example:
 		// <script
 		// src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-		var placeSearch, autocomplete;
+		var placeSearch, autocomplete, autocomplete2;
 
 		var componentForm = {
 			street_number: 'short_name',
@@ -452,6 +451,7 @@ function move() {
 			// When the user selects an address from the drop-down, populate the
 			// address fields in the form.
 			autocomplete.addListener('place_changed', fillInAddress);
+			autocomplete2.addListener('place_changed', fillInAddress);
 		}
 
 		function fillInAddress() {
@@ -932,25 +932,25 @@ function move() {
 					if($("#RName").val()==""){
 						$("#RName").css("border","2px solid red");
 						$("#RName").parent().find("label").css("color","red");
-						$("#RName").parent().find("label").shake();
+						shake($("#RName").parent().find("label"));
 					}
 					if($("#RPname").val()==""){
 						$("#RPname").css("border","2px solid red");
 						$("#RPname").parent().find("label").css("color","red");
-						$("#RPname").parent().find("label").shake();
+						shake($("#RPname").parent().find("label"));
 					}
 					if($("#REmail").val()==""){
 						$("#REmail").css("border","2px solid red");
 						$("#REmail").parent().find("label").css("color","red");
-						$("#REmail").parent().find("label").shake();
+						shake($("#REmail").parent().find("label"));
 					}
 					if(validEmail2($("#REmail").val())==1){
-									$("#REmail").parent().find("label").shake();
+									shake($("#REmail").parent().find("label"));
 								} 
 					if($("#RPhone").val()==""){
 						$("#RPhone").css("border","2px solid red");
 						$("#RPhone").parent().find("label").css("color","red");
-						$("#RPhone").parent().find("label").shake();
+						shake($("#RPhone").parent().find("label"));
 					}
 					if($("#RPhone").val().length!=10)
 						{
@@ -959,12 +959,12 @@ function move() {
 					if($("#RZip").val()==""){
 						$("#RZip").css("border","2px solid red");
 						$("#RZip").parent().find("label").css("color","red");
-						$("#RZip").parent().find("label").shake();
+						shake($("#RZip").parent().find("label"));
 					}
 					if(strPrc==""){
 						$("#Nofpro").parent().addClass("BCRed");
 						$("#Nofpro").parent().find("label").css("color","red");
-						$("#Nofpro").parent().find("label").shake();						
+						shake($("#Nofpro").parent().find("label"));						
 					}
 					return false;
 					}
@@ -1081,14 +1081,27 @@ $(document).click(function(e) {
 $("#submit").click(function(){
 var GetLoc2=$("#autocomplete2").val();
 if(GetLoc2==""){
-	$("#autocomplete2").css("border-bottom","2px dashed red")
+	$("#autocomplete2").css("border-bottom","2px dashed red");	
 }
 else
 {
 	$('#btnPop').click();
 	$("#autocomplete").val(GetLoc2);
+	$(".LocFie label").addClass("actInp");
+	
 }
 });
+
+$("#btnPop").click(function(){
+         $('#pracFrm').modal('show');
+         setTimeout(function(){ getClassModal(); }, 300);
+    });
+
+   function getClassModal(){
+   	if(($("#pracFrm").hasClass("in"))){
+		$("#autocomplete2").focus();
+	}
+   }
 
 
  $('.LodSlid').slick({

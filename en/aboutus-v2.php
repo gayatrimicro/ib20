@@ -1212,7 +1212,7 @@ $result = $conn->query($sql);
                             <div class="o-section -margin-small">
                                 <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1 is-show">iBridge Digital compares and analyzes your Google rank, web presence, website, and online reputation to find opportunities for you to grow your business and dominate your local market.</p>
                                 <div class="" style="margin-top: 30px;">
-                                        <a class="o-circle-button -large c-home_about_cta" style="width: 8rem;height: 8rem;" id="PatComBtn" onclick="get_patients_competitor_form()" data-toggle="modal" data-target="#pracFrm">
+                                        <a class="o-circle-button -large c-home_about_cta" style="width: 8rem;height: 8rem;" id="PatComBtn" onclick="get_patients_competitor_form()">
                                             <div class="o-circle-button_bg"></div>
                                             <span class="o-circle-button_label">See my results</span>
                                         </a>
@@ -1833,7 +1833,7 @@ $result = $conn->query($sql);
                                                         <i class="fa fa-arrow-right icon-right" aria-hidden="true"></i>
                                                     <!-- </div> -->
                                                 </div>
-                                                <button style="display: none;" id="btnPop" data-toggle="modal" data-target="#pracFrm"></button>
+                                                <button style="display: none;" id="btnPop" onclick="get_patients_competitor_form()"></button>
                             </div>
                         </div>
                     </section>
@@ -2681,8 +2681,8 @@ $result = $conn->query($sql);
             <div class="row">
                 <div class="col-sm-7">
                     <div class="BacTxt">
-                        <h1>Your personalized Business growth results</h1>
-                        <p>We compared you against the 3 top-ranking competitors on Google for your local market and specialty. These are the most important factors affecting your Business growth.</p>
+                        <h1>Your personalized business growth results</h1>
+                        <p>We compared you against the 3 top-ranking competitors on Google for your local market and business category. These are the most important factors affecting your business growth.</p>
                         <ul>
                             <li>
                                 <p>
@@ -2758,7 +2758,7 @@ $result = $conn->query($sql);
                 <div class="col-sm-5">
                     <div class="pracGrow">
                         <h2>Competitors</h2>
-                        <p>Here's how you rank against your competitors based on your overall practice growth scores:</p>
+                        <p>Here's how you rank against your competitors based on your overall business growth scores:</p>
                         <ul id="competitor_div">
                         </ul>
                     </div>
@@ -2776,7 +2776,7 @@ $result = $conn->query($sql);
                     <div><img src="../com-assets/img/google-bac2.png" class="WidXs"></div>
                     <div class="TxtGrap">           
                         <h2>Google rank</h2>
-                        <p>This shows where you appear in Google search results when the majority of patients search for your specialty in your city.</p>
+                        <p>This shows where you appear in Google search results when the majority of customers search for your business in your city.</p>
                         <ul id="google_rank_div">
                             
                         </ul>
@@ -2785,7 +2785,7 @@ $result = $conn->query($sql);
                 </div>
                 <div class="col-sm-8">
                     <div class="bac_clrMap">
-                        <h4 class="BClr">"You need your practice to rank as high as possible. Search results listed on page 1 of Google get 95% of all web traffic."</h4>
+                        <h4 class="BClr">"You need your business to rank as high as possible. Search results listed on page 1 of Google get 95% of all web traffic."</h4>
                         <section class="main_br" id="main_br1">
                             <ul class="graph-container" id="google_rank_graph">
                                 
@@ -3234,7 +3234,7 @@ $result = $conn->query($sql);
                                         <div class="col-sm-8">
                                             <div class="txtSli">
                                                 <h2>Gathering your compititors</h2>
-                                                <h3>Patients could be choosing your competitors without you even realizing it.</h3>
+                                                <h3>Customers could be choosing competitors without you even realizing it.</h3>
                                             </div>                    
                                         </div>
                                     </div>
@@ -3260,7 +3260,7 @@ $result = $conn->query($sql);
                                         <div class="col-sm-8">
                                             <div class="txtSli">
                                                 <h2>Calculating your website score</h2>
-                                                <h3>Patients could be choosing your competitors without you even realizing it.</h3>
+                                                <h3>Customers could be choosing your competitors without you even realizing it.</h3>
                                             </div>                    
                                         </div>
                                     </div>
@@ -3273,7 +3273,7 @@ $result = $conn->query($sql);
                                         <div class="col-sm-8">
                                             <div class="txtSli">
                                                 <h2>Calculating your reputation score</h2>
-                                                <h3>When choosing between two providers, patients are likely to select the one with better reviews 91 percent of the time.</h3>                      
+                                                <h3>When choosing among businesses, customers are likely to select the one with better reviews 91 percent of the time.</h3>                      
                                             </div>                    
                                         </div>
                                     </div>
@@ -3286,7 +3286,7 @@ $result = $conn->query($sql);
                                         <div class="col-sm-8">
                                             <div class="txtSli">
                                                 <h2>Scanning your practice</h2>
-                                                <h3>Please do not refresh your screen or click your browser's back button.</h3>
+                                                <h3>Scanning your business instead of Scanning your practice</h3>
                                             </div>                    
                                         </div>
                                     </div>
@@ -3301,6 +3301,9 @@ $result = $conn->query($sql);
 
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../com-assets/js/slick.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
@@ -3315,7 +3318,7 @@ $result = $conn->query($sql);
             // Script loader
             var iterator = 0;
             var scripts = [
-                'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
+                // 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
                 '../assets/scripts/vendors.js?v=4.7.0',
                 '../assets/scripts/app.js?v=4.7.0'
             ];
