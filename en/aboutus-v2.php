@@ -144,7 +144,7 @@ $result = $conn->query($sql);
 
     <a class="c-play-button" href="" data-load="play" ga-on="click" ga-event-category="ui.menu.section" ga-event-action="click" ga-event-label="play" style="color: transparent !important;">
         <span class="u-screen-reader-text">Play hard</span>
-         <iframe height="100%" width="100%" src="../smoke/test.html" name="iframe_a" style="outline: none;"></iframe>
+         <!-- <iframe height="100%" width="100%" src="../smoke/test.html" name="iframe_a" style="outline: none;"></iframe> -->
         <span class="c-play-button_circle"></span>
     </a>
 
@@ -2518,13 +2518,13 @@ $result = $conn->query($sql);
                         <hr>
                         <div id="address" hidden="">
                             <div class="row">
-                                <div class="col-sm-6 pad_l">
+                                <div class="col-sm-6 pad_l pad360">
                                     <div class="PosRel">
                                         <label for="FirName">Street No</label>
                                         <input type="text"class="form-control"  id="street_number" oninput="ChkInpSts(this)" />
                                     </div>
                                 </div>
-                                <div class="col-sm-6 pad_r">
+                                <div class="col-sm-6 pad_r pad360">
                                     <div class="PosRel">
                                         <label for="FirName">Street address</label>
                                         <input type="text" class="form-control" id="route" oninput="ChkInpSts(this)">
@@ -2532,13 +2532,13 @@ $result = $conn->query($sql);
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6 pad_l">
+                                <div class="col-sm-6 pad_l pad360">
                                     <div class="PosRel">
                                         <label for="FirName">City</label>
                                         <input type="text" class="form-control" id="locality" oninput="ChkInpSts(this)">
                                     </div>
                                 </div>
-                                <div class="col-sm-6 pad_r">
+                                <div class="col-sm-6 pad_r pad360">
                                     <div class="PosRel">
                                         <label for="FirName">State</label>
                                         <input type="text" class="form-control" id="administrative_area_level_1" oninput="ChkInpSts(this)">
@@ -2546,13 +2546,13 @@ $result = $conn->query($sql);
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6 pad_l">
+                                <div class="col-sm-6 pad_l pad360">
                                     <div class="PosRel">
                                         <label for="FirName">Zip code</label>
                                         <input type="text" class="form-control" id="postal_code" oninput="ChkInpSts(this)">
                                     </div>
                                 </div>
-                                <div class="col-sm-6 pad_r">
+                                <div class="col-sm-6 pad_r pad360">
                                     <div class="PosRel">
                                         <label for="FirName">Country</label>
                                         <input type="text" class="form-control" id="country" oninput="ChkInpSts(this)">
@@ -2560,19 +2560,19 @@ $result = $conn->query($sql);
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-12 pad_0">
+                                <div class="col-sm-12 pad_0 pad360">
                                     <div class="PosRel">
                                         <label for="FirName">Website</label>
                                         <input type="text" class="form-control" id="website" oninput="ChkInpSts(this)">
                                     </div>
                                 </div>
-                                <div class="col-sm-12 pad_0">
+                                <div class="col-sm-12 pad_0 pad360">
                                     <div class="PosRel">
                                         <label for="FirName">Organization</label>
                                         <input type="text" class="form-control" id="name" oninput="ChkInpSts(this)">
                                     </div>
                                 </div>
-                                <div class="col-sm-12 cat_js_basic pad_0">
+                                <div class="col-sm-12 cat_js_basic pad_0 pad360">
                                     <div class="PosRel SelClik" id="selClPr">
                                         <label for="FirName">Business Category</label>
                                         <input type="hidden" name="category" id="e1" value="">
@@ -2589,8 +2589,8 @@ $result = $conn->query($sql);
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-6 text-left pad_l"><button class="bckPge" onclick="BckStp('step1')"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &nbsp;Previous</button></div>
-                            <div class="col-sm-6 text-right pad_r"><button class="nxtPge" onclick="NxtStp('step2')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
+                            <div class="col-xs-6 text-left pad_l pad360"><button class="bckPge" onclick="BckStp('step1')"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &nbsp;Previous</button></div>
+                            <div class="col-xs-6 text-right pad_r pad360"><button class="nxtPge" onclick="NxtStp('step2')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
                         </div>
 
                     </div>
@@ -2634,8 +2634,8 @@ $result = $conn->query($sql);
                                             </div>
                                     </form>         
                             <div class="row">
-                                <div class="col-sm-6 text-left"><button class="bckPge" onclick="BckStp('step2')"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &nbsp;Previous</button></div>
-                                <div class="col-sm-6 text-right"><button class="nxtPge" onclick="NxtStp('step3')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
+                                <div class="col-xs-6 text-left pad360"><button class="bckPge" onclick="BckStp('step2')"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &nbsp;Previous</button></div>
+                                <div class="col-xs-6 text-right pad360"><button class="nxtPge" onclick="NxtStp('step3')">Next &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button></div>
                         </div>
                     </div>
                     <img src="../assets/images/lod.gif" class="img_lod">
@@ -2741,7 +2741,7 @@ $result = $conn->query($sql);
                         <div class="col-sm-6 text-center">
                             <div class="inPerBar">
                                 <div class="ScrRes">
-                                    <p>Your Score :</p>
+                                    <p class="txtLFT">Your Score :</p>
                                     <span id="Per"></span>
                                 </div>
                                 <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="265" height="265" xmlns="">
@@ -3209,10 +3209,10 @@ $result = $conn->query($sql);
                         <div class="col-sm-7">
                             <div class="disMsg op0zin">
                                 <div class="row">                
-                                    <div class="col-sm-11">
+                                    <div class="col-xs-11 pad360">
                                         <p>This can take about a minute. Please do not refresh<br> your screen or click your browser’s back button.</p>
                                     </div>
-                                    <div class="col-sm-1 pad_0">
+                                    <div class="col-xs-1 pad_0">
                                         <img src="../com-assets/img/clock.png" class="imgClock">
                                     </div>
                                 </div>              

@@ -1481,8 +1481,52 @@ z-index: 1;
 /*----------------------------------*/
 
 @media(min-width: 320px) and (max-width: 767px){
-    .pracGrow {
+    .modbdy {
+    padding: 33px 20px;
+        height: 100%;
+}
+.graph-container .bar-container, .graph-container:after, .graph-container > li:last-child {
+    height: 42em;
+}
+.contact-form{
+    margin: 0px !important;
+    padding: 15px !important;
+}
+.txtLFT{
+    text-align: center !important;
+}
+.ResMap h4 {
+    margin-bottom: 40px;
+}
+.SlickSli{
+    top: 75px;
+    width: 100%;
+}
+.txtSli h3 {
+    font-size: 20px;
+    line-height: 26px;
+}
+.SliSec {
+    height: 600px;
+}
+.HdrNav {
+    padding: 40px 15px;
+}
+.disMsg p {
+    text-align: left;
+    margin-top: 25px;
+}
+#pracFrm{
+    z-index: 10000;
+}
+.pad360{
+    padding: 0px;
+}
+.pracGrow {
     padding: 0px 10px;
+}
+.Step3str .form-box {
+    padding: 0px 0px;
 }
 .MobScreen img {
     width: 130px;
@@ -1526,7 +1570,7 @@ z-index: 1;
     margin-bottom: 20px;
     font-size: 17px;
     line-height: 32px;
-    text-align: center;
+    text-align: left;
 }
 .BacTxt li p
 {
@@ -1542,7 +1586,7 @@ z-index: 1;
 }
 .ScoreRes p {
     margin-bottom: 35px;
-    text-align: center;
+    text-align: left;
 }
 .pracGrow p {
     font-size: 17px;
