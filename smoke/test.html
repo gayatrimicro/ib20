@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="v3App" id="ng-app">
+<head>
+    <title>website designing & web development company | iBridge Digital</title>
+
+ 
+    <style type="text/css">
+        @font-face {
+    font-family: Proxima-Nova-Thin;
+    src: url(../assets/fonts/ProximaNova-Regular.otf) format("opentype"), url(../assets/fonts/ProximaNova-Regular.otf) format("opentype");
+    font-style: normal;
+    font-weight: 200;
+}
+        :-webkit-full-screen-ancestor .highlight-slide:not(.active) {
+    visibility: hidden
+}
+
+.highlight-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.highlight-slide.active {
+    visibility: visible
+}
+.TxtHed{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 35%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.TxtHed h2{
+    font-size: 27px;
+    color: #fff;
+    font-family: Proxima-Nova-Thin;
+    font-weight: 200;
+    margin-top: 13px;
+}
+.TxtHed h5{
+    font-size: 10px;
+    color: #fff;
+    margin: 30px;
+}
+.d_txt{
+    display: none;
+}
+
+    </style>
+</head>
+<body ng-app="myapp" id="CalBdyWid">
+    <section class="ontop">
+        <div id="bg-image" class="highlight-slide active" data-idx="0" ata-img-fallback="assets/images/1.jpg">
+            <div class="highlight-background">
+                <div> 
+                    <section id="main_content" ng-controller="HomeCtrl">
+                     <div ui-view autoscroll="false" class="sts_transition" style="position: static; opacity: 1; z-index: 1;">
+                        <div id="fluid_wrapper" ng-show="showFluid" class="ng-scope">
+                          <div id="overlay" class="glass"></div>
+                          <canvas id="fluid_container" style="width: 100%;"></canvas>
+                          <div class="TxtHed">
+                            <h5>+</h5>
+                            <h2>BORN IN TECHNOLOGY.</h2>
+                            <h2>FORGED IN STRATEGY.</h2>
+                            <h2>WIRED FOR INNOVATION.</h2>
+                            <h5>+</h5>
+                          </div>
+                        </div>
+                        <div page-loader>
+                        </div>
+                     </div>
+                    </section>
+                    <section class="d_txt" style="background-color: #fff;
+    height: 800px;">
+        <h1 style="color: #000;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 80px;">This is Demo Text</h1>
+    </section>
+                </div>
+                <!-- <a href="#" ng-click="toggleAudio()" id="toggle_audio" audio-control></a>
+                <i the-worm></i> -->
+            </div> 
+        </div>
+    </section> 
+    
+    <script src="fluid_effect.js"></script>
+    <script type="text/javascript">
+        require(['main']);
+    </script>
+    <script src="sts.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</body>
+</html>
