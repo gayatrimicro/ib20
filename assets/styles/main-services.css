@@ -9813,24 +9813,45 @@ html:not(.has-slider-grabbing) .c-home_title_mobile_item.is-active {
 
 .c-list_icon-wrap svg {
 	fill: currentColor;
-	transition: transform .3s cubic-bezier(.4, 0, 0, 1);
+	transition: transform 1.5s cubic-bezier(.4, 0, 0, 1);
 	transform: translateZ(0)
 }
+
+.c-list_icon-wrap .arr {
+	fill: currentColor;
+	transition: transform 1.5s cubic-bezier(.4, 0, 0, 1);
+	transform: translateZ(0) rotate(-45deg);
+}
+.c-list_icon-wrap .lets {
+	transition: transform 1.5s cubic-bezier(0.1, 0, 0, 1);
+	transform: translateX(0);
+	visibility: hidden;
+}
+
+
 
 @media (min-width:1200px) {
 	.c-list_header:hover .c-list_icon-wrap svg {
 		transform: translateX(-2.07407rem)
 	}
+	.c-list_header:hover .c-list_icon-wrap .arr {
+		transform: translateX(-2.07407rem) rotate(315deg);
+	}
+	.c-list_header:hover .c-list_icon-wrap .lets {
+		transform: translateX(-2.07407rem);
+		visibility: visible;
+	}
 }
 
 .c-list_item.is-open .c-list_icon-wrap svg {
-	transform: translateX(-2.07407rem) rotate(-90deg)
+	transform: translateX(-2.07407rem) rotate(-180deg);
+
 }
 
 .c-list_main {
 	display: none;
 	background-color: #1c1c20;
-	padding: 0 2.07407rem;
+	padding: 0rem;
 	padding-bottom: 2.33333rem
 }
 
