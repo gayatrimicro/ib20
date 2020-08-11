@@ -1138,7 +1138,7 @@
                                 <canvas class="o-line_canvas js-animate" data-auto="true" data-module="Rope" data-delay="0.4" data-color="white"></canvas>
                             </div> -->
                             <div class="c-heading-lines_words">
-                               <span class="c-heading-lines_word o-h1 -noMargin" style="font-family: Proxima-Nova-Bold;font-weight: 100;font-size: 4rem;text-transform: uppercase;white-space: normal;text-align: justify;line-height: 1.2;">A Digital-first is one of the best dummy text to work with free.</span>
+                               <span class="c-heading-lines_word o-h1 -noMargin" style="font-family: Proxima-Nova-Bold;font-weight: 100;font-size: 4rem;text-transform: uppercase;white-space: normal;text-align: left;line-height: 1.4;">A Digital-first is one of the best dummy text to work with free.</span>
                             </div>
                         </div>
                     </div>
@@ -1184,7 +1184,244 @@
     /*border-bottom: thin solid #1e1f21;*/
                     font-family: Haas, sans-serif !important;
                 }
+                .box-padding-list{
+                    padding: 5rem 0rem;
+                }
+.strike{
+    width: auto;
+    cursor: pointer;
+}
+ .c-list_header.-links h3:before, .strike h3:before {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 2px;
+     background: #747474;
+     top: 47%;
+     animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+ .c-list_header.-links:hover > .strike h3:before, .strike h3:hover:before {
+     animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+ @keyframes in {
+     0% {
+         width: 0;
+         left: 0;
+         right: auto;
+    }
+     100% {
+         left: 0;
+         right: auto;
+         width: 100%;
+    }
+}
+ @keyframes out {
+     0% {
+         width: 100%;
+         left: auto;
+         right: 0;
+    }
+     100% {
+         width: 0;
+         left: auto;
+         right: 0;
+    }
+}
+ @keyframes show {
+     0% {
+         opacity: 0;
+         transform: translateY(-10px);
+    }
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+    }
+}
+.strike h3, .c-list_header.-links h3{
+     animation: show 0.2s 1.1s ease 1 both;
+}
+
+.trans-box {
+  transition-duration: 5s;
+}
             </style>
+            <div>
+            <section class="o-section -padding-std" id="job-list">
+                <div class="o-container">
+                    <div class="c-list -large" data-module="AccordionCareers">
+                        <div class="c-list_item || js-accordion-item" id="job-offer-68286719-ed16-45b3-8d78-887d99a78888">
+                            <!-- <div class="o-line -noMargin"></div> -->
+                            <div class="c-list_header -links || js-accordion-triggerer">
+                                <div class="o-layout -gutter -baseline grid">
+                                    <div class="o-layout_item u-2/3@from-small strike">
+                                        <h3 class="c-list_heading -hover o-h4" style="font-family: 'IntegralCF'">Responsive Web Design </h3>
+
+                                    </div>
+                                    <!-- <div class="o-layout_item u-1/3@from-small">
+                                        <span class="c-list_icon-wrap">
+                                            <span class="c-list_heading o-h4 u-none@to-small">Full-time</span>
+                                            <span class="u-screen-reader-text">Learn more</span>
+                                            <svg role="img"><use xlink:href="../assets/images/sprite.svg#arrow-down"></use></svg>
+                                        </span>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="c-list_main || c-careers-content || js-accordion-content ">
+                                <!-- <span class="o-line -noTop -white || c-careers-content_line"></span> -->
+
+                            <div class="o-layout box-padding-list" >
+                               
+                                <div class="o-layout_item u-1/2@from-small">
+                                    
+                                    <div class="o-section">
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1" >Designing a website means creating a user journey end to end.</p>
+                                        <br>
+
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">You need solid planning, a touch of storytelling and a taste of inspiration. From pencil sketches to whiteboard sessions, we think about your project from every angle and every marketing platform. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="o-layout -gutter">
+                                    <div class="o-layout_item u-2/3@from-small || u-margin-bottom">
+                                        <div class="o-line -white"></div>
+                                        <div class="o-wysiwyg">
+                                            <p>We can help you with :</p>
+                                            <ul>
+                                                <li>Product & Service Websites</li>
+                                                <li>eCommerce Sites</li>
+                                                <li>Intranets & Web Portals</li>
+                                                <li>UX Design</li>
+                                                <li>Front and Back-end Development</li>
+                                                <li>Mobile Web-Apps</li>
+                                                <li>Content Strategy</li>
+                                                <li>SEO</li>
+                                                <li>Accessibility Services</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="o-layout_item u-1/3@from-small || u-margin-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-list_item || js-accordion-item" id="job-offer-e39a12dc-0343-42e6-81b5-b64495898a75">
+                            <!-- <div class="o-line -noMargin"></div> -->
+                            <div class="c-list_header -links || js-accordion-triggerer">
+                                <div class="o-layout -gutter -baseline">
+                                    <div class="o-layout_item u-2/3@from-small strike">
+                                        <h3 class="c-list_heading -hover o-h4" style="font-family: 'IntegralCF'">Brand Identity</h3>
+                                    </div>
+                                   <!--  <div class="o-layout_item u-1/3@from-small">
+                                        <span class="c-list_icon-wrap">
+                                            <span class="c-list_heading o-h4 u-none@to-small">Full-time</span>
+                                            <span class="u-screen-reader-text">Learn more</span>
+                                            <svg role="img"><use xlink:href="../assets/images/sprite.svg#arrow-down"></use></svg>
+                                        </span>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="c-list_main || c-careers-content || js-accordion-content">
+                                <!-- <span class="o-line -noTop -white || c-careers-content_line"></span> -->
+
+                                <div class="o-layout box-padding-list" >
+                               
+                                <div class="o-layout_item u-1/2@from-small">
+                                    
+                                    <div class="o-section">
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">Your company's visual identity plays a key role and is the first touchpoint customers have with your business and a powerful driver for success. </p><br>
+
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">Our creative team works with you to develop a impactful brand identity that resonates with its audience and carries on an emotional impact</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="o-layout -gutter">
+                                    <div class="o-layout_item u-2/3@from-small || u-margin-bottom">
+                                        <div class="o-line -white"></div>
+                                        <div class="o-wysiwyg">
+                                            <ul>
+<li>Brand Identity Development</li>
+<li>Logo Creation</li>
+<li>Graphic Design</li>
+<li>Brand Guidelines</li>
+<li>Corporate Stationary</li>
+<li>Collateral</li>
+</ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="o-layout_item u-1/3@from-small || u-margin-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-list_item || js-accordion-item" id="job-offer-51c8eef1-e77c-4b37-9cb3-5cf95f17b46f">
+                            <!-- <div class="o-line -noMargin"></div> -->
+                            <div class="c-list_header -links || js-accordion-triggerer">
+                                <div class="o-layout -gutter -baseline">
+                                    <div class="o-layout_item u-2/3@from-small strike">
+                                        <h3 class="c-list_heading -hover o-h4" style="font-family: 'IntegralCF'">Digital Marketing</h3>
+                                    </div>
+                                    <!-- <div class="o-layout_item u-1/3@from-small">
+                                        <span class="c-list_icon-wrap">
+                                            <span class="c-list_heading o-h4 u-none@to-small">Full-time</span>
+                                            <span class="u-screen-reader-text">Learn more</span>
+                                            <svg role="img"><use xlink:href="../assets/images/sprite.svg#arrow-down"></use></svg>
+                                        </span>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="c-list_main || c-careers-content || js-accordion-content">
+                                <!-- <span class="o-line -noTop -white || c-careers-content_line"></span> -->
+
+                                <div class="o-layout box-padding-list" >
+                               
+                                <div class="o-layout_item u-1/2@from-small">
+                                    
+                                    <div class="o-section">
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">We use storytelling to create a deeper connection with your audience.</p><br>
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">We brainstorm multi-channel marketing tactics to get you noticed.</p><br> 
+
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">We leverage the power of imagination and the accuracy of data to revise, amend, and repeat what’s working. And this is how the magic happens.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                                <div class="o-layout -gutter">
+                                    <div class="o-layout_item u-2/3@from-small || u-margin-bottom">
+                                        <div class="o-line -white"></div>
+                                        <div class="o-wysiwyg">
+                                            <ul>
+<li>Campaign Strategy & Planning</li>
+<li>Media Planning & Management</li>
+<li>Google Adwords / PPC</li>
+<li>Social Media Marketing</li>
+<li>Content Marketing</li>
+<li>Search Engine Marketing</li>
+<li>Copywriting</li>
+<li>Analytics & Reporting</li>
+</ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="o-layout_item u-1/3@from-small || u-margin-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="o-line -noMargin"></div> -->
+                    </div>
+                </div>
+            </section>
+            </div>
+<!-- Old one starts here -->
+
             <div>
             <section class="o-section -padding-std" id="job-list">
                 <div class="o-container">
@@ -1194,11 +1431,11 @@
                             <div class="c-list_header -link || js-accordion-triggerer">
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
-                                        <h3 class="c-list_heading -hover o-h4">Back-End Developer </h3>
+                                        <h3 class="c-list_heading -hover o-h4">Responsive Web Design </h3>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
-                                            <span class="c-list_heading o-h4 u-none@to-small">Full-time</span>
+                                            <span class="c-list_heading o-h4 u-none@to-small"><!-- Full-time --></span>
                                             <span class="u-screen-reader-text">Learn more</span>
                                             <svg role="img"><use xlink:href="../assets/images/sprite.svg#arrow-down"></use></svg>
                                         </span>
@@ -1209,70 +1446,35 @@
                             <div class="c-list_main || c-careers-content || js-accordion-content">
                                 <span class="o-line -noTop -white || c-careers-content_line"></span>
 
-                                <p class="c-careers-content_brief o-h2">
-                                    <span class="o-h -indent"></span>Hi there. iBridge is a booming digital agency that specializes in design and web development. We are always looking for the best talent available.
-                                </p>
+                            <div class="o-layout box-padding-list" >
+                               
+                                <div class="o-layout_item u-1/2@from-small">
+                                    
+                                    <div class="o-section">
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">Designing a website means creating a user journey end to end.</p>
+                                        <br>
 
-                                <div class="o-layout -gutter -middle || c-careers-content_tools">
-                                    <div class="o-layout_item u-2/3">
-                                        <button class="o-button -blue -min" type="button" data-module="LisaOpener" data-session='{ "goal": "join-team", "jobOffer": "68286719-ed16-45b3-8d78-887d99a78888" }' data-step="reference">
-                                            <span class="o-button_label -base" >Apply Now</span>
-                                            <span class="o-button_label -hover">Apply Now</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="o-layout_item u-1/3">
-                                        <div class="c-share" data-module="Share">
-                                            <button class="o-circle-button -tiny js-share-open" type="button">
-                                                <span class="u-screen-reader-text">Share</span>
-                                                <div class="o-circle-button_bg -white"></div>
-                                                <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#icon-share"></use></svg>
-                                            </button>
-
-                                            <div class="c-share_menu">
-                                                <button class="c-share_menu_close o-circle-button -tiny js-share-close">
-                                                    <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#cross"></use></svg>
-                                                </button>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="facebook" data-share-url="https://locomotive.ca/en/careers/back-end-developer">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#facebook"></use></svg>
-                                                        facebook
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="twitter" data-share-url="https://locomotive.ca/en/careers/back-end-developer" data-share-text="Back-End Developer ">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#twitter"></use></svg>
-                                                        twitter
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="mail" data-share-subject="Back-End Developer " data-share-body="https://locomotive.ca/en/careers/back-end-developer">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#email"></use></svg>
-                                                        e-mail
-                                                    </button>
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">You need solid planning, a touch of storytelling and a taste of inspiration. From pencil sketches to whiteboard sessions, we think about your project from every angle and every marketing platform. </p>
                                     </div>
                                 </div>
+                            </div>
 
                                 <div class="o-layout -gutter">
                                     <div class="o-layout_item u-2/3@from-small || u-margin-bottom">
                                         <div class="o-line -white"></div>
                                         <div class="o-wysiwyg">
+                                            <p>We can help you with :</p>
                                             <ul>
-<li>Minimum 3 years experience in web programming</li>
-<li>Excellent knowledge of modern PHP, MySQL, and popular web frameworks</li>
-<li>Good knowledge of React, Git, JS, XML, JSON</li>
-<li>Basic knowledge of modern HTML, CSS, ES2015, and creative tools for working with mockups</li>
-<li>Ability to develop and implement customized solutions (e.g., working with external APIs)</li>
-<li>Experience in setting up or working with e-commerce platforms</li>
-<li>Ability to work on several projects at the same time</li>
-<li>Good stress management</li>
-<li>Good team spirit</li>
-<li>Positive attitude</li>
-<li>Bilingual is a must (French and English)</li>
-</ul>
+                                                <li>Product & Service Websites</li>
+                                                <li>eCommerce Sites</li>
+                                                <li>Intranets & Web Portals</li>
+                                                <li>UX Design</li>
+                                                <li>Front and Back-end Development</li>
+                                                <li>Mobile Web-Apps</li>
+                                                <li>Content Strategy</li>
+                                                <li>SEO</li>
+                                                <li>Accessibility Services</li>
+                                            </ul>
                                         </div>
                                     </div>
 
@@ -1286,11 +1488,11 @@
                             <div class="c-list_header -link || js-accordion-triggerer">
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
-                                        <h3 class="c-list_heading -hover o-h4">Front-End Developer</h3>
+                                        <h3 class="c-list_heading -hover o-h4">Brand Identity</h3>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
-                                            <span class="c-list_heading o-h4 u-none@to-small">Full-time</span>
+                                            <span class="c-list_heading o-h4 u-none@to-small"><!-- Full-time --></span>
                                             <span class="u-screen-reader-text">Learn more</span>
                                             <svg role="img"><use xlink:href="../assets/images/sprite.svg#arrow-down"></use></svg>
                                         </span>
@@ -1301,70 +1503,29 @@
                             <div class="c-list_main || c-careers-content || js-accordion-content">
                                 <span class="o-line -noTop -white || c-careers-content_line"></span>
 
-                                <p class="c-careers-content_brief o-h2">
-                                    <span class="o-h -indent"></span>Hi there. iBridge is a booming digital agency that specializes in design and web development. We are always looking for the best talent available.
-                                </p>
+                                <div class="o-layout box-padding-list" >
+                               
+                                <div class="o-layout_item u-1/2@from-small">
+                                    
+                                    <div class="o-section">
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">Your company's visual identity plays a key role and is the first touchpoint customers have with your business and a powerful driver for success. </p><br>
 
-                                <div class="o-layout -gutter -middle || c-careers-content_tools">
-                                    <div class="o-layout_item u-2/3">
-                                        <button class="o-button -blue -min" type="button" data-module="LisaOpener" data-session='{ "goal": "join-team", "jobOffer": "e39a12dc-0343-42e6-81b5-b64495898a75" }' data-step="reference">
-                                            <span class="o-button_label -base" >Apply Now</span>
-                                            <span class="o-button_label -hover">Apply Now</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="o-layout_item u-1/3">
-                                        <div class="c-share" data-module="Share">
-                                            <button class="o-circle-button -tiny js-share-open" type="button">
-                                                <span class="u-screen-reader-text">Share</span>
-                                                <div class="o-circle-button_bg -white"></div>
-                                                <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#icon-share"></use></svg>
-                                            </button>
-
-                                            <div class="c-share_menu">
-                                                <button class="c-share_menu_close o-circle-button -tiny js-share-close">
-                                                    <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#cross"></use></svg>
-                                                </button>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="facebook" data-share-url="https://locomotive.ca/en/careers/front-end-developer">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#facebook"></use></svg>
-                                                        facebook
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="twitter" data-share-url="https://locomotive.ca/en/careers/front-end-developer" data-share-text="Front-End Developer">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#twitter"></use></svg>
-                                                        twitter
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="mail" data-share-subject="Front-End Developer" data-share-body="https://locomotive.ca/en/careers/front-end-developer">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#email"></use></svg>
-                                                        e-mail
-                                                    </button>
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">Our creative team works with you to develop a impactful brand identity that resonates with its audience and carries on an emotional impact</p>
                                     </div>
                                 </div>
+                            </div>
 
                                 <div class="o-layout -gutter">
                                     <div class="o-layout_item u-2/3@from-small || u-margin-bottom">
                                         <div class="o-line -white"></div>
                                         <div class="o-wysiwyg">
                                             <ul>
-<li>Minimum 2 years experience in web integration</li>
-<li>Excellent knowledge of modern HTML, CSS, and ES6</li>
-<li>Good knowledge of animation libraries and techniques (Anime.js, GSAP), build tools (Node.js, Gulp, Sass), Photoshop, Illustrator, and Sketch</li>
-<li>Basic knowledge of Git, PHP, and popular CMS platforms</li>
-<li>Bonus: React, WebGL, Canvas, Pixi.js, and SEO</li>
-<li>Ability to anticipate possible problems with design mockups</li>
-<li>Experience in finding solutions to major problems between different browsers</li>
-<li>Ability to work on several projects at the same time</li>
-<li>Good stress management</li>
-<li>Good team spirit</li>
-<li>Positive attitude</li>
-<li>Bilingual is a must (French and English)</li>
+<li>Brand Identity Development</li>
+<li>Logo Creation</li>
+<li>Graphic Design</li>
+<li>Brand Guidelines</li>
+<li>Corporate Stationary</li>
+<li>Collateral</li>
 </ul>
                                         </div>
                                     </div>
@@ -1379,11 +1540,11 @@
                             <div class="c-list_header -link || js-accordion-triggerer">
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
-                                        <h3 class="c-list_heading -hover o-h4">Project Manager</h3>
+                                        <h3 class="c-list_heading -hover o-h4">Digital Marketing</h3>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
-                                            <span class="c-list_heading o-h4 u-none@to-small">Full-time</span>
+                                            <span class="c-list_heading o-h4 u-none@to-small"><!-- Full-time --></span>
                                             <span class="u-screen-reader-text">Learn more</span>
                                             <svg role="img"><use xlink:href="../assets/images/sprite.svg#arrow-down"></use></svg>
                                         </span>
@@ -1394,70 +1555,33 @@
                             <div class="c-list_main || c-careers-content || js-accordion-content">
                                 <span class="o-line -noTop -white || c-careers-content_line"></span>
 
-                                <p class="c-careers-content_brief o-h2">
-                                    <span class="o-h -indent"></span>Hi there. iBridge is a booming digital agency that specializes in design and web development. We are always looking for the best talent available.
-                                </p>
+                                <div class="o-layout box-padding-list" >
+                               
+                                <div class="o-layout_item u-1/2@from-small">
+                                    
+                                    <div class="o-section">
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">We use storytelling to create a deeper connection with your audience.</p><br>
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">We brainstorm multi-channel marketing tactics to get you noticed.</p><br> 
 
-                                <div class="o-layout -gutter -middle || c-careers-content_tools">
-                                    <div class="o-layout_item u-2/3">
-                                        <button class="o-button -blue -min" type="button" data-module="LisaOpener" data-session='{ "goal": "join-team", "jobOffer": "51c8eef1-e77c-4b37-9cb3-5cf95f17b46f" }' data-step="reference">
-                                            <span class="o-button_label -base" >Apply Now</span>
-                                            <span class="o-button_label -hover">Apply Now</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="o-layout_item u-1/3">
-                                        <div class="c-share" data-module="Share">
-                                            <button class="o-circle-button -tiny js-share-open" type="button">
-                                                <span class="u-screen-reader-text">Share</span>
-                                                <div class="o-circle-button_bg -white"></div>
-                                                <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#icon-share"></use></svg>
-                                            </button>
-
-                                            <div class="c-share_menu">
-                                                <button class="c-share_menu_close o-circle-button -tiny js-share-close">
-                                                    <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#cross"></use></svg>
-                                                </button>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="facebook" data-share-url="https://locomotive.ca/en/careers/project-manager">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#facebook"></use></svg>
-                                                        facebook
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="twitter" data-share-url="https://locomotive.ca/en/careers/project-manager" data-share-text="Project Manager">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#twitter"></use></svg>
-                                                        twitter
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="mail" data-share-subject="Project Manager" data-share-body="https://locomotive.ca/en/careers/project-manager">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#email"></use></svg>
-                                                        e-mail
-                                                    </button>
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <p class="o-h4 u-no-margin u-2/2@from-small js-animate u-anim -delay-1">We leverage the power of imagination and the accuracy of data to revise, amend, and repeat what’s working. And this is how the magic happens.</p>
                                     </div>
                                 </div>
+                            </div>
+
 
                                 <div class="o-layout -gutter">
                                     <div class="o-layout_item u-2/3@from-small || u-margin-bottom">
                                         <div class="o-line -white"></div>
                                         <div class="o-wysiwyg">
                                             <ul>
-<li>Minimum 1 year experience in digital projects management.</li>
-<li>Experience in digital strategy, marketing, communication or other pertinent knowledge</li>
-<li>Managing every aspect of a project, from the budgets to the timelines</li>
-<li>Ensuring that every project is done in time and that the client is always happy</li>
-<li>Good knowledge of Word, Excel and PowerPoint</li>
-<li>Knowledge with TeamWork is an asset</li>
-<li>Excellent organization</li>
-<li>Ability to work on several projects at the same time</li>
-<li>Good stress management</li>
-<li>Good team spirit</li>
-<li>Positive attitude</li>
-<li>Bilingual is a must (French and English)</li>
+<li>Campaign Strategy & Planning</li>
+<li>Media Planning & Management</li>
+<li>Google Adwords / PPC</li>
+<li>Social Media Marketing</li>
+<li>Content Marketing</li>
+<li>Search Engine Marketing</li>
+<li>Copywriting</li>
+<li>Analytics & Reporting</li>
 </ul>
                                         </div>
                                     </div>
@@ -1467,197 +1591,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="c-list_item || js-accordion-item" id="job-offer-f47602bc-31fa-4260-96b4-7fcdea59ec2f">
-                            <div class="o-line -noMargin"></div>
-                            <div class="c-list_header -link || js-accordion-triggerer">
-                                <div class="o-layout -gutter -baseline">
-                                    <div class="o-layout_item u-2/3@from-small">
-                                        <h3 class="c-list_heading -hover o-h4">Interactive Designer</h3>
-                                    </div>
-                                    <div class="o-layout_item u-1/3@from-small">
-                                        <span class="c-list_icon-wrap">
-                                            <span class="c-list_heading o-h4 u-none@to-small">Full-time</span>
-                                            <span class="u-screen-reader-text">Learn more</span>
-                                            <svg role="img"><use xlink:href="../assets/images/sprite.svg#arrow-down"></use></svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="c-list_main || c-careers-content || js-accordion-content">
-                                <span class="o-line -noTop -white || c-careers-content_line"></span>
 
-                                <p class="c-careers-content_brief o-h2">
-                                    <span class="o-h -indent"></span>Hi there. iBridge is a booming digital agency that specializes in design and web development. We are always looking for the best talent available.
-                                </p>
+                        
 
-                                <div class="o-layout -gutter -middle || c-careers-content_tools">
-                                    <div class="o-layout_item u-2/3">
-                                        <button class="o-button -blue -min" type="button" data-module="LisaOpener" data-session='{ "goal": "join-team", "jobOffer": "f47602bc-31fa-4260-96b4-7fcdea59ec2f" }' data-step="reference">
-                                            <span class="o-button_label -base" >Apply Now</span>
-                                            <span class="o-button_label -hover">Apply Now</span>
-                                        </button>
-                                    </div>
 
-                                    <div class="o-layout_item u-1/3">
-                                        <div class="c-share" data-module="Share">
-                                            <button class="o-circle-button -tiny js-share-open" type="button">
-                                                <span class="u-screen-reader-text">Share</span>
-                                                <div class="o-circle-button_bg -white"></div>
-                                                <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#icon-share"></use></svg>
-                                            </button>
 
-                                            <div class="c-share_menu">
-                                                <button class="c-share_menu_close o-circle-button -tiny js-share-close">
-                                                    <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#cross"></use></svg>
-                                                </button>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="facebook" data-share-url="https://locomotive.ca/en/careers/interactive-designer">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#facebook"></use></svg>
-                                                        facebook
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                  <button type="button" class="o-link -underline" data-share-platform="twitter" data-share-url="https://locomotive.ca/en/careers/interactive-designer" data-share-text="Interactive Designer">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#twitter"></use></svg>
-                                                        twitter
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="mail" data-share-subject="Interactive Designer" data-share-body="https://locomotive.ca/en/careers/interactive-designer">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#email"></use></svg>
-                                                        e-mail
-                                                    </button>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        
 
-                                <div class="o-layout -gutter">
-                                    <div class="o-layout_item u-2/3@from-small || u-margin-bottom">
-                                        <div class="o-line -white"></div>
-                                        <div class="o-wysiwyg">
-                                            <ul>
-<li>Minimum 3 years experience in web design</li>
-<li>Excellent knowledge of the entire Adobe Creative Suite</li>
-<li>Create the visuals and interactive elements for web site and mobile apps</li>
-<li>Ensure the visual quality of the project, from the beginning to the end</li>
-<li>Capacity to work with the project manager and the front-end developer</li>
-<li>Assets: Knowledge of HTML5, CSS3, responsive web design and UX wireframing</li>
-<li>Participate in brainstorming sessions</li>
-<li>Always be on the lookout for new trends and show great creativity and originality</li>
-<li>Ability to work on several projects at the same time</li>
-<li>Good stress management</li>
-<li>Good team spirit</li>
-<li>Positive attitude</li>
-<li>Bilingual is a must (French and English)</li>
-</ul>
-                                        </div>
-                                    </div>
 
-                                    <div class="o-layout_item u-1/3@from-small || u-margin-bottom">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="c-list_item || js-accordion-item" id="job-offer-3f50a6bf-954e-4dee-9e16-61b4b65a943d">
-                            <div class="o-line -noMargin"></div>
-                            <div class="c-list_header -link || js-accordion-triggerer">
-                                <div class="o-layout -gutter -baseline">
-                                    <div class="o-layout_item u-2/3@from-small">
-                                        <h3 class="c-list_heading -hover o-h4">Art Director</h3>
-                                    </div>
-                                    <div class="o-layout_item u-1/3@from-small">
-                                        <span class="c-list_icon-wrap">
-                                            <span class="c-list_heading o-h4 u-none@to-small">Full-time</span>
-                                            <span class="u-screen-reader-text">Learn more</span>
-                                            <svg role="img"><use xlink:href="../assets/images/sprite.svg#arrow-down"></use></svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="c-list_main || c-careers-content || js-accordion-content">
-                                <span class="o-line -noTop -white || c-careers-content_line"></span>
-
-                                <p class="c-careers-content_brief o-h2">
-                                    <span class="o-h -indent"></span>Hi there. iBridge is a booming digital agency that specializes in design and web development. We are always looking for the best talent available.
-                                </p>
-
-                                <div class="o-layout -gutter -middle || c-careers-content_tools">
-                                    <div class="o-layout_item u-2/3">
-                                        <button class="o-button -blue -min" type="button" data-module="LisaOpener" data-session='{ "goal": "join-team", "jobOffer": "3f50a6bf-954e-4dee-9e16-61b4b65a943d" }' data-step="reference">
-                                            <span class="o-button_label -base" >Apply Now</span>
-                                            <span class="o-button_label -hover">Apply Now</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="o-layout_item u-1/3">
-                                        <div class="c-share" data-module="Share">
-                                            <button class="o-circle-button -tiny js-share-open" type="button">
-                                                <span class="u-screen-reader-text">Share</span>
-                                                <div class="o-circle-button_bg -white"></div>
-                                                <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#icon-share"></use></svg>
-                                            </button>
-
-                                            <div class="c-share_menu">
-                                                <button class="c-share_menu_close o-circle-button -tiny js-share-close">
-                                                    <svg class="o-circle-button_icon -black" role="img"><use xlink:href="../assets/images/sprite.svg#cross"></use></svg>
-                                                </button>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="facebook" data-share-url="https://locomotive.ca/en/careers/art-director">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#facebook"></use></svg>
-                                                        facebook
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="twitter" data-share-url="https://locomotive.ca/en/careers/art-director" data-share-text="Art Director">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#twitter"></use></svg>
-                                                        twitter
-                                                    </button>
-                                                </p>
-                                                <p class="c-share_menu_item">
-                                                    <button type="button" class="o-link -underline" data-share-platform="mail" data-share-subject="Art Director" data-share-body="https://locomotive.ca/en/careers/art-director">
-                                                        <svg role="img"><use xlink:href="../assets/images/sprite.svg#email"></use></svg>
-                                                        e-mail
-                                                    </button>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="o-layout -gutter">
-                                    <div class="o-layout_item u-2/3@from-small || u-margin-bottom">
-                                        <div class="o-line -white"></div>
-                                        <div class="o-wysiwyg">
-                                            <ul>
-<li>Minimum 3 years experience as an Art Director</li>
-<li>Good leadership and strength of character</li>
-<li>User experience and user interface knowledge</li>
-<li>A strong branding and web portfolio</li>
-<li>Understanding of responsive, device agnostic and mobile first methods</li>
-<li>Leading brainstorming sessions</li>
-<li>Excellent knowledge of the entire Adobe Creative Suite</li>
-<li>Create the visuals and interactive elements for web sites and mobile apps</li>
-<li>Insure the visual quality of the project, from the beginning to the end</li>
-<li>Assets: Knowledge of HTML5, CSS3</li>
-<li>Always be on the lookout for new trends and show great creativity and originality</li>
-<li>Ability to work on several projects at the same time</li>
-<li>Good stress management</li>
-<li>Good team spirit</li>
-<li>Positive attitude</li>
-<li>Bilingual is a must (French and English)</li>
-</ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="o-layout_item u-1/3@from-small || u-margin-bottom">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="o-line -noMargin"></div>
                     </div>
                 </div>
@@ -2542,7 +2484,7 @@
             var scripts = [
                 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
                 '../assets/scripts/vendors.js?v=4.7.0',
-                '../assets/scripts/app.js?v=4.7.0'
+                '../assets/scripts/app.js'
             ];
             function dynamicallyLoadScript(url) {
                 var script = document.createElement('script');

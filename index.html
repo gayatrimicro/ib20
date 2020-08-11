@@ -83,7 +83,7 @@
 
 </div> -->
 
-<a class="c-play-button" href="en/play.html" data-load="play" ga-on="click" ga-event-category="ui.menu.section" ga-event-action="click" ga-event-label="play" style="color: transparent !important;">
+<a class="c-play-button" href="" data-load="play" ga-on="click" ga-event-category="ui.menu.section" ga-event-action="click" ga-event-label="play" style="color: transparent !important;">
         <span class="u-screen-reader-text">Play hard</span>
          <iframe height="100%" width="100%" src="smoke/test.html" name="iframe_a" id="ifr" style="outline: none;border: none;"></iframe>
          <!-- <iframe height="100%" width="100%" src="waves/index.html?effect=waves" name="iframe_a" id="ifr" style="outline: none;"></iframe> -->
@@ -1868,16 +1868,16 @@
 <script type="text/javascript">
             function goBack() {
 var iframe = document.getElementById("ifr");
-  var elmnt = iframe.contentWindow.document.getElementsByTagName("section")[2];
-  elmnt.style.display = "none";
+  var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[18];
+  elmnt.style.overflow = "hidden";
   window.history.back();  
 }
         </script>
         <script type="text/javascript">
     $(".c-play-button").click(function(){
         var iframe = document.getElementById("ifr");
-  var elmnt = iframe.contentWindow.document.getElementsByTagName("section")[2];
-  elmnt.style.display = "block";
+  var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[18];
+  elmnt.style.overflow = "unset";
         });
             
         </script>

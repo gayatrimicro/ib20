@@ -431,12 +431,12 @@ button:hover {
 	font-style: normal;
 	font-weight: 200
 }
-/*@font-face {
-	font-family: Proxima-Nova-Bold;
-	src: url(../fonts/Proxima-Nova-Bold.otf) format("opentype"), url(../fonts/Proxima-Nova-Bold.otf) format("opentype");
+@font-face {
+	font-family: IntegralCF;
+	src: url(../fonts/IntegralCF-ExtraBold.otf) format("opentype"), url(../fonts/IntegralCF-ExtraBold.otf) format("opentype");
 	font-style: normal;
 	font-weight: 200
-}*/
+}
 html {
 	color: #1e1f21;
 	font-family: Haas, sans-serif;
@@ -2459,7 +2459,7 @@ html.is-mobile .o-cursor:not(.-top-mobile):not(.-center-mobile) {
 
 @media (min-width:700px) {
 	.o-section.-padding-std {
-		padding-top: 4.66667rem;
+		padding-top: 14.66667rem;
 		padding-bottom: 10.66667rem
 	}
 }
@@ -3044,15 +3044,16 @@ html.is-mobile .o-cursor:not(.-top-mobile):not(.-center-mobile) {
 }
 
 .o-wysiwyg p {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	margin-bottom: 1.06667rem
 }
 
 .o-wysiwyg ul {
-	font-size: .93333rem;
+	font-size: 1.1rem;
 	margin: 0;
 	padding: 0;
-	padding-left: 18px
+	padding-left: 18px;
+	color: #747474;
 }
 
 .o-wysiwyg a,
@@ -7403,7 +7404,7 @@ html[data-theme=light] .c-banner-minimal {
 }
 
 .c-careers-content {
-	color: #fff
+	color: #747474
 }
 
 .c-careers-content_brief {
@@ -9661,14 +9662,14 @@ html:not(.has-slider-grabbing) .c-home_title_mobile_item.is-active {
 	left: 0;
 	bottom: 0;
 	transform-origin: center top;
-	background-color: #1e1f21;
+	background-color: #fff;
 	transform: scaleY(0);
 	transition: transform .3s cubic-bezier(.4, 0, 0, 1)
 }
 
 @media (min-width:1200px) {
 	.c-list_header.-link:hover {
-		color: #fff
+		color: #1c1c20
 	}
 	.c-list_header.-link:hover:before {
 		transform: scaleX(1)
@@ -9698,12 +9699,17 @@ html:not(.has-slider-grabbing) .c-home_title_mobile_item.is-active {
 }
 
 .c-list_item.is-open .c-list_header {
-	color: #fff
+	color: #1c1c20
 }
 
 .c-list_item.is-open .c-list_header:before {
 	transform: scaleX(1)
 }
+.c-list_item.is-open .c-list_header.-links {
+	color: #fff
+}
+
+
 
 .c-list_heading {
 	display: block;
@@ -9823,7 +9829,7 @@ html:not(.has-slider-grabbing) .c-home_title_mobile_item.is-active {
 
 .c-list_main {
 	display: none;
-	background-color: #1e1f21;
+	background-color: #1c1c20;
 	padding: 0 2.07407rem;
 	padding-bottom: 2.33333rem
 }
