@@ -35,7 +35,7 @@ const init_pointer = (options) => {
 
     const getOption = (option) => {
         let defaultObj = {
-            pointerColor: "#750c7e",
+            pointerColor: "",
             ringSize: 38,
             ringClickSize: (options["ringSize"] || 15) - 5,
         }

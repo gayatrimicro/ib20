@@ -128,7 +128,7 @@
     </a>
 	
 	<div data-load-container>
-		<header class="c-header js-header">
+		<header class="c-header js-header o_drk">
 			<div class="c-header_logoWrap">
 				<a class="c-header_logo" href="../../index.html" style="margin-top: 10px !important;">
 					<span class="u-screen-reader-text">Home</span>
@@ -1084,9 +1084,26 @@
 							}
 
 						</style> -->
+						<style type="text/css">
+							.new-menu{
+								width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;
+
+							}
+							@media (max-width: 600px){
+								.new-menu{
+									width: 100%;
+									text-align: center;
+									height: 10vh;
+									position: relative;
+									cursor:pointer;
+
+								}
+							}
+
+						</style>
 						<ul class="c-nav_list">
 							 <div class="o-layout ">
-		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        <div class="o-layout_item u-1/6@from-small new-menu" onclick="window.location.href='#'" >
 		                        	<li class="c-nav_list_item list-menu">
 										<a href="" class="menu-1" data-load="nav">
 											PORTFOLIO
@@ -1094,28 +1111,28 @@
 									</li>
 									
 		                        </div>
-		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        <div class="o-layout_item u-1/6@from-small new-menu" onclick="window.location.href='#'" >
 		                        	<li class="c-nav_list_item list-menu">
 										<a href="" class="menu-2" data-load="nav">
 											CAPABILITIES
 										</a>
 									</li> 
 		                        </div>
-		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        <div class="o-layout_item u-1/6@from-small new-menu" onclick="window.location.href='#'" >
 		                        	<li class="c-nav_list_item list-menu">
 										<a href="" class="menu-3" data-load="nav">
 											ABOUT US 	
 										</a>
 									</li>   
 		                        </div>
-		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        <div class="o-layout_item u-1/6@from-small new-menu" onclick="window.location.href='#'" >
 		                        	<li class="c-nav_list_item list-menu">
 										<a href="" class="menu-4" data-load="nav">
 											Careers
 										</a>
 									</li> 
 		                        </div>
-		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        <div class="o-layout_item u-1/6@from-small new-menu" onclick="window.location.href='#'" >
 		                        	<li class="c-nav_list_item list-menu">
 										<a href="" class="menu-5" data-load="nav">
 											Contact
@@ -1145,13 +1162,13 @@
 					</div>
 				</div> -->
 			</div>
-			<a class="c-nav_play u-none@from-thousand" href="" data-load="play">
+			<!-- <a class="c-nav_play u-none@from-thousand" href="" data-load="play">
 				<span class="o-container">
 					<p class="c-nav_play_title">
 						Play hard
 					</p>
 				</span>
-			</a>
+			</a> -->
 			<ul class="c-nav_socials c-social" ga-on="click" ga-event-category="ui.social.nav" ga-event-action="click" ga-event-label="">
 				<li class="c-nav_socials_item c-social_item">
 					<a href="https://facebook.com/" class="o-link -circleHover" target="_blank" rel="noopener noreferrer">
@@ -1173,23 +1190,23 @@
 				</li>
 				
 			</ul>
-			<a class="c-nav_lang o-link -circleHover" href="../../fr/projets/design-canada.html" data-load="false" ga-on="click" ga-event-category="ui.lang-switcher" ga-event-action="click" ga-event-label="FR">
+			<!-- <a class="c-nav_lang o-link -circleHover" href="../../fr/projets/design-canada.html" data-load="false" ga-on="click" ga-event-category="ui.lang-switcher" ga-event-action="click" ga-event-label="FR">
 				FR
 				<svg preserveAspectRatio="none" viewBox="0 0 338 172" class="o-link_circle -small">
 					<path vector-effect="non-scaling-stroke" d="M169,3.5c91.1,0,165,36.9,165,82.5s-73.9,82.5-165,82.5S4,131.6,4,86C4,40.4,77.9,3.5,169,3.5"></path>
 				</svg>
-			</a>
+			</a> -->
 		</div>
 <div class="o-scroll" data-module="Scroll" data-main-scroll>
 	<main class="o-page -no-padding-top">
 		<div class="c-project">
-			<div class="o-container">
+			<div class="o-container o_drk">
 				<div class="o-line -elastic">
 					<canvas class="o-line_canvas js-animate" data-auto="true" data-module="Rope" data-delay="0.4" data-color="white"></canvas>
 				</div>
 			</div>
 
-			<div class="c-project-header js-animate" data-module="ProjectHeader" data-callback="trigger.ProjectHeader()" data-repeat>
+			<div class="c-project-header js-animate o_drk" data-module="ProjectHeader" data-callback="trigger.ProjectHeader()" data-repeat>
 				<div class="c-project-header_block">
 					<div class="o-container">
 						<div class="o-header-block">
@@ -1289,7 +1306,7 @@
 				<script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script> -->
 			</div>
 
-			<div class="o-container || c-project_intro">
+			<div class="o-container || c-project_intro o_drk">
 
 				<div class="c-project_awards || o-header-block || c-project_intro_item || js-animate">
 					<div class="o-line -elastic || u-none@from-small">
@@ -1366,7 +1383,7 @@
 
 			</div>
 
-				<figure class="o-image -parallax">
+				<figure class="o-image -parallax o_lig">
 	<div class="o-image_inner">
 		<img src="../../uploads/projects/Harsha/img_1920x1260_harsha.jpg" alt="" class="js-animate" data-speed="-6">
 	</div>
@@ -1430,7 +1447,7 @@
 </style>
 
 				
-<div class="c-device -desktop o-container padding-manual">
+<div class="c-device -desktop o-container padding-manual o_drk">
 	<div class="c-device_inner u-anim -delay-3 js-animate">
 		<img src="../../assets/images/desktop.png" alt="">
 		<div class="c-device_media">
@@ -1462,7 +1479,7 @@
 	</div>
 </div> -->
 
-<section>
+<section class="o_lig">
 	<div class="o-section -padding-v-huge grid-ice">
 	<figure class="o-container"  data-theme="light" style="padding: 0px;">
 		<div class="c-fancy-video c-project_intro_item js-animate has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
@@ -1493,7 +1510,7 @@
 
 
 
-				<div class="o-section -padding-v-huge">
+				<div class="o-section -padding-v-huge o_drk">
 	<figure class="o-container"  data-theme="light">
 		<div class="c-fancy-video c-project_intro_item js-animate has-video is-show" style="padding-bottom: 0% !important;margin-top: 0% !important;">
 			<div>
@@ -1529,7 +1546,7 @@
 </figure> -->
 
 
-<figure class="o-image -parallax">
+<figure class="o-image -parallax o_drk">
 	<div class="o-image_inner">
 		<img src="../../uploads/projects/Harsha/img_1920x1280_harsha-features.jpg" alt="" class="js-animate" data-speed="-6">
 	</div>
@@ -1609,7 +1626,7 @@
 }
 </style> -->
 
-<section>
+<section class="o_lig">
 	<div class="o-container demo u-bg-white" id="bg-change" style="padding-bottom: 5rem;padding-top: 5rem;">
                     <div class="o-layout ">
                         <div class="o-layout_item u-1/2@from-small">
@@ -1675,7 +1692,7 @@
 - backgroundColor: #EB2931
 -->
 
-<section>
+<section class="o_drk">
 	<section class="c-quote_wrapper -padding-top">
 		<div class="c-quote js-animate" data-module="Quote" data-callback="trigger.Quote()">
 			<div class="c-quote_header o-container">
@@ -1719,7 +1736,7 @@
 </figure> -->
 
 
-		<div class="o-section -padding-v-big slider-padding">
+		<div class="o-section -padding-v-big slider-padding o_lig">
 	<div class="o-cursor_wrapper u-relative -show-native o-container js-animate" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()" data-draggable="true">
 		<div class="o-cursor -alpha js-cursor -ahead -drag -points -h">
 			<div class="o-cursor_background"></div>
@@ -1855,7 +1872,7 @@
 
 
 
-				<div class="o-container animate">
+				<div class="o-container animate o_drk">
 	<div class="c-feature || o-layout animation-padding">
 		<div class="c-feature_content || o-layout_item u-2/5@from-medium">
 			<p class="u-anim js-animate -delay-1">Animations</p>
@@ -1884,7 +1901,7 @@
 		</figure>
 	</div>
 </div>
-				<div class="o-section -padding-v-huge" style="background-color:#ddd;">
+				<div class="o-section -padding-v-huge o_lig" style="background-color:#ddd;">
 	<figure class="o-container">
 		<div class="o-vimeo-player js-animate u-anim -delay-1 images-padding-b">
 			<img src="../../uploads/projects/Harsha/img_1920x1260_harsha_ice_01.jpg" alt="" class="js-animate" data-speed="-6">
@@ -1893,7 +1910,7 @@
 </div>
 		
 
-			<div class="o-container" style="color: #003;">
+			<div class="o-container o_drk" style="color: #003;">
 				<div class="c-stats">
 					<div class="o-layout -gutter">
 						<div class="o-layout_item u-1/2@from-small || c-stats_block">
@@ -2117,7 +2134,7 @@
 
 .link, .link:visited {
     position: relative;
-    color: #fff;
+    /*color: #fff;*/
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
@@ -2411,6 +2428,29 @@ $('#myid').click(function(){
 	}
 });
 </script>
+<script type="text/javascript">
+            $(".o_drk").bind('mouseover', function() {
+                $("html").removeClass("ui-dark");
+            $("html").addClass("ui-light");
+            if($("html").hasClass("ui-light")){
+            	$("#pointer-ring").removeClass("clrlig");
+            	$("#pointer-ring").addClass("clrdrk");
+            	$(".color-light").removeClass("clrfntlig");
+            	$(".color-light").addClass("clrfntdrk");
+            }
+            });
+            $(".o_lig").bind('mouseover', function() {
+                $("html").removeClass("ui-light");
+            $("html").addClass("ui-dark");
+            if($("html").hasClass("ui-dark")){
+            	$("#pointer-ring").removeClass("clrdrk");
+            	$("#pointer-ring").addClass("clrlig");
+            	$(".color-light").removeClass("clrfntdrk");
+            	$(".color-light").addClass("clrfntlig");
+            	
+            }
+            });
+        </script>
 	</body>
 </html>
 

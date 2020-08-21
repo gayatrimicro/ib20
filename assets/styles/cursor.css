@@ -17,7 +17,6 @@
     width: 0;
     height: 0;
     padding: 15px;
-    border: 2px solid #750c7e;
     position: fixed;
     border-radius: 100px;
     z-index: 2;
@@ -59,4 +58,17 @@ a {
     top: 50px;
     width: 200px;
     height: 200px;
+}
+.clrdrk{
+    border:2px solid #fff;
+}
+.clrlig{
+    border:2px solid #000096;
+}
+
+.clrfntdrk{
+    color: #fff;
+}
+.clrfntlig{
+    color: #000096;
 }

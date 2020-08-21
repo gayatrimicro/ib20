@@ -1607,7 +1607,7 @@ html:not(.is-mobile) .o-circle-button:hover .o-circle-button_bg {
 }
 
 .o-circle-button_icon.-blue {
-	fill: #4d84f1
+	fill: #fff;
 }
 
 .o-circle-button_icon.-black {
@@ -4766,7 +4766,7 @@ html[data-template=play] .c-header_tagline {
 
 @media(max-width:699px) {
 	.c-header_burger {
-		right: 15px;
+		right: 50px;
 		padding: 10px;
 		width: 45px;
 		top: 28px
@@ -6681,14 +6681,14 @@ html.is-mobile .c-lisa_circle.-compact .c-lisa_circle_inner {
 
 @media(min-width:1025px) and (max-width:1599px) {
 	.c-lisa-button {
-		margin-right: -3.16667rem
+		margin-right: -2.16667rem
 	}
 }
 
 @media(min-width:1600px) {
 	.c-lisa-button {
 		right: 8.88889rem;
-		margin-right: -3.16667rem
+		margin-right: -2.16667rem
 	}
 }
 
@@ -6726,7 +6726,7 @@ html.is-mobile .c-lisa_circle.-compact .c-lisa_circle_inner {
 	height: 250vw;
 	background-color: #4d84f1;
 	border-radius: 50%;
-	transform: translate3d(-50%, -50%, 0) scale(.005);
+	transform: translate3d(-50%, -50%, 0) scale(.000);
 	transition: transform .5s cubic-bezier(.645, .045, .355, 1) .5s, opacity .5s ease;
 	opacity: 1;
 	pointer-events: none;
@@ -6764,6 +6764,7 @@ html.is-mobile .c-lisa_circle.-compact .c-lisa_circle_inner {
 	transition-delay: .1s;
 	transform: translateX(-33.33333vw) translateX(7.6rem);
 	visibility: hidden;
+	opacity: 0;
 }
 
 @media(max-width:699px) {
@@ -6786,13 +6787,19 @@ html.is-mobile .c-lisa_circle.-compact .c-lisa_circle_inner {
 
 @media(min-width:1025px) and (max-width:1599px) {
 	.has-dom-animated.has-nav-open .c-lisa-button {
-		transform: translateX(-33.33333vw) translateX(7.6rem)
+		transform: translateX(-33.33333vw) translateX(7.6rem);
+	visibility: hidden;
+	opacity: 0;
+
 	}
 }
 
 @media(min-width:1600px) {
 	.has-dom-animated.has-nav-open .c-lisa-button {
-		transform: translateX(-33.33333vw) translateX(8.88889rem)
+		transform: translateX(-33.33333vw) translateX(8.88889rem);
+	visibility: hidden;
+	opacity: 0;
+
 	}
 }
 
@@ -8480,7 +8487,7 @@ html.has-smooth-scroll .c-video-player.-parallax .c-video-player_preview {
 
 @media(max-width:699px) {
 	.c-nav_section {
-		margin-top: 110px
+		margin-top: 180px
 	}
 }
 
@@ -8800,7 +8807,7 @@ html.has-smooth-scroll .c-video-player.-parallax .c-video-player_preview {
 
 @media(max-width:699px) {
 	.c-nav_socials {
-		bottom: 130px;
+		bottom: 70px;
 		right: 40px
 	}
 }
