@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html class="has-no-js" lang="en" data-template="contact" data-theme="dark"  data-pageColor="default">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -10,7 +10,7 @@
 	<meta name="keywords" content="Case studies, pwa and wordpress developer, custom web application, award winning web design services in Mumbai, msme & b2b digital marketing solutions, web app developer near you, bespoke web apps">
 	<link rel="canonical" href="https://ibridgedigital.com/bayswater">
 	<title>Works & Portfolio | iBridge Digital</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
 	
 	<link rel="alternate" hreflang="fr" href="../../fr/projets/design-canada.html">
 	
@@ -27,7 +27,7 @@
 	<meta name="HandheldFriendly" content="true">
 
 
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
 	
 	<!-- Appearance -->
 	<meta name="theme-color" content="#4D84F1">
@@ -73,9 +73,13 @@
     background-image: none !important;
     height: 0px;
 }
+.c-footer {
+    height: 100vh !important;
+}
 
 	</style>
 	<link rel="stylesheet" id="main-css" href="../../assets/styles/main-yellow.css" media="none" onload="if(media!='all')media='all'">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/cursor.css">
 
 	<script>
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -113,11 +117,12 @@
 		</div>
 	</div>
 
-	<a class="c-play-button">
-		<span class="u-screen-reader-text">Play hard</span>
-		<canvas class="c-play-canvas" data-module="PlayShapes"></canvas>
-		<span class="c-play-button_circle"></span>
-	</a>
+	<a class="c-play-button" href="" data-load="play" ga-on="click" ga-event-category="ui.menu.section" ga-event-action="click" ga-event-label="play" style="color: transparent !important;">
+        <span class="u-screen-reader-text">Play hard</span>
+         <iframe height="100%" width="100%" src="../../smoke/test.html" name="iframe_a" id="ifr" style="outline: none;border: none;"></iframe>
+         <!-- <iframe height="100%" width="100%" src="waves/index.html?effect=waves" name="iframe_a" id="ifr" style="outline: none;"></iframe> -->
+        <span class="c-play-button_circle"></span>
+    </a>
 	
 	<div data-load-container>
 		<header class="c-header js-header">
@@ -127,7 +132,7 @@
 
 					<!-- <svg role="img"><use xlink:href="../../assets/images/sprite.svg#logo"></use></svg> -->
 					<!-- <img src="../../assets/images/Untitled-2.png" style="width:75px"> -->
-					<?xml version="1.0" encoding="utf-8"?>
+					<!--?xml version="1.0" encoding="utf-8"?-->
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -1039,48 +1044,91 @@
 				</nav>
 			</div>
 
-			<button class="c-header_burger" data-module="NavButton" type="button" ga-on="click" ga-event-category="ui.menu.burger" ga-event-action="toggle">
-				<span class="u-screen-reader-text">Menu</span>
-				<span class="c-header_burger_background"></span>
-			</button>
+			<div class="attract-hover-proximity">
+            <button class="c-header_burger buthov js-attract-hover" data-module="NavButton" type="button" ga-on="click" ga-event-category="ui.menu.burger" ga-event-action="toggle">
+                <span class="u-screen-reader-text">Menu</span>
+                <span class="c-header_burger_background"></span>
+            </button>
+            </div>
 		</header>
 
 		<div class="c-nav_wrapper">
 			<div class="c-nav_background"></div>
 			<div class="c-nav_layout o-layout">
-				<div class="o-layout_item u-2/3@from-thousand">
+				<div class="o-layout_item u-3/3@from-thousand">
 					<div class="c-nav_section c-nav_main">
-						<a class="c-nav_lang_mobile" href="../../fr/projets/design-canada.html" data-load="false" ga-on="click" ga-event-category="ui.lang-switcher" ga-event-action="click" ga-event-label="FR">
+						<!-- <a class="c-nav_lang_mobile" href="../../fr/projets/design-canada.html" data-load="false" ga-on="click" ga-event-category="ui.lang-switcher" ga-event-action="click" ga-event-label="FR">
 							FR
 						</a>
 						<p class="c-nav_section_label">
 							Work hard
-						</p>
+						</p> -->
+
+						<!-- <style type="text/css">
+							.desc-boxs{
+								width: 100%;
+								height: 200px;
+								overflow: hidden;
+							}
+							.desc-boxs p{
+								transform: translateY(-130%);
+								transition: transform .5s cubic-bezier(.08, .03, .22, .87) .3s, -webkit-transform .5s cubic-bezier(.08, .03, .22, .87) .3s;
+								will-change: transform;
+							}
+							.c-nav_list .o-layout_item:hover ~ .desc-boxs p{
+								transform: translateY(0%);
+								transition-duration: 0.6s;
+							}
+
+						</style> -->
 						<ul class="c-nav_list">
-							<li class="c-nav_list_item">
-								<a href="" data-load="nav">
-									Projects
-								</a>
-							</li>                            <li class="c-nav_list_item">
-								<a href="" data-load="nav">
-									Agency
-								</a>
-							</li>                            <li class="c-nav_list_item">
-								<a href="" data-load="nav">
-									Team
-								</a>
-							</li>                                                        <li class="c-nav_list_item">
-								<a href="" data-load="nav">
-									Careers
-								</a>
-							</li>                            <li class="c-nav_list_item">
-								<a href="" data-load="nav">
-									Contact
-								</a>
-							</li>                        </ul>
+							 <div class="o-layout ">
+		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        	<li class="c-nav_list_item list-menu">
+										<a href="" class="menu-1" data-load="nav">
+											PORTFOLIO
+										</a>
+									</li>
+									
+		                        </div>
+		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        	<li class="c-nav_list_item list-menu">
+										<a href="" class="menu-2" data-load="nav">
+											CAPABILITIES
+										</a>
+									</li> 
+		                        </div>
+		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        	<li class="c-nav_list_item list-menu">
+										<a href="" class="menu-3" data-load="nav">
+											ABOUT US 	
+										</a>
+									</li>   
+		                        </div>
+		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        	<li class="c-nav_list_item list-menu">
+										<a href="" class="menu-4" data-load="nav">
+											Careers
+										</a>
+									</li> 
+		                        </div>
+		                        <div class="o-layout_item u-1/6@from-small" onclick="window.location.href='#'" style="width: 20%;text-align: center;height: 100vh;position: relative;cursor:pointer;">
+		                        	<li class="c-nav_list_item list-menu">
+										<a href="" class="menu-5" data-load="nav">
+											Contact
+										</a>
+									</li>  
+		                        </div>
+
+		                    </div>
+							                            
+							                           
+							                                               
+							                           
+							                      </ul>
 					</div>
 				</div>
-				<div class="o-layout_item u-1/3@from-thousand u-none@to-thousand">
+				<!-- <div class="o-layout_item u-1/3@from-thousand u-none@to-thousand">
 					<div class="c-nav_section c-nav_secondary">
 						<p class="c-nav_section_label">
 							Play hard
@@ -1092,7 +1140,7 @@
 								</a>
 							</li>                        </ul>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<a class="c-nav_play u-none@from-thousand" href="" data-load="play">
 				<span class="o-container">
@@ -2014,14 +2062,105 @@
 
 		</div>
 
-		<div class="c-lisa-button || js-lisa-toggle">
-			<button class="o-circle-button" type="button">
-				<span class="u-screen-reader-text">Toggle LISA</span>
-				<div class="o-circle-button_bg || js-lisa-toggle-bg || c-lisa-button_bg"></div>
-				<svg class="o-circle-button_icon       || c-lisa-button_icon         || js-lisa-toggle-open" role="img"><use xlink:href="../../assets/images/sprite.svg#write"></use></svg>
-				<svg class="o-circle-button_icon -blue || c-lisa-button_icon -hidden || js-lisa-toggle-close" role="img"><use xlink:href="../../assets/images/sprite.svg#cross"></use></svg>
-			</button>
-		</div>
+		<style type="text/css">
+            .TzA8585JTCp59Q4vSdUeO_0 {
+    overflow: visible;
+    visibility: visible;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 15px;
+    width: 200px;
+}.TzA8585JTCp59Q4vSdUeO_0 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+._2vodTjXJTiGj5uYbT0C5n__0 {
+  display: inline-block;
+  padding: 0 5px;
+  -webkit-transform-origin: 90% 100%;
+          transform-origin: 90% 100%;
+  visibility: visible;
+}
+._2vodTjXJTiGj5uYbT0C5n__0 {
+    -webkit-animation: hello-anim 5s ease-in-out infinite;
+            animation: hello-anim 5s ease-in-out infinite;
+}
+@-webkit-keyframes hello-anim {
+0%,
+  10% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+5% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+}
+}
+@keyframes hello-anim {
+0%,
+  10% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+5% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+}
+}
+
+.link, .link:visited {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+.link:before, .link:visited:before {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    content: "";
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #000096;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s,-webkit-transform .3s;
+    transition-timing-function: cubic-bezier(.7,0,.3,1);
+}
+.link:hover:before, .link:visited:hover:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+        </style>
+        <div class="c-lisa-button || js-lisa-toggle">
+            <button class="o-circle-button" type="button" id="form-inq">
+                <span class="router-link-exact-active router-link-active TzA8585JTCp59Q4vSdUeO_0 c-lisa-button_icon || js-lisa-toggle-open"><span class="link color-light">Start a Project</span> <span class="_2vodTjXJTiGj5uYbT0C5n__0">👋</span></span>
+
+                <svg class="o-circle-button_icon -blue || c-lisa-button_icon -hidden || js-lisa-toggle-close" role="img"><use xlink:href="../assets/images/sprite.svg#cross"></use></svg>
+            </button>
+        </div>
 		
 		<div class="c-lisa" data-module="Lisa" data-lang="en">
 			<div class="c-lisa_ui">
@@ -2116,7 +2255,7 @@
                                 </div>
                             </div>
                         </form>
-        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
 
 <script>
 $(document).ready(function() { 
@@ -2175,36 +2314,15 @@ $(document).ready(function() {
 			
 		</div>
 		
-		<section class="c-choo" data-module="Choochoo">
 		
-			<button class="o-circle-button c-choo-btn_close js-choo-close" type="button">
-				<div class="o-circle-button_bg"></div>
-				<svg class="o-circle-button_icon" role="img"><use xlink:href="../../assets/images/sprite.svg#cross"></use></svg>
-			</button>
-		
-			<div class="c-choo_letter_bg js-letter-bg"></div>
-		
-			<div class="c-choo_letter_container">
-				<span class="js-letter c-choo_letter">C</span>
-				<span class="js-letter c-choo_letter">H</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">C</span>
-				<span class="js-letter c-choo_letter">H</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">O</span>
-			</div>
-		
-			<div class="c-choo_image_container js-images-container"></div>
-		
-		</section>
 		<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
 	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
 	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
 	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 
 
-
+<script src='https://unpkg.com/attract-hover/dist/attractHover.js'></script>
+<script src="../../assets/scripts/menuanm.js"></script>
 		<script>
 			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
 
@@ -2233,13 +2351,7 @@ $(document).ready(function() {
 		<script type="text/javascript" src="../../assets/scripts/app3e3a.js"></script> -->
 		<!-- <script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script> -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.image_ripple').ripples('show');
-			});
-
-			
-		</script>
+		
 
 
 		<!-- <script type="text/javascript" src="../../assets/scripts/analytics.js"></script>

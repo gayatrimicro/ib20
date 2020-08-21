@@ -88,9 +88,16 @@
     background-image: none !important;
     height: 0px;
 }
+.c-play-button:before {
+    z-index: -1 !important;
+}
+.c-footer {
+    height: 100vh !important;
+}
 
 	</style>
 	<link rel="stylesheet" id="main-css" href="../../assets/styles/main-tija.css" media="none" onload="if(media!='all')media='all'">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles/cursor.css">
 
 	<script>
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -128,21 +135,22 @@
 		</div>
 	</div>
 
-	<a class="c-play-button">
-		<span class="u-screen-reader-text">Play hard</span>
-		<canvas class="c-play-canvas" data-module="PlayShapes"></canvas>
-		<span class="c-play-button_circle"></span>
-	</a>
+	<a class="c-play-button" href="" data-load="play" ga-on="click" ga-event-category="ui.menu.section" ga-event-action="click" ga-event-label="play" style="color: transparent !important;">
+        <span class="u-screen-reader-text">Play hard</span>
+         <iframe height="100%" width="100%" src="../../smoke/test.html" name="iframe_a" id="ifr" style="outline: none;border: none;"></iframe>
+         <!-- <iframe height="100%" width="100%" src="waves/index.html?effect=waves" name="iframe_a" id="ifr" style="outline: none;"></iframe> -->
+        <span class="c-play-button_circle"></span>
+    </a>
 	
 	<div data-load-container>
-		<header class="c-header js-header">
+		<header class="c-header js-header o_drk">
 			<div class="c-header_logoWrap">
 				<a class="c-header_logo" href="../../index.html" style="margin-top: 10px !important;">
 					<span class="u-screen-reader-text">Home</span>
 
 					<!-- <svg role="img"><use xlink:href="../../assets/images/sprite.svg#logo"></use></svg> -->
 					<!-- <img src="../../assets/images/Untitled-2.png" style="width:75px"> -->
-					<?xml version="1.0" encoding="utf-8"?>
+					<!--?xml version="1.0" encoding="utf-8"?-->
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -1054,10 +1062,12 @@
 				</nav>
 			</div>
 
-			<button class="c-header_burger" data-module="NavButton" type="button" ga-on="click" ga-event-category="ui.menu.burger" ga-event-action="toggle">
-				<span class="u-screen-reader-text">Menu</span>
-				<span class="c-header_burger_background"></span>
-			</button>
+			<div class="attract-hover-proximity">
+            <button class="c-header_burger buthov js-attract-hover" data-module="NavButton" type="button" ga-on="click" ga-event-category="ui.menu.burger" ga-event-action="toggle">
+                <span class="u-screen-reader-text">Menu</span>
+                <span class="c-header_burger_background"></span>
+            </button>
+            </div>
 		</header>
 
 		<div class="c-nav_wrapper">
@@ -1147,13 +1157,13 @@
 <div class="o-scroll" data-module="Scroll" data-main-scroll>
 	<main class="o-page -no-padding-top">
 		<div class="c-project">
-			<div class="o-container">
+			<div class="o-container o_drk">
 				<div class="o-line -elastic">
 					<canvas class="o-line_canvas js-animate" data-auto="true" data-module="Rope" data-delay="0.4" data-color="white"></canvas>
 				</div>
 			</div>
 
-			<div class="c-project-header js-animate" data-module="ProjectHeader" data-callback="trigger.ProjectHeader()" data-repeat>
+			<div class="c-project-header js-animate o_drk" data-module="ProjectHeader" data-callback="trigger.ProjectHeader()" data-repeat>
 				<div class="c-project-header_block">
 					<div class="o-container">
 						<div class="o-header-block">
@@ -1271,7 +1281,7 @@
 			</div>
 
 <div  style="position: relative;">
-			<div class="o-container || c-project_intro">
+			<div class="o-container || c-project_intro o_drk">
 
 				<div class="c-project_awards || o-header-block || c-project_intro_item || js-animate">
 					<div class="o-line -elastic || u-none@from-small">
@@ -1350,7 +1360,7 @@
 
 
 
-				<figure class="o-image -parallax" style="background-color: #fff;">
+				<figure class="o-image -parallax o_lig" style="background-color: #fff;">
 	<div class="o-image_inner">
 
 		<img src="../../uploads/projects/Tija/tertiary_icons.png" style="position: absolute;width: auto;height: auto;z-index: 99999999;display: block;transform: translate(40px,80px);">
@@ -1382,7 +1392,7 @@
 
 </div>
 				
-<div class="c-device -desktop o-container outline-laptop">
+<div class="c-device -desktop o-container outline-laptop o_drk">
 	<div class="c-device_inner u-anim -delay-3 js-animate">
 		<img src="../../assets/images/laptop.png" alt="">
 		<div class="c-device_media">
@@ -1404,7 +1414,7 @@
 
 <section style="background-color: #e47a33;">
 
-<figure class="o-image -parallax" style="background-color: #f0a82e;width: 80%;">
+<figure class="o-image -parallax o_drk" style="background-color: #f0a82e;width: 80%;">
 	<div class="o-image_inner ">
 
 		<img src="../../uploads/projects/Tija/logonew.png" class="logo-floating">
@@ -1552,7 +1562,7 @@
 		}
 }
 </style>
-		<div class="o-section -padding-v-big packing bag-pattrn">
+		<div class="o-section -padding-v-big packing bag-pattrn o_lig">
 			<img src="../../uploads/projects/Tija/side-pattern.png" class="pattrn-side desk-vis">
 	<div class="o-cursor_wrapper u-relative -show-native o-container js-animate padding-box" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()" data-draggable="true">
 		<!-- <div class="o-cursor -alpha js-cursor -ahead -drag -points -h">
@@ -1663,7 +1673,7 @@
 </figure> -->
 
 <section>
-	<div class="o-layout js-animate">
+	<div class="o-layout js-animate o_drk">
 	<div class="o-layout_item u-1/2@from-medium">
 		<div class="" style="height:35rem;background:#e47a33;position: relative;">
 			<div class=" u-anim -delay-3 js-animate" style="padding: 3rem">
@@ -1690,7 +1700,7 @@
 		</div>
 	</div>
 </div>
-<div class="o-layout js-animate">
+<div class="o-layout js-animate o_lig">
 	<div class="o-layout_item u-1/3@from-medium">
 		<div class="" style="height:35rem;background:#ebe9e5;position: relative;">
 			<div class=" u-anim -delay-3 js-animate">
@@ -1854,7 +1864,7 @@
 </style>
 <section>
 	
-	<div class="o-layout js-animate" style="position: relative;">
+	<div class="o-layout js-animate o_lig" style="position: relative;">
 		<div class="o-layout_item u-1/2@from-medium classic-vectors">
 			<div  style="background:#fff; height: 100%;"><!-- background:#101820 -->
 				<div class="u-anim -delay-3 js-animate inner-vector-padding">
@@ -1884,7 +1894,7 @@
 
 
 <section>
-	<div class="o-container demo u-bg-white" style="padding-bottom: 5rem;padding-top: 5rem;position: relative;margin-top: -3px;">
+	<div class="o-container demo u-bg-white o_lig" style="padding-bottom: 5rem;padding-top: 5rem;position: relative;margin-top: -3px;">
                     	
 
                     <div class="o-layout " style="">
@@ -1946,7 +1956,7 @@
 -->
 
 <section>
-	<section class="c-quote_wrapper -padding-top">
+	<section class="c-quote_wrapper -padding-top o_drk">
 		<div class="c-quote js-animate" data-module="Quote" data-callback="trigger.Quote()">
 			<div class="c-quote_header o-container">
 				<div class="o-layout">
@@ -1994,7 +2004,7 @@
 		}
 </style>
 
-		<div class="o-section -padding-v-big small-slider slider-boxes">
+		<div class="o-section -padding-v-big small-slider slider-boxes o_lig">
 	<div class="o-cursor_wrapper u-relative -show-native o-container js-animate" data-module="CursorZone" data-repeat data-callback="trigger.CursorZone()" data-draggable="true">
 		<div class="o-cursor -alpha js-cursor -ahead -drag -points -h">
 			<div class="o-cursor_background"></div>
@@ -2173,7 +2183,7 @@
 		</figure>
 	</div>
 </div> -->
-				<div class="o-section -padding-v-huge" style="background-color:#fff;margin-top: -3px;">
+				<div class="o-section -padding-v-huge o_lig" style="background-color:#fff;margin-top: -3px;">
 	<figure class="o-container">
 		<div class="o-vimeo-player js-animate u-anim -delay-1">
 			<img src="../../uploads/projects/Tija/img_1920x1260_harsha_ice_01.jpg" alt="" class="js-animate" data-speed="-6">
@@ -2190,7 +2200,7 @@
 
 
 
-			<div class="o-container">
+			<div class="o-container o_drk">
 				<div class="c-stats">
 					<div class="o-layout -gutter">
 						<div class="o-layout_item u-1/2@from-small || c-stats_block">
@@ -2238,7 +2248,7 @@
     background: linear-gradient(0deg,#001646 0,rgba(0, 22, 70, 0.09));
 }	</style> -->
 
-		<footer class="c-footer">
+		<footer class="c-footer o_drk">
 			<span class="o-trigger js-animate -top-screen-top" data-callback="triggerUILight.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
 				<span class="o-trigger js-animate -top-screen-top" data-callback="triggerUIDark.Locomotive.Scroll(way:leave|direction:up)" data-repeat></span>
 		
@@ -2466,6 +2476,29 @@
                         </form>
         
 
+
+
+
+                </div>
+
+</div>
+
+
+			
+			</div>
+		
+			
+		</div>
+		
+		
+		<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
+	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
+	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src='https://unpkg.com/attract-hover/dist/attractHover.js'></script>
+<script src="../../assets/scripts/menuanm.js"></script> 
 <script>
 $(document).ready(function() { 
 	var vid = document.getElementById("desk_vid1");	
@@ -2512,49 +2545,6 @@ $(document).ready(function() {
 
 </script>
 
-
-
-                </div>
-
-</div>
-
-
-			
-			</div>
-		
-			
-		</div>
-		
-		<section class="c-choo" data-module="Choochoo">
-		
-			<button class="o-circle-button c-choo-btn_close js-choo-close" type="button">
-				<div class="o-circle-button_bg"></div>
-				<svg class="o-circle-button_icon" role="img"><use xlink:href="../../assets/images/sprite.svg#cross"></use></svg>
-			</button>
-		
-			<div class="c-choo_letter_bg js-letter-bg"></div>
-		
-			<div class="c-choo_letter_container">
-				<span class="js-letter c-choo_letter">C</span>
-				<span class="js-letter c-choo_letter">H</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">C</span>
-				<span class="js-letter c-choo_letter">H</span>
-				<span class="js-letter c-choo_letter">O</span>
-				<span class="js-letter c-choo_letter">O</span>
-			</div>
-		
-			<div class="c-choo_image_container js-images-container"></div>
-		
-		</section>
-		<!-- <script async src="../../www.google-analytics.com/analytics.js"></script> -->
-	<!-- <script src="../../assets/scripts/autotrack3e3a.js"></script> -->
-	<!-- <script src="../../../www.google.com/recaptcha/apid027.js?hl=en&amp;render=explicit" async defer></script> -->
-	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-
-
-
 		<script>
 			window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
 
@@ -2583,13 +2573,7 @@ $(document).ready(function() {
 		<script type="text/javascript" src="../../assets/scripts/app3e3a.js"></script> -->
 		<!-- <script type="text/javascript" src="../../assets/scripts/jquery.ripples.js"></script> -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.image_ripple').ripples('show');
-			});
-
-			
-		</script>
+		
 
 
 		<!-- <script type="text/javascript" src="../../assets/scripts/analytics.js"></script>
@@ -2646,6 +2630,41 @@ $('#myid').click(function(){
 	}
 });
 </script>
+        <script type="text/javascript">
+            $(document).ready(function($) {                
+
+  if (window.history && window.history.pushState) {
+
+    $(window).on('popstate', function() {
+        var ifr = document.getElementById("ifr");
+  var elm = ifr.contentWindow.document.getElementsByTagName("div")[18];
+      var hashLocation = location.hash;
+      var hashSplit = hashLocation.split("#!/");
+      var hashName = hashSplit[1];
+
+      if (hashName !== '') {
+        var hash = window.location.hash;
+        if (hash === '') {
+  elm.style.overflow = "hidden";
+        }
+      }
+    });
+
+    // window.history.pushState('forward', null, '#forward');
+  }
+
+});
+        </script>
+        <script type="text/javascript">
+            $(".o_drk").bind('mouseover', function() {
+                $("html").removeClass("ui-dark");
+            $("html").addClass("ui-light");
+            });
+            $(".o_lig").bind('mouseover', function() {
+                $("html").removeClass("ui-light");
+            $("html").addClass("ui-dark");
+            });
+        </script>
 	</body>
 </html>
 

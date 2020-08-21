@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <base >
+    <base > 
 
     <link rel="canonical" href="https://ibridgedigital.com/about-us">
     <title>Company Overview | iBridge Digital</title>
@@ -38,6 +38,11 @@
     <script async src="https://www.google-analytics.com/analytics.js"></script>
     <script src="../assets/scripts/autotrack.js?v=4.7.0"></script>
     <script src="https://www.google.com/recaptcha/api.js?hl=en&render=explicit" async defer></script>
+    <style type="text/css">
+        .c-play-button:before {
+    z-index: -1 !important;
+}
+    </style>
 </head>
 <body data-module="Load" style="opacity: 0;">
     <!-- <div class="c-debug-safari"></div> -->
@@ -62,9 +67,10 @@
         </div>
     </div>
 
-    <a class="c-play-button">
+    <a class="c-play-button" href="" data-load="play" ga-on="click" ga-event-category="ui.menu.section" ga-event-action="click" ga-event-label="play" style="color: transparent !important;">
         <span class="u-screen-reader-text">Play hard</span>
-        <canvas class="c-play-canvas" data-module="PlayShapes"></canvas>
+         <iframe height="100%" width="100%" src="../smoke/test.html" name="iframe_a" id="ifr" style="outline: none;border: none;"></iframe>
+         <!-- <iframe height="100%" width="100%" src="waves/index.html?effect=waves" name="iframe_a" id="ifr" style="outline: none;"></iframe> -->
         <span class="c-play-button_circle"></span>
     </a>
     
@@ -76,7 +82,7 @@
 
                     <!-- <svg role="img"><use xlink:href="../../assets/images/sprite.svg#logo"></use></svg> -->
                     <!-- <img src="../../assets/images/Untitled-2.png" style="width:75px"> -->
-                    <?xml version="1.0" encoding="utf-8"?>
+                    <!--?xml version="1.0" encoding="utf-8"?-->
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -1136,7 +1142,7 @@
                     font-family: Haas, sans-serif !important;
                 }
                 .box-padding-list{
-                    padding: 5rem 0rem;
+                    padding: 2rem 0rem;
                 }
                 .-links{
                     cursor: pointer;
@@ -1198,11 +1204,20 @@
 .trans-box {
   transition-duration: 5s;
 }
+.res .o-line{
+    color: #6b6b6b !important
+}
+#job-list .-baseline{
+    position: relative;
+}
+.-link h3{
+    font-family: IntegralCF !important;
+}
             </style>
             <div>
             <section class="o-section -padding-std" id="job-list">
                 
-                <div class="o-container">
+                <div class="o-container res">
                     <div class="o-layout -gutter-huge js-animate ">
                     <div class="o-layout_item u-1/3@from-small">
                          <h3 class="c-list_heading -hover o-h4" style="font-family: 'IntegralCF';padding: 3.33333rem 0;">WTF Premium:-</h3>
@@ -1456,8 +1471,9 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">Corporate Websites</h3>
+                                        <p>We know how to make websites for businesses of any scale. And we love to do it.</p>
                                     </div>
-                                    <div class="o-layout_item u-1/3@from-small">
+                                    <div class="o-layout_item u-1/3@from-small drop">
                                         <span class="c-list_icon-wrap">
                                             <span class="c-list_heading o-h4 u-none@to-small lets">Lets Discuss</span>
                                             <span class="u-screen-reader-text">Learn more</span>
@@ -1479,6 +1495,7 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">Landing Pages</h3>
+                                        <p>We highlight product and service advantages and turn users into buyers.</p>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
@@ -1502,6 +1519,7 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">Online Stores</h3>
+                                        <p>People love to buy online. And we love to create friendly online stores of any complexity.</p>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
@@ -1524,6 +1542,7 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">Highload Services and Protals</h3>
+                                        <p>Big data requires big services. We use the most advanced methods to develop big.</p>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
@@ -1548,6 +1567,7 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">WOW Sites</h3>
+                                        <p>We love going beyond creativity, design, and development. That is how WOW sites appear. They catch attention and, as a bonus, awards.</p>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
@@ -1572,6 +1592,7 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">Complex Solutions</h3>
+                                        <p>All your business needs is an online promotion. Strategy and content development, product development, recruitment, future advance and promotion strategy.</p>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
@@ -1596,6 +1617,7 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">Mobile apps, VR and AR solutions, Phygital Projects</h3>
+                                        <p>We work ahead of the curve by using advanced technologies. We create solutions your competitors just dream about. Your clients will say “WOW.”</p>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
@@ -1620,6 +1642,7 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">Market Research</h3>
+                                        <p>We interview your customers and conduct an unbiased research on three levels: product, competition, and industry knowledge to see how you can sell  better.</p>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
@@ -1644,6 +1667,7 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">Digital Strategy</h3>
+                                        <p>Rational and data-backed plan to get your brand, your business, and your future from point A to point B, by using digital assets, data, and resources available.</p>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
@@ -1668,6 +1692,7 @@
                                 <div class="o-layout -gutter -baseline">
                                     <div class="o-layout_item u-2/3@from-small">
                                         <h3 class="c-list_heading -hover o-h4">Photo and Video Production</h3>
+                                        <p>We know how difficult it is to reflect all the smallest details of your product. Almost impossible. That's why we love it.</p>
                                     </div>
                                     <div class="o-layout_item u-1/3@from-small">
                                         <span class="c-list_icon-wrap">
@@ -2540,29 +2565,16 @@
             </div>
         </div>
         
-        <section class="c-choo" data-module="Choochoo">
         
-            <button class="o-circle-button c-choo-btn_close js-choo-close" type="button">
-                <div class="o-circle-button_bg"></div>
-                <svg class="o-circle-button_icon" role="img"><use xlink:href="../assets/images/sprite.svg#cross"></use></svg>
-            </button>
-        
-            <div class="c-choo_letter_bg js-letter-bg"></div>
-        
-            <div class="c-choo_letter_container">
-                <span class="js-letter c-choo_letter">C</span>
-                <span class="js-letter c-choo_letter">H</span>
-                <span class="js-letter c-choo_letter">O</span>
-                <span class="js-letter c-choo_letter">O</span>
-                <span class="js-letter c-choo_letter">C</span>
-                <span class="js-letter c-choo_letter">H</span>
-                <span class="js-letter c-choo_letter">O</span>
-                <span class="js-letter c-choo_letter">O</span>
-            </div>
-        
-            <div class="c-choo_image_container js-images-container"></div>
-        
-        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+    $(".c-play-button").click(function(){
+        var iframe = document.getElementById("ifr");
+  var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[18];
+  elmnt.style.overflow = "unset";
+        });
+            
+        </script> 
         <script>
             // Recaptcha
             window.recaptchaKey = '6LfhbgETAAAAAEpdtdf_R6J28OgC3t00HjJTXgk6';
@@ -2570,8 +2582,7 @@
             // Script loader
             var iterator = 0;
             var scripts = [
-                'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
-                '../assets/scripts/vendors.js?v=4.7.0',
+                '../assets/scripts/vendors.js',
                 '../assets/scripts/app.js'
             ];
             function dynamicallyLoadScript(url) {
@@ -2589,6 +2600,31 @@
             window.onload = function() {
                 dynamicallyLoadScript(scripts[iterator]);
             }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function($) {                
+
+  if (window.history && window.history.pushState) {
+
+    $(window).on('popstate', function() {
+        var ifr = document.getElementById("ifr");
+  var elm = ifr.contentWindow.document.getElementsByTagName("div")[18];
+      var hashLocation = location.hash;
+      var hashSplit = hashLocation.split("#!/");
+      var hashName = hashSplit[1];
+
+      if (hashName !== '') {
+        var hash = window.location.hash;
+        if (hash === '') {
+  elm.style.overflow = "hidden";
+        }
+      }
+    });
+
+    window.history.pushState('services', null, '#services');
+  }
+
+});
         </script>
     </body>
 </html>

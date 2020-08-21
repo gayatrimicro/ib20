@@ -4586,9 +4586,8 @@ html[data-theme=light]:not(.ui-light):not(.has-lisa-active):not(.has-nav-open):n
 		transform: translateY(0)
 	}
 	.c-header_logo svg {
-		width:10.73333rem;
-		height:6rem;
-		
+		width: 2.73333rem;
+		height: 6rem
 	}
 }
 

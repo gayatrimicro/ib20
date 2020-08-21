@@ -76,7 +76,10 @@
     padding-right: 0;
 }
 .oveHid{
-    overflow: hidden;
+    overflow: visible;
+}
+.oVH{
+    overflow: visible !important;
 }
 .lgoSet{
     position: fixed;
@@ -84,6 +87,123 @@
     top: 54px;
     cursor: pointer;
 }
+@media (min-width: 1600px){
+.c-header_logo svg {
+    width: 10.2rem;
+}
+}
+.c-play-button {
+    z-index: 100000000000000;
+}
+.spnLg{
+    z-index: 1000000000000;
+    position: absolute;
+}
+.DNon{
+    display: none;
+}
+@-webkit-keyframes Mouse__mouseWheel--3X3Wk {
+    0% {
+        -webkit-transform: scaleY(0.4) translateY(0);
+        transform: scaleY(0.4) translateY(0);
+    }
+    20% {
+        -webkit-transform: scaleY(1) translateY(0);
+        transform: scaleY(1) translateY(0);
+    }
+    60% {
+        -webkit-transform: scaleY(0.4) translateY(12px);
+        transform: scaleY(0.4) translateY(12px);
+    }
+    to {
+        -webkit-transform: scaleY(0.4) translateY(0);
+        transform: scaleY(0.4) translateY(0);
+    }
+}
+@keyframes Mouse__mouseWheel--3X3Wk {
+    0% {
+        -webkit-transform: scaleY(0.4) translateY(0);
+        transform: scaleY(0.4) translateY(0);
+    }
+    20% {
+        -webkit-transform: scaleY(1) translateY(0);
+        transform: scaleY(1) translateY(0);
+    }
+    60% {
+        -webkit-transform: scaleY(0.4) translateY(12px);
+        transform: scaleY(0.4) translateY(12px);
+    }
+    to {
+        -webkit-transform: scaleY(0.4) translateY(0);
+        transform: scaleY(0.4) translateY(0);
+    }
+}
+.Mouse__mouse--1pma4 {
+    position: absolute;
+    width: 30px;
+    height: 48px;
+    border-radius: 15px;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.Mouse__mouse-black--Up58Y {
+    border: 2px solid #000;
+}
+.Mouse__mouse-white--2x3Ck {
+    border: 2px solid #fff;
+}
+@media (max-height: 421px), (max-width: 767px) {
+    .Mouse__mouse--1pma4 {
+        display: none;
+    }
+}
+.Mouse__arrow--2bCBm {
+    left: 50%;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    display: none;
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background-image: url("https://d2kdkox9jtuwgl.cloudfront.net/cases/common/next-arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+}
+@media (max-height: 421px), (max-width: 767px) {
+    .Mouse__arrow--2bCBm {
+        display: block;
+        bottom: 10px;
+    }
+}
+.Mouse__arrow-white--3rK5W {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
+.Mouse__mouseWheel--3X3Wk {
+    width: 4px;
+    height: 9px;
+    position: absolute;
+    top: 8px;
+    left: 11px;
+    border-radius: 2px;
+    -webkit-animation: Mouse__mouseWheel--3X3Wk 1.25s infinite linear;
+    animation: Mouse__mouseWheel--3X3Wk 1.25s infinite linear;
+}
+.Mouse__mouseWheel-black--2SmTc {
+    background-color: #000;
+}
+.Mouse__mouseWheel-white--39ulj {
+    background-color: #fff;
+}
+@media (max-height: 421px), (max-width: 767px) {
+    .Mouse__mouseWheel--3X3Wk {
+        display: none;
+    }
+}
+
 
     </style>
 </head>
@@ -104,6 +224,7 @@
                             <h2>WIRED FOR INNOVATION.</h2>
                             <h5>+</h5>
                           </div>
+                          <span class="Mouse__mouse--1pma4 Mouse__mouse-white--2x3Ck CategorySlide__mouse--3mnkW"><span class="Mouse__mouseWheel--3X3Wk Mouse__mouseWheel-white--39ulj"></span></span>
                         </div>
                         <div page-loader>
                         </div>
@@ -115,13 +236,14 @@
                 <i the-worm></i> -->
             </div> 
         </div>
-        <a class="c-header_logo" href="index.html" style="margin-top: 10px !important;">
+        <span onclick="window.parent.location.href='https://ibridgedigital.com/test'" class="spnLg">
+        <a class="c-header_logo" href="#" style="margin-top: 10px !important;margin-left: 150px;">
                     <span class="u-screen-reader-text">Home</span>
                     <!-- <svg role="img"><use xlink:href="assets/images/sprite.svg#logo"></use></svg> -->
                     <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg class="DNon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      width="250px" height="75px" viewBox="0 0 250 75" enable-background="new 0 0 250 75" xml:space="preserve">
 <g display="none">
     <g display="inline">
@@ -1000,7 +1122,7 @@
 <rect x="8.607" y="31.826" width="5.912" height="17.617"/>
 </svg>
 
-                </a>
+                </a></span>
     </div> 
 
     <!-- <div class="c-debug-safari"></div> -->
@@ -1036,7 +1158,7 @@
                 <nav class="c-header_nav">
                     <ul class="c-header_nav_list">
                         <li class="c-header_nav_item">
-                            <a class="c-header_nav_link o-link -circleHover" href="#">
+                            <a class="c-header_nav_link o-link -circleHover" href="#" onclick="window.parent.location.href='https://ibridgedigital.com/test/en/projects.php'">
                                 Projects
                                 <svg preserveAspectRatio="none" viewBox="0 0 338 172" class="o-link_circle">
                                     <path vector-effect="non-scaling-stroke" d="M169,3.5c91.1,0,165,36.9,165,82.5s-73.9,82.5-165,82.5S4,131.6,4,86C4,40.4,77.9,3.5,169,3.5"></path>
@@ -1044,7 +1166,7 @@
                             </a>
                         </li>
                         <li class="c-header_nav_item">
-                            <a class="c-header_nav_link o-link -circleHover" href="#">
+                            <a class="c-header_nav_link o-link -circleHover" href="#" onclick="window.parent.location.href='https://ibridgedigital.com/test/en/aboutus.php'">
                                 Agency 
                                 <svg preserveAspectRatio="none" viewBox="0 0 338 172" class="o-link_circle">
                                     <path vector-effect="non-scaling-stroke" d="M169,3.5c91.1,0,165,36.9,165,82.5s-73.9,82.5-165,82.5S4,131.6,4,86C4,40.4,77.9,3.5,169,3.5"></path>
@@ -1074,23 +1196,23 @@
                         </p>
                         <ul class="c-nav_list">
                             <li class="c-nav_list_item">
-                                <a href="en/projects" data-load="nav">
+                                <a href="#" data-load="nav" onclick="window.parent.location.href='https://ibridgedigital.com/test/en/projects.php'">
                                     Projects
                                 </a>
                             </li>                            <li class="c-nav_list_item">
-                                <a href="en/about" data-load="nav">
+                                <a href="#" data-load="nav" onclick="window.parent.location.href='https://ibridgedigital.com/test/en/aboutus.php'">
                                     Agency
                                 </a>
                             </li>                            <li class="c-nav_list_item">
-                                <a href="en/team" data-load="nav">
+                                <a href="#" data-load="nav" onclick="window.parent.location.href='https://ibridgedigital.com/test/en/team.html'">
                                     Team
                                 </a>
                             </li>                                                        <li class="c-nav_list_item">
-                                <a href="en/careers" data-load="nav">
+                                <a href="#" data-load="nav" onclick="window.parent.location.href='https://ibridgedigital.com/test/en/careers.html'">
                                     Careers
                                 </a>
                             </li>                            <li class="c-nav_list_item">
-                                <a href="en/contact" data-load="nav">
+                                <a href="#" data-load="nav" onclick="window.parent.location.href='https://ibridgedigital.com/test/en/contact.html'">
                                     Contact
                                 </a>
                             </li>                        </ul>
@@ -1150,12 +1272,16 @@
                 </svg>
             </a>
         </div>
-
+<style type="text/css">
+    [data-theme=dark] .o-page:not(.-transparent){
+        background-color: #0d0d0d;
+    }
+</style>
 <div class="o-scroll" data-module="Scroll" data-main-scroll>
     <main class="o-page">
         <div class="u-relative">
-            <div class="u-z-index-100 || u-bg-black">
-                <div class="c-heading-lines_title">
+            <div class="u-z-index-100 || u-bg-black" style="background: linear-gradient(180deg, rgba(0, 0, 150, 0), rgba(0, 0, 150, .8) 70%, #000096 99%);">
+                <div class="c-heading-lines_title" style="background: transparent;">
                     <div class="c-heading-lines_title_line">
                         <div class="o-container">
                             <div class="o-line -elastic">
@@ -1213,7 +1339,7 @@
                 </div>
             </div>
 
-            <div class="c-video-player -parallax">
+            <div class="c-video-player -parallax" style="background: #000096;">
                 <video width="100%" height="100%" id="vidBAc" autoplay muted="muted" loop>
   <source src="../assets/videos/ib9.mp4" type="video/mp4">
   <source src="../assets/videos/ib9.mp4" type="video/ogg">
@@ -1227,7 +1353,7 @@
                 </div> -->
 
                 <div class="c-video-player_cursor || o-cursor_wrapper || js-video-cursor js-animate" data-repeat data-callback="trigger.CursorZone()" data-module="CursorZone">
-                    <div class="c-video-player_cursor-zone || js-drag-zone"></div>
+                    <div class="c-video-player_cursor-zone || js-drag-zone" style="background: linear-gradient(180deg, rgba(0, 0, 150, 0), rgba(0, 0, 150, .8) 70%, #000096 99%) !important;"></div>
                     <div class="o-cursor -white -center-mobile || js-cursor">
                         <div class="o-cursor_background"></div>
                         <div class="o-cursor_label">
@@ -1240,82 +1366,369 @@
                     </div>
                 </div>
             </div>
+            <style type="text/css">
+                .profile-content{
+                    position: absolute;top: 50%;transform: translateY(10%) !important;
+                }
+                .profile-container{
+                    padding:7rem 4.2rem;
+                }
+                .profile-layout{
+                    padding: 5rem 2rem;
+                }
+                .feature-box{
+                    padding:8rem 11.2rem;background: linear-gradient(180deg, rgba(0, 0, 150), rgba(0, 0, 150) 70%, #000096 99%)
+                }
 
+                .career-box{
+                    padding: 0rem 11.2rem;position: absolute;bottom:0%;left: 50%;transform: translate(-50%, 0%);width: 100%;background: linear-gradient(180deg, rgba(0, 0, 150, 0), rgba(0, 0, 150, .8) 70%, #000096 99%);height: 100vh
+                }
+                .desk-career-pad{
+                    margin-top: 15rem
+                }
+                .we-are{
+                    padding:10rem 11.2rem;background: linear-gradient(180deg, rgba(0, 0, 150), rgba(0, 0, 150) 70%, #000096 99%);
+                }
+                .w-50{
+                    width: 50%
+                }
+                .inner-we-are{
+                    width: 48%;padding-left: 1rem
+                }
+                .inner-pad{
+                    padding-left: 1rem;
+                }
+
+                @media (max-width: 600px){
+                    .TxtHed{
+                        width: 100%
+                    }
+                    .profile-content{
+                        position: static;
+                        transform: none;
+                        margin-top: 2rem;
+                    }
+                    .profile-container{
+                        padding:3rem 1rem;
+                    }
+                    .profile-layout{
+                        padding: 5rem 2rem;
+                    }
+                    .feature-box{
+                        padding:8rem 1.2rem;background: linear-gradient(180deg, rgba(0, 0, 150), rgba(0, 0, 150) 70%, #000096 99%)
+                    }
+                    .career-box{
+                        padding: 0rem 1.2rem;position: static;bottom:0%;left: 50%;transform: none !important;width: 100%;background: linear-gradient(180deg, rgba(0, 0, 150, 0), rgba(0, 0, 150, .8) 70%, #000096 99%);height: auto;
+                    }
+                    .desk-career-pad{
+                        margin-top: 1rem
+                    }
+                    .height-per{
+                        height: 0px;
+                    }
+                    .we-are{
+                        padding:3rem 1.2rem;background: linear-gradient(180deg, rgba(0, 0, 150), rgba(0, 0, 150) 70%, #000096 99%);
+                    }
+                    .w-50{
+                        width: 100%
+                    }
+                    .inner-we-are{
+                        width: 100%;padding-left: 0rem;
+                        margin: 2rem 0px;
+                    }
+                    .inner-pad{
+                        margin: 2rem 0px;
+                        padding-left: 0rem;
+                    }
+                }
+            </style>
             <div class="u-bg-white u-relative">
-                <span class="o-trigger js-animate -top-screen-top" data-callback="triggerUIDark.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
-                <span class="o-trigger js-animate -top-screen-top" data-callback="triggerUILight.Locomotive.Scroll(way:leave|direction:up)" data-repeat></span>
 
-                <span class="o-trigger js-animate -bottom-screen-top" data-callback="triggerUILight.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
-                <span class="o-trigger js-animate -bottom-screen-top" data-callback="triggerUIDark.Locomotive.Scroll(way:leave|direction:up)" data-repeat></span>
+                <div class="o-container profile-container">
+                    
+                    <div class="o-layout profile-layout">
+                        <div class="o-layout_item u-1/2@from-small" style="margin: auto;">
+                            <img src="../assets/images/kalpesh1.jpg" style="width: 95%">
+                        </div>
+                        <div class="o-layout_item u-1/2@from-small u-relative">
+                            <div class="profile-content">
+                                <div class="o-section js-animate">
+                                    <div class="o-section_heading" style="text-align: center;"> 
+                                        <p class="o-section_heading_content o-h3 o-fade-up-rows -text-indent || js-animate">Kalpesh Upadhyay</p>
+                                        <p class="o-section_heading_content o-h5 o-fade-up-rows -text-indent || js-animate" style="line-height: normal;">Our vision is to be known as one of the best new-media digital marketing agency in the world. We believe in our vision just as strongly — we embrace these values just as passionately — as we did the first time we put them on paper. Our vision, our values, our commitment to outstanding service for every customer — none of that has changed.</p>
 
-                <div class="o-container">
-                    <div class="o-section -padding-top -margin-small">
-                        <span class="o-h -indent -top"></span> <p class="o-h2 -inline-block || o-fade-up-rows || js-animate" data-module="FadeUpByRow" data-lines-class="o-fade-up-rows_line" data-viewport-offset="0.15">Made in Montreal,<br><span class="u-italic">Quebec, Canada</span></p>
+                                        <p class="o-section_heading_content o-h5 o-fade-up-rows -text-indent || js-animate" style="line-height: normal;margin-top: 2rem;">Digital Strategist<br>13+ years of experience<br>800+ Projects Completed</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+
+                    
+
+                </div>
+            </div>
+
+            <style type="text/css">
+                .c-icon {
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                }
+                .c-icon>svg {
+                    height: 100%;
+                }
+                .c-home__ideas-item-icon svg * {
+                    stroke: #fff;
+                    /* stroke-dashoffset: 0px; */
+                    stroke-dashoffset: 300px;
+                    stroke-dasharray: 300px;
+                    /*transition: stroke-dashoffset 2s, opacity .6s;*/
+                     /*animation: dash 2s linear forwards;*/;
+                    /*animation: dash 2s linear forwards;*/
+                }
+                .acT svg * {
+                    animation: dash 2s linear forwards;
+                }
+                @keyframes dash {
+                  to {
+                    stroke-dashoffset: 0;
+                  }
+                }
+                .c-home__ideas-item-icon{
+                    margin-bottom: 1rem; 
+                }
+
+            </style>
+            <div class="u-relative">
+
+                <div class="o-container feature-box getHov">
+                    
 
                     <div class="o-section js-animate">
                         <div class="o-section_heading">
-                            <h1 class="o-section_heading_title o-h -indent u-anim -parent -delay-2">About</h1> <p class="o-section_heading_content o-h2 o-fade-up-rows -text-indent || js-animate" data-module="FadeUpByRow" data-lines-class="o-fade-up-rows_line" data-viewport-offset="0.15"><span class="o-fade-up-rows_indent-el"></span>iBridge stands out among web agencies, and offers a wide range of creative and strategic services for brands, companies, foundations and other remarkable organizations. We assist and educate our clients in making the best use of the solutions we build with them.</p>
+                        <p class="o-section_heading_content o-h2 -text-indent || js-animate" style="text-align: center;padding:2rem;">We help companies design for web and beyond.</p>
+                        <p class="o-section_heading_content o-h5 -text-indent || js-animate" style="text-align: center;padding:2rem;">We dedicate ourselves to crafting awesome and eye-catching digital experiences that change the way your brand connects with users.</p>
+
+                        </div>
+                    </div>
+                    <div class="o-layout oLy" style="margin-top: 10rem;">
+                        <div class="o-layout_item u-1/2@from-small"></div>
+                        <div class="o-layout_item u-1/2@from-small">
+                            <!-- <div class="o-line -text"></div> -->
+                            <div class="c-home__ideas-item-icon">
+                                <span class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><g><g id="svg-2" fill="none" stroke="#0000f0" stroke-linecap="round" stroke-width="2" class="svg-animate"><path d="M38 35c4.292 1.184 6 3 6 3v8H16v-8s1.708-1.816 6-3M35 58.562A28.979 28.979 0 1 0 30 59" stroke-linejoin="round" class="svg-animate"></path><path d="M39.528 27.5A11.003 11.003 0 1 1 41 22a30.995 30.995 0 0 1-10 2 16.07 16.07 0 0 1-8.111-2" stroke-linejoin="round" class="svg-animate"></path><path stroke-miterlimit="10" d="M27 17v1M33 17v1M30 37v1M30 42v4" class="svg-animate"></path></g></g></svg></span>
+                            </div>
+                            <div class="o-section">
+                                <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">We combine digital strategy, UX and design to help clients think beyond ordinary.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="o-object3d-wrap -medium -overlap-v-lg">
-                        <div class="o-object3d js-animate" data-callback="trigger.Object3D()" data-repeat data-module="Object3D" data-models="montreal-new.glb" data-settings='{ "camera": { "position": [0,0,6], "fov": 42, "translateScroll": [0,-15,0] }, "object": { "rotation": [0,0,-35], "rotationScroll": [0,-90,0] }, "ambientLight": { "intensity": 0.53 }, "spotLight": { "intensity": 0.45 } }'></div>
-                    </div>
-
-                    <section class="o-section -margin-small">
-                        <div class="o-line -text"></div>
-                        <div class="o-layout -gutter-huge js-animate ">
-                            <div class="o-layout_item u-2/6@from-small">
-                                <h2 class="o-h -normal -margin-small u-anim -delay-2 -parent">Established in 2007</h2>
-                            </div>
-                            <div class="o-layout_item u-1/6@from-small"></div>
-                            <div class="o-layout_item u-3/6@from-small">
-                                <div class="u-2/3@from-small">
-                                    <p class="u-anim -delay-4 -parent">In a few short years, iBridge has made its mark on Montreal — our home and a powerhouse recognized internationally for its creativity. With a unique identity rooted in Quebec, its reputation branches far beyond its borders.</p>
-                                </div>
+                    <div class="o-layout oLy" style="margin-top: 10rem;">
+                        <div class="o-layout_item u-1/2@from-small">
+                            <!-- <div class="o-line -text"></div> -->
+                            <div class="c-home__ideas-item-icon"><span class="c-icon "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><g><g id="svg-3" fill="none" stroke="#0000f0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="svg-animate"><path d="M27 11h6M21.132 15H43v35a3 3 0 0 1-3 3H20a3 3 0 0 1-3-3V10a3 3 0 0 1 3-3h20a3 3 0 0 1 3 3v.781M17.132 48H39" class="svg-animate"></path><path d="M22 30.81L27.19 36 38 26M35 58.562A28.979 28.979 0 1 0 30 59" class="svg-animate"></path></g></g></svg></span>
+                                    </div>
+                            <div class="o-section">
+                                <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">Where web technology meets user experience and creative strategy.</p>
                             </div>
                         </div>
-                    </section>
+                        <div class="o-layout_item u-1/2@from-small"></div>
+                    </div>
+
+                    <div class="o-layout oLy" style="margin-top: 10rem;">
+                        <div class="o-layout_item u-1/2@from-small"></div>
+                        <div class="o-layout_item u-1/2@from-small">
+                            <!-- <div class="o-line -text"></div> -->
+                            <div class="c-home__ideas-item-icon"><span class="c-icon "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><g><g id="svg-4" fill="none" stroke="#0000f0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="svg-animate"><path d="M46.313 30c0 10.46-3.115 19.626-7.786 24.727M46.313 30c0-10.46-3.115-19.626-7.786-24.727M13.688 30c0 10.46 3.114 19.626 7.785 24.727M13.688 30c0-10.46 3.114-19.626 7.785-24.727M30 3.993V59M4 30h52M10 45.993h40M10 13.993h40M35 58.562A28.979 28.979 0 1 0 30 59" class="svg-animate"></path></g></g></svg></span>
+                                    </div>
+                            <div class="o-section">
+                                <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">From making products to marketing them. Two specialized teams. One unified company.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="o-layout oLy" style="margin-top: 10rem;">
+                        <div class="o-layout_item u-1/2@from-small">
+                            <!-- <div class="o-line -text"></div> -->
+                            <div class="c-home__ideas-item-icon"><span class="c-icon "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><g><g id="svg-5" fill="none" stroke="#0000f0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="svg-animate"><path d="M17.317 39.948a11.994 11.994 0 0 0 10.666-11.926M30.061 39.93a7.681 7.681 0 0 1-1.528-1.997M12.405 24.354a16.003 16.003 0 0 1 31.467 5.559M21.973 42.844a16.016 16.016 0 0 0 1.881-.914 2.62 2.62 0 0 1 3.16.456 15.839 15.839 0 0 0 1.826 1.592" class="svg-animate"></path><path d="M31.466 34.786a3.699 3.699 0 0 1-.106-2.388 15.771 15.771 0 0 0 .62-4.141 4.107 4.107 0 0 0-3.271-4.171 4.003 4.003 0 0 0-4.726 3.936 8.01 8.01 0 0 1-7.922 8 4.184 4.184 0 0 0-1.685.387" class="svg-animate"></path><path d="M35.76 30.943a19.477 19.477 0 0 0 .213-2.315 8.227 8.227 0 0 0-7.3-8.577 8.009 8.009 0 0 0-8.69 7.97 4.004 4.004 0 0 1-3.952 4 8.58 8.58 0 0 0-3.336.73" class="svg-animate"></path><path d="M39.897 30.002q.054-.625.074-1.248a12.181 12.181 0 0 0-10.961-12.69q-.517-.043-1.027-.043a12.013 12.013 0 0 0-12 12 12.574 12.574 0 0 0-3.965.693M46.197 44A6.002 6.002 0 1 1 47 41H35M35 58.562A28.979 28.979 0 1 0 30 59" class="svg-animate"></path></g></g></svg></span>
+                                    </div>
+                            <div class="o-section">
+                                <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">We are, a future-obsessed digital agency specializing in web and mobile design and development, social media strategy and new-media marketing.</p>
+                            </div>
+                        </div>
+                        <div class="o-layout_item u-1/2@from-small"></div>
+                    </div>
+
+                    <div class="o-layout oLy" style="margin-top: 10rem;">
+                        <div class="o-layout_item u-1/2@from-small"></div>
+                        <div class="o-layout_item u-1/2@from-small">
+                            <!-- <div class="o-line -text"></div> -->
+                            <div class="c-home__ideas-item-icon"><span class="c-icon "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><g><g id="svg-6" fill="none" stroke="#0000f0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="svg-animate"><path d="M40 27a10 10 0 1 0-16.161 7.865A2.915 2.915 0 0 1 25 37.15V41h10v-3.852a2.901 2.901 0 0 1 1.153-2.276 10.072 10.072 0 0 0 2.206-2.39M25 46l10-1M27.504 49.75l4.992-.5M30.007 7v3M10.206 18.424l2.598 1.5M10.2 41.284l2.598-1.5M49.794 41.295l-2.598-1.5M49.8 18.436l-2.598 1.5M35 58.562A28.979 28.979 0 1 0 30 59" class="svg-animate"></path></g></g></svg></span>
+                                    </div>
+                            <div class="o-section">
+                                <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">We strive for better. We’ve helped companies win hearts and minds since 2003.</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
+            </div>
 
-                <section class="c-quote_wrapper">
-                    <div class="c-quote js-animate" data-module="Quote" data-callback="trigger.Quote()">
-                        <div class="o-container">
-                            <div class="o-layout">
-                                <div class="o-layout_item u-1/2@from-small"></div>
-                                <div class="o-layout_item u-1/2@from-small">
-                                    <div class="o-line -text"></div>
-                                    <div class="o-section">
-                                        <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">iBridge isn’t just a team — <span class='u-italic'>it’s a family</span>. We all share the same vision here: to push ideas all the way, without taking ourselves too seriously, and overcoming challenges together.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- <div class="u-relative -parallax" style="background-image: url(../assets/images/bg3.jpg);background-size: cover;background-position: center center;">
 
-                        <div class="o-cursor_wrapper -show-native js-animate" data-module="CursorZone" data-draggable="true" data-repeat data-callback="trigger.CursorZone()">
-                            <div class="o-cursor -alpha js-cursor -ahead -drag -points -h">
-                                <div class="o-cursor_background"></div>
-                            </div>
+                <div class="o-container" style="padding:15rem 11.2rem;background: linear-gradient(180deg, rgba(0, 0, 150, 0), rgba(0, 0, 150, .8) 70%, #000096 99%);height: 100vh;">
+                    
 
-                            <div class="js-drag-zone || o-icon-drag-h_wrapper">
-                                <div class="o-icon-drag-h_inner -right">
-                                    <svg class="o-icon-drag-h" role="img"><use xlink:href="../assets/images/sprite.svg#icon-drag-h"></use></svg>
-                                </div>
+                    <div class="o-section js-animate">
+                        <div class="o-section_heading">
+                        <p class="o-section_heading_content o-h2 -text-indent || js-animate" style="text-align: center;padding:2rem;">We believe in passionate people.</p>
+                        <p class="o-section_heading_content o-h4 -text-indent || js-animate" style="text-align: center;padding:2rem;">No matter their background or years of experience.<br>
+                                                    You feel like you could be one of us?<br>
+                                                    We are constantly looking for new talents to join us.</p>
 
-                                <div class="c-quote_outer">
-                                    <div class="c-quote_inner || js-inner">
-                                        <blockquote class="c-quote_text || js-text">
-                                            Work hard, play harder, never play it safe.
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                </section>
+                </div>
+
+            </div> -->
+
+
+            <figure class="o-image -parallax">
+            <div class="o-image_inner" style="background: linear-gradient(180deg, rgba(0, 0, 150, 0), rgba(0, 0, 150, .8) 70%, #000096 99%);position: relative;">
+                <img src="../assets/images/bg3.jpg" alt="" class="js-animate height-per" data-speed="-6">
+                    
+                <div class="career-box">
+                    <div class="o-section js-animate desk-career-pad" >
+                        <div class="o-section_heading">
+                        <p class="o-section_heading_content o-h2 -text-indent || js-animate" style="text-align: center;padding:2rem;">We believe in passionate people.</p>
+                        <p class="o-section_heading_content o-h4 -text-indent || js-animate" style="text-align: center;padding:2rem;">No matter their background or years of experience.<br>
+                                                    You feel like you could be one of us?<br>
+                                                    We are constantly looking for new talents to join us.</p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
+        </figure>
+
+
+
+
+
+
+
+    <section class="c-quote_wrapper -padding-top u-bg-white" style="background-color: #fff">
+        <div class="c-quote js-animate" data-module="Quote" data-callback="trigger.Quote()">
+            <div class="c-quote_header o-container">
+                <div class="o-layout">
+                    <div class="o-layout_item u-1/2@from-small"></div>
+                    <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-line -text"></div>
+                        <div class="o-section">
+                            <p class="o-h4 u-no-margin c-quote_subtitle u-2/3@from-small u-anim -delay-1 js-animate">Kalpesh Upadhyay<br>CEO, iBridge Digital.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o-cursor_wrapper -show-native js-animate" data-module="CursorZone" data-draggable="true" data-repeat data-callback="trigger.CursorZone()">
+                <div class="o-cursor -alpha js-cursor -ahead -drag -points -h">
+                    <div class="o-cursor_background"></div>
+                </div>
+
+                <div class="js-drag-zone || o-icon-drag-h_wrapper">
+                    <div class="o-icon-drag-h_inner -white-alpha -right">
+                        <svg class="o-icon-drag-h" role="img"><use xlink:href="../../assets/images/sprite.svg#icon-drag-h"></use></svg>
+                    </div>
+
+                    <div class="c-quote_outer">
+                        <div class="c-quote_inner || js-inner">
+                            <blockquote class="c-quote_text || js-text">
+                                “The thing we like about iBridge Digital is they take ownership of your idea.”
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <div class=" u-relative">
+
+                <div class="o-container we-are" >
+                    
+
+                    <div class="o-section js-animate">
+                        <div class="o-section_heading">
+                        <p class="o-section_heading_content o-h2 -text-indent || js-animate" style="text-align: center;padding:2rem;">We are iBridge Digital.</p>
+                        <!-- <p class="o-section_heading_content o-h5 -text-indent || js-animate" style="text-align: center;padding:2rem;">We dedicate ourselves to crafting awesome and eye-catching digital experiences that change the way your brand connects with users.</p> -->
+
+                        </div>
+                    </div>
+                    <div class="o-layout" style="margin-top: 10rem;">
+                        
+                        <div class="o-layout_item u-2/3@from-small w-50">
+                            <div class="o-line -text"></div>
+                            <div class="o-section">
+                                <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">iBridge Digital is the digital arm of Gayatri Web Services (earlier Gayatri Microsystems Pvt. Ltd.).</p>
+                            </div>
+                        </div>
+                        <!-- <div class="o-layout_item u-1/6@from-small"></div> -->
+                        <div class="o-layout_item u-1/3@from-small w-50" style="padding-left: 0rem;">
+                            <div class="o-layout_item u-1/2@from-small inner-we-are">
+                                <div class="o-line -text"></div>
+                                <div class="o-section">
+                                    <p class="o-h2 u-no-margin u-3/3@from-small js-animate u-anim -delay-1">800 +</p>
+                                    <p class="o-h4 u-no-margin u-3/3@from-small js-animate u-anim -delay-1">Projects</p>
+                                </div>
+                            </div>
+                            <div class="o-layout_item u-1/2@from-small inner-we-are">
+                                <div class="o-line -text"></div>
+                                <div class="o-section">
+                                    <p class="o-h2 u-no-margin u-3/3@from-small js-animate u-anim -delay-1">13 +</p>
+                                    <p class="o-h4 u-no-margin u-3/3@from-small js-animate u-anim -delay-1">years of experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="o-layout_item u-2/6@from-small" style="padding-left: 1rem;">
+                            <div class="o-line -text"></div>
+                            <div class="o-section">
+                                <p class="o-h2 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">13 +</p>
+                                <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">years of experience</p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="o-layout" style="margin-top: 10rem;">
+                        <div class="o-layout_item u-3/6@from-small">
+                            <div class="o-line -text"></div>
+                            <div class="o-section">
+                                <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">We’ve worked with wide range of clients from different industries, verticals and geographical locations.</p>
+                            </div>
+                        </div>
+                        <!-- <div class="o-layout_item u-1/6@from-small"></div> -->
+                        <div class="o-layout_item u-3/6@from-small inner-pad">
+                            <div class="o-line -text"></div>
+                            <div class="o-section">
+                                <p class="o-h4 u-no-margin u-2/3@from-small js-animate u-anim -delay-1">Web Application Development<br>
+                                Database design and development<br>
+                                Mobile App development</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
 
             <div class="o-sticky || u-overflow-hidden js-animate" data-module="StickyLimiter" data-repeat data-callback="trigger.StickyLimiter()">
                 <div class="o-sticky_inner || js-sticky-inner">
@@ -1587,14 +2000,14 @@
 
         </div>
 
-        <div class="c-lisa-button || js-lisa-toggle">
+        <!-- <div class="c-lisa-button || js-lisa-toggle">
             <button class="o-circle-button" type="button">
                 <span class="u-screen-reader-text">Toggle LISA</span>
                 <div class="o-circle-button_bg || js-lisa-toggle-bg || c-lisa-button_bg"></div>
                 <svg class="o-circle-button_icon       || c-lisa-button_icon         || js-lisa-toggle-open" role="img"><use xlink:href="../assets/images/sprite.svg#write"></use></svg>
                 <svg class="o-circle-button_icon -blue || c-lisa-button_icon -hidden || js-lisa-toggle-close" role="img"><use xlink:href="../assets/images/sprite.svg#cross"></use></svg>
             </button>
-        </div>
+        </div> -->
         
         <div class="c-lisa" data-module="Lisa" data-lang="en">
             <div class="c-lisa_ui">
@@ -1624,9 +2037,12 @@
     <script type="text/javascript">
 
         var GetVid=document.getElementById("vidBAc");
-        $(document).ready(function(){
+        $(".vidBAc").bind('mouseover', function() {
             GetVid.play();
-        })
+            });
+        // $(document).ready(function(){
+            
+        // })
         
         $(".c-video-player_cursor").click(function() {
             
@@ -1638,7 +2054,25 @@
     $("#TxtVid").text("Play");
   }
 });
+
     </script>
+    <script type="text/javascript">
+            $(".o_drk").bind('mouseover', function() {
+                $("html").removeClass("ui-dark");
+            $("html").addClass("ui-light");
+            });
+            $(".o_lig").bind('mouseover', function() {
+                $("html").removeClass("ui-light");
+            $("html").addClass("ui-dark");
+            });
+
+            $(".c-header_burger").click(function(){
+                $(".oveHid").toggleClass("oVH");
+            });
+
+
+            
+        </script>
     
         <script>
             // Recaptcha

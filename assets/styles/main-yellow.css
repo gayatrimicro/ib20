@@ -6681,14 +6681,14 @@ html.is-mobile .c-lisa_circle.-compact .c-lisa_circle_inner {
 
 @media(min-width:1025px) and (max-width:1599px) {
 	.c-lisa-button {
-		margin-right: -3.16667rem
+		margin-right: -2.16667rem
 	}
 }
 
 @media(min-width:1600px) {
 	.c-lisa-button {
 		right: 8.88889rem;
-		margin-right: -3.16667rem
+		margin-right: -2.16667rem
 	}
 }
 
@@ -6730,7 +6730,8 @@ html.is-mobile .c-lisa_circle.-compact .c-lisa_circle_inner {
 	transition: transform .5s cubic-bezier(.645, .045, .355, 1) .5s, opacity .5s ease;
 	opacity: 1;
 	pointer-events: none;
-	z-index: 100
+	z-index: 100;
+	transform: translate3d(-50%, -50%, 0) scale(.000);
 }
 
 @media(max-aspect-ratio:1/1) {

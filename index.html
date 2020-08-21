@@ -53,8 +53,19 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="assets/styles/home.css">
 
-    <link rel="stylesheet" href="assets/styles/main-proxima.css">    
-    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" async> -->
+    <link rel="stylesheet" href="assets/styles/main-proxima.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/cursor.css">    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" async>
+    <style type="text/css">
+        @media (min-width: 1600px){
+.c-header_logo svg {
+    width: 10.73333rem !important;
+}}
+.c-play-button:before {
+    z-index: -1 !important;
+}
+    </style>
+    <link rel="stylesheet" id="main-css" href="assets/styles/main.css" media="none" onload="if(media!='all')media='all'">
 </head>
 <body data-module="Load" style="opacity: 0;">
 
@@ -1013,11 +1024,15 @@
                     </ul>
                 </nav>
             </div>
-
-            <button class="c-header_burger" data-module="NavButton" type="button" ga-on="click" ga-event-category="ui.menu.burger" ga-event-action="toggle">
+<div class="attract-hover-proximity">
+            <button class="c-header_burger buthov js-attract-hover" data-module="NavButton" type="button" ga-on="click" ga-event-category="ui.menu.burger" ga-event-action="toggle">
                 <span class="u-screen-reader-text">Menu</span>
                 <span class="c-header_burger_background"></span>
             </button>
+            </div>
+            <!-- <div class="">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+</div> -->
         </header>
 
         <div class="c-nav_wrapper">
@@ -1478,14 +1493,14 @@
         </div>
 
 
-        <div class="u-bg-white u-relative">
+        <div class="u-bg-white u-relative o_lig">
             <span class="o-trigger js-animate -top-screen-top" data-callback="triggerUIDark.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
             <span class="o-trigger js-animate -top-screen-top" data-callback="triggerUILight.Locomotive.Scroll(way:leave|direction:up)" data-repeat></span>
 
             <span class="o-trigger js-animate -bottom-screen-top" data-callback="triggerUILight.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
             <span class="o-trigger js-animate -bottom-screen-top" data-callback="triggerUIDark.Locomotive.Scroll(way:leave|direction:up)" data-repeat></span>
 
-            <div class="o-container" data-theme="light">
+            <div class="o-container o_lig" data-theme="light">
                 <div class="o-section -padding-v-huge">
                     <div class="o-section || js-animate">
                         <div class="o-section_heading">
@@ -1571,12 +1586,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                    </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="o-sticky || u-overflow-hidden || js-animate" data-module="StickyLimiter" data-repeat data-callback="trigger.StickyLimiter()">
+        <div class="o-sticky || u-overflow-hidden || js-animate o_drk" data-module="StickyLimiter" data-repeat data-callback="trigger.StickyLimiter()">
             <div class="o-sticky_inner || js-sticky-inner">
                 <div class="o-container">
                     <div class="o-section -padding-top-big">
@@ -1600,7 +1616,7 @@
             </div>
         </div>
 
-        <div class="o-container">
+        <div class="o-container o_drk">
             <div class="c-list -dark || u-margin-top-double">
                 <a class="c-list_header -link" href="#" target="_blank">
                     <span class="o-layout">
@@ -1620,7 +1636,7 @@
             </div>
         </div>
 
-        <div class="o-container">
+        <div class="o-container o_drk" id="jhg">
             <div class="o-section -padding-v-huge">
                 <div class="o-layout">
                     <div class="o-layout_item u-1/2@from-medium"></div>
@@ -1692,7 +1708,7 @@
         </div>
 
 
-        <footer class="c-footer">
+        <footer class="c-footer o_drk">
             <span class="o-trigger js-animate -top-screen-top" data-callback="triggerUILight.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
         
             <span class="o-trigger js-animate -top-screen-top" data-callback="showQuickMenu.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
@@ -1865,22 +1881,9 @@
         
         </section> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-            function goBack() {
-var iframe = document.getElementById("ifr");
-  var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[18];
-  elmnt.style.overflow = "hidden";
-  window.history.back();  
-}
-        </script>
-        <script type="text/javascript">
-    $(".c-play-button").click(function(){
-        var iframe = document.getElementById("ifr");
-  var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[18];
-  elmnt.style.overflow = "unset";
-        });
-            
-        </script>
+<script src='https://unpkg.com/attract-hover/dist/attractHover.js'></script>
+<script src="assets/scripts/menuanm.js"></script>
+        
         <script>
 
             // Script loader
@@ -1906,6 +1909,32 @@ var iframe = document.getElementById("ifr");
             }
         </script>
         <script src="assets/scripts/js/lazysizes.min.js" async></script>
+
+        <script type="text/javascript">
+            $(document).ready(function($) {                
+
+  if (window.history && window.history.pushState) {
+
+    $(window).on('popstate', function() {
+      var hashLocation = location.hash;
+      var hashSplit = hashLocation.split("#!/");
+      var hashName = hashSplit[1];
+
+      if (hashName !== '') {
+        var hash = window.location.hash;
+        if (hash === '') {
+  window.location.href = "https://ibridgedigital.com/test/";
+        }
+      }
+    });
+
+    // window.history.pushState('home', null, './#home');
+  }
+
+});
+        </script>
+
+       
 
     </body>
 

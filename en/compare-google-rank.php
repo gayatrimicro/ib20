@@ -81,6 +81,7 @@ $result = $conn->query($sql);
    <link rel="stylesheet" type="text/css" href="../assets/styles/comparepop.css">
 
     <link rel="stylesheet" id="main-css" href="../assets/styles/main-plain-blue.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/cursor.css">
 
     <script>
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -219,6 +220,9 @@ $result = $conn->query($sql);
     border-bottom: 2px dashed rgb(44, 152, 247) !important;
     border-radius: 0;
 }
+.c-play-button:before {
+    z-index: -1 !important;
+}
 
         </style>
 
@@ -249,15 +253,15 @@ $result = $conn->query($sql);
         </div>
     </div>
 
-    <a class="c-play-button" href="../en/play.html" data-load="play" ga-on="click" ga-event-category="ui.menu.section" ga-event-action="click" ga-event-label="play" style="color: transparent !important;">
+    <a class="c-play-button" href="" data-load="play" ga-on="click" ga-event-category="ui.menu.section" ga-event-action="click" ga-event-label="play" style="color: transparent !important;">
         <span class="u-screen-reader-text">Play hard</span>
-         <!-- <iframe height="100%" width="100%" src="../smoke/test.html" name="iframe_a" id="ifr" style="outline: none;border: none;"></iframe> -->
+         <iframe height="100%" width="100%" src="../smoke/test.html" name="iframe_a" id="ifr" style="outline: none;border: none;"></iframe>
          <!-- <iframe height="100%" width="100%" src="waves/index.html?effect=waves" name="iframe_a" id="ifr" style="outline: none;"></iframe> -->
         <span class="c-play-button_circle"></span>
     </a>
 
     <div data-load-container>
-        <header class="c-header js-header">
+        <header class="c-header js-header o_drk">
             <div class="c-header_logoWrap">
                 <a class="c-header_logo" href="index.html" style="margin-top: 10px !important;">
                     <span class="u-screen-reader-text">Home</span>
@@ -1172,10 +1176,12 @@ $result = $conn->query($sql);
                 </nav>
             </div>
 
-            <button class="c-header_burger" data-module="NavButton" type="button" ga-on="click" ga-event-category="ui.menu.burger" ga-event-action="toggle">
+            <div class="attract-hover-proximity">
+            <button class="c-header_burger buthov js-attract-hover" data-module="NavButton" type="button" ga-on="click" ga-event-category="ui.menu.burger" ga-event-action="toggle">
                 <span class="u-screen-reader-text">Menu</span>
                 <span class="c-header_burger_background"></span>
             </button>
+            </div>
         </header>
 
         <div class="c-nav_wrapper">
@@ -1267,7 +1273,7 @@ $result = $conn->query($sql);
     <main class="o-page">
         <div class="u-relative">
             <div class="u-z-index-100 || u-bg-white" > <!-- || u-bg-white -->
-                <div class="c-heading-lines_title">
+                <div class="c-heading-lines_title o_drk">
                     <div class="c-heading-lines_title_line">
                         <div class="o-container">
                             <div class="o-line -elastic">
@@ -1306,7 +1312,7 @@ $result = $conn->query($sql);
                     </div>
                 </div>
 
-                <div class="o-container demo" style="padding-bottom: 0rem;padding-top: 5rem;">
+                <div class="o-container demo o_lig" style="padding-bottom: 0rem;padding-top: 5rem;">
                     <div class="o-layout ">
                         <div class="o-layout_item u-1/2@from-small"></div>
                         <div class="o-layout_item u-1/2@from-small">
@@ -1444,7 +1450,7 @@ $result = $conn->query($sql);
 
         
 
-            <div class="u-bg-white u-relative">
+            <div class="u-bg-white u-relative o_lig">
                 <span class="o-trigger js-animate -top-screen-top" data-callback="triggerUIDark.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
                 <span class="o-trigger js-animate -top-screen-top" data-callback="triggerUILight.Locomotive.Scroll(way:leave|direction:up)" data-repeat></span>
 
@@ -1672,11 +1678,8 @@ $result = $conn->query($sql);
                 </div>
             </div> -->
         </div>
-        <br>
-        <br>
-        <br>
         
-                    <section class="form-comp">
+                    <section class="form-comp o_drk">
                         <div class="r-card contact-form" style="margin: 70px 157px;background-color: #fff;color: #000;text-align: center;padding: 5rem 4rem;">
                             <h1 style="font-size: 45px;font-weight: 800;color:#000">Compare your practice</h1>
                             <p style="font-size: 18px;">See how your entire online performance compares with other practices in your local area.</p>
@@ -1725,7 +1728,7 @@ input.addEventListener('blur', () => {
 })
 </script> -->
 
-        <footer class="c-footer">
+        <footer class="c-footer o_drk">
             <span class="o-trigger js-animate -top-screen-top" data-callback="triggerUILight.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
         
             <span class="o-trigger js-animate -top-screen-top" data-callback="showQuickMenu.Locomotive.Scroll(way:enter|direction:down)" data-repeat></span>
@@ -3185,6 +3188,8 @@ input.addEventListener('blur', () => {
         </div>
        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src='https://unpkg.com/attract-hover/dist/attractHover.js'></script>
+<script src="../assets/scripts/menuanm.js"></script>
         <script type = "text/javascript" 
          src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
       </script>
@@ -3223,6 +3228,42 @@ input.addEventListener('blur', () => {
             }
 
         </script>  
+        
+        <script type="text/javascript">
+            $(".o_drk").bind('mouseover', function() {
+                $("html").removeClass("ui-dark");
+            $("html").addClass("ui-light");
+            });
+            $(".o_lig").bind('mouseover', function() {
+                $("html").removeClass("ui-light");
+            $("html").addClass("ui-dark");
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function($) {                
+
+  if (window.history && window.history.pushState) {
+
+    $(window).on('popstate', function() {
+        var ifr = document.getElementById("ifr");
+  var elm = ifr.contentWindow.document.getElementsByTagName("div")[18];
+      var hashLocation = location.hash;
+      var hashSplit = hashLocation.split("#!/");
+      var hashName = hashSplit[1];
+
+      if (hashName !== '') {
+        var hash = window.location.hash;
+        if (hash === '') {
+  elm.style.overflow = "hidden";
+        }
+      }
+    });
+
+    // window.history.pushState('forward', null, '#forward');
+  }
+
+});
+        </script>
            
     </body>
 </html>
